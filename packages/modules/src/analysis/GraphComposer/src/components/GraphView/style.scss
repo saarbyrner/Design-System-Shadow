@@ -1,0 +1,30 @@
+.graphView {
+  &__controls {
+    background-color: $colour-s23;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+  }
+
+  &__graphTypeOptions {
+    display: flex;
+  }
+
+  &__graphTypeBtn {
+    margin-left: 10px;
+
+    &:first-of-type {
+      margin-left: 0;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+  }
+
+  &__graphContainer {
+    padding: 28px 20px 0;
+  }
+}

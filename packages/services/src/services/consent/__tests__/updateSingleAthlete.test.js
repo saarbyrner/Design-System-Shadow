@@ -1,0 +1,41 @@
+// flow
+import { axios } from '@kitman/common/src/utils/services';
+import {
+  CONSENTABLE_TYPE,
+  CONSENTING_TO,
+} from '@kitman/common/src/types/Consent';
+import { response } from '@kitman/services/src/mocks/handlers/consent/consentSingleAthlete.mock';
+import updateSingleAthleteConsent, {
+  endpoint,
+} from '@kitman/services/src/services/consent/updateSingleAthleteConsent';
+
+const payload = {
+  athlete_id: 1,
+  consentable_type: CONSENTABLE_TYPE.Organisation,
+  consenting_to: CONSENTING_TO.injury_surveillance_export,
+  updated_from: '2024-05-14T23:00:00.000Z”',
+};
+
+describe('searchConsentAthletes', () => {
+  let request;
+  beforeEach(() => {
+    request = jest.spyOn(axios, 'patch');
+  });
+
+  afterEach(() => {
+    jest.restoreAllMocks();
+  });
+  it('calls the correct endpoint and returns the correct value', async () => {
+    const returnedData = await updateSingleAthleteConsent(payload);
+
+    expect(returnedData).toEqual(response.data);
+  });
+
+  describe('Mock axios', () => {
+    it('calls the correct endpoint with correct body data in the request', async () => {
+      await updateSingleAthleteConsent(payload);
+      expect(request).toHaveBeenCalledTimes(1);
+      expect(request).toHaveBeenCalledWith(endpoint, payload);
+    });
+  });
+});

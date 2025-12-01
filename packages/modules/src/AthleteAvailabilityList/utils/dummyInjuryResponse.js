@@ -1,0 +1,102 @@
+/* eslint-disable flowtype/require-valid-file-annotation */
+const injuryResponse = () => [
+  {
+    activity_id: 1,
+    activity_type: 'game',
+    association_period_id: null,
+    athlete_id: 1644,
+    closed: false,
+    created_at: '2018-05-01T00:00:00+01:00',
+    created_by: 'Fabrizio Menghini Calderón',
+    diagnostics: [],
+    events: [
+      {
+        date: '2018-05-01T00:00:00+01:00',
+        event_date: '2018-05-01T00:00:00+01:00',
+        id: 22929,
+        injury_status_id: 1,
+      },
+    ],
+    events_duration: { 22929: 336 },
+    events_order: [22929],
+    game_id: 11574,
+    has_recurrence: false,
+    id: 23925, // occurrence id
+    issue_id: 123456, // injury id
+    is_first_occurrence: true,
+    is_last_occurrence: true,
+    modification_info: '',
+    notes: [
+      {
+        created_by: 'Mark Hill',
+        date: '2018-05-01T00:00:00+01:00',
+        id: 149875,
+        note: 'Voluptates beatae odio repudiandae numquam corporis. Impedit hic sapiente consequatur voluptates et quis ea.',
+        restricted: false,
+        psych_only: false,
+      },
+    ],
+    occurrence_date: '2018-05-01T00:00:00+01:00',
+    occurrence_min: 32,
+    osics: {
+      osics_id: 'BTHB',
+      osics_pathology_id: 160,
+      osics_classification_id: 15,
+      osics_body_area_id: 2,
+    },
+    position_when_injured_id: 72,
+    session_completed: null,
+    side_id: 1,
+    supplementary_pathology: null,
+    total_duration: 336,
+    training_session_id: null,
+    type_id: 2,
+    unavailability_duration: 336,
+  },
+  {
+    activity_id: 8,
+    activity_type: 'game',
+    association_period_id: null,
+    athlete_id: 1644,
+    closed: false,
+    created_at: '2018-09-11T10:35:54.000+01:00',
+    created_by: 'Fabrizio Menghini Calderón',
+    diagnostics: [],
+    events: [
+      {
+        date: '2018-09-11T10:35:54.000+01:00',
+        event_date: '2018-09-11T10:35:54.000+01:00',
+        id: 22929,
+        injury_status_id: 2,
+      },
+    ],
+    events_duration: { 22929: 336 },
+    events_order: [22929],
+    game_id: 11574,
+    has_recurrence: false,
+    id: 7654, // occurrence id
+    issue_id: 123457, // injury id
+    is_first_occurrence: true,
+    is_last_occurrence: true,
+    modification_info: '',
+    notes: [],
+    occurrence_date: '2018-05-01T00:00:00+01:00',
+    occurrence_min: 32,
+    osics: {
+      osics_body_area_id: 15,
+      osics_classification_id: 17,
+      osics_id: 'TMHX',
+      osics_pathology_id: 1099,
+    },
+    position_when_injured_id: 72,
+    session_completed: null,
+    side_id: 1,
+    supplementary_pathology: null,
+    total_duration: 336,
+    training_session_id: null,
+    type_id: 2,
+    unavailability_duration: 336,
+  },
+];
+
+export default injuryResponse;

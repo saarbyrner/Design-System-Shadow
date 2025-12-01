@@ -1,0 +1,67 @@
+.athleteAvailabilityAddAbsenceModal {
+  min-height: 345px;
+
+  &__selectReason {
+    margin: 30px 0 20px;
+    width: 430px;
+
+    &.formValidator__section--hasError {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__datePickers {
+    display: flex;
+
+    .datePicker {
+      margin-bottom: 5px;
+      width: 320px;
+
+      &:first-child {
+        margin-right: 30px;
+      }
+    }
+
+    &--to {
+      width: 320px;
+    }
+  }
+
+  &__dateConflictError {
+    color: $colour-s11;
+    display: none;
+
+    &.show {
+      display: block;
+    }
+  }
+
+  &__optionalText {
+    color: $colour-s16;
+    float: right;
+  }
+
+  &__footer {
+    border-top: 2px solid $colour-s14;
+    height: 105px;
+  }
+
+  .formValidator__errorMsg {
+    margin-top: 5px;
+  }
+}
+
+.reactDialogue {
+  .reactDialogue__background {
+    opacity: 0.9;
+  }
+
+  .reactDialogue__message {
+    font-weight: normal;
+  }
+
+  .textButton {
+    height: 45px;
+    width: 160px;
+  }
+}

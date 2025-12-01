@@ -1,0 +1,40 @@
+// @flow
+export const DEAFULT_GRIDS = {
+  association_admin: {
+    organisation: [],
+    squad: [],
+    athlete: [],
+    organisation_athlete: [],
+    staff: [],
+    organisation_staff: [],
+    athlete_squad: [],
+    athlete_registration: [],
+    staff_registration: [],
+    roster_history: [],
+    requirements: [],
+    athlete_discipline: [],
+    user_discipline: [],
+  },
+  organisation_admin: {
+    athlete: [],
+    staff: [],
+    squad: [],
+    athlete_squad: [],
+    athlete_registration: [],
+    staff_registration: [],
+    roster_history: [],
+    requirements: [],
+    athlete_discipline: [],
+    user_discipline: [],
+  },
+  athlete: {
+    athlete_registration: [],
+    squad: [],
+    requirements: [],
+  },
+  staff: {
+    staff_registration: [],
+    squad: [],
+    requirements: [],
+  },
+};

@@ -1,0 +1,424 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getInstructionsTextForClipboard should return the correct instructions text for baselines 1`] = `
+"
+        Khamis-Roche baselines
+
+        To avoid errors make sure you are importing the correct template file type for this submission. Download a CSV file template for Growth and maturation assessments.
+
+        Also make sure the required Khamis-Roche baseline data has been already submitted for each athlete listed in your import. You only have to do this once per athlete. Download a CSV file template for Khamis-Roche baselines.
+
+        Guide to accepted inputs and formatting:
+
+        date_of_birth_of_player
+
+        Required.
+
+        Format must be one of the following: YYYY-MM-DD, YYYY/MM/DD, DD-MM-YYYY, DD/MM/YYYY
+
+        gender
+
+        Required.
+
+        Accepted values:
+
+        Male, m
+        Female, f
+        Other, o
+
+        method_for_assessing_mothers_height
+
+        Required.
+
+        Accepted values:
+
+        Self reported
+        Measured by staff
+        Not available
+
+        biological_mothers_height_cm
+
+        Example: 180
+
+        method_for_assessing_fathers_height
+
+        Required.
+
+        Accepted values:
+
+        Self reported
+        Measured by staff
+        Not available
+
+        biological_fathers_height_cm
+
+        Example: 180
+        "
+`;
+
+exports[`getInstructionsTextForClipboard should return the correct instructions text for event_data 1`] = `null`;
+
+exports[`getInstructionsTextForClipboard should return the correct instructions text for growth_and_maturation 1`] = `
+"
+        Growth and maturation
+
+        To avoid errors make sure you are importing the correct template file type for this submission. Download a CSV file template for Growth and maturation assessments.
+
+        Also make sure the required Khamis-Roche baseline data has been already submitted for each athlete listed in your import. You only have to do this once per athlete. Download a CSV file template for Khamis-Roche baselines.
+
+        Guide to accepted inputs and formatting:
+
+        date_measured
+
+        Required.
+
+        Format must be one of the following: YYYY-MM-DD, YYYY/MM/DD, DD-MM-YYYY, DD/MM/YYYY
+
+        head_attire_worn
+
+        Required.
+
+        Accepted values:
+
+        Yes or No
+        True or False
+        Y or N
+        0 or 1
+
+        standing_height_1_cm
+
+        Required.
+
+        Example: 180
+
+        standing_height_2_cm
+
+        Required.
+
+        Example: 180
+
+        standing_height_3_cm
+
+        Required.
+
+        Example: 180
+
+        box_height_cm
+
+        Required.
+
+        Example: 40
+
+        sitting_height_1_cm
+
+        Required.
+
+        Example: 100
+
+        sitting_height_2_cm
+
+        Required.
+
+        Example: 100
+
+        sitting_height_3_cm
+
+        Required.
+
+        Example: 100
+
+        weight_1_kg
+
+        Required.
+
+        Example: 60
+
+        weight_2_kg
+
+        Required.
+
+        Example: 60
+
+        weight_3_kg
+
+        Required.
+
+        Example: 60
+        "
+`;
+
+exports[`getInstructionsTextForClipboard should return the correct instructions text for kit_matrix 1`] = `
+"
+        League kits import
+
+        To avoid errors make sure you are importing the correct template file type for this submission. Download a CSV file template for League kits import.
+        
+        Guide to accepted inputs and formatting:
+        
+        Type
+        Required.
+        Accepted values:
+        Player
+        Goalkeeper
+        Referee
+        
+        Club
+        Required.
+        Format must be Full club name for Player or Goalkeeper. For the Referee, use the association name.
+        
+        Season
+        Required.
+        Format must be year (ie - 2025)
+        
+        Kit name
+        Required.
+        Format should follow the naming conventions of the organisation.
+        
+        Kit Color
+        Required.
+        Format must be a Hex color (ie - #123456)
+        
+        Jersey Color
+        Required.
+        Format must be a valid color within the add kit side panel.
+        
+        Jersey URL
+        Required.
+        Format must be URL
+        
+        Shorts Color
+        Required.
+        Format must be a valid color within the add kit side panel.
+        
+        Shorts URL
+        Required.
+        Format must be URL
+        
+        Socks Color
+        Required.
+        Format must be a valid color within the add kit side panel.
+        
+        Socks URL
+        Required.
+        Format must be URL
+        "
+`;
+
+exports[`getInstructionsTextForClipboard should return the correct instructions text for league_benchmarking 1`] = `
+"
+        League benchmarking
+
+        To avoid errors make sure you are importing the correct template file type for this submission. Download a CSV file template for league benchmarking test.
+
+        Once a file has been submitted it has to be validated by a representative from the Premier League before it is included in the league-wide benchmark data.
+
+        Guide to accepted inputs and formatting:
+
+        date_of_test
+
+        Required.
+
+        Format must be one of the following: YYYY-MM-DD, YYYY/MM/DD, DD-MM-YYYY, DD/MM/YYYY
+
+        player_exempt
+
+        Required.
+
+        Case insensitive.
+
+        Accepted values:
+
+        Yes or No
+        True or False
+        Y or N
+        0 or 1
+
+        player_position
+
+        Required.
+
+        Accepted values:
+
+        Forward
+        Back
+        Other
+
+        05m_sprint
+
+        Unit: minutes
+
+        10m_sprint
+
+        Unit: minutes
+
+        20m_sprint
+
+        Unit: minutes
+
+        30m_sprint
+
+        Unit: minutes
+
+        505_agility_right
+
+        Unit: seconds
+
+        505_agility_left
+
+        Unit: seconds
+
+        cmj_optojump
+
+        Unit: cm
+
+        cmj_vald
+
+        Unit: cm
+
+        cmj_flight_time
+
+        Unit: seconds
+
+        yo_yo_intermittent_recovery_test_level_1
+
+        Unit: minutes
+
+        yo_yo_intermittent_recovery_test_level_2
+
+        Unit: minutes
+
+        agility_arrow_head_left
+
+        Unit: seconds
+
+        agility_arrow_head_right
+
+        Unit: seconds
+        "
+`;
+
+exports[`getInstructionsTextForClipboard should return the correct instructions text for league_game 1`] = `
+"
+      League fixtures import
+
+      To avoid errors make sure you are importing the correct template file type for this submission. Download a CSV file template for League fixtures import.
+
+      Guide to accepted inputs and formatting:
+
+      Match ID
+      Required.
+      Format must be 123456
+
+      Competition
+      Required.
+      
+      Match Day
+      Unit: numeric
+      
+      Date Time
+      Required.
+      Format must be DD MMM YYYY HH:mm (ie - 29 Sep 2025 10:30)
+
+      Timezone
+      Required.
+
+      Duration
+      Required.
+      Unit: numeric
+  
+      Home Team
+      Required.
+      Format must be Full club name
+
+      Home Squad
+      Required.
+      
+      Away Team
+      Required.
+      Format must be Full club name
+      
+      Away Squad
+      Required.
+      
+      Venue
+      Name of game venue
+      
+      TV
+      Example: Apple TV
+      
+      Match Director
+      Format must be email address
+      
+      Referee
+      Format must be email address
+      
+      AR1
+      Format must be email address
+      
+      AR2
+      Format must be email address
+      
+      4th Official
+      Format must be email address
+      
+      VAR
+      Format must be email address
+      
+      AVAR
+      Format must be email address
+      
+      Notification Recipient
+      Format must be email address
+      
+      Hide from club
+      Accepted values:
+      Yes or No
+      True or False
+      Y or N
+      0 or 1
+      "
+`;
+
+exports[`getInstructionsTextForClipboard should return the correct instructions text for training_variable_answer 1`] = `
+"
+        Data importer
+
+        To avoid errors make sure you are importing the correct template file type for this submission. Download a CSV file template for required fields.
+
+        id
+
+        Required.
+
+        Please ensure you use the CSV file template to have the correct id
+
+        first_name
+
+        Required.
+
+        Please ensure you use the CSV file template to have the correct first name
+
+        last_name
+
+        Required.
+
+        Please ensure you use the CSV file template to have the correct last name
+
+        time_measured
+
+        Required.
+
+        Accepted values:
+
+        2023-10-12T04:25:03Z
+        2023-10-12
+        2023-10-12 04:25
+        2023/10/12
+        2023/10/12 04:25
+
+        micro_cycle
+
+        If filled, the entry must be a whole number: 0 or greater.
+
+        The training variables to be uploaded are added after the above fields. Please reach out to your Kitman Representative to get a list of these for your organization.
+        "
+`;

@@ -1,0 +1,36 @@
+.emptyState__button {
+  align-items: center;
+  border: 1px solid $colour-s15;
+  border-radius: 5px;
+  color: $colour-p01;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  height: 84px;
+  margin: auto;
+  padding-top: 20px;
+  width: 94px;
+}
+
+.emptyState__icon {
+  font-size: 18px;
+}
+
+.emptyState__text {
+  margin-top: 8px;
+}
+
+.emptyState__noNotesText {
+  align-items: center;
+  bottom: 0;
+  color: $colour-s17;
+  display: flex;
+  font-size: 14px;
+  font-weight: 600;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 50px;
+}

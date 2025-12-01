@@ -1,0 +1,27 @@
+.availabilityIssueList {
+  &__issue {
+    padding-bottom: 5px;
+
+    .availabilityLabel {
+      float: left;
+    }
+  }
+
+  &__issueNameContainer {
+    padding-left: 15px;
+  }
+
+  &__lastEventDate {
+    color: $colour-s16;
+    padding-left: 5px;
+  }
+
+  &__issueStatus {
+    display: block;
+    padding-left: 15px;
+  }
+
+  &__absenceReason {
+    font-weight: 600;
+  }
+}

@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`useEventDataImporter renders the ruleset as expected 1`] = `
+<ForwardRef(Typography)
+  variant="body"
+>
+  To avoid errors make sure you are importing the correct template file type for this submission.
+</ForwardRef(Typography)>
+`;
+
+exports[`useEventDataImporter returns the correct initial data 1`] = `
+Array [
+  Object {
+    "content": <DefaultHeaderCell
+      title="kUserName"
+    />,
+    "id": "kUserName",
+    "row_key": "kUserName",
+  },
+  Object {
+    "content": <DefaultHeaderCell
+      title="Date"
+    />,
+    "id": "Date",
+    "row_key": "Date",
+  },
+  Object {
+    "content": <DefaultHeaderCell
+      title="5-0-5"
+    />,
+    "id": "5-0-5",
+    "row_key": "5-0-5",
+  },
+  Object {
+    "content": <DefaultHeaderCell
+      title="5m"
+    />,
+    "id": "5m",
+    "row_key": "5m",
+  },
+]
+`;

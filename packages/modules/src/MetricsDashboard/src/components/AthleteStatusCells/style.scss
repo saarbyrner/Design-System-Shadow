@@ -1,0 +1,28 @@
+.athleteStatusCells {
+  .athleteStatusCells__break {
+    height: 44px;
+    width: 100%;
+  }
+
+  .athleteStatusCells__row {
+    border-bottom: 0;
+    border-top: 1px solid $colour-s14;
+    display: flex;
+    flex-direction: row;
+    height: 45px;
+    overflow: hidden;
+
+    &:last-child {
+      border-bottom: 1px solid $colour-s14;
+      margin-bottom: 0;
+    }
+  }
+
+  .athleteStatusCells__cell {
+    border-right: 1px solid $colour-s14;
+    height: 100%;
+    max-width: 96px;
+    min-width: 96px;
+    width: 96px;
+  }
+}

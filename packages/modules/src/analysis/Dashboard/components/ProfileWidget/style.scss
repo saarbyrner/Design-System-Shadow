@@ -1,0 +1,248 @@
+@mixin availabilityIndicator($top, $left) {
+  border-color: transparent;
+  border-style: solid;
+  border-top-color: $colour-p06;
+  border-width: 25px 25px 0 0;
+  height: 0;
+  left: $left;
+  position: absolute;
+  top: $top;
+  width: 0;
+  z-index: 1;
+
+  &::before {
+    border-right: 25px solid transparent;
+    border-top: 25px solid $colour-s25;
+    content: '';
+    display: block;
+    height: 0;
+    left: 0;
+    position: absolute;
+    top: -25px;
+    width: 0;
+    z-index: 0;
+  }
+
+  &--injured {
+    &::before {
+      border-top-color: $colour-s09;
+    }
+  }
+
+  &--returning {
+    &::before {
+      border-top-color: $colour-s07;
+    }
+  }
+}
+
+.profileWidget {
+  background: $colour-p06;
+  border: 1px solid $colour-s13;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  height: 320px;
+  width: 100%;
+}
+
+.profileWidgetV2 {
+  background: $colour-p06;
+  border: 1px solid $colour-neutral-300;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  height: 320px;
+  width: 100%;
+  background: var(--theme-primary-color)
+    linear-gradient(
+      160deg,
+      var(--theme-primary-4-gradient) 0%,
+      var(--theme-primary-2-gradient) 62%,
+      var(--theme-primary-4-gradient) 61%,
+      var(--theme-primary-2-gradient) 100%
+    )
+    100%;
+
+  &__availabilityIndicatorContainer {
+    position: relative;
+  }
+}
+
+.profileWidget,
+.profileWidgetV2 {
+  &__widgetMenu {
+    align-self: flex-end;
+    background: transparent;
+    border: 0;
+    color: $colour-p04;
+    font-size: 18px;
+    margin-top: 5px;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__widgetMenuV2 {
+    align-self: flex-end;
+    background: transparent;
+    border: 0;
+    font-size: 18px;
+    margin: 10px 0;
+    position: absolute;
+    z-index: 1;
+    color: $colour-neutral-100;
+    i {
+      font-size: 28px;
+    }
+  }
+
+  &__imageV2 {
+    height: 100px;
+    margin-top: 12px;
+  }
+
+  &__contents {
+    align-self: center;
+  }
+
+  &__imageContainer {
+    position: relative;
+  }
+
+  &__imageContainerV2 {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__availabilityIndicator {
+    @include availabilityIndicator(-10px, 0px);
+  }
+
+  &__availabilityIndicatorV2 {
+    @include availabilityIndicator(12px, 0px);
+  }
+
+  &__image {
+    height: 133px;
+    margin: -10px auto 0;
+    width: 133px;
+  }
+
+  &__infoContainer {
+    display: flex;
+    flex-direction: column;
+    line-height: 14px;
+    overflow: hidden;
+    position: absolute;
+  }
+
+  &__infoContainerV2 {
+    // justify-content: space-evenly;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    line-height: 14px;
+    overflow: hidden;
+    color: $colour-neutral-100;
+    padding: 10px 20px 10px 20px;
+
+    &--blackFont {
+      color: $colour-p03 !important;
+    }
+  }
+
+  &__infoField {
+    height: 20px;
+    margin-top: 18px;
+    max-width: 135px;
+  }
+
+  &__errorOverlay {
+    align-items: center;
+    background: $colour-p06;
+    display: flex;
+    height: 100%;
+    opacity: 0.9;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+  }
+
+  &__errorMessage {
+    font-weight: bold;
+    margin: 0 auto;
+    text-align: center;
+    width: 200px;
+  }
+
+  @media (max-width: 992px) {
+    &__image {
+      height: 100px;
+      margin: 0 auto;
+      width: 100px;
+    }
+
+    &__infoContainer {
+      margin: 2px;
+    }
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    &__image {
+      height: 80px;
+      margin: 10px auto;
+      width: 80px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    &__image {
+      height: 60px;
+      margin: 10px auto;
+      width: 60px;
+    }
+
+    &__infoField {
+      height: auto;
+      margin-top: 14px;
+      width: auto;
+      word-break: break-word;
+    }
+  }
+}
+
+p.profileWidget__infoFieldV2 {
+  line-height: 18.5px;
+
+  span:first-child {
+    font-weight: bold;
+  }
+
+  span:last-child {
+    font-weight: unset;
+    display: inline-block;
+  }
+}
+
+.profileWidget__infoContainerV2 {
+  span.profileWidget__infoFieldV2 {
+    margin-top: 5px;
+    line-height: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  p.profileWidget__infoFieldV2 {
+    line-height: 18.5px;
+    &:first-child {
+      font-weight: bold;
+    }
+
+    &:nth-child(2) {
+      height: 20px;
+      margin-top: 18px;
+      max-width: 135px;
+      font-weight: unset;
+    }
+  }
+}

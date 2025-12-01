@@ -1,0 +1,100 @@
+.km-page-content--user-page {
+  background: transparent !important;
+  min-height: auto !important;
+  padding: 0 !important;
+}
+
+.users {
+  &__header {
+    align-items: baseline;
+    background: $colour-p06;
+    display: flex;
+    justify-content: space-between;
+    padding: 24px;
+    padding-bottom: 0;
+
+    h1 {
+      color: $colour-grey-300;
+      font-size: 24px;
+    }
+  }
+
+  &__actionButtons {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__searchInput {
+    position: relative;
+
+    input {
+      background-color: $colour-neutral-200;
+      border: 0;
+      border-radius: 3px;
+      font-size: 14px;
+      line-height: 24px;
+      padding: 4px 36px 4px 8px;
+      width: 240px;
+    }
+
+    i {
+      font-size: 24px;
+      position: absolute;
+      right: 4px;
+      top: 4px;
+    }
+  }
+
+  &__userTable {
+    background-color: $colour-p06;
+    border-radius: 3px;
+    box-shadow: $section-shadow;
+    padding: 24px;
+
+    .dataGrid {
+      min-height: auto;
+      overflow: auto;
+
+      &__body {
+        .dataGrid__cell {
+          padding-bottom: 6px;
+          padding-top: 6px;
+        }
+      }
+
+      &__cell {
+        width: auto !important;
+
+        &:first-child {
+          padding-left: 24px;
+        }
+      }
+    }
+  }
+
+  &__userTableHeader {
+    color: $colour-grey-300;
+    font-size: 18px;
+    margin-bottom: 18px;
+  }
+
+  &__userTableName {
+    a,
+    div {
+      align-items: center;
+      display: flex;
+      gap: 8px;
+    }
+  }
+
+  &__userTableNoResults {
+    color: $colour-grey-200;
+    font-size: 16px;
+    padding: 0 16px 24px;
+    text-align: center;
+  }
+
+  &__userTableEdit {
+    color: $colour-grey-300;
+  }
+}

@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`utils getColumns 1`] = `
+Array [
+  Object {
+    "field": "testName",
+    "flex": 1,
+    "headerName": "Test name",
+    "renderCell": [Function],
+  },
+  Object {
+    "field": "lastEdited",
+    "flex": 1,
+    "headerName": "Last edited",
+  },
+  Object {
+    "field": "resultsSubmitted",
+    "flex": 1,
+    "headerName": "Results submitted",
+  },
+]
+`;
+
+exports[`utils getRows 1`] = `
+Array [
+  Object {
+    "id": "growthAndMaturationRow",
+    "lastEdited": "Oct 30, 2024 11:02 AM by Dan Higgins-admin-eu",
+    "resultsSubmitted": 17,
+    "testName": Object {
+      "name": "Growth and maturation assessments",
+      "url": "/growth_and_maturation/assessments",
+    },
+  },
+  Object {
+    "id": "baselineRow",
+    "lastEdited": "-",
+    "resultsSubmitted": 0,
+    "testName": Object {
+      "name": "Khamis-Roche baselines",
+      "url": "/growth_and_maturation/assessments/baselines",
+    },
+  },
+]
+`;

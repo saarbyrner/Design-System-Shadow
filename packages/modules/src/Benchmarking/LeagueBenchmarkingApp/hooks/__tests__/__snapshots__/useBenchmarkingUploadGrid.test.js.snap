@@ -1,0 +1,838 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`useBenchmarkingUploadGrid [computed data] correctly parses the csv data 1`] = `
+Array [
+  Object {
+    "content": <DefaultHeaderCell
+      title="athlete_id"
+    />,
+    "id": "athlete_id",
+    "row_key": "athlete_id",
+  },
+  Object {
+    "content": <DefaultHeaderCell
+      title="athlete_first_name"
+    />,
+    "id": "athlete_first_name",
+    "row_key": "athlete_first_name",
+  },
+  Object {
+    "content": <DefaultHeaderCell
+      title="athlete_last_name"
+    />,
+    "id": "athlete_last_name",
+    "row_key": "athlete_last_name",
+  },
+  Object {
+    "content": <DefaultHeaderCell
+      title="squad"
+    />,
+    "id": "squad",
+    "row_key": "squad",
+  },
+  Object {
+    "content": <DefaultHeaderCell
+      title="date_of_test"
+    />,
+    "id": "date_of_test",
+    "row_key": "date_of_test",
+  },
+  Object {
+    "content": <DefaultHeaderCell
+      title="player_exempt"
+    />,
+    "id": "player_exempt",
+    "row_key": "player_exempt",
+  },
+  Object {
+    "content": <DefaultHeaderCell
+      title="05m_sprint"
+    />,
+    "id": "05m_sprint",
+    "row_key": "05m_sprint",
+  },
+  Object {
+    "content": <DefaultHeaderCell
+      title="10m_sprint"
+    />,
+    "id": "10m_sprint",
+    "row_key": "10m_sprint",
+  },
+  Object {
+    "content": <DefaultHeaderCell
+      title="20m_sprint"
+    />,
+    "id": "20m_sprint",
+    "row_key": "20m_sprint",
+  },
+  Object {
+    "content": <DefaultHeaderCell
+      title="30m_sprint"
+    />,
+    "id": "30m_sprint",
+    "row_key": "30m_sprint",
+  },
+  Object {
+    "content": <DefaultHeaderCell
+      title="505_agility_right"
+    />,
+    "id": "505_agility_right",
+    "row_key": "505_agility_right",
+  },
+  Object {
+    "content": <DefaultHeaderCell
+      title="505_agility_left"
+    />,
+    "id": "505_agility_left",
+    "row_key": "505_agility_left",
+  },
+  Object {
+    "content": <DefaultHeaderCell
+      title="cmj_optojump"
+    />,
+    "id": "cmj_optojump",
+    "row_key": "cmj_optojump",
+  },
+  Object {
+    "content": <DefaultHeaderCell
+      title="cmj_vald"
+    />,
+    "id": "cmj_vald",
+    "row_key": "cmj_vald",
+  },
+  Object {
+    "content": <DefaultHeaderCell
+      title="cmj_flight_time"
+    />,
+    "id": "cmj_flight_time",
+    "row_key": "cmj_flight_time",
+  },
+  Object {
+    "content": <DefaultHeaderCell
+      title="yo_yo_intermittent_recovery_test_level_1"
+    />,
+    "id": "yo_yo_intermittent_recovery_test_level_1",
+    "row_key": "yo_yo_intermittent_recovery_test_level_1",
+  },
+  Object {
+    "content": <DefaultHeaderCell
+      title="yo_yo_intermittent_recovery_test_level_2"
+    />,
+    "id": "yo_yo_intermittent_recovery_test_level_2",
+    "row_key": "yo_yo_intermittent_recovery_test_level_2",
+  },
+  Object {
+    "content": <DefaultHeaderCell
+      title="player_position"
+    />,
+    "id": "player_position",
+    "row_key": "player_position",
+  },
+  Object {
+    "content": <DefaultHeaderCell
+      title="agility_arrow_head_left"
+    />,
+    "id": "agility_arrow_head_left",
+    "row_key": "agility_arrow_head_left",
+  },
+  Object {
+    "content": <DefaultHeaderCell
+      title="agility_arrow_head_right"
+    />,
+    "id": "agility_arrow_head_right",
+    "row_key": "agility_arrow_head_right",
+  },
+]
+`;
+
+exports[`useBenchmarkingUploadGrid ruleset renders the ruleset as expected 1`] = `
+<EmotionCssPropInternal
+  __EMOTION_LABEL_PLEASE_DO_NOT_USE__="Component"
+  __EMOTION_TYPE_PLEASE_DO_NOT_USE__="div"
+  css={
+    Object {
+      ".textButton__text": Object {
+        "&:hover": Object {
+          "textDecoration": "underline",
+        },
+        "color": "#3b4960",
+        "fontWeight": 600,
+      },
+    }
+  }
+>
+  <p>
+    To avoid errors make sure you are importing the correct template file type for this submission. Download a CSV file template for
+     
+    <TextLink
+      href="/benchmark/league_benchmarking?action=open-side-panel"
+      id={null}
+      kitmanDesignSystem={true}
+      target="_self"
+      text="league benchmarking test."
+      type="textOnly"
+    />
+  </p>
+  <p>
+    Once a file has been submitted it has to be validated by a representative from the Premier League before it is included in the league-wide benchmark data.
+  </p>
+  <EmotionCssPropInternal
+    __EMOTION_LABEL_PLEASE_DO_NOT_USE__="Component"
+    __EMOTION_TYPE_PLEASE_DO_NOT_USE__="p"
+    css={
+      Object {
+        "color": "#3b4960",
+        "fontWeight": 600,
+      }
+    }
+  >
+    Guide to accepted inputs and formatting:
+  </EmotionCssPropInternal>
+  <React.Fragment>
+    <ForwardRef(Box)
+      sx={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+        }
+      }
+    >
+      <EmotionCssPropInternal
+        __EMOTION_LABEL_PLEASE_DO_NOT_USE__="Component"
+        __EMOTION_TYPE_PLEASE_DO_NOT_USE__="p"
+        css={
+          Object {
+            "color": "#3b4960",
+            "fontWeight": 600,
+            "margin": 0,
+          }
+        }
+      >
+        date_of_test
+      </EmotionCssPropInternal>
+      <ForwardRef(IconButton)
+        onClick={[Function]}
+      >
+        <KitmanIcon
+          fontSize="small"
+          name="ContentCopy"
+        />
+      </ForwardRef(IconButton)>
+    </ForwardRef(Box)>
+    <EmotionCssPropInternal
+      __EMOTION_LABEL_PLEASE_DO_NOT_USE__="Component"
+      __EMOTION_TYPE_PLEASE_DO_NOT_USE__="p"
+      css={
+        Object {
+          "margin": 0,
+        }
+      }
+    >
+      Required.
+    </EmotionCssPropInternal>
+    <p>
+      Format must be one of the following: YYYY-MM-DD, YYYY/MM/DD, DD-MM-YYYY, DD/MM/YYYY
+    </p>
+  </React.Fragment>
+  <React.Fragment>
+    <ForwardRef(Box)
+      sx={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+        }
+      }
+    >
+      <EmotionCssPropInternal
+        __EMOTION_LABEL_PLEASE_DO_NOT_USE__="Component"
+        __EMOTION_TYPE_PLEASE_DO_NOT_USE__="p"
+        css={
+          Object {
+            "color": "#3b4960",
+            "fontWeight": 600,
+            "margin": 0,
+          }
+        }
+      >
+        player_exempt
+      </EmotionCssPropInternal>
+      <ForwardRef(IconButton)
+        onClick={[Function]}
+      >
+        <KitmanIcon
+          fontSize="small"
+          name="ContentCopy"
+        />
+      </ForwardRef(IconButton)>
+    </ForwardRef(Box)>
+    <EmotionCssPropInternal
+      __EMOTION_LABEL_PLEASE_DO_NOT_USE__="Component"
+      __EMOTION_TYPE_PLEASE_DO_NOT_USE__="p"
+      css={
+        Object {
+          "margin": 0,
+        }
+      }
+    >
+      Required.
+    </EmotionCssPropInternal>
+    <EmotionCssPropInternal
+      __EMOTION_LABEL_PLEASE_DO_NOT_USE__="Component"
+      __EMOTION_TYPE_PLEASE_DO_NOT_USE__="p"
+      css={
+        Object {
+          "margin": 0,
+        }
+      }
+    >
+      Case insensitive.
+    </EmotionCssPropInternal>
+    <React.Fragment>
+      <EmotionCssPropInternal
+        __EMOTION_LABEL_PLEASE_DO_NOT_USE__="Component"
+        __EMOTION_TYPE_PLEASE_DO_NOT_USE__="p"
+        css={
+          Object {
+            "margin": 0,
+          }
+        }
+      >
+        Accepted values:
+      </EmotionCssPropInternal>
+      <ul>
+        <li>
+          Yes or No
+        </li>
+        <li>
+          True or False
+        </li>
+        <li>
+          Y or N
+        </li>
+        <li>
+          0 or 1
+        </li>
+      </ul>
+    </React.Fragment>
+  </React.Fragment>
+  <React.Fragment>
+    <ForwardRef(Box)
+      sx={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+        }
+      }
+    >
+      <EmotionCssPropInternal
+        __EMOTION_LABEL_PLEASE_DO_NOT_USE__="Component"
+        __EMOTION_TYPE_PLEASE_DO_NOT_USE__="p"
+        css={
+          Object {
+            "color": "#3b4960",
+            "fontWeight": 600,
+            "margin": 0,
+          }
+        }
+      >
+        player_position
+      </EmotionCssPropInternal>
+      <ForwardRef(IconButton)
+        onClick={[Function]}
+      >
+        <KitmanIcon
+          fontSize="small"
+          name="ContentCopy"
+        />
+      </ForwardRef(IconButton)>
+    </ForwardRef(Box)>
+    <EmotionCssPropInternal
+      __EMOTION_LABEL_PLEASE_DO_NOT_USE__="Component"
+      __EMOTION_TYPE_PLEASE_DO_NOT_USE__="p"
+      css={
+        Object {
+          "margin": 0,
+        }
+      }
+    >
+      Required.
+    </EmotionCssPropInternal>
+    <React.Fragment>
+      <EmotionCssPropInternal
+        __EMOTION_LABEL_PLEASE_DO_NOT_USE__="Component"
+        __EMOTION_TYPE_PLEASE_DO_NOT_USE__="p"
+        css={
+          Object {
+            "margin": 0,
+          }
+        }
+      >
+        Accepted values:
+      </EmotionCssPropInternal>
+      <ul>
+        <li>
+          Position group 1
+        </li>
+        <li>
+          Position group 2
+        </li>
+      </ul>
+    </React.Fragment>
+  </React.Fragment>
+  <React.Fragment>
+    <ForwardRef(Box)
+      sx={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+        }
+      }
+    >
+      <EmotionCssPropInternal
+        __EMOTION_LABEL_PLEASE_DO_NOT_USE__="Component"
+        __EMOTION_TYPE_PLEASE_DO_NOT_USE__="p"
+        css={
+          Object {
+            "color": "#3b4960",
+            "fontWeight": 600,
+            "margin": 0,
+          }
+        }
+      >
+        05m_sprint
+      </EmotionCssPropInternal>
+      <ForwardRef(IconButton)
+        onClick={[Function]}
+      >
+        <KitmanIcon
+          fontSize="small"
+          name="ContentCopy"
+        />
+      </ForwardRef(IconButton)>
+    </ForwardRef(Box)>
+    <p>
+      Unit: minutes
+    </p>
+  </React.Fragment>
+  <React.Fragment>
+    <ForwardRef(Box)
+      sx={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+        }
+      }
+    >
+      <EmotionCssPropInternal
+        __EMOTION_LABEL_PLEASE_DO_NOT_USE__="Component"
+        __EMOTION_TYPE_PLEASE_DO_NOT_USE__="p"
+        css={
+          Object {
+            "color": "#3b4960",
+            "fontWeight": 600,
+            "margin": 0,
+          }
+        }
+      >
+        10m_sprint
+      </EmotionCssPropInternal>
+      <ForwardRef(IconButton)
+        onClick={[Function]}
+      >
+        <KitmanIcon
+          fontSize="small"
+          name="ContentCopy"
+        />
+      </ForwardRef(IconButton)>
+    </ForwardRef(Box)>
+    <p>
+      Unit: minutes
+    </p>
+  </React.Fragment>
+  <React.Fragment>
+    <ForwardRef(Box)
+      sx={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+        }
+      }
+    >
+      <EmotionCssPropInternal
+        __EMOTION_LABEL_PLEASE_DO_NOT_USE__="Component"
+        __EMOTION_TYPE_PLEASE_DO_NOT_USE__="p"
+        css={
+          Object {
+            "color": "#3b4960",
+            "fontWeight": 600,
+            "margin": 0,
+          }
+        }
+      >
+        20m_sprint
+      </EmotionCssPropInternal>
+      <ForwardRef(IconButton)
+        onClick={[Function]}
+      >
+        <KitmanIcon
+          fontSize="small"
+          name="ContentCopy"
+        />
+      </ForwardRef(IconButton)>
+    </ForwardRef(Box)>
+    <p>
+      Unit: minutes
+    </p>
+  </React.Fragment>
+  <React.Fragment>
+    <ForwardRef(Box)
+      sx={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+        }
+      }
+    >
+      <EmotionCssPropInternal
+        __EMOTION_LABEL_PLEASE_DO_NOT_USE__="Component"
+        __EMOTION_TYPE_PLEASE_DO_NOT_USE__="p"
+        css={
+          Object {
+            "color": "#3b4960",
+            "fontWeight": 600,
+            "margin": 0,
+          }
+        }
+      >
+        30m_sprint
+      </EmotionCssPropInternal>
+      <ForwardRef(IconButton)
+        onClick={[Function]}
+      >
+        <KitmanIcon
+          fontSize="small"
+          name="ContentCopy"
+        />
+      </ForwardRef(IconButton)>
+    </ForwardRef(Box)>
+    <p>
+      Unit: minutes
+    </p>
+  </React.Fragment>
+  <React.Fragment>
+    <ForwardRef(Box)
+      sx={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+        }
+      }
+    >
+      <EmotionCssPropInternal
+        __EMOTION_LABEL_PLEASE_DO_NOT_USE__="Component"
+        __EMOTION_TYPE_PLEASE_DO_NOT_USE__="p"
+        css={
+          Object {
+            "color": "#3b4960",
+            "fontWeight": 600,
+            "margin": 0,
+          }
+        }
+      >
+        505_agility_right
+      </EmotionCssPropInternal>
+      <ForwardRef(IconButton)
+        onClick={[Function]}
+      >
+        <KitmanIcon
+          fontSize="small"
+          name="ContentCopy"
+        />
+      </ForwardRef(IconButton)>
+    </ForwardRef(Box)>
+    <p>
+      Unit: seconds
+    </p>
+  </React.Fragment>
+  <React.Fragment>
+    <ForwardRef(Box)
+      sx={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+        }
+      }
+    >
+      <EmotionCssPropInternal
+        __EMOTION_LABEL_PLEASE_DO_NOT_USE__="Component"
+        __EMOTION_TYPE_PLEASE_DO_NOT_USE__="p"
+        css={
+          Object {
+            "color": "#3b4960",
+            "fontWeight": 600,
+            "margin": 0,
+          }
+        }
+      >
+        505_agility_left
+      </EmotionCssPropInternal>
+      <ForwardRef(IconButton)
+        onClick={[Function]}
+      >
+        <KitmanIcon
+          fontSize="small"
+          name="ContentCopy"
+        />
+      </ForwardRef(IconButton)>
+    </ForwardRef(Box)>
+    <p>
+      Unit: seconds
+    </p>
+  </React.Fragment>
+  <React.Fragment>
+    <ForwardRef(Box)
+      sx={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+        }
+      }
+    >
+      <EmotionCssPropInternal
+        __EMOTION_LABEL_PLEASE_DO_NOT_USE__="Component"
+        __EMOTION_TYPE_PLEASE_DO_NOT_USE__="p"
+        css={
+          Object {
+            "color": "#3b4960",
+            "fontWeight": 600,
+            "margin": 0,
+          }
+        }
+      >
+        cmj_optojump
+      </EmotionCssPropInternal>
+      <ForwardRef(IconButton)
+        onClick={[Function]}
+      >
+        <KitmanIcon
+          fontSize="small"
+          name="ContentCopy"
+        />
+      </ForwardRef(IconButton)>
+    </ForwardRef(Box)>
+    <p>
+      Unit: cm
+    </p>
+  </React.Fragment>
+  <React.Fragment>
+    <ForwardRef(Box)
+      sx={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+        }
+      }
+    >
+      <EmotionCssPropInternal
+        __EMOTION_LABEL_PLEASE_DO_NOT_USE__="Component"
+        __EMOTION_TYPE_PLEASE_DO_NOT_USE__="p"
+        css={
+          Object {
+            "color": "#3b4960",
+            "fontWeight": 600,
+            "margin": 0,
+          }
+        }
+      >
+        cmj_vald
+      </EmotionCssPropInternal>
+      <ForwardRef(IconButton)
+        onClick={[Function]}
+      >
+        <KitmanIcon
+          fontSize="small"
+          name="ContentCopy"
+        />
+      </ForwardRef(IconButton)>
+    </ForwardRef(Box)>
+    <p>
+      Unit: cm
+    </p>
+  </React.Fragment>
+  <React.Fragment>
+    <ForwardRef(Box)
+      sx={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+        }
+      }
+    >
+      <EmotionCssPropInternal
+        __EMOTION_LABEL_PLEASE_DO_NOT_USE__="Component"
+        __EMOTION_TYPE_PLEASE_DO_NOT_USE__="p"
+        css={
+          Object {
+            "color": "#3b4960",
+            "fontWeight": 600,
+            "margin": 0,
+          }
+        }
+      >
+        cmj_flight_time
+      </EmotionCssPropInternal>
+      <ForwardRef(IconButton)
+        onClick={[Function]}
+      >
+        <KitmanIcon
+          fontSize="small"
+          name="ContentCopy"
+        />
+      </ForwardRef(IconButton)>
+    </ForwardRef(Box)>
+    <p>
+      Unit: seconds
+    </p>
+  </React.Fragment>
+  <React.Fragment>
+    <ForwardRef(Box)
+      sx={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+        }
+      }
+    >
+      <EmotionCssPropInternal
+        __EMOTION_LABEL_PLEASE_DO_NOT_USE__="Component"
+        __EMOTION_TYPE_PLEASE_DO_NOT_USE__="p"
+        css={
+          Object {
+            "color": "#3b4960",
+            "fontWeight": 600,
+            "margin": 0,
+          }
+        }
+      >
+        yo_yo_intermittent_recovery_test_level_1
+      </EmotionCssPropInternal>
+      <ForwardRef(IconButton)
+        onClick={[Function]}
+      >
+        <KitmanIcon
+          fontSize="small"
+          name="ContentCopy"
+        />
+      </ForwardRef(IconButton)>
+    </ForwardRef(Box)>
+    <p>
+      Unit: minutes
+    </p>
+  </React.Fragment>
+  <React.Fragment>
+    <ForwardRef(Box)
+      sx={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+        }
+      }
+    >
+      <EmotionCssPropInternal
+        __EMOTION_LABEL_PLEASE_DO_NOT_USE__="Component"
+        __EMOTION_TYPE_PLEASE_DO_NOT_USE__="p"
+        css={
+          Object {
+            "color": "#3b4960",
+            "fontWeight": 600,
+            "margin": 0,
+          }
+        }
+      >
+        yo_yo_intermittent_recovery_test_level_2
+      </EmotionCssPropInternal>
+      <ForwardRef(IconButton)
+        onClick={[Function]}
+      >
+        <KitmanIcon
+          fontSize="small"
+          name="ContentCopy"
+        />
+      </ForwardRef(IconButton)>
+    </ForwardRef(Box)>
+    <p>
+      Unit: minutes
+    </p>
+  </React.Fragment>
+  <React.Fragment>
+    <ForwardRef(Box)
+      sx={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+        }
+      }
+    >
+      <EmotionCssPropInternal
+        __EMOTION_LABEL_PLEASE_DO_NOT_USE__="Component"
+        __EMOTION_TYPE_PLEASE_DO_NOT_USE__="p"
+        css={
+          Object {
+            "color": "#3b4960",
+            "fontWeight": 600,
+            "margin": 0,
+          }
+        }
+      >
+        agility_arrow_head_left
+      </EmotionCssPropInternal>
+      <ForwardRef(IconButton)
+        onClick={[Function]}
+      >
+        <KitmanIcon
+          fontSize="small"
+          name="ContentCopy"
+        />
+      </ForwardRef(IconButton)>
+    </ForwardRef(Box)>
+    <p>
+      Unit: seconds
+    </p>
+  </React.Fragment>
+  <React.Fragment>
+    <ForwardRef(Box)
+      sx={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+        }
+      }
+    >
+      <EmotionCssPropInternal
+        __EMOTION_LABEL_PLEASE_DO_NOT_USE__="Component"
+        __EMOTION_TYPE_PLEASE_DO_NOT_USE__="p"
+        css={
+          Object {
+            "color": "#3b4960",
+            "fontWeight": 600,
+            "margin": 0,
+          }
+        }
+      >
+        agility_arrow_head_right
+      </EmotionCssPropInternal>
+      <ForwardRef(IconButton)
+        onClick={[Function]}
+      >
+        <KitmanIcon
+          fontSize="small"
+          name="ContentCopy"
+        />
+      </ForwardRef(IconButton)>
+    </ForwardRef(Box)>
+    <p>
+      Unit: seconds
+    </p>
+  </React.Fragment>
+</EmotionCssPropInternal>
+`;

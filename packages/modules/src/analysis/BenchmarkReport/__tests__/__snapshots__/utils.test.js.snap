@@ -1,0 +1,104 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`utils getColumnsData must match the snapshot 1`] = `
+Array [
+  Object {
+    "field": "athlete_name",
+    "headerName": "Athlete name",
+    "width": 180,
+  },
+  Object {
+    "field": "age_group",
+    "headerName": "Age group",
+    "sortComparator": [Function],
+    "width": 102,
+  },
+  Object {
+    "field": "test",
+    "headerName": "Test",
+    "width": 180,
+  },
+  Object {
+    "field": "label",
+    "headerName": "Results",
+  },
+  Object {
+    "field": "athletes",
+    "headerName": "#Athletes",
+  },
+  Object {
+    "field": "results",
+    "headerName": "#Results",
+  },
+  Object {
+    "field": "mean",
+    "headerName": "Mean",
+  },
+  Object {
+    "field": "min",
+    "headerName": "Minimum",
+  },
+  Object {
+    "field": "max",
+    "headerName": "Maximum",
+  },
+  Object {
+    "field": "standard_deviation",
+    "headerName": "Standard deviation",
+    "width": 150,
+  },
+  Object {
+    "field": "age_group_on_day_of_test",
+    "headerName": "Age group (at most recent test date)",
+    "renderHeader": [Function],
+    "width": 300,
+  },
+  Object {
+    "field": "most_recent_test_result",
+    "headerName": "Most recent result",
+    "renderHeader": [Function],
+    "width": 200,
+  },
+  Object {
+    "field": "z_score_club",
+    "headerName": "Club z-score",
+    "renderHeader": [Function],
+    "width": 150,
+  },
+  Object {
+    "field": "z_score_national",
+    "headerName": "National z-score",
+    "renderHeader": [Function],
+    "width": 180,
+  },
+]
+`;
+
+exports[`utils renderToolTip 1`] = `
+<React.Fragment>
+  <EmotionCssPropInternal
+    __EMOTION_TYPE_PLEASE_DO_NOT_USE__="span"
+    css={
+      Object {
+        "map": "/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInV0aWxzLmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQWdCTSIsImZpbGUiOiJ1dGlscy5qcyIsInNvdXJjZXNDb250ZW50IjpbIi8vIEBmbG93XG5pbXBvcnQgeyB0eXBlIE5vZGUgfSBmcm9tICdyZWFjdCc7XG5pbXBvcnQgX2lzRXF1YWwgZnJvbSAnbG9kYXNoL2lzRXF1YWwnO1xuXG5pbXBvcnQgeyBERUZBVUxUX0JJT19CQU5EX1JBTkdFIH0gZnJvbSAnQGtpdG1hbi9tb2R1bGVzL3NyYy9hbmFseXNpcy9CZW5jaG1hcmtSZXBvcnQvY29uc3RzJztcbmltcG9ydCBpMThuIGZyb20gJ0BraXRtYW4vY29tbW9uL3NyYy91dGlscy9pMThuJztcbmltcG9ydCB7IFRvb2x0aXAsIEljb25CdXR0b24gfSBmcm9tICdAa2l0bWFuL3BsYXlib29rL2NvbXBvbmVudHMnO1xuaW1wb3J0IHsgS0lUTUFOX0lDT05fTkFNRVMsIEtpdG1hbkljb24gfSBmcm9tICdAa2l0bWFuL3BsYXlib29rL2ljb25zJztcblxuZXhwb3J0IGNvbnN0IGdldEhhc0RlZmF1bHRCaW9CYW5kUmFuZ2UgPSAoZmlsdGVyOiBBcnJheTxudW1iZXI+KSA9PlxuICBfaXNFcXVhbChmaWx0ZXIsIERFRkFVTFRfQklPX0JBTkRfUkFOR0UpO1xuXG5leHBvcnQgY29uc3QgcmVuZGVyVG9vbFRpcCA9IChjb2x1bW5UaXRsZTogc3RyaW5nLCB0b29sdGlwVGV4dDogc3RyaW5nKSA9PiAoXG4gIDw+XG4gICAgPHNwYW5cbiAgICAgIC8vIHJlcGxpY2F0aW5nIGNvbHVtbkhlYWRlclRpdGxlIG11aSBzdHlsaW5nXG4gICAgICBjc3M9e3tcbiAgICAgICAgdGV4dE92ZXJmbG93OiAnZWxsaXBzaXMnLFxuICAgICAgICBvdmVyZmxvdzogJ2hpZGRlbicsXG4gICAgICAgIHdoaXRlU3BhY2U6ICdub3dyYXAnLFxuICAgICAgICBmb250V2VpZ2h0OiA1MDAsXG4gICAgICB9fVxuICAgID5cbiAgICAgIHtjb2x1bW5UaXRsZX1cbiAgICA8L3NwYW4+XG4gICAgPFRvb2x0aXAgdGl0bGU9e3Rvb2x0aXBUZXh0fSBhcnJvdz5cbiAgICAgIDxJY29uQnV0dG9uPlxuICAgICAgICA8S2l0bWFuSWNvbiBuYW1lPXtLSVRNQU5fSUNPTl9OQU1FUy5JbmZvT3V0bGluZWR9IGZvbnRTaXplPVwic21hbGxcIiAvPlxuICAgICAgPC9JY29uQnV0dG9uPlxuICAgIDwvVG9vbHRpcD5cbiAgPC8+XG4pO1xuXG5leHBvcnQgY29uc3QgZ2V0Q29sdW1uc0RhdGEgPSAoKTogKEFycmF5PHtcbiAgZmllbGQ6IHN0cmluZyxcbiAgaGVhZGVyTmFtZTogc3RyaW5nLFxuICB3aWR0aD86IG51bWJlcixcbiAgcmVuZGVySGVhZGVyPzogKCkgPT4gTm9kZSxcbn0+KSA9PiBbXG4gIHtcbiAgICBmaWVsZDogJ2F0aGxldGVfbmFtZScsXG4gICAgaGVhZGVyTmFtZTogaTE4bi50KCdBdGhsZXRlIG5hbWUnKSxcbiAgICB3aWR0aDogMTgwLFxuICB9LFxuICB7XG4gICAgZmllbGQ6ICdhZ2VfZ3JvdXAnLFxuICAgIGhlYWRlck5hbWU6IGkxOG4udCgnQWdlIGdyb3VwJyksXG4gICAgc29ydENvbXBhcmF0b3I6IChhLCBiKSA9PiB7XG4gICAgICBjb25zdCBnZXROdW1lcmljQWdlR3JvdXAgPSAoZ3JvdXA6IHN0cmluZykgPT5cbiAgICAgICAgTnVtYmVyKFxuICAgICAgICAgIGdyb3VwXG4gICAgICAgICAgICAuc3BsaXQoJycpXG4gICAgICAgICAgICAuZmlsdGVyKChjaGFyKSA9PiAhTnVtYmVyLmlzTmFOKE51bWJlci5wYXJzZUludChjaGFyLCAxMCkpKVxuICAgICAgICAgICAgLmpvaW4oJycpXG4gICAgICAgICk7XG4gICAgICByZXR1cm4gZ2V0TnVtZXJpY0FnZUdyb3VwKGEpIC0gZ2V0TnVtZXJpY0FnZUdyb3VwKGIpO1xuICAgIH0sXG4gICAgd2lkdGg6IDEwMixcbiAgfSxcbiAge1xuICAgIGZpZWxkOiAndGVzdCcsXG4gICAgaGVhZGVyTmFtZTogaTE4bi50KCdUZXN0JyksXG4gICAgd2lkdGg6IDE4MCxcbiAgfSxcbiAge1xuICAgIGZpZWxkOiAnbGFiZWwnLFxuICAgIGhlYWRlck5hbWU6IGkxOG4udCgnUmVzdWx0cycpLFxuICB9LFxuICB7XG4gICAgZmllbGQ6ICdhdGhsZXRlcycsXG4gICAgaGVhZGVyTmFtZTogYCMke2kxOG4udCgnQXRobGV0ZXMnKX1gLFxuICB9LFxuICB7XG4gICAgZmllbGQ6ICdyZXN1bHRzJyxcbiAgICBoZWFkZXJOYW1lOiBgIyR7aTE4bi50KCdSZXN1bHRzJyl9YCxcbiAgfSxcbiAge1xuICAgIGZpZWxkOiAnbWVhbicsXG4gICAgaGVhZGVyTmFtZTogaTE4bi50KCdNZWFuJyksXG4gIH0sXG4gIHtcbiAgICBmaWVsZDogJ21pbicsXG4gICAgaGVhZGVyTmFtZTogaTE4bi50KCdNaW5pbXVtJyksXG4gIH0sXG4gIHtcbiAgICBmaWVsZDogJ21heCcsXG4gICAgaGVhZGVyTmFtZTogaTE4bi50KCdNYXhpbXVtJyksXG4gIH0sXG4gIHtcbiAgICBmaWVsZDogJ3N0YW5kYXJkX2RldmlhdGlvbicsXG4gICAgaGVhZGVyTmFtZTogaTE4bi50KCdTdGFuZGFyZCBkZXZpYXRpb24nKSxcbiAgICB3aWR0aDogMTUwLFxuICB9LFxuICB7XG4gICAgZmllbGQ6ICdhZ2VfZ3JvdXBfb25fZGF5X29mX3Rlc3QnLFxuICAgIGhlYWRlck5hbWU6IGkxOG4udCgnQWdlIGdyb3VwIChhdCBtb3N0IHJlY2VudCB0ZXN0IGRhdGUpJyksXG4gICAgd2lkdGg6IDMwMCxcbiAgICByZW5kZXJIZWFkZXI6ICgpID0+XG4gICAgICByZW5kZXJUb29sVGlwKFxuICAgICAgICBpMThuLnQoJ0FnZSBncm91cCAoYXQgbW9zdCByZWNlbnQgdGVzdCBkYXRlKScpLFxuICAgICAgICBpMThuLnQoXG4gICAgICAgICAgJ01vc3QgcmVjZW50IHRlc3QgYXRobGV0ZSBoYWQgd2l0aGluIHRoZSBzZWxlY3RlZCBzZWFzb24ocykgYW5kIHRlc3Qgd2luZG93cydcbiAgICAgICAgKVxuICAgICAgKSxcbiAgfSxcbiAge1xuICAgIGZpZWxkOiAnbW9zdF9yZWNlbnRfdGVzdF9yZXN1bHQnLFxuICAgIGhlYWRlck5hbWU6IGkxOG4udCgnTW9zdCByZWNlbnQgcmVzdWx0JyksXG4gICAgd2lkdGg6IDIwMCxcbiAgICByZW5kZXJIZWFkZXI6ICgpID0+XG4gICAgICByZW5kZXJUb29sVGlwKFxuICAgICAgICBpMThuLnQoJ01vc3QgcmVjZW50IHJlc3VsdCcpLFxuICAgICAgICBpMThuLnQoXG4gICAgICAgICAgJ01vc3QgcmVjZW50IHJlc3VsdCBhdGhsZXRlIGhhZCB3aXRoaW4gdGhlIHNlbGVjdGVkIHNlYXNvbihzKSBhbmQgdGVzdCB3aW5kb3dzJ1xuICAgICAgICApXG4gICAgICApLFxuICB9LFxuICB7XG4gICAgZmllbGQ6ICd6X3Njb3JlX2NsdWInLFxuICAgIGhlYWRlck5hbWU6IGkxOG4udCgnQ2x1YiB6LXNjb3JlJyksXG4gICAgd2lkdGg6IDE1MCxcbiAgICByZW5kZXJIZWFkZXI6ICgpID0+XG4gICAgICByZW5kZXJUb29sVGlwKFxuICAgICAgICBpMThuLnQoJ0NsdWIgei1zY29yZScpLFxuICAgICAgICBpMThuLnQoXG4gICAgICAgICAgJ0NsdWIgei1zY29yZSBpcyBjYWxjdWxhdGVkIGJhc2VkIG9uIHRoZSBNZWFuIG9mIGFnZSBncm91cCB0aGF0IG1hdGNoZXMgdGhlIGF0aGxldGVzIGFnZSBncm91cCBhdCB0aGUgdGltZSBvZiB0aGUgdGVzdCdcbiAgICAgICAgKVxuICAgICAgKSxcbiAgfSxcbiAge1xuICAgIGZpZWxkOiAnel9zY29yZV9uYXRpb25hbCcsXG4gICAgaGVhZGVyTmFtZTogaTE4bi50KCdOYXRpb25hbCB6LXNjb3JlJyksXG4gICAgd2lkdGg6IDE4MCxcbiAgICByZW5kZXJIZWFkZXI6ICgpID0+XG4gICAgICByZW5kZXJUb29sVGlwKFxuICAgICAgICBpMThuLnQoJ05hdGlvbmFsIHotc2NvcmUnKSxcbiAgICAgICAgaTE4bi50KFxuICAgICAgICAgICdOYXRpb25hbCB6LXNjb3JlIGlzIGNhbGN1bGF0ZWQgYmFzZWQgb24gdGhlIE1lYW4gb2YgYWdlIGdyb3VwIHRoYXQgbWF0Y2hlcyB0aGUgYXRobGV0ZXMgYWdlIGdyb3VwIGF0IHRoZSB0aW1lIG9mIHRoZSB0ZXN0J1xuICAgICAgICApXG4gICAgICApLFxuICB9LFxuXTtcbiJdfQ== */",
+        "name": "1sdjsut-renderToolTip",
+        "styles": "text-overflow:ellipsis;overflow:hidden;white-space:nowrap;font-weight:500;label:renderToolTip;",
+        "toString": [Function],
+      }
+    }
+  >
+    Test title
+  </EmotionCssPropInternal>
+  <ForwardRef(Tooltip)
+    arrow={true}
+    title="This is tooltip text"
+  >
+    <ForwardRef(IconButton)>
+      <KitmanIcon
+        fontSize="small"
+        name="InfoOutlined"
+      />
+    </ForwardRef(IconButton)>
+  </ForwardRef(Tooltip)>
+</React.Fragment>
+`;

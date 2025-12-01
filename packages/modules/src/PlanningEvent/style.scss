@@ -1,0 +1,981 @@
+.planningEvent {
+  background-color: $colour-background;
+  min-height: calc(100vh - 50px);
+
+  .planningEventHeader {
+    background-color: $colour-p06;
+    padding: 1rem 1.5rem 0.3125rem;
+
+    &__head {
+      align-items: flex-start;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__title {
+      color: $colour-grey-300;
+      font-size: 24px;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    &__actions {
+      display: flex;
+
+      button {
+        margin-left: 4px;
+      }
+    }
+
+    &__eventTime {
+      color: $colour-grey-300;
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    &__eventDescription {
+      color: $colour-grey-300;
+      max-width: 488px;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 20px;
+    }
+
+    &__metaInformations {
+      margin-top: 2px;
+      display: inline-block;
+    }
+
+    &__metaInformation {
+      display: inline-block;
+      margin-right: 25px;
+      margin-top: 8px;
+
+      h4 {
+        color: $colour-grey-100;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 16px;
+        margin-bottom: 4px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      p {
+        color: $colour-grey-300;
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+
+    &__attachmentIcons {
+      margin-right: 5px;
+      color: $colour-grey-300;
+      font-size: 16px;
+    }
+
+    &__attachments {
+      color: $colour-grey-200;
+      font-weight: 400;
+
+      &:visited,
+      &:hover,
+      &:focus,
+      &:active {
+        color: $colour-grey-300;
+      }
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &__attachmentList {
+      display: flex;
+      overflow-x: scroll;
+      white-space: nowrap;
+      width: 95vw;
+      margin-bottom: 5px;
+    }
+
+    &__attachmentMargin {
+      margin: 5px;
+    }
+  }
+
+  .rc-tabs-bar {
+    background-color: $colour-p06;
+    padding: 0 24px;
+  }
+
+  .collectionPanelBtn {
+    left: 0;
+    margin-bottom: 20px;
+  }
+
+  .collectionChannelsBtn {
+    margin-left: auto;
+    right: 0;
+  }
+
+  .rc-tabs-tabpane {
+    background-color: transparent;
+    border: 0;
+    overflow: visible;
+    padding: 0;
+  }
+
+  .collectionsPanelOpen {
+    margin-left: 369px;
+  }
+
+  .planningEventGameActivitiesTab,
+  .gameActivitiesTab,
+  .planningEventGridTab {
+    background: $colour-p06;
+    border: 1px solid $colour-s13;
+    -webkit-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+    transition-property: margin-left;
+
+    &__periodsForm {
+      display: flex;
+    }
+
+    &__periodsFormField {
+      margin-right: 10px;
+    }
+
+    &__periodsFormFormation {
+      width: 120px;
+    }
+
+    &__header {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__assessment {
+      align-items: flex-end;
+      text-align: left;
+
+      &--participationLevels {
+        font-size: 12px;
+        font-weight: 300;
+        display: block;
+      }
+    }
+
+    &__expandable {
+      align-items: center;
+      cursor: pointer;
+      display: flex;
+      height: 32px;
+      width: 100%;
+    }
+
+    &__title {
+      color: $colour-grey-300;
+      font-size: 20px;
+      font-weight: 600;
+      margin: 0;
+
+      span {
+        font-size: 14px;
+        font-weight: 400;
+      }
+
+      button {
+        span {
+          color: $colour-grey-300;
+          font-size: 24px;
+          font-weight: 600;
+          margin: 0;
+        }
+      }
+
+      &--sessionPlanning {
+        h3 {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &__actions {
+      display: flex;
+
+      button {
+        margin-left: 4px;
+      }
+    }
+
+    &__dropdownMenuBtn {
+      background: $colour-neutral-200;
+      border: 0;
+      border-radius: 3px;
+      color: $colour-grey-200;
+      font-size: 18px;
+      height: 32px;
+      width: 36px;
+
+      &:hover {
+        color: $colour-s28;
+        background-color: $colour-neutral-300;
+      }
+    }
+
+    &__filters {
+      margin-top: 24px;
+      position: relative;
+      z-index: 4;
+    }
+
+    &__filter {
+      display: inline-block;
+      margin-right: 8px;
+      width: 200px;
+    }
+
+    &__grid {
+      margin-top: 27px;
+
+      tbody {
+        tr {
+          &:first-child {
+            td {
+              padding-top: 4px;
+            }
+          }
+        }
+      }
+
+      .dataGrid__loading {
+        margin-top: 80px;
+      }
+
+      .dataGrid__cell {
+        overflow: visible;
+        &:nth-of-type(4) {
+          max-width: 260px;
+          min-width: 260px;
+        }
+
+        .InputNumeric__input {
+          background-color: $colour-neutral-200;
+        }
+      }
+    }
+
+    .athlete {
+      &__row {
+        &--selected {
+          .dataGrid__cell,
+          .dataGrid__fillerCell {
+            background-color: $colour-blue-50;
+          }
+        }
+      }
+    }
+
+    &__dropdownScore {
+      width: 85px;
+      z-index: 1;
+    }
+
+    &__headerCell {
+      max-width: 200px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+
+      button {
+        background: none;
+        border: 0;
+        color: inherit;
+        font-size: inherit;
+        font-weight: inherit;
+        text-align: left;
+      }
+    }
+
+    &__headerCellMenuDisplayer {
+      cursor: default;
+      height: 100%;
+      max-width: 200px;
+      overflow: hidden;
+      padding: 0;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      width: 100%;
+    }
+
+    &__headerCellMenuTrigger {
+      opacity: 0;
+      padding-left: 16px;
+      position: absolute;
+      right: 0;
+      top: 4px;
+      visibility: hidden;
+      z-index: 1;
+
+      &--visible {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    &__athleteCell {
+      align-items: center;
+      display: flex;
+
+      div:first-child {
+        margin-right: 8px;
+      }
+    }
+
+    &__invalidCell {
+      &--blank {
+        height: 20px;
+      }
+
+      &--error {
+        color: $red-100;
+        font-size: 12px;
+        font-weight: 600;
+      }
+    }
+
+    &--collectionsPanelOpen {
+      margin-left: 369px;
+    }
+  }
+
+  .planningEventCollectionTab {
+    &__forbiddenContent {
+      display: flex;
+      height: 468px;
+    }
+
+    &__forbiddenContentMessage {
+      color: $colour-grey-300;
+      margin-top: 182px;
+      margin-left: 24px;
+      width: 320px;
+
+      &--title {
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 40px;
+      }
+
+      &--description {
+        margin-top: 24px;
+      }
+
+      &--image {
+        margin: auto;
+      }
+    }
+  }
+
+  .planningEventImportedDataTab {
+    background: $colour-p06;
+    padding: 24px;
+
+    &__actionsDropdownButton {
+      color: $colour-p01;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    &__noImportMessage,
+    &__noAthleteMessage {
+      background-color: $colour-s23;
+      border-radius: 4px;
+      margin-top: 30px;
+      padding: 15px;
+      text-align: center;
+
+      p {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  .planningEventImportTable {
+    &__inProgress {
+      color: $colour-s08;
+    }
+
+    &__complete {
+      color: $colour-s02;
+      font-size: 25px;
+    }
+
+    &__failed {
+      color: $colour-s12;
+      font-size: 25px;
+    }
+
+    &__reloadLink {
+      color: $colour-p01;
+      font-size: 14px;
+
+      &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .collectionChannelsForm {
+    padding: 0 24px;
+
+    &__rpeCollectionSectionTitle {
+      font-size: 14px;
+      font-weight: normal;
+      margin-bottom: 20px;
+      margin-top: -17px;
+    }
+
+    &__checkbox {
+      margin-bottom: 10px;
+    }
+
+    &__athleteSection {
+      &--sendNotification {
+        align-items: center;
+        background-color: $colour-neutral-100;
+        border-radius: 3px;
+        color: $colour-grey-300;
+        display: flex;
+        font-size: 14px;
+        height: 48px;
+        justify-content: space-between;
+        margin-bottom: 24px;
+        padding: 16px;
+      }
+
+      &--checkbox {
+        margin: 10px 0 6px;
+        font-weight: 400;
+      }
+
+      button {
+        margin-left: 55%;
+      }
+
+      &--scheduledNotification {
+        align-items: center;
+        background-color: $colour-neutral-100;
+        border-radius: 3px;
+        color: $colour-grey-300;
+        display: flex;
+        font-size: 14px;
+        height: 48px;
+        justify-content: space-between;
+        padding: 16px;
+        margin: 8px 0;
+      }
+
+      &--title {
+        color: $colour-grey-300;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 18px;
+      }
+
+      &--subTitle {
+        color: $colour-grey-100;
+        font-size: 12px;
+        margin-top: 4px;
+      }
+
+      input {
+        margin-left: 55%;
+      }
+    }
+
+    &__lastSentNotification {
+      color: $colour-grey-100;
+      font-size: 12px;
+    }
+
+    &__kioskSection {
+      border-top: 1px solid $colour-s14;
+
+      &--title {
+        color: $colour-grey-300;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 18px;
+        margin-top: 24px;
+      }
+
+      &--subTitle {
+        color: $colour-grey-100;
+        font-size: 12px;
+        margin-top: 4px;
+      }
+
+      &--checkbox {
+        margin: 10px 0 6px;
+      }
+
+      &--options {
+        background-color: $colour-neutral-100;
+        border-radius: 3px;
+        display: flex;
+        justify-content: space-between;
+        padding: 16px;
+      }
+    }
+
+    &__kioskTypeChoice {
+      align-items: center;
+      display: flex;
+
+      img {
+        margin-right: 16px;
+      }
+    }
+  }
+
+  .gameActivitiesGrid {
+    margin-top: 20px;
+
+    &__moreMenu {
+      margin-left: 10px;
+      padding-left: 10px;
+      padding-right: 10px;
+      cursor: pointer;
+    }
+  }
+}
+
+.session_type {
+  display: inline-block;
+}
+
+.planningEventBulkEditTooltip {
+  &__content {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__label {
+    align-self: flex-start;
+    display: flex;
+    font-weight: 600;
+    margin-right: 15px;
+    margin-top: 6px;
+  }
+
+  &__dropdown {
+    width: 150px;
+  }
+
+  &__input {
+    width: 150px;
+
+    &--error {
+      color: $red-100;
+      font-size: 12px;
+      font-weight: 600;
+    }
+  }
+
+  &__toggle {
+    text-align: right;
+    width: 100px;
+  }
+
+  &__bulkCTA {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 15px;
+
+    i {
+      font-size: 10px;
+    }
+  }
+}
+
+.collectionSidePanel {
+  .slidingPanel {
+    height: calc(100% - 72px) !important;
+  }
+
+  &__list {
+    height: inherit;
+    overflow-y: scroll;
+    list-style: none;
+    padding: 0 0 0 0px;
+    background-color: white;
+  }
+
+  &__headerItem {
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    height: 36px;
+
+    &__title {
+      display: flex;
+      align-items: center;
+      padding-left: 12px;
+    }
+
+    &--addAssessment {
+      float: right;
+      height: 20px;
+    }
+  }
+
+  &__item {
+    border-bottom: 1px solid $colour-neutral-300;
+    cursor: pointer;
+    height: 44px;
+    padding: 12px;
+
+    &--locked {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &--loading {
+      display: flex;
+      justify-content: center;
+      border-bottom: none;
+    }
+
+    &--icon {
+      font-size: 20px;
+    }
+
+    &:hover {
+      background-color: $colour-blue-100-10-percent;
+    }
+  }
+}
+
+.planningEventStatusSidePanel {
+  &__calculation {
+    margin-top: 21px;
+
+    .dropdown {
+      max-width: 150px;
+    }
+  }
+
+  &__periodSelector {
+    margin-top: 21px;
+
+    .row {
+      flex-direction: column;
+    }
+
+    &--disabled {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+
+    &--hidden {
+      display: none;
+    }
+
+    .lastXDaysSelector {
+      &__options {
+        margin-left: 15px;
+        width: 158px;
+
+        .radioList {
+          .radioList__item {
+            padding-left: 10px;
+          }
+        }
+      }
+
+      &.lastXDaysSelector--pushdown {
+        display: flex;
+        margin: 24px;
+      }
+    }
+  }
+
+  &__duplicateColumnError {
+    color: $colour-s11;
+    margin-left: 25px;
+    margin-top: 25px;
+  }
+
+  .slidingPanel {
+    .dropdown {
+      margin: 0 24px;
+      width: 410px;
+    }
+
+    .slidingPanelActions {
+      justify-content: flex-between;
+    }
+  }
+}
+
+.commentsSidePanel {
+  color: $colour-grey-300;
+
+  &__content {
+    padding: 0 24px;
+  }
+
+  &__athleteNavigation {
+    margin-bottom: 8px;
+  }
+
+  &__noComments {
+    margin-top: 8px;
+  }
+
+  &__comment {
+    margin-top: 0;
+  }
+
+  &__commentDetail {
+    color: $colour-grey-100;
+    margin-bottom: 0;
+  }
+
+  &__presentationViewComments {
+    .commentsSidePanel__commentBody {
+      margin-top: 4px;
+    }
+  }
+
+  &__editionViewComments {
+    .commentsSidePanel__commentBody {
+      margin-top: 16px;
+    }
+  }
+}
+
+.assessmentsColumnPanel {
+  &__content {
+    margin: 16px;
+  }
+
+  &__calculation {
+    margin-top: 16px;
+  }
+
+  &__periodSelector {
+    margin-top: 16px;
+  }
+}
+
+.reorderColumnModal {
+  &__items {
+    margin-bottom: 5px;
+    max-height: calc(100vh - 280px);
+    overflow: scroll;
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .reorderColumnModal__item {
+      align-items: center;
+      cursor: row-resize;
+      display: flex;
+      margin-bottom: 2px;
+      padding: 12px 24px;
+
+      &--header {
+        font-weight: 600;
+      }
+
+      &:nth-of-type(even) {
+        background-color: $colour-s23;
+      }
+
+      &:nth-of-type(odd) {
+        background-color: $colour-s13;
+      }
+
+      &.reorderColumnModal__draggable {
+        background-color: $colour-s14;
+      }
+
+      .icon-reorder-vertical {
+        color: $colour-grey-50;
+        font-size: 20px;
+        margin-right: 24px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $breakpoint-desktop) {
+  .planningEvent {
+    .planningEventGridTab,
+    .planningEventHeader {
+      &__actions {
+        &--desktop {
+          display: none;
+        }
+      }
+    }
+
+    .gameActivitiesTab,
+    .planningEventGridTab {
+      &__actions,
+      &__filters {
+        text-align: right;
+
+        &--desktop {
+          display: none;
+        }
+      }
+
+      &__filtersPanel {
+        padding-left: 25px;
+        padding-right: 25px;
+
+        .planning__eventFiltersDropdown {
+          display: block;
+          margin-bottom: 10px;
+          width: 100%;
+        }
+      }
+
+      &__filter {
+        margin-right: 0;
+        margin-top: 8px;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $breakpoint-desktop) {
+  .planningEvent {
+    .gameActivitiesTab,
+    .planningEventGridTab {
+      &__actions,
+      &__filters {
+        &--mobile {
+          display: none;
+        }
+      }
+
+      &__filtersPanel {
+        padding-left: 25px;
+        padding-right: 25px;
+
+        .planning__eventFiltersDropdown {
+          display: block;
+          margin-bottom: 10px;
+          width: 100%;
+        }
+      }
+    }
+
+    .planningEventGridTab,
+    .planningEventHeader {
+      &__actions {
+        &--mobile {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media print {
+  body,
+  html,
+  .dataGrid {
+    width: 100%;
+    height: 100%;
+    margin-top: 0%;
+    display: inline;
+  }
+
+  div.planningTabLayoutHeader,
+  div.planningTabLayoutFilters,
+  div.rc-tabs-bar,
+  div.planningEventHeader__head div.planningEventHeader__actions,
+  span.tooltipMenu__text,
+  .tooltipMenu,
+  div.dataGrid__loading,
+  i.icon-chevron-down {
+    display: none;
+    opacity: 0;
+  }
+
+  div.planningEventGridTab__grid div.dataGrid {
+    max-height: unset !important;
+    margin: 0% !important;
+  }
+  .planningEventGridTab__grid {
+    margin: 0;
+    padding: 0;
+    margin-left: -3%;
+  }
+  div#planningEventContainer {
+    margin-top: -3%;
+  }
+  .planningEventGridTab__grid .kitmanReactSelect__control {
+    background-color: white;
+  }
+  .planningEvent header.planningEventHeader,
+  .rc-tabs-tabpane.rc-tabs-tabpane-active,
+  .rc-tabs-content .planningTabLayoutTab {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  //Override browser default print modal settings
+  @page {
+    margin: 0%;
+    scale: 106;
+  }
+}
+
+// Include coloured bullet points in print
+.athlete__row {
+  &:nth-child(even) {
+    background: $colour-s13;
+
+    @media print {
+      -webkit-print-color-adjust: exact; // Chrome/Safari
+      print-color-adjust: exact; // Firefox
+      background: transparentize($colour-s13, 0.1) !important;
+    }
+  }
+
+  &:nth-child(odd) {
+    background: $colour-s23;
+
+    @media print {
+      -webkit-print-color-adjust: exact; // Chrome/Safari
+      print-color-adjust: exact; // Firefox
+      background: transparentize($colour-s23, 0.1) !important;
+    }
+  }
+}
+
+// Session Download/Share
+@import './src/components/Download/style';
+@import './src/components/Download/Template/TemplateHeader/style';
+@import './src/components/Download/Template/AvailableAthletes/style';
+@import './src/components/Download/Template/Activities/style';
+@import './src/components/Download/Template/Athletes/style';

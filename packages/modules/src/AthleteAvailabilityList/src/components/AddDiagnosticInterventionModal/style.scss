@@ -1,0 +1,123 @@
+.athleteAvailabilityDiagnosticModal {
+  padding-bottom: 107px;
+
+  &__optionalText {
+    color: $colour-s16;
+    float: right;
+    margin-right: 5px;
+    margin-top: 8px;
+  }
+
+  &__row {
+    &--medicationDetails {
+      & > div {
+        margin: 0 5px;
+      }
+    }
+
+    &--covidTestDetails,
+    &--medicationDetails,
+    &--typeDate {
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      margin-bottom: 20px;
+
+      & > div {
+        flex: 1;
+
+        &:first-child {
+          margin-left: 0;
+          margin-right: 5px;
+        }
+
+        &:last-child {
+          margin-left: 5px;
+          margin-right: 0;
+        }
+      }
+    }
+
+    &--covidTestDetails {
+      align-items: flex-start;
+      margin-bottom: 30px;
+
+      .km-form-label {
+        margin-top: 0;
+      }
+    }
+
+    &--covidTestDate {
+      margin-bottom: 20px;
+
+      & > div {
+        width: 33%;
+      }
+    }
+
+    &--attachments {
+      flex-direction: column;
+      margin-top: 20px;
+      position: relative;
+    }
+
+    &--medicationNote {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__relevantIssueContainer {
+    margin-bottom: 20px;
+  }
+
+  &__issueContainer {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -5px;
+  }
+
+  &__relevantIssue {
+    margin-bottom: 10px;
+    overflow: hidden;
+    padding: 0 5px;
+    width: 50%;
+  }
+
+  &__emptyText {
+    color: $colour-s16;
+    padding: 0 5px;
+    text-align: center;
+  }
+
+  &__issueCheckboxContainer {
+    display: inline-block;
+    float: left;
+    margin-right: 10px;
+  }
+
+  &__issueDate {
+    color: $colour-s16;
+    line-height: 22px;
+  }
+
+  &__issueName {
+    line-height: 22px;
+    padding: 0 5px;
+  }
+
+  &__issueSide {
+    line-height: 22px;
+  }
+
+  &__currentLabel {
+    background: $colour-s19;
+    border-radius: 3px;
+    color: $colour-p06;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    margin-left: 10px;
+    padding: 0 4px;
+  }
+}

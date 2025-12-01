@@ -1,0 +1,376 @@
+import { buildLogoPath } from '../../mock_data_utils';
+
+export const data = [
+  {
+    id: '645235245664daf0f8fccc44',
+    user_id: 6,
+    address: {
+      id: '64523524a609c745dbaca047',
+      city: 'Cazadero',
+      country: {
+        abbreviation: 'AS',
+        name: 'Guadeloupe',
+        id: '645235246f06ace5b28ae7ca',
+      },
+      line_1: 679,
+      line_2: 'Elm Avenue',
+      line_3: 'Coleridge Street',
+      state: 'Tennessee',
+      zipcode: 6782,
+    },
+    avatar_url: buildLogoPath('kitman-staff.png'),
+    date_of_birth: '2004-01-11',
+    firstname: 'Latasha',
+    middlename: 'Marie',
+    lastname: 'Christian',
+    fullname: 'Latasha Christian',
+    gender: 'Female',
+    email: 'latasha.christian@gmail.com',
+    mobile_number: '+1 123 456 7891',
+    place_of_birth: 'Cazadero',
+    shortname: '',
+    organisations: [
+      {
+        id: 115,
+        logo_full_path: buildLogoPath('kitman_logo_full_bleed.png'),
+        name: 'LA Galaxy',
+      },
+    ],
+    payment_status: false,
+    position: {
+      id: 98,
+      name: 'Other',
+    },
+    registration_status: {
+      id: 123,
+      status: 'incomplete',
+      registration_status_reason: null,
+    },
+    squad_numbers: [29],
+    squads: [
+      {
+        id: '64523524fdcd2b55ce021877',
+        name: 'U14',
+      },
+      {
+        id: '64523524fdcd2b55ce021833',
+        name: 'U15',
+      },
+    ],
+    registrations: [
+      {
+        id: 13618,
+        user_id: 161192,
+        status: 'pending_payment',
+        division: {
+          id: 1,
+          name: 'KLS Next',
+        },
+      },
+      {
+        id: 17788,
+        user_id: 161192,
+        status: 'incomplete',
+        division: {
+          id: 2,
+          name: 'MLS Next',
+        },
+      },
+    ],
+    registration_system_status: {
+      id: 9,
+      name: 'Pending League',
+      type: 'pending_league',
+    },
+    type: 'FR',
+    emergency_contacts: [
+      {
+        firstname: 'John',
+        lastname: 'Doe',
+        phone_numbers: '+1 123 456 7890',
+        email: 'john.doh@gmail.com',
+      },
+    ],
+    parent_guardian_details: {
+      firstname: 'John',
+      lastname: 'Doe',
+      phone: '+1 123 456 7890',
+      email: 'john.doh@gmail.com',
+    },
+    labels: [],
+    initial_academy_registration_date: '2018-12-18T00:00:00Z',
+    insurance: {
+      insurance_carrier: 'Axa',
+      group_number: 123456,
+      policy_number: 123457,
+      insurance_id: 123458,
+    },
+  },
+  {
+    id: '6452352401d171f70fdbc431',
+    user_id: 5,
+    address: {
+      id: '645235240d571499b1112bc3',
+      city: 'Cawood',
+      country: {
+        abbreviation: 'SB',
+        name: 'Cyprus',
+        id: '645235242f82aac0f304992d',
+      },
+      line_1: 622,
+      line_2: 'Schroeders Avenue',
+      line_3: 'Branton Street',
+      state: 'Virginia',
+      zipcode: 5793,
+    },
+    avatar_url: buildLogoPath('kitman-staff.png'),
+    date_of_birth: '2003-10-25',
+    firstname: 'Chase',
+    lastname: 'Mueller',
+    fullname: 'Chase Mueller',
+    shortname: '',
+    registrations: [],
+    organisations: [
+      {
+        id: 115,
+        logo_full_path: buildLogoPath('kitman_logo_full_bleed.png'),
+        name: 'LA Galaxy',
+      },
+    ],
+    payment_status: true,
+    position: {
+      id: 98,
+      name: 'Other',
+    },
+    registration_status: {
+      id: null,
+      status: 'pending_association',
+      registration_status_reason: null,
+    },
+    squad_numbers: [33, 42, 30],
+    squads: [
+      {
+        id: '64523524b8da2446b3d4bb6b',
+        name: 'U15',
+      },
+    ],
+    type: 'P',
+    emergency_contacts: [],
+  },
+  {
+    id: '64523524fd7bd4f6e436ef56',
+    user_id: 4,
+    address: {
+      id: '645235240cb1e3e6b9072e21',
+      city: 'Grahamtown',
+      country: {
+        abbreviation: 'HT',
+        name: 'Palau',
+        id: '6452352464d0eeb95e56c02c',
+      },
+      line_1: 159,
+      line_2: 'Haring Street',
+      line_3: 'Crawford Avenue',
+      state: 'Colorado',
+      zipcode: 4134,
+    },
+    registrations: [],
+    avatar_url: buildLogoPath('kitman-staff.png'),
+    date_of_birth: '3 Jun 2009',
+    firstname: 'Garrison',
+    lastname: 'Bolton',
+    fullname: 'Garrison Bolton',
+    shortname: '',
+    organisations: [
+      {
+        id: 115,
+        logo_full_path: buildLogoPath('kitman_logo_full_bleed.png'),
+        name: 'LA Galaxy',
+      },
+    ],
+    payment_status: false,
+    position: {
+      id: 98,
+      name: 'Other',
+    },
+    registration_status: {
+      id: 123,
+      status: 'pending_organisation',
+      registration_status_reason: null,
+    },
+    squad_numbers: [11, 80],
+    squads: [
+      {
+        id: '64523524b114c27f8e00c58c',
+        name: 'U19',
+      },
+    ],
+    type: 'F',
+    emergency_contacts: [],
+  },
+  {
+    id: '645235247c243bbcfaffb0d0',
+    user_id: 3,
+    address: {
+      id: '645235241988e9608b557dde',
+      city: 'Galesville',
+      country: {
+        abbreviation: 'NZ',
+        name: 'Ghana',
+        id: '645235240b6d5d409dd9ab3f',
+      },
+      line_1: 250,
+      line_2: 'Banker Street',
+      line_3: 'Kent Street',
+      state: 'Pennsylvania',
+      zipcode: 3301,
+    },
+    avatar_url: buildLogoPath('kitman-staff.png'),
+    date_of_birth: '3 Jun 2009',
+    firstname: 'Walls',
+    lastname: 'West',
+    fullname: 'Walls West',
+    shortname: '',
+    registrations: [],
+    organisations: [
+      {
+        id: 116,
+        logo_full_path: buildLogoPath('kitman_logo_full_bleed.png'),
+        name: 'LA Galaxy',
+      },
+    ],
+    payment_status: false,
+    position: {
+      id: 98,
+      name: 'Other',
+    },
+    registration_status: {
+      id: null,
+      status: 'rejected_organisation',
+      registration_status_reason: null,
+    },
+    squad_numbers: [12],
+    squads: [
+      {
+        id: '64523524a23944d0113d00a8',
+        name: 'U15',
+      },
+    ],
+    type: 'F',
+    emergency_contacts: [],
+  },
+  {
+    id: '645235241bb7274fa3d3b7b5',
+    user_id: 2,
+    address: {
+      id: '64523524e61f662f4193bf92',
+      city: 'Echo',
+      country: {
+        abbreviation: 'VE',
+        name: 'Egypt',
+        id: '64523524c2bac94e61cd61d1',
+      },
+      line_1: 715,
+      line_2: 'Hazel Court',
+      line_3: 'Doscher Street',
+      state: 'Minnesota',
+      zipcode: 1928,
+    },
+    registrations: [],
+    avatar_url: buildLogoPath('kitman-staff.png'),
+    date_of_birth: '3 Jun 2009',
+    firstname: 'Yesenia',
+    lastname: 'Oneill',
+    fullname: 'Yesenia Oneill',
+    shortname: '',
+    organisations: [
+      {
+        id: 116,
+        logo_full_path: buildLogoPath('kitman_logo_full_bleed.png'),
+        name: 'LA Galaxy',
+      },
+    ],
+    payment_status: false,
+    position: {
+      id: 98,
+      name: 'Other',
+    },
+    registration_status: {
+      id: null,
+      status: 'rejected_association',
+      registration_status_reason: null,
+    },
+    squad_numbers: [99],
+    squads: [
+      {
+        id: '64523524ecd78ef26d8690df',
+        name: 'U16',
+      },
+    ],
+    type: 'L',
+    emergency_contacts: [],
+  },
+  {
+    id: '6452352436c823e474d1101a',
+    user_id: 1,
+    address: {
+      id: '64523524b3ce42ba9d2ddeb6',
+      city: 'Wollochet',
+      country: {
+        abbreviation: 'NO',
+        name: 'Comoros',
+        id: '64523524730f0aa7ae1af3da',
+      },
+      line_1: 663,
+      line_2: 'Holmes Lane',
+      line_3: 'Varick Avenue',
+      state: 'North Carolina',
+      zipcode: 1997,
+    },
+    registrations: [],
+    avatar_url: buildLogoPath('kitman-staff.png'),
+    date_of_birth: '3 Jun 2009',
+    firstname: 'Noemi',
+    lastname: 'Ferrell',
+    fullname: 'Noemi Ferrell',
+    shortname: '',
+    organisations: [
+      {
+        id: 115,
+        logo_full_path: buildLogoPath('kitman_logo_full_bleed.png'),
+        name: 'LA Galaxy',
+      },
+    ],
+    payment_status: true,
+    position: {
+      id: 98,
+      name: 'Other',
+    },
+    registration_status: {
+      id: null,
+      status: 'pending_payment',
+      registration_status_reason: null,
+    },
+    squad_numbers: [23],
+    squads: [
+      {
+        id: '64523524496e27bfb8568f7b',
+        name: 'U13',
+      },
+    ],
+    type: 'F',
+    emergency_contacts: [],
+  },
+];
+export const meta = {
+  current_page: 1,
+  next_page: null,
+  prev_page: null,
+  total_pages: 1,
+  total_count: 2,
+};
+
+export const response = {
+  data,
+  meta,
+};

@@ -1,0 +1,1939 @@
+.assessments {
+  display: flex;
+
+  &.assessments--assessments-grid-view-enabled {
+    display: block;
+
+    .assessmentsAthletes {
+      &__list {
+        height: calc(100vh - 175px);
+      }
+    }
+
+    .assessmentsList {
+      height: calc(100vh - 201px);
+    }
+
+    .assessmentsHeader {
+      position: initial;
+    }
+
+    .assessmentsMetricSidePanel {
+      .customDropdown {
+        &__menu {
+          margin-top: -56px;
+        }
+      }
+    }
+
+    .assessmentsStatusSidePanel {
+      .groupedDropdown {
+        &__menu {
+          margin-top: -56px;
+        }
+      }
+    }
+  }
+
+  .assessmentsAppHeader {
+    align-items: center;
+    background-color: $colour-p06;
+    display: flex;
+
+    .tabBar {
+      width: 100%;
+    }
+
+    .rc-tabs-content {
+      display: none;
+    }
+  }
+
+  .assessmentsView {
+    display: flex;
+
+    > div {
+      &:last-of-type {
+        width: 100%;
+      }
+    }
+
+    .assessmentsHeader {
+      margin: 0;
+    }
+
+    .assessmentsList {
+      &__row {
+        border-left: 0;
+        margin-left: 0;
+        padding-left: 0;
+
+        &::before {
+          display: none;
+        }
+
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .assessmentsAthletes {
+    background-color: $colour-p06;
+    flex-grow: 2;
+    max-width: 275px;
+    min-width: 275px;
+    z-index: 3;
+
+    &__title {
+      font-size: 14px;
+      font-weight: bold;
+      height: 60px;
+      line-height: 60px;
+      margin: 0;
+      padding-left: 24px;
+    }
+
+    &__list {
+      height: calc(100vh - 110px);
+      list-style: none;
+      margin: 0;
+      overflow: auto;
+      padding: 0;
+    }
+
+    &__athlete {
+      display: flex;
+      font-size: 14px;
+      line-height: 21px;
+
+      &--selected {
+        background-color: $colour-p01;
+        color: $colour-p06;
+
+        .assessmentsAthletes__name {
+          color: $colour-p06;
+        }
+      }
+
+      &:hover {
+        cursor: pointer;
+
+        &:not(.assessmentsAthletes__athlete--selected) {
+          background-color: $colour-s31;
+        }
+      }
+    }
+
+    &__picture {
+      background-color: $colour-p06;
+      border-radius: 3px;
+      height: 36px;
+      margin: 5px 13px 0 24px;
+      width: 36px;
+    }
+
+    &__name {
+      color: $colour-grey-300;
+      margin-top: 4px;
+      max-width: 200px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    &__position {
+      font-size: 12px;
+      max-width: 200px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    &__mobileCloseBtn {
+      display: none;
+    }
+  }
+
+  .assessmentsHeader {
+    background-color: $colour-s31;
+    display: flex;
+    height: 86px;
+    justify-content: space-between;
+    margin-left: -30px;
+    margin-right: -30px;
+    padding: 20px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 4;
+
+    &__addAssessmentBtn {
+      position: relative;
+
+      &::before {
+        border-left: 1px solid $colour-s15;
+        content: '';
+        height: 26px;
+        left: 20px;
+        position: absolute;
+        top: 40px;
+      }
+
+      &:hover {
+        cursor: pointer;
+
+        .assessmentsHeader__addAssessmentBtnIcon {
+          background-color: $colour-p01;
+          color: $colour-p06;
+        }
+      }
+
+      .assessmentsHeader__addAssessmentBtnIcon {
+        background-color: $colour-p06;
+        border: 1px solid $colour-p01;
+        border-radius: 50%;
+        color: $colour-p01;
+        display: inline-block;
+        font-size: 20px;
+        height: 40px;
+        margin-right: 15px;
+        padding: 9px;
+        vertical-align: middle;
+        width: 40px;
+      }
+
+      .assessmentsHeader__addAssessmentBtnLabel {
+        color: $colour-p01;
+        display: inline-block;
+        font-weight: 600;
+        vertical-align: middle;
+      }
+
+      &--disabled {
+        &:hover {
+          cursor: default;
+
+          .assessmentsHeader__addAssessmentBtnIcon {
+            background-color: $colour-p06;
+            color: $colour-s15;
+          }
+        }
+
+        .assessmentsHeader__addAssessmentBtnIcon,
+        .assessmentsHeader__addAssessmentBtnLabel {
+          border-color: $colour-s15;
+          color: $colour-s15;
+        }
+      }
+    }
+
+    &__templateFilterActions {
+      display: inline-block;
+      margin-right: 10px;
+      text-align: right;
+      vertical-align: middle;
+    }
+
+    &__filterLabel {
+      font-weight: 600;
+    }
+
+    &__editTemplates {
+      border: 0;
+      color: $colour-p01;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 0;
+
+      &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+
+      &--disabled {
+        color: $colour-s15;
+
+        &:hover {
+          cursor: default;
+          text-decoration: none;
+        }
+      }
+    }
+
+    &__filterDropdown {
+      display: inline-block;
+      vertical-align: middle;
+      width: 250px;
+    }
+  }
+
+  .assessmentsList {
+    flex-grow: 1;
+    height: calc(100vh - 50px);
+    overflow: auto;
+    padding-bottom: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    &__noAssessmentMatchFilter {
+      background-color: $colour-p06;
+      border: 1px solid $colour-s13;
+      border-radius: 5px;
+    }
+
+    &__row {
+      border-left: 1px solid $colour-s15;
+      margin-left: 20px;
+      padding-bottom: 12px;
+      padding-left: 35px;
+      padding-top: 12px;
+      position: relative;
+
+      &:last-of-type {
+        border-color: transparent;
+      }
+
+      &::before {
+        border-left: 1px solid $colour-s15;
+        content: '';
+        height: 55px;
+        left: -1px;
+        position: absolute;
+        top: 0;
+      }
+
+      &::after {
+        background-color: $colour-p06;
+        border: 1px solid $colour-p01;
+        border-radius: 50%;
+        content: '';
+        height: 14px;
+        left: -7px;
+        position: absolute;
+        top: 55px;
+        width: 14px;
+      }
+    }
+
+    &__loading {
+      .assessmentsList__loadingText {
+        margin: 30px;
+      }
+    }
+  }
+
+  .assessmentsNoAssessment {
+    background-color: $colour-p06;
+    border: 1px solid $colour-s13;
+    border-radius: 5px;
+    padding: 45px;
+    text-align: center;
+
+    &__warningText {
+      align-self: center;
+      color: $colour-grey-300;
+      display: flex;
+      justify-content: center;
+    }
+
+    &__addAssessmentBtn {
+      margin: auto;
+      width: 200px;
+
+      &:hover {
+        cursor: pointer;
+
+        .assessmentsNoAssessment__addAssessmentBtnIcon {
+          background-color: $colour-p01;
+          color: $colour-p06;
+        }
+      }
+
+      .assessmentsNoAssessment__addAssessmentBtnIcon {
+        border: 1px solid $colour-p01;
+        border-radius: 50%;
+        color: $colour-p01;
+        display: inline-block;
+        font-size: 20px;
+        height: 40px;
+        padding: 9px;
+        vertical-align: middle;
+        width: 40px;
+      }
+
+      .assessmentsNoAssessment__addAssessmentBtnLabel {
+        color: $colour-p01;
+        font-weight: 600;
+        margin-top: 10px;
+      }
+
+      &--disabled {
+        &:hover {
+          cursor: default;
+
+          .assessmentsNoAssessment__addAssessmentBtnIcon {
+            background-color: $colour-p06;
+            color: $colour-s15;
+          }
+        }
+
+        .assessmentsNoAssessment__addAssessmentBtnIcon,
+        .assessmentsNoAssessment__addAssessmentBtnLabel {
+          border-color: $colour-s15;
+          color: $colour-s15;
+        }
+      }
+    }
+  }
+
+  .assessmentWidget {
+    background-color: $colour-p06;
+    border-radius: 3px;
+
+    &__headerInfos {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      height: 100%;
+      justify-content: center;
+      overflow: hidden;
+      padding-left: 24px;
+    }
+
+    &__headerBtns {
+      button {
+        &:last-of-type {
+          margin-left: 4px;
+        }
+      }
+    }
+
+    &__header {
+      align-items: center;
+      display: flex;
+      height: 80px;
+
+      &--expandable {
+        cursor: pointer;
+      }
+    }
+
+    &__name {
+      color: $colour-grey-300;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 20px;
+      margin-bottom: 2px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    &__subtitle {
+      font-size: 12px;
+    }
+
+    &__dropdownMenuBtn {
+      background: transparent;
+      border: 0;
+      color: $colour-p04;
+      float: right;
+      font-size: 18px;
+      height: 70px;
+      width: 55px;
+
+      &:hover {
+        color: $colour-p01;
+      }
+
+      &--disabled {
+        cursor: default;
+        opacity: 0.5;
+
+        &:hover {
+          color: $colour-p04;
+        }
+      }
+    }
+
+    &__noItem {
+      border-top: 1px solid $colour-s13;
+      padding: 10px;
+      text-align: center;
+    }
+
+    &__addStatusBtn,
+    &__addMetricBtn,
+    &__addHeaderBtn {
+      background: transparent;
+      border: 1px solid $colour-p01;
+      border-radius: 5px;
+      color: $colour-p01;
+      height: 55px;
+      margin-left: 15px;
+      margin-right: 15px;
+      text-align: center;
+      width: 180px;
+
+      &:hover {
+        background-color: $colour-p01;
+        color: $colour-p06;
+      }
+
+      &--disabled {
+        &:hover {
+          background-color: $colour-p06;
+          color: $colour-s15;
+          cursor: default;
+        }
+
+        border-color: $colour-s15;
+        color: $colour-s15;
+      }
+    }
+  }
+
+  .individualAssessment {
+    &__addStatusHeader,
+    &__addMetricHeader {
+      align-items: center;
+      background-color: $colour-p06;
+      border-top: 1px solid $colour-s13;
+      display: flex;
+      font-weight: 600;
+      height: 50px;
+      padding: 0 0 0 20px;
+    }
+  }
+
+  .assessmentHeader {
+    align-items: center;
+    background-color: $colour-p06;
+    border-top: 1px solid $colour-s13;
+    display: flex;
+    height: 60px;
+
+    &__title {
+      color: $colour-grey-300;
+      display: inline-block;
+      flex: 1;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 20px;
+      margin-bottom: 0;
+      padding-left: 24px;
+    }
+
+    &__dropdownMenuBtn {
+      background: transparent;
+      border: 0;
+      color: $colour-p04;
+      float: right;
+      font-size: 18px;
+      height: 50px;
+      width: 55px;
+
+      &:hover {
+        color: $colour-p01;
+      }
+
+      &--disabled {
+        cursor: default;
+        opacity: 0.5;
+
+        &:hover {
+          color: $colour-p04;
+        }
+      }
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+      .assessmentHeader__dropdownMenuBtn {
+        opacity: 0;
+
+        &--disabled {
+          opacity: 0;
+        }
+      }
+
+      &:hover {
+        .assessmentHeader__dropdownMenuBtn {
+          opacity: 1;
+
+          &--disabled {
+            opacity: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .assessmentsStatus,
+  .assessmentsMetric {
+    background-color: $colour-p06;
+    border-top: 1px solid $colour-s13;
+
+    &__header {
+      align-items: center;
+      display: flex;
+      height: 50px;
+
+      &--expandable {
+        cursor: pointer;
+      }
+
+      .assessmentsStatus__dropdownMenuBtn,
+      .assessmentsMetric__dropdownMenuBtn {
+        background: transparent;
+        border: 0;
+        color: $colour-p04;
+        float: right;
+        font-size: 18px;
+        height: 50px;
+        width: 55px;
+
+        &:hover {
+          color: $colour-p01;
+        }
+
+        &--disabled {
+          cursor: default;
+          opacity: 0.5;
+
+          &:hover {
+            color: $colour-p04;
+          }
+        }
+      }
+
+      @media (min-width: $breakpoint-desktop) {
+        .assessmentsStatus__dropdownMenuBtn,
+        .assessmentsMetric__dropdownMenuBtn {
+          opacity: 0;
+
+          &--disabled {
+            opacity: 0;
+          }
+        }
+
+        &:hover {
+          .assessmentsStatus__dropdownMenuBtn,
+          .assessmentsMetric__dropdownMenuBtn {
+            opacity: 1;
+
+            &--disabled {
+              opacity: 0;
+            }
+          }
+        }
+      }
+    }
+
+    &__info {
+      align-items: center;
+      display: flex;
+      flex: 1;
+      padding-left: 24px;
+    }
+
+    &__answers {
+      align-items: center;
+      display: flex;
+    }
+
+    &__name {
+      flex-grow: 1;
+      font-size: 14px;
+      font-weight: normal;
+      margin-bottom: 0;
+    }
+
+    &__user {
+      font-size: 12px;
+      margin: 10px;
+    }
+
+    &__score {
+      margin: 10px;
+      min-width: 85px;
+
+      &--loading {
+        .assessmentsStatus__value {
+          @keyframes placeHolderShimmer {
+            0% {
+              background-position: -200px 0;
+            }
+
+            100% {
+              background-position: 200px 0;
+            }
+          }
+
+          animation-duration: 1.8s;
+          animation-fill-mode: forwards;
+          animation-iteration-count: infinite;
+          animation-name: placeHolderShimmer;
+          animation-timing-function: cubic-bezier(0.44, 0.3, 0.9, 0.37);
+          background: linear-gradient(
+            to right,
+            $colour-neutral-100 0%,
+            $colour-neutral-200,
+            $colour-neutral-100 50%
+          );
+          background-size: 400px 104px;
+        }
+      }
+    }
+
+    &__noteIcon {
+      color: $colour-s15;
+      font-size: 34px;
+      margin: 10px;
+      width: 34px;
+    }
+
+    &__value {
+      align-items: center;
+      background-color: $colour-neutral-200;
+      border-radius: 5px;
+      color: $colour-p03;
+      display: inline-flex;
+      font-size: 14px;
+      font-weight: bold;
+      height: 30px;
+      justify-content: center;
+      min-width: 40px;
+      padding: 0 10px;
+      vertical-align: middle;
+    }
+
+    .assessmentsStatus__fetchScoreError {
+      color: $colour-s11;
+      font-size: 30px;
+      width: 30px;
+    }
+
+    &__previousValue {
+      align-items: center;
+      background-color: $colour-neutral-200;
+      border-radius: 5px;
+      color: $colour-p03;
+      display: inline-flex;
+      font-size: 12px;
+      height: 20px;
+      justify-content: center;
+      margin-left: 5px;
+      min-width: 30px;
+      padding: 0 10px;
+    }
+
+    &__addScore {
+      color: $colour-p01;
+      font-size: 12px;
+      font-weight: 600;
+
+      &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+
+      &--disabled {
+        &:hover {
+          color: $colour-s15;
+          cursor: default;
+          text-decoration: none;
+        }
+
+        color: $colour-s15;
+      }
+    }
+
+    &__noteContainer {
+      background: $colour-s13;
+      padding: 20px 40px;
+    }
+
+    &__note {
+      header {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+
+    &__noteTitle {
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 0;
+    }
+
+    &__editButton {
+      color: $colour-p01;
+      font-size: 14px;
+      font-weight: 600;
+
+      &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+
+      &--disabled {
+        &:hover {
+          color: $colour-s15;
+          cursor: default;
+          text-decoration: none;
+        }
+
+        color: $colour-s15;
+      }
+    }
+
+    &__noteMeta {
+      color: $colour-s18;
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+
+    &__noteText {
+      white-space: pre-line;
+    }
+  }
+
+  .assessmentReorderHandle {
+    color: $colour-s15;
+    cursor: row-resize;
+    font-size: 20px;
+    margin-left: 20px;
+    vertical-align: middle;
+  }
+
+  .assessmentItemReorderingFooter {
+    padding: 15px 20px;
+    text-align: right;
+
+    button {
+      margin-left: 15px;
+    }
+  }
+
+  .infinite-scroll-component {
+    overflow: visible !important;
+  }
+
+  .groupedAssessment {
+    padding: 0 24px 10px;
+
+    .dataGrid {
+      &__head {
+        .dataGrid__cell {
+          // Because the parent's overflow:hidden breaks border-bottom we are using box-shadow to create a bottom border instead
+          box-shadow: inset 0 -2px 0 0 $colour-neutral-300;
+          max-width: 160px;
+          min-width: 160px;
+        }
+
+        .dataGrid__fillerCell {
+          box-shadow: inset 0 -2px 0 0 $colour-neutral-300;
+          // FillerCells outside of the header have a z-index of 2, so we need to set it to 3 here
+          z-index: 3;
+        }
+
+        .groupedAssessment__bulkEditTooltip {
+          // Apply wrap to headers when the bulk edit is active
+          text-wrap: wrap;
+        }
+      }
+      // Hide the headLine used by DataGrid to create the bottom border as it's not compatible with wrap (fixed size values)
+      &__headLine::after {
+        display: none;
+      }
+
+      .customDropdown__menu {
+        max-height: 125px;
+      }
+    }
+
+    .athlete {
+      &__row {
+        .dataGrid__cell,
+        .dataGrid__fillerCell {
+          transition: background-color 0.5s ease;
+        }
+
+        &--selected {
+          .dataGrid__cell,
+          .dataGrid__fillerCell {
+            background-color: $colour-blue-50;
+          }
+        }
+
+        &--notSelected {
+          .dataGrid__cell,
+          .dataGrid__fillerCell {
+            background-color: $colour-p06;
+          }
+        }
+      }
+    }
+
+    &__columnHeaderMenu {
+      background: none;
+      border: 0;
+      color: inherit;
+      font-size: inherit;
+      font-weight: inherit;
+      position: relative;
+      text-wrap: wrap;
+
+      button {
+        background: none;
+        border: 0;
+        color: inherit;
+        font-size: inherit;
+        font-weight: inherit;
+        text-align: left;
+      }
+
+      .groupedAssessment {
+        &__columnHeaderMenuDisplayer {
+          cursor: context-menu;
+          height: 100%;
+          padding: 0;
+          width: 100%;
+        }
+
+        &__columnHeaderMenuTrigger {
+          opacity: 0;
+          position: absolute;
+          right: 0;
+          top: 0;
+          visibility: hidden;
+          z-index: 1;
+
+          &--showed {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+      }
+    }
+
+    &__editableScore {
+      width: 85px;
+
+      .customDropdown {
+        button {
+          height: 36px;
+          line-height: 36px;
+        }
+      }
+    }
+
+    &__addAthletesCell {
+      padding: 38px 0 28px;
+
+      button {
+        color: $colour-p01;
+
+        &:hover {
+          color: $colour-p01;
+        }
+      }
+    }
+
+    &__interactiveCell {
+      background: none;
+      border: 0;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    &__metricScore {
+      align-items: center;
+      background-color: $colour-neutral-200;
+      border-radius: 5px;
+      color: $colour-p03;
+      display: inline-flex;
+      font-size: 14px;
+      font-weight: bold;
+      height: 30px;
+      justify-content: center;
+      min-width: 40px;
+      padding: 0 10px;
+      vertical-align: middle;
+
+      &--loading {
+        @keyframes placeHolderShimmer {
+          0% {
+            background-position: -200px 0;
+          }
+
+          100% {
+            background-position: 200px 0;
+          }
+        }
+
+        animation-duration: 1.8s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-name: placeHolderShimmer;
+        animation-timing-function: cubic-bezier(0.44, 0.3, 0.9, 0.37);
+        background: linear-gradient(
+          to right,
+          $colour-neutral-100 0%,
+          $colour-neutral-200 25%,
+          $colour-neutral-100 50%
+        );
+        background-size: 400px 104px;
+      }
+    }
+
+    &__addButtonText {
+      color: $colour-p01;
+      font-size: 22px;
+    }
+
+    &__editFooter {
+      padding: 15px 20px 5px;
+      text-align: right;
+
+      button {
+        margin-left: 4px;
+      }
+    }
+
+    &__statusValue {
+      align-items: center;
+      background-color: $colour-neutral-200;
+      border-radius: 5px;
+      color: $colour-p03;
+      display: inline-flex;
+      font-size: 14px;
+      font-weight: bold;
+      height: 30px;
+      justify-content: center;
+      min-width: 40px;
+      padding: 0 10px;
+      vertical-align: middle;
+
+      &--loading {
+        @keyframes placeHolderShimmer {
+          0% {
+            background-position: -200px 0;
+          }
+
+          100% {
+            background-position: 200px 0;
+          }
+        }
+
+        animation-duration: 1.8s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-name: placeHolderShimmer;
+        animation-timing-function: cubic-bezier(0.44, 0.3, 0.9, 0.37);
+        background: linear-gradient(
+          to right,
+          $colour-neutral-100 0%,
+          $colour-neutral-200,
+          $colour-neutral-100 50%
+        );
+        background-size: 400px 104px;
+      }
+    }
+  }
+}
+
+.assessmentsAssessmentForm {
+  %assessment-form-field-spacing {
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+  }
+
+  &__footer {
+    border-top: 1px solid $colour-s14;
+    margin: 0 -30px -30px;
+    padding: 20px 30px;
+    text-align: right;
+
+    @media (max-width: $breakpoint-tablet) {
+      margin: 0 -10px -30px;
+      padding: 20px 10px;
+    }
+  }
+
+  &__templateDropdown {
+    @extend %assessment-form-field-spacing;
+    border-bottom: 1px dashed $colour-s14;
+  }
+
+  &__inputText {
+    @extend %assessment-form-field-spacing;
+  }
+
+  &__sessionTypeDropdown {
+    @extend %assessment-form-field-spacing;
+  }
+
+  &__datepicker {
+    @extend %assessment-form-field-spacing;
+    width: 250px;
+  }
+
+  &__sessionLabel {
+    @extend %assessment-form-field-spacing;
+    display: block;
+    padding: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 10px 0;
+    width: 100%;
+  }
+}
+
+.assessmentsTemplateForm {
+  &__footer {
+    border-top: 1px solid $colour-s14;
+    margin: 0 -30px -30px;
+    padding: 20px 30px;
+    text-align: right;
+  }
+
+  &__name {
+    border-bottom: 1px dashed $colour-s14;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+  }
+
+  &__includedInTemplate {
+    margin-bottom: 30px;
+
+    h5 {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__checkbox {
+    margin-bottom: 10px;
+  }
+
+  &__itemWithoutCheckbox {
+    margin-bottom: 10px;
+    margin-top: 15px;
+    padding-left: 30px;
+  }
+}
+
+.assessmentsMetricForm {
+  background-color: $colour-s13;
+  position: relative;
+
+  &__form {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: 70% 1fr 100px;
+    padding: 20px 40px;
+
+    .assessmentsMetricForm__score {
+      display: flex;
+      grid-column: 3 / 4;
+    }
+
+    &.wideScore {
+      grid-template-columns: 70% 0fr 100px;
+      .assessmentsMetricForm__score {
+        grid-column: 3 / 5;
+      }
+    }
+
+    .assessmentsMetricForm__previousValue {
+      align-items: center;
+      align-self: flex-end;
+      background-color: $colour-neutral-200;
+      border-radius: 5px;
+      color: $colour-p03;
+      display: inline-flex;
+      font-size: 12px;
+      height: 20px;
+      justify-content: center;
+      margin-bottom: 13px;
+      margin-left: 5px;
+      min-width: 30px;
+      padding: 0 10px;
+
+      &--loading {
+        @keyframes placeHolderShimmer {
+          0% {
+            background-position: -200px 0;
+          }
+
+          100% {
+            background-position: 200px 0;
+          }
+        }
+
+        animation-duration: 1.8s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-name: placeHolderShimmer;
+        animation-timing-function: cubic-bezier(0.44, 0.3, 0.9, 0.37);
+        background: linear-gradient(
+          to right,
+          $colour-neutral-100 0%,
+          $colour-neutral-200,
+          $colour-neutral-100 50%
+        );
+        background-size: 400px 104px;
+      }
+    }
+
+    .assessmentsMetricForm__fetchPreviousValueError {
+      align-items: center;
+      align-self: flex-end;
+      color: $colour-s11;
+      display: inline-flex;
+      font-size: 18px;
+      justify-content: center;
+      margin-bottom: 13px;
+      margin-left: 5px;
+    }
+
+    .assessmentsMetricForm__note,
+    .assessmentsMetricForm__user {
+      grid-column: 1 / 2;
+    }
+
+    .assessmentsMetricForm__warningText {
+      grid-row: none;
+      margin: 0;
+    }
+  }
+
+  &__footer {
+    border-top: 1px solid $colour-s14;
+    margin-top: 15px;
+    padding: 15px 20px;
+    text-align: right;
+
+    button {
+      margin-left: 20px;
+    }
+  }
+}
+
+.assessmentsStatusForm {
+  background-color: $colour-s13;
+  position: relative;
+
+  &__form {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: 70% 1fr 100px;
+    padding: 20px 40px;
+
+    .assessmentsStatusForm__score {
+      grid-column: 3 / 4;
+
+      .assessmentsStatusForm__scoreLabel {
+        color: $colour-s18;
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 10px;
+        margin-top: 0;
+      }
+
+      .assessmentsStatusForm__scoreBox {
+        align-items: center;
+        background-color: $colour-p06;
+        border: 1px solid $colour-p04;
+        border-radius: 4px;
+        display: flex;
+        font-size: 14px;
+        height: 45px;
+        justify-content: center;
+        padding: 0 10px;
+        width: 65px;
+      }
+
+      &--loading {
+        .assessmentsStatusForm__scoreBox {
+          @keyframes placeHolderShimmer {
+            0% {
+              background-position: -200px 0;
+            }
+
+            100% {
+              background-position: 200px 0;
+            }
+          }
+
+          animation-duration: 1.8s;
+          animation-fill-mode: forwards;
+          animation-iteration-count: infinite;
+          animation-name: placeHolderShimmer;
+          animation-timing-function: cubic-bezier(0.44, 0.3, 0.9, 0.37);
+          background: linear-gradient(
+            to right,
+            $colour-s23 0%,
+            $colour-s13 25%,
+            $colour-s23 50%
+          );
+          background-size: 400px 104px;
+        }
+      }
+
+      .assessmentsStatusForm__fetchScoreError {
+        color: $colour-s11;
+        font-size: 30px;
+      }
+    }
+
+    .assessmentsStatusForm__note,
+    .assessmentsStatusForm__user {
+      grid-column: 1 / 2;
+    }
+
+    .assessmentsStatusForm__periodSelector {
+      grid-column: 1 / 4;
+
+      &--disabled {
+        opacity: 0.5;
+        pointer-events: none;
+      }
+
+      &--hidden {
+        display: none;
+      }
+
+      .lastXDaysSelector {
+        display: block;
+
+        @media (max-width: $breakpoint-tablet) {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+
+  &__footer {
+    border-top: 1px solid $colour-s14;
+    margin-top: 15px;
+    padding: 15px 20px;
+    text-align: right;
+
+    button {
+      margin-left: 20px;
+    }
+  }
+}
+
+.assessmentsTemplateList {
+  height: calc(100vh - 100px);
+  margin: 20px;
+  overflow: auto;
+
+  &__templateName {
+    color: $colour-grey-300;
+    font-weight: 400;
+    vertical-align: middle;
+  }
+
+  &__deleteIcon {
+    color: $colour-s25;
+  }
+
+  &__editIcon {
+    color: $colour-p04;
+
+    &:hover {
+      color: $colour-p01;
+    }
+  }
+
+  &__deleteIcon,
+  &__editIcon {
+    background: none;
+    border: 0;
+    float: right;
+    font-size: 25px;
+    padding-bottom: 0;
+    padding-top: 0;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .km-table {
+    td {
+      padding: 15px 0 15px 24px;
+    }
+  }
+}
+
+.assessmentsTooltip {
+  padding: 15px 30px 15px 15px;
+
+  &__title {
+    color: $colour-p03;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  &__meta {
+    color: $colour-s18;
+    font-size: 12px;
+    margin-top: 3px;
+  }
+}
+
+.assessmentsMetricSidePanel {
+  .slidingPanel {
+    .slidingPanelActions {
+      justify-content: flex-end;
+    }
+  }
+
+  &__warningText {
+    font-size: 12px;
+    margin: 12px 0 0 30px;
+  }
+}
+
+.assessmentsStatusSidePanel {
+  &__calculation {
+    margin-top: 21px;
+
+    .dropdown {
+      max-width: 150px;
+    }
+  }
+
+  &__periodSelector {
+    margin-top: 21px;
+
+    .row {
+      flex-direction: column;
+    }
+
+    &--disabled {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+
+    &--hidden {
+      display: none;
+    }
+
+    .lastXDaysSelector {
+      &__options {
+        margin-left: 15px;
+        width: 158px;
+
+        .radioList {
+          .radioList__item {
+            padding-left: 10px;
+          }
+        }
+      }
+
+      &.lastXDaysSelector--pushdown {
+        display: flex;
+        margin-top: 10px;
+      }
+    }
+  }
+
+  .slidingPanel {
+    .slidingPanelActions {
+      justify-content: flex-end;
+    }
+  }
+}
+
+.assessmentsAthleteSidePanel {
+  .slidingPanel {
+    .slidingPanelActions {
+      justify-content: flex-end;
+    }
+
+    .dropdownWrapper__menu--pivotDate {
+      max-height: calc(100vh - 145px);
+    }
+  }
+
+  .athleteSelector {
+    &__positionGroupList {
+      .athleteSelector__section {
+        &:last-of-type {
+          border-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+.commentsSidePanel {
+  p {
+    margin-bottom: 0;
+  }
+
+  &__content {
+    padding: 5px 25px 25px;
+  }
+
+  &__athlete {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    button {
+      color: $colour-p01;
+
+      &:hover {
+        color: $colour-p01;
+      }
+    }
+  }
+
+  &__athleteNavigation {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    > :nth-child(1) {
+      width: 120px;
+    }
+
+    > :nth-child(2) {
+      width: 160px;
+    }
+
+    > :nth-child(3) {
+      width: 120px;
+    }
+
+    button {
+      margin-top: 5px;
+
+      span {
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__commentsHeader {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+    p {
+      font-size: 12px;
+      font-weight: 600;
+    }
+  }
+
+  &__comment {
+    border-top: 1px solid $colour-neutral-300;
+    margin-top: 20px;
+    padding-top: 8px;
+  }
+
+  &__commentHead {
+    align-items: center;
+    color: $colour-grey-300;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__commentBody {
+    color: $colour-grey-300;
+    margin-top: 10px;
+  }
+
+  &__commentDetail {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+
+    p {
+      color: $colour-s16;
+      font-size: 12px;
+    }
+  }
+
+  &__noComments {
+    align-items: center;
+    background-color: $colour-s23;
+    display: flex;
+    height: 84px;
+    justify-content: center;
+    margin-top: 25px;
+    width: 100%;
+  }
+
+  .slidingPanel {
+    overflow: auto;
+    padding-bottom: 96px;
+
+    .slidingPanelActions {
+      justify-content: flex-end;
+      position: fixed;
+      width: inherit;
+
+      &--edition {
+        justify-content: space-between;
+      }
+    }
+  }
+}
+
+.assessmentsAthleteAvatar {
+  align-items: center;
+  display: flex;
+
+  img {
+    border-radius: 3px;
+    height: 36px;
+    width: 36px;
+  }
+
+  p {
+    color: $colour-grey-300;
+    margin: 0 0 0 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 160px;
+  }
+
+  &--highlighted {
+    flex-direction: column;
+
+    img {
+      height: 48px;
+      margin-bottom: 8px;
+      width: 48px;
+    }
+
+    p {
+      font-weight: 600;
+      margin: 0;
+      text-align: center;
+    }
+  }
+}
+
+.assessmentsReorderModal {
+  &__items {
+    margin-bottom: 5px;
+    max-height: calc(100vh - 280px);
+    overflow: scroll;
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .assessmentsReorderModal__item {
+      align-items: center;
+      cursor: row-resize;
+      display: flex;
+      margin-bottom: 2px;
+      padding: 12px 24px;
+
+      &--header {
+        font-weight: 600;
+      }
+
+      &:nth-of-type(even) {
+        background-color: $colour-s23;
+      }
+
+      &:nth-of-type(odd) {
+        background-color: $colour-s13;
+      }
+
+      &.assessmentsReorderModal__draggable {
+        background-color: $colour-s14;
+      }
+
+      .icon-reorder-vertical {
+        color: $colour-grey-50;
+        font-size: 20px;
+        margin-right: 24px;
+      }
+    }
+  }
+
+  &__apply {
+    border-top: 1px solid $colour-s14;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 21px;
+  }
+}
+
+@media (min-width: $breakpoint-desktop) {
+  .assessmentsMobileSelectedAthlete {
+    display: none;
+  }
+}
+
+.groupedAssessmentBulkScores {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+
+  &__label {
+    font-weight: 600;
+    margin-right: 83px;
+  }
+
+  .groupedAssessment__editableScore {
+    padding: 5px 0;
+    width: 85px;
+  }
+}
+
+@media (max-width: $breakpoint-desktop) {
+  .assessments {
+    &.assessments--assessments-grid-view-enabled {
+      .assessmentsMobileSelectedAthlete {
+        top: 125px;
+      }
+
+      .assessmentsList {
+        height: calc(100vh - 261px);
+      }
+
+      .assessmentsAthletes {
+        &.assessmentsAthletes--visibleOnMobile {
+          top: 125px;
+
+          .assessmentsAthletes__list {
+            height: calc(100vh - 175px);
+          }
+        }
+      }
+    }
+
+    .assessmentsListView {
+      display: block;
+      padding-top: 50px;
+    }
+
+    .assessmentsAthletes {
+      display: none;
+    }
+
+    .assessmentsHeader {
+      background-color: $colour-s31;
+      flex-direction: column;
+      height: auto;
+      margin: 0;
+      padding: 20px;
+      position: relative;
+
+      &__addAssessmentBtn {
+        &::before {
+          display: none;
+        }
+      }
+
+      &__templateFilterActions {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+        margin-right: 0;
+        margin-top: 20px;
+      }
+
+      &__filterDropdown {
+        width: 100%;
+      }
+    }
+
+    .assessmentsList {
+      height: calc(100vh - 110px);
+      padding-left: 0;
+      padding-right: 0;
+      padding-top: 10px;
+
+      &__row {
+        border-left: 0;
+        margin-left: 0;
+        padding-left: 0;
+
+        &::before {
+          display: none;
+        }
+
+        &::after {
+          display: none;
+        }
+      }
+    }
+
+    .assessmentsMetricForm {
+      &__form {
+        grid-template-columns: 100%;
+
+        .assessmentsMetricForm__score {
+          grid-column: auto;
+          max-width: 150px;
+        }
+      }
+    }
+
+    .assessmentsMobileSelectedAthlete {
+      background-color: $colour-p06;
+      border-bottom: 1px solid $colour-s13;
+      display: flex;
+      font-size: 14px;
+      line-height: 21px;
+      position: fixed;
+      top: 60px;
+      width: 100%;
+      z-index: 10;
+
+      &__picture {
+        background-color: $colour-p06;
+        border-radius: 3px;
+        height: 36px;
+        margin: 5px 13px 0 24px;
+        width: 36px;
+      }
+
+      &__name {
+        color: $colour-grey-300;
+        margin-top: 4px;
+        max-width: 200px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      &__position {
+        font-size: 12px;
+        max-width: 200px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      &__athletesButton {
+        align-self: center;
+        color: $colour-p01;
+        font-weight: 600;
+        margin: 13px;
+
+        &:hover {
+          cursor: pointer;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+      .assessmentWidget {
+        &__addMetricBtn,
+        &__addStatusBtn,
+        &__addHeaderBtn {
+          margin-bottom: 5px;
+          margin-top: 5px;
+        }
+      }
+
+      .assessmentsStatus,
+      .assessmentsMetric {
+        &__header {
+          display: block;
+          height: auto;
+          position: relative;
+        }
+
+        &__info {
+          display: inline-block;
+          padding-top: 15px;
+          vertical-align: middle;
+        }
+
+        &__score,
+        &__noteIcon,
+        &__user {
+          display: inline-block;
+          margin-top: 5px;
+          vertical-align: middle;
+        }
+
+        &__user {
+          margin-left: 0;
+        }
+
+        &__dropdownMenuBtn {
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+      }
+    }
+  }
+
+  .assessmentsTemplateList {
+    height: calc(100vh - 160px);
+  }
+
+  .assessmentsAthletes {
+    display: none;
+
+    &.assessmentsAthletes--visibleOnMobile {
+      display: block;
+      max-width: 100%;
+      position: fixed;
+      top: 60px;
+      z-index: 10;
+
+      @media (max-width: $breakpoint-tablet) {
+        width: 100%;
+      }
+
+      @media (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop) {
+        width: 375px;
+      }
+
+      .assessmentsAthletes__list {
+        height: calc(100vh - 120px);
+      }
+
+      .assessmentsAthletes__mobileCloseBtn {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 5px;
+      }
+    }
+  }
+}
+
+@media print {
+  .assessments {
+    .assessmentsListView {
+      padding-top: 0;
+    }
+
+    .assessmentsMobileSelectedAthlete {
+      position: relative;
+      top: 0;
+    }
+
+    .assessmentsMobileSelectedAthlete__athletesButton,
+    .assessmentsHeader {
+      display: none;
+    }
+  }
+}

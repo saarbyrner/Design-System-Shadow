@@ -1,0 +1,190 @@
+.profileWidgetModal {
+  color: $colour-s18;
+  display: flex;
+
+  &__label {
+    font-weight: 600;
+  }
+
+  &__form {
+    margin-right: 30px;
+
+    .dropdown {
+      width: 320px;
+    }
+  }
+
+  &__optionalText {
+    color: $colour-s16;
+    float: right;
+    margin-top: 5px;
+  }
+
+  &__pictureOverlays {
+    margin-top: 35px;
+  }
+
+  &__overlayCheckboxes {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__widgetInfo {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+  }
+
+  &__widgetInfoItem {
+    display: flex;
+    margin-top: 15px;
+
+    .dropdown {
+      width: 260px;
+    }
+  }
+
+  &__largeNumberCircle {
+    background-color: $colour-s13;
+    border: 1px solid $colour-s14;
+    border-radius: 50%;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    height: 45px;
+    margin-right: 15px;
+    padding: 10px;
+    text-align: center;
+    width: 45px;
+  }
+
+  &__preview {
+    background: $colour-s13;
+    float: right;
+    height: 571px;
+    padding: 79px 0 0 30px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 280px;
+  }
+
+  &__previewV2 {
+    background: $colour-s13;
+    float: right;
+    height: 571px;
+    padding: 79px 30px 0 30px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 280px;
+  }
+
+  &__preview,
+  &__previewV2 {
+    .profileWidget {
+      margin: 68px 25px;
+      width: 173px;
+    }
+
+    .profileWidget__availabilityIndicator {
+      left: 20px;
+      top: 20px;
+    }
+
+    .profileWidget__image {
+      margin: 20px;
+    }
+
+    .profileWidget__infoContainer {
+      top: 337px;
+    }
+
+    .profileWidget__infoField {
+      font-size: 13px;
+      margin-left: 20px;
+      margin-top: 15px;
+    }
+  }
+
+  &__previewNumbers {
+    display: flex;
+    flex-direction: column;
+    margin-left: 13px;
+    margin-top: 337px;
+    position: absolute;
+    top: 0;
+  }
+
+  &__previewNumbersV2 {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 222px;
+    left: 18px;
+  }
+
+  &__backgroundColourOptions {
+    margin-top: 20px;
+
+    &--container {
+      display: flex;
+      justify-content: space-between;
+
+      .colorPicker {
+        border: 1px solid $colour-s15;
+        border-radius: 0.25rem;
+
+        &__swatchColor {
+          border-radius: 0.2rem;
+        }
+      }
+
+      .dropdown {
+        width: 250px;
+      }
+    }
+  }
+
+  &__smallNumberCircle {
+    background-color: $colour-s13;
+    border: 1px solid $colour-s14;
+    border-radius: 50%;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bold;
+    height: 25px;
+    margin-top: 10px;
+    padding: 2px;
+    text-align: center;
+    width: 25px;
+  }
+
+  &__smallNumberCircleV2 {
+    background-color: $colour-s13;
+    border: 1px solid $colour-s14;
+    border-radius: 50%;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bold;
+    height: 25px;
+    margin-top: 20px;
+    padding: 2px;
+    text-align: center;
+    width: 25px;
+  }
+
+  &__previewInfoDetail {
+    font-size: 13px;
+  }
+
+  &__footer {
+    border-top: 1px solid $colour-s14;
+    bottom: 0;
+    left: 0;
+    padding: 30px;
+    position: absolute;
+    text-align: right;
+    width: 100%;
+  }
+}

@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`useBaselinesUploadGrid [computed data] correctly parses the csv data 1`] = `
+Array [
+  Object {
+    "content": <DefaultHeaderCell
+      title="athlete_id"
+    />,
+    "id": "athlete_id",
+    "row_key": "athlete_id",
+  },
+  Object {
+    "content": <DefaultHeaderCell
+      title="athlete_first_name"
+    />,
+    "id": "athlete_first_name",
+    "row_key": "athlete_first_name",
+  },
+  Object {
+    "content": <DefaultHeaderCell
+      title="athlete_last_name"
+    />,
+    "id": "athlete_last_name",
+    "row_key": "athlete_last_name",
+  },
+  Object {
+    "content": <DefaultHeaderCell
+      title="date_of_birth_of_player"
+    />,
+    "id": "date_of_birth_of_player",
+    "row_key": "date_of_birth_of_player",
+  },
+  Object {
+    "content": <DefaultHeaderCell
+      title="gender"
+    />,
+    "id": "gender",
+    "row_key": "gender",
+  },
+  Object {
+    "content": <DefaultHeaderCell
+      title="method_for_assessing_mothers_height"
+    />,
+    "id": "method_for_assessing_mothers_height",
+    "row_key": "method_for_assessing_mothers_height",
+  },
+  Object {
+    "content": <DefaultHeaderCell
+      title="biological_mothers_height_cm"
+    />,
+    "id": "biological_mothers_height_cm",
+    "row_key": "biological_mothers_height_cm",
+  },
+  Object {
+    "content": <DefaultHeaderCell
+      title="method_for_assessing_fathers_height"
+    />,
+    "id": "method_for_assessing_fathers_height",
+    "row_key": "method_for_assessing_fathers_height",
+  },
+  Object {
+    "content": <DefaultHeaderCell
+      title="biological_fathers_height_cm"
+    />,
+    "id": "biological_fathers_height_cm",
+    "row_key": "biological_fathers_height_cm",
+  },
+]
+`;

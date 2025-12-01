@@ -1,0 +1,238 @@
+.manageParticipantHeader {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+
+  &__title {
+    color: $colour-p03;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 0;
+  }
+
+  &__sidePanelBtn {
+    color: $colour-p01;
+    font-size: 14px;
+    font-weight: 600;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.rpeCollectionForm {
+  &__rpeCollectionSection {
+    padding: 0 20px;
+    padding-bottom: 10px;
+  }
+
+  &__rpeCollectionSectionTitle {
+    font-size: 14px;
+    font-weight: normal;
+    margin-bottom: 20px;
+    margin-top: -17px;
+  }
+
+  &__checkbox {
+    margin-bottom: 10px;
+  }
+
+  &__kioskSection {
+    border-top: 1px solid $colour-s14;
+    padding: 20px;
+
+    &--disabled {
+      img,
+      .rpeCollectionForm__kioskSectionTitle {
+        opacity: 0.4;
+      }
+    }
+  }
+
+  &__kioskSectionTitle {
+    color: $colour-p03;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 18px;
+  }
+
+  &__kioskTypeChoice {
+    align-items: center;
+    display: flex;
+    margin-bottom: 23px;
+
+    img {
+      margin-right: 20px;
+    }
+  }
+}
+
+.participantForm {
+  padding: 0 20px;
+  padding-bottom: 40px;
+
+  .rc-tabs-tabpane {
+    overflow: visible;
+    padding: 0;
+  }
+
+  .participantsFilter {
+    background-color: $colour-s23;
+    margin-left: -20px;
+    margin-right: -20px;
+    padding: 15px;
+  }
+
+  .km-table {
+    tbody {
+      tr {
+        td {
+          padding-bottom: 10px;
+          padding-top: 10px;
+        }
+
+        &.participantForm__noResult {
+          background-color: $colour-p06;
+        }
+      }
+
+      .participantForm__errors {
+        color: $colour-s11;
+
+        td {
+          background-color: $colour-p06;
+          padding-top: 5px;
+
+          ul {
+            list-style: none;
+            margin-bottom: 0;
+            padding-left: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &__athleteColumn {
+    width: 50%;
+  }
+
+  &__includeInGroupCalculationsColumn {
+    max-width: 120px;
+  }
+
+  &__availabilityCircle {
+    border-radius: 5px;
+    display: inline-block;
+    height: 8px;
+    margin-right: 7px;
+    width: 8px;
+
+    &--unavailable {
+      background-color: $colour-s25;
+    }
+
+    &--injured {
+      background-color: $colour-s09;
+    }
+
+    &--returning {
+      background-color: $colour-s07;
+    }
+  }
+
+  &__durationField,
+  &__rpeField {
+    margin: auto;
+    max-width: 50px;
+  }
+
+  &__footer {
+    background-color: $colour-p06;
+    bottom: 0;
+    box-shadow: 0 -4px 4px 0 rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 20px;
+    position: fixed;
+    right: 0;
+    text-align: right;
+    width: calc(100% - 60px);
+  }
+
+  &__bulkEditCTA {
+    color: $colour-p01;
+    width: max-content;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .text-center {
+    .participantForm__bulkEditCTA {
+      margin: auto;
+    }
+  }
+
+  &__table {
+    margin-top: 20px;
+  }
+
+  &__athleteCell {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  &__athleteNameContainer {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 5px;
+  }
+
+  &__athleteName {
+    font-weight: 600;
+  }
+
+  &__primarySquadName {
+    font-size: 12px;
+  }
+}
+
+.bulkEditIncludeInGroupCalculationsTooltip {
+  align-items: center;
+  display: flex;
+
+  &__label {
+    color: $colour-s18;
+    font-weight: 600;
+    margin-right: 20px;
+    max-width: 130px;
+  }
+}
+
+.bulkEditTooltip__label {
+  color: $colour-s18;
+  font-weight: 600;
+  margin-right: 20px;
+  max-width: 100px;
+}
+
+.bulkEditTooltip__durationField {
+  max-width: 50px;
+}
+
+.bulkEditTooltip__participationLevelField {
+  width: 200px;
+}
+
+.main--mainMenuOpen {
+  .participantForm__footer {
+    width: calc(100% - 220px);
+  }
+}

@@ -1,0 +1,29 @@
+.importWorkflowWarning {
+  margin: 15px 0;
+
+  &__icon {
+    color: $colour-s25;
+    display: inline-block;
+    font-size: 22px;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+
+  &__container {
+    display: inline-block;
+    width: calc(100% - 40px);
+  }
+
+  &__title {
+    color: $colour-s25;
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    vertical-align: middle;
+  }
+
+  &__description {
+    margin-bottom: 15px;
+    margin-top: 5px;
+  }
+}

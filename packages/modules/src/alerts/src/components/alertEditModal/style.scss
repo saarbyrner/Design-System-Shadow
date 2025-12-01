@@ -1,0 +1,39 @@
+.alertEditModal {
+  &__row {
+    margin-bottom: 20px;
+  }
+
+  &__footer {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  &__variable {
+    background: $colour-s13;
+    margin-bottom: 15px;
+    padding: 10px;
+    position: relative;
+  }
+
+  &__deleteBtn {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+  }
+
+  &__variableRow {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 10px;
+
+    .InputNumeric {
+      margin-left: 15px;
+    }
+  }
+}

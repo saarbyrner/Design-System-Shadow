@@ -1,0 +1,128 @@
+.statusList {
+  border-right: 1px;
+  border-right-color: $colour-s14;
+  border-right-style: solid;
+  display: flex;
+  flex-direction: column;
+  float: left;
+  height: 100%;
+  width: 33.3%;
+
+  &__sortableList {
+    flex-grow: 1;
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 0;
+  }
+
+  &__header,
+  &__item {
+    align-items: center;
+    border-bottom: 1px;
+    border-bottom-color: $colour-s14;
+    border-bottom-style: solid;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    min-height: 57px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  &__item {
+    &:active,
+    &.selected {
+      background: $colour-p01;
+      color: $colour-p06;
+      cursor: pointer;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      &:not(.selected) {
+        background: $colour-p05;
+        color: $colour-p03;
+      }
+
+      &.disabled {
+        &:not(.selected) {
+          background: $colour-p06;
+          cursor: not-allowed;
+        }
+      }
+    }
+
+    &--reordering {
+      background: $colour-p06;
+      border: 1px solid $colour-p04;
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.17);
+    }
+  }
+
+  &__icon {
+    cursor: row-resize;
+    font-size: 25px;
+    padding-right: 10px;
+
+    &.disabled {
+      color: $colour-s14;
+      cursor: not-allowed;
+    }
+  }
+
+  &__info-cont {
+    align-items: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    line-height: 19px;
+  }
+
+  &__name {
+    display: block;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    &.disabled {
+      color: $colour-s14;
+    }
+  }
+
+  &__date {
+    font-size: 12px;
+  }
+
+  &__page {
+    background: none;
+    border-radius: 2px;
+    color: $colour-s18;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: normal;
+    height: 45px;
+    list-style: none;
+    margin-top: 3px;
+    padding: 10px;
+
+    span {
+      color: $colour-s16;
+      display: inline-block;
+      padding-left: 0;
+      padding-top: 4px;
+      position: relative;
+    }
+
+    &:hover {
+      color: $colour-s18;
+      cursor: default;
+    }
+  }
+}

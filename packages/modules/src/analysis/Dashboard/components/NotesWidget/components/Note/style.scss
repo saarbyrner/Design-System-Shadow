@@ -1,0 +1,100 @@
+.note__headerContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  button {
+    margin-right: 0;
+  }
+
+  .icon-hamburger-circled-dots {
+    font-size: 30px;
+  }
+}
+
+.note__title {
+  color: $colour-p01;
+  display: block;
+  font-weight: 600;
+
+  &:hover {
+    color: $colour-p02;
+  }
+
+  &--expanded {
+    color: $colour-s18;
+    display: block;
+    font-weight: 600;
+  }
+}
+
+.note__titleV2 {
+  color: $colour-s32;
+  display: block;
+  font-weight: 600;
+
+  &:hover {
+    color: $colour-s32;
+  }
+
+  &--expanded {
+    color: $colour-s32;
+    display: block;
+    font-weight: 600;
+  }
+}
+
+.note__dateType {
+  color: $colour-s18;
+  display: block;
+  font-size: 12px;
+}
+
+.note__population {
+  color: $colour-s16;
+  display: block;
+  font-size: 12px;
+}
+
+.note__content {
+  margin-bottom: 0;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  // All browsers that support webkit-line-clamp will ellipsis after 3 lines.
+  // Older browsers will ellipsis after 1.
+  @supports (-webkit-line-clamp: 3) {
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    max-height: 60px;
+    max-width: 100%;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    text-overflow: ellipsis;
+    white-space: pre-line;
+  }
+
+  &--expanded {
+    border-bottom: 1px dashed $colour-s14;
+    display: block;
+    margin-bottom: 10px;
+    overflow: visible;
+    padding-bottom: 10px;
+  }
+}
+
+.note__attachmentCounter {
+  margin-top: 5px;
+
+  i {
+    color: $colour-p04;
+    font-size: 16px;
+  }
+
+  span {
+    padding-left: 5px;
+  }
+}

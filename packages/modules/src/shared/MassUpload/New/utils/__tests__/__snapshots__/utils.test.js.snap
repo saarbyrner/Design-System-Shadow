@@ -1,0 +1,116 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`utils getErrorStateTemplateConfig 1`] = `
+Object {
+  "baselines": Object {
+    "templateUrl": "/growth_and_maturation/assessments/baselines?action=open-side-panel",
+    "title": "Khamis-Roche baselines.",
+  },
+  "growth_and_maturation": Object {
+    "templateUrl": "/growth_and_maturation/assessments?action=open-side-panel",
+    "title": "Growth and maturation assessments.",
+  },
+  "kit_matrix": Object {
+    "downloadTemplate": [Function],
+    "title": "League kits import",
+  },
+  "league_benchmarking": Object {
+    "templateUrl": "/benchmark/league_benchmarking?action=open-side-panel",
+    "title": "League benchmarking test.",
+  },
+  "league_game": Object {
+    "downloadTemplate": [Function],
+    "title": "League Fixtures.",
+  },
+  "training_variable_answer": Object {
+    "templateUrl": "/data_importer?action=open-side-panel",
+    "title": "Data importer.",
+  },
+}
+`;
+
+exports[`utils getTitleLabels should match snapshot when eventType is "Game" 1`] = `
+Object {
+  "baselines": "Khamis-Roche baselines",
+  "event_data": "Game importer",
+  "growth_and_maturation": "Growth and maturation",
+  "kit_matrix": "League kits import",
+  "league_benchmarking": "League benchmarking",
+  "league_game": "League fixtures import",
+  "training_variable_answer": "Data importer",
+}
+`;
+
+exports[`utils getTitleLabels should match snapshot when eventType is "Session" 1`] = `
+Object {
+  "baselines": "Khamis-Roche baselines",
+  "event_data": "Session importer",
+  "growth_and_maturation": "Growth and maturation",
+  "kit_matrix": "League kits import",
+  "league_benchmarking": "League benchmarking",
+  "league_game": "League fixtures import",
+  "training_variable_answer": "Data importer",
+}
+`;
+
+exports[`utils getTitleLabels should match snapshot when eventType is null 1`] = `
+Object {
+  "baselines": "Khamis-Roche baselines",
+  "event_data": "Event data importer",
+  "growth_and_maturation": "Growth and maturation",
+  "kit_matrix": "League kits import",
+  "league_benchmarking": "League benchmarking",
+  "league_game": "League fixtures import",
+  "training_variable_answer": "Data importer",
+}
+`;
+
+exports[`utils integrationImageMapping should return the correct mapping when not on staging 1`] = `
+Object {
+  "catapult": "https://kitman.imgix.net/integrations/catapult.png",
+  "champion": "https://kitman.imgix.net/integrations/champion.png",
+  "firstbeat": "https://kitman.imgix.net/integrations/firstbeat.png",
+  "forcedecks": "https://kitman.imgix.net/integrations/forcedecks.png",
+  "gymaware": "https://kitman.imgix.net/integrations/gymaware.png",
+  "hawkin_dynamics": "https://kitman.imgix.net/integrations/hawkin.png",
+  "kangatech": "https://kitman.imgix.net/integrations/kangatech.png",
+  "kinexon": "https://kitman.imgix.net/integrations/kinexon.png",
+  "omegawave": "https://kitman.imgix.net/integrations/omegawave.svg",
+  "oura": "https://kitman.imgix.net/integrations/oura.png",
+  "playmaker": "https://kitman.imgix.net/integrations/playermaker.png",
+  "polar": "https://kitman.imgix.net/integrations/polar.png",
+  "push": "https://kitman.imgix.net/integrations/push.png",
+  "statsbomb": "https://kitman.imgix.net/integrations/statsbomb.png",
+  "statsports": "https://kitman.imgix.net/integrations/statsports.png",
+  "swift": "https://kitman.imgix.net/integrations/swift.png",
+  "vald": "https://kitman.imgix.net/integrations/vald.png",
+  "vald_dynamo": "https://kitman.imgix.net/integrations/dynamo.png",
+  "vald_smartspeed": "https://kitman.imgix.net/integrations/smartspeed.png",
+  "wimu": "https://kitman.imgix.net/integrations/wimu.png",
+}
+`;
+
+exports[`utils integrationImageMapping should return the correct mapping when on staging 1`] = `
+Object {
+  "catapult": "https://kitman-staging.imgix.net/integrations/catapult.png",
+  "champion": "https://kitman-staging.imgix.net/integrations/champion.png",
+  "firstbeat": "https://kitman-staging.imgix.net/integrations/firstbeat.png",
+  "forcedecks": "https://kitman-staging.imgix.net/integrations/forcedecks.png",
+  "gymaware": "https://kitman-staging.imgix.net/integrations/gymaware.png",
+  "hawkin_dynamics": "https://kitman-staging.imgix.net/integrations/hawkin.png",
+  "kangatech": "https://kitman-staging.imgix.net/integrations/kangatech.png",
+  "kinexon": "https://kitman-staging.imgix.net/integrations/kinexon.png",
+  "omegawave": "https://kitman-staging.imgix.net/integrations/omegawave.svg",
+  "oura": "https://kitman-staging.imgix.net/integrations/oura.png",
+  "playmaker": "https://kitman-staging.imgix.net/integrations/playermaker.png",
+  "polar": "https://kitman-staging.imgix.net/integrations/polar.png",
+  "push": "https://kitman-staging.imgix.net/integrations/push.png",
+  "statsbomb": "https://kitman-staging.imgix.net/integrations/statsbomb.png",
+  "statsports": "https://kitman-staging.imgix.net/integrations/statsports.png",
+  "swift": "https://kitman-staging.imgix.net/integrations/swift.png",
+  "vald": "https://kitman-staging.imgix.net/integrations/vald.png",
+  "vald_dynamo": "https://kitman-staging.imgix.net/integrations/dynamo.png",
+  "vald_smartspeed": "https://kitman-staging.imgix.net/integrations/smartspeed.png",
+  "wimu": "https://kitman-staging.imgix.net/integrations/wimu.png",
+}
+`;

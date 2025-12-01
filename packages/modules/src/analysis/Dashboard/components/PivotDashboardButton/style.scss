@@ -1,0 +1,33 @@
+.pivotDashboardButton {
+  &__datesIcon,
+  &__athletesIcon {
+    font-size: 18px;
+  }
+
+  &__datesSection {
+    display: flex;
+    width: fit-content;
+  }
+
+  &__selectedDates {
+    margin-left: 5px;
+  }
+
+  &__dividerLine {
+    border-right: 1px solid $colour-grey-200;
+    height: 20px;
+    margin: 0 8px;
+  }
+
+  &__athletesSection {
+    display: flex;
+    max-width: 150px;
+  }
+
+  &__selectedAthletes {
+    margin-left: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}

@@ -1,0 +1,123 @@
+.channelMemberRemover {
+  margin-top: 10px;
+  max-height: calc(100vh - 300px);
+  overflow: auto;
+
+  @media only screen and (max-width: $breakpoint-desktop) {
+    max-height: calc(100vh - 310px);
+  }
+
+  // No Hover: For touch screens ( excluding Samgsung devices that return true for hover query )
+  @media only screen and (hover: none) {
+    max-height: calc(100vh - 310px - #{$mobile-browser-footer-height});
+  }
+
+  // No Pointer: For touch screens
+  @media only screen and (pointer: none) {
+    max-height: calc(100vh - 310px - #{$mobile-browser-footer-height});
+  }
+
+  // Portrait: For portrait phones and tablets and narrow screens
+  @media only screen and (orientation: portrait) {
+    max-height: calc(100vh - 310px - #{$mobile-browser-footer-height});
+  }
+
+  // Fine Pointer: For PC with mouse override above
+  @media only screen and (pointer: fine) {
+    max-height: calc(100vh - 300px);
+  }
+
+  .kitmanReactSelect__option {
+    text-align: left;
+  }
+
+  .accordion__icon {
+    color: $colour-grey-100;
+    font-weight: 800;
+    margin-right: 18px;
+  }
+
+  &__content {
+    margin-bottom: 60px;
+  }
+
+  &__divider {
+    border-bottom: 1px dotted $colour-neutral-300;
+    height: 2px;
+    margin-bottom: 16px;
+    margin-top: 16px;
+    width: 100%;
+  }
+
+  &__accordionTitle {
+    color: $colour-blue-100;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 34px;
+  }
+
+  &__privilegeSelector {
+    display: flex;
+    margin-left: 20px;
+    margin-right: auto;
+
+    &::before {
+      border-left: 2px solid $colour-blue-100;
+      content: '';
+      height: 16px;
+      position: relative;
+      right: 9px;
+      top: 9px;
+    }
+
+    .kitmanReactSelect {
+      width: 160px;
+    }
+  }
+
+  &__athleteList,
+  &__staffList {
+    list-style: none;
+    padding: 0;
+  }
+
+  &__memberRow {
+    display: flex;
+    font-size: 14px;
+    font-weight: 400;
+    height: 35px;
+    justify-content: space-between;
+    max-height: 100px;
+    overflow: hidden;
+    padding-left: 10px;
+    transition: max-height 0.3s ease 1s, background-color 0.5s ease;
+
+    &--transitionToRemoved {
+      background-color: $red-100-20-percent;
+      max-height: 0;
+    }
+  }
+
+  &__memberDetails {
+    align-items: center;
+    column-gap: 8px;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__memberName {
+    align-self: center;
+  }
+
+  &__removeButton {
+    align-self: center;
+
+    .iconButton--transparent {
+      &::before {
+        color: $colour-grey-400;
+        font-size: 16px;
+        font-weight: 600;
+      }
+    }
+  }
+}

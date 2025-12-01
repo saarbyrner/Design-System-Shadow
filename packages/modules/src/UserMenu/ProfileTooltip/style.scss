@@ -1,0 +1,86 @@
+.profileTooltip {
+  border-left: 1px solid $colour-s14;
+  padding-left: 15px;
+}
+
+.profileTooltipMenu {
+  background: $colour-p06;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  max-width: 320px;
+  min-width: 150px;
+  z-index: 5000;
+
+  &__userDetails {
+    border-bottom: solid 0.5px $colour-neutral-300;
+    display: flex;
+    flex: 1;
+    padding: 16px;
+
+    .profileTooltip__avatar {
+      cursor: initial;
+    }
+  }
+
+  &__userDetailsNames {
+    color: $colour-grey-200;
+    display: flex;
+    flex-direction: column;
+    margin-left: 12px;
+  }
+
+  &__userFullName {
+    font-weight: 600;
+    padding-bottom: 2px;
+    padding-top: 2px;
+  }
+
+  &__userNickname {
+    color: $colour-grey-100;
+    font-size: 14px;
+    font-weight: 600;
+    padding-bottom: 5px;
+  }
+
+  &__items {
+    list-style-type: none;
+    margin-bottom: 0;
+    padding: 8px 0;
+  }
+
+  &__item {
+    padding: 8px 16px;
+
+    &__link {
+      align-items: center;
+      display: flex;
+    }
+
+    &__icon {
+      color: $colour-grey-100;
+      font-size: 24px;
+    }
+
+    &__label {
+      color: $colour-grey-300;
+      font-size: 14px;
+      margin-left: 12px;
+    }
+
+    &:hover {
+      background-color: $colour-neutral-300;
+    }
+  }
+
+  &__footer {
+    border-top: solid 0.5px $colour-neutral-300;
+    padding: 12px 16px;
+
+    a {
+      color: $colour-grey-300;
+      font-size: 12px;
+    }
+  }
+}

@@ -1,0 +1,292 @@
+.printBuilder {
+  padding: 20px;
+
+  &__header {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  &__titleContainer {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h2 {
+      font-size: 22px;
+    }
+
+    .pagesTotal {
+      display: block;
+    }
+  }
+
+  &__settingContainer {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 15px;
+  }
+
+  &__typeSelector {
+    flex: 1;
+    margin-right: 30px;
+    max-width: 200px;
+  }
+
+  &__content {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  &__pageWrapper {
+    background: $transparent-blue;
+    border: 2px dashed $colour-p01;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  &__pageDivider {
+    background: $colour-p01;
+    height: 2px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+
+    span {
+      background: $colour-p01;
+      border-radius: 3px 3px 0 0;
+      color: $colour-p06;
+      display: inline-block;
+      font-weight: 600;
+      left: 50%;
+      padding: 2px 5px;
+      position: absolute;
+      top: 0;
+      transform: translate(-50%, -100%);
+    }
+  }
+
+  &__widgetDragHandle {
+    display: block;
+    height: 15px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 15px;
+    z-index: 100;
+
+    &:hover {
+      cursor: grab;
+    }
+  }
+
+  .react-grid-item {
+    & > .react-resizable-handle {
+      height: 40px;
+      width: 40px;
+      z-index: 100;
+    }
+
+    &.react-grid-placeholder {
+      background: $transparent-blue;
+      border: 2px dashed $colour-p01;
+      opacity: 1;
+    }
+  }
+
+  .graphWidget__menuButton {
+    display: none;
+  }
+
+  .graphWidget__sortButton {
+    display: none;
+  }
+
+  .graphWidget {
+    border: 1px solid $colour-s14;
+    padding-top: 40px;
+
+    .graphDescription {
+      p {
+        margin-bottom: 0;
+      }
+
+      &__separator {
+        color: $colour-s16 !important;
+      }
+    }
+
+    &__header {
+      background: transparent;
+      height: 40px;
+      padding: 0 10px;
+    }
+
+    &__graph {
+      padding-bottom: 0;
+      padding-top: 0;
+    }
+
+    .graphLegendList--toggleable {
+      .graphLegendList__toggleButton {
+        display: none;
+      }
+
+      .graphLegendList__list {
+        display: flex;
+        padding-bottom: 0;
+        position: relative;
+        top: 0;
+      }
+    }
+  }
+
+  .headerWidget {
+    align-items: center;
+    border: 1px solid $colour-s14;
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    justify-content: stretch;
+    margin: 0;
+    padding-bottom: 10px;
+
+    &__logo {
+      height: 70px;
+      width: 70px;
+    }
+
+    &__reportDate {
+      display: block;
+    }
+
+    &__pivotAthletes {
+      white-space: normal;
+    }
+
+    &__currentUser {
+      display: block;
+    }
+
+    &__leftDetails {
+      color: unset !important;
+
+      > * {
+        color: unset !important;
+      }
+    }
+
+    &__rightDetails {
+      align-items: flex-end;
+      color: unset !important;
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      justify-content: center;
+      margin: 10px 20px 0 0;
+      max-width: none;
+
+      > * {
+        color: unset !important;
+      }
+    }
+
+    &__widgetMenu {
+      display: none;
+    }
+  }
+
+  .notesWidget {
+    border: 1px solid $colour-s14;
+
+    &__header {
+      background: transparent;
+      height: 40px;
+      padding: 0 10px;
+    }
+
+    &__content {
+      padding-top: 0;
+    }
+
+    .noteMenu,
+    &__headerRightDetails {
+      display: none;
+    }
+  }
+
+  .profileWidget {
+    &__image {
+      margin: 0;
+    }
+  }
+
+  .printHeader {
+    display: flex;
+  }
+}
+
+@media print {
+  @page {
+    size: auto;
+  }
+
+  @page:left {
+    margin-left: 10mm;
+  }
+
+  @page:right {
+    margin-right: 10mm;
+  }
+
+  .mainNavBarDesktop {
+    display: none !important;
+  }
+
+  .printBuilder {
+    background: $colour-p06;
+    margin-top: -10mm;
+    padding: 0;
+
+    &__pageWrapper {
+      background: transparent;
+      border: 0;
+      margin: 0;
+      width: 100% !important;
+    }
+
+    &__pages {
+      background: transparent;
+      width: 100% !important;
+    }
+
+    .react-grid-layout,
+    .react-grid-item {
+      max-width: 100% !important;
+    }
+
+    &__settingContainer,
+    .react-resizable-handle,
+    &__widgetDragHandle,
+    .textButton,
+    &__header {
+      display: none;
+    }
+
+    &__pageDivider {
+      background: transparent;
+
+      span {
+        display: none;
+      }
+    }
+  }
+}

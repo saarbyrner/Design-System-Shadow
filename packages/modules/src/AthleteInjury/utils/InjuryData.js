@@ -1,0 +1,292 @@
+/* eslint-disable flowtype/require-valid-file-annotation */
+export const InjuryDataRequested = () => ({
+  id: 14348,
+  athlete_id: 1242,
+  activity_id: 123,
+  activity_type: 'game',
+  occurrence_date: '2018-05-05 10:18:24',
+  examination_date: '2018-05-06 12:00:00',
+  occurrence_min: 34,
+  association_period_id: 456,
+  events: [
+    {
+      id: 'id_1234',
+      injury_status_id: 'option_1234',
+      date: '2018-05-05 10:18:24',
+    },
+    {
+      id: 'id_1235',
+      injury_status_id: 'option_1235',
+      date: '2018-05-10 10:18:24',
+    },
+    {
+      id: 'id_1236',
+      injury_status_id: 'option_1237',
+      date: '2018-05-15 10:18:24',
+    },
+  ],
+  events_duration: {
+    id_1234: 3,
+    id_1235: 4,
+    id_1236: 3,
+  },
+  unavailability_duration: 6,
+  total_duration: 10,
+  osics: {
+    osics_body_area_id: 10,
+    osics_classification_id: 11,
+    osics_id: 'D32131',
+    osics_pathology_id: 12,
+    icd: 3,
+  },
+  side_id: 2,
+  type_id: 1,
+  onset_id: 1,
+  supplementary_pathology: '',
+  created_at: '2018-08-27T12:11:10+01:00',
+  created_by: 'Jon Doe user',
+  game_id: 132,
+  training_session_id: null,
+  session_completed: null,
+  position_when_injured_id: 2,
+  diagnostics: [
+    {
+      id: 123,
+      type: 'CT Scan',
+      diagnostic_date: '2018-06-10 10:18:24',
+      is_medication: true,
+      attachments: [
+        {
+          id: 213456,
+          url: 'https://injpro-staging.s3.eu-west-1.amazonaws.com/kitman/x.jpg',
+          filename: 'xz123CTScan_123.jpg',
+          filetype: 'JPG',
+          filesize: 32,
+          audio_file: false,
+        },
+        {
+          id: 678904,
+          url: 'https://injpro-staging.s3.eu-west-1.amazonaws.com/kitman/y.jpg',
+          filename: 'xz123CT_123.jpg',
+          filetype: 'JPG',
+          filesize: 32,
+          audio_file: false,
+        },
+      ],
+      attached_links: [],
+      medical_meta: {
+        is_completed: false,
+        dosage: '2',
+        end_date: '-',
+        frequency: 'daily',
+        notes: 'this is a medication note',
+        start_date: '2018-08-01T00:00:00+01:00',
+        type: 'medication type',
+      },
+    },
+    {
+      id: 456,
+      type: 'MRI Scan',
+      diagnostic_date: '2018-06-12 10:18:24',
+      is_medication: false,
+      attached_links: [],
+      attachments: [
+        {
+          id: 213456,
+          url: 'https://injpro-staging.s3.eu-west-1.amazonaws.com/kitman/x.jpg',
+          filename: 'xz123MRI_123.jpg',
+          filetype: 'JPG',
+          filesize: 32,
+          audio_file: false,
+        },
+        {
+          id: 678904,
+          url: 'https://injpro-staging.s3.eu-west-1.amazonaws.com/kitman/y.jpg',
+          filename: 'xz123MRIScan_123.jpg',
+          filetype: 'JPG',
+          filesize: 32,
+          audio_file: false,
+        },
+      ],
+    },
+  ],
+  notes: [
+    {
+      id: 'note_123',
+      date: '2013-07-19 10:18:24',
+      note: "I'm from the future. I came here in a Time Machine that you invented. Now I need your help to get back to the year 1985.",
+      created_by: 'Jon Doe',
+    },
+    {
+      id: 'note_124',
+      date: '2013-07-19 10:18:24',
+      note: "I'm from the future.",
+      created_by: 'Jon Doe',
+    },
+    {
+      id: 'note_125',
+      date: '2013-07-19 10:18:24',
+      note: 'Now I need your help to get back to the year 1985.',
+      created_by: 'Jon Doe',
+    },
+  ],
+  modification_info: 'Quia natus quibusdam vero accusantium.',
+  treatment_sessions: [
+    {
+      annotation: { id: 1, content: 'Session note.' },
+      athlete: {
+        fullname: 'Jon Doe',
+        id: 15642,
+      },
+      created_at: '2021-03-23T09:56:24Z',
+      created_by: {
+        fullname: 'Panna Zsamba',
+        id: 21563,
+      },
+      end_time: '2021-03-23T11:48:00Z',
+      id: 6486,
+      start_time: '2021-03-23T09:00:00Z',
+      timezone: 'Europe/Dublin',
+      title: 'Treatment Note',
+      user: {
+        fullname: 'Panna Zsamba',
+        id: 21563,
+      },
+      treatments: [
+        {
+          duration: 3,
+          id: 10879,
+          issue: { activity_id: 1 },
+          issue_name:
+            'Buttock/pelvis Hamstring tendinopathy with ischial bursitis [Left]',
+          issue_type: 'InjuryOccurrence',
+          note: 'Treatment note',
+          reason: 'issue',
+          treatment_body_areas: [
+            {
+              id: 18361,
+              name: 'N/A Buttock/pelvis',
+              side: { id: 5, name: 'N/A' },
+              treatable_area: { id: 2, name: 'Buttock/pelvis' },
+              treatable_area_type: 'OsicsBodyArea',
+            },
+          ],
+          treatment_modality: {
+            id: 1,
+            name: 'Ultrasound',
+            treatment_category: { id: 1, name: 'Electrotherapy' },
+          },
+        },
+      ],
+    },
+  ],
+  rehab_sessions: [
+    {
+      annotation: { id: 1, content: 'Session note.' },
+      athlete: {
+        fullname: 'Jon Doe',
+        id: 15642,
+      },
+      created_at: '2021-03-22T11:34:30Z',
+      created_by: {
+        fullname: 'Panna Zsamba',
+        id: 21563,
+      },
+      end_time: '2021-03-23T11:48:00Z',
+      id: 3,
+      start_time: '2021-03-23T09:00:00Z',
+      timezone: 'Europe/Dublin',
+      title: 'Rehab Note',
+      user: {
+        fullname: 'Panna Zsamba',
+        id: 21563,
+      },
+      rehab_session_exercises: [
+        {
+          id: 4,
+          issue: { activity_id: 1 },
+          issue_name:
+            'Buttock/pelvis Hamstring tendinopathy with ischial bursitis [Left]',
+          issue_type: 'InjuryOccurrence',
+          note: 'Rehab note.',
+          reason: 'issue',
+          rehab_exercise: {
+            id: 1,
+            name: 'My Rehab',
+            rehab_category: { id: 1, name: 'My Rehab Category' },
+          },
+          reps: 2,
+          sets: 3,
+        },
+      ],
+    },
+  ],
+});
+
+const InjuryData = () => ({
+  id: 14348,
+  athlete_id: 1242,
+  activity_id: 123,
+  activity_type: 'game',
+  occurrence_date: '2018-05-05 10:18:24',
+  occurrence_min: 34,
+  events_order: ['id_1234', 'id_1235', 'id_1236'],
+  events: {
+    id_1234: {
+      id: 'id_1234',
+      injury_status_id: 'option_1234',
+      date: '2018-05-05 10:18:24',
+    },
+    id_1235: {
+      id: 'id_1235',
+      injury_status_id: 'option_1235',
+      date: '2018-05-10 10:18:24',
+    },
+    id_1236: {
+      id: 'id_1236',
+      injury_status_id: 'option_1237',
+      date: '2018-05-15 10:18:24',
+    },
+  },
+  osics: {
+    osics_body_area_id: 10,
+    osics_classification_id: 11,
+    osics_id: 'D32131',
+    osics_pathology_id: 12,
+  },
+  side_id: 2,
+  type_id: null,
+  supplementary_pathology: '',
+  created_at: '2018-08-27T12:11:10+01:00',
+  created_by: 'Jon Doe user',
+  game_id: 132,
+  training_session_id: null,
+  session_completed: null,
+  position_when_injured_id: 2,
+  notes: [
+    {
+      id: 'note_123',
+      date: '2013-07-19 10:18:24',
+      note: "I'm from the future. I came here in a Time Machine that you invented. Now I need your help to get back to the year 1985.",
+      created_by: 'Jon Doe',
+    },
+    {
+      id: 'note_124',
+      date: '2013-07-19 10:18:24',
+      note: "I'm from the future.",
+      created_by: 'Jon Doe',
+    },
+    {
+      id: 'note_125',
+      date: '2013-07-19 10:18:24',
+      note: 'Now I need your help to get back to the year 1985.',
+      created_by: 'Jon Doe',
+    },
+  ],
+  modification_info: 'Quia natus quibusdam vero accusantium.',
+  prior_resolved_date: null,
+  bamic_grade_id: null,
+  bamic_site_id: null,
+});
+
+export default InjuryData;

@@ -1,0 +1,143 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`useImportConfig should return the correct config for baselines 1`] = `
+Object {
+  "enabled": true,
+  "expectedHeaders": Array [
+    "athlete_id",
+    "athlete_first_name",
+    "athlete_last_name",
+    "date_of_birth_of_player",
+    "gender",
+    "method_for_assessing_mothers_height",
+    "biological_mothers_height_cm",
+    "method_for_assessing_fathers_height",
+    "biological_fathers_height_cm",
+  ],
+  "grid": [Function],
+  "redirectUrl": "/growth_and_maturation/assessments/baselines",
+}
+`;
+
+exports[`useImportConfig should return the correct config for event_data 1`] = `
+Object {
+  "allowAdditionalHeaders": true,
+  "canImportWithErrors": true,
+  "customImportService": [Function],
+  "customSteps": Array [
+    Object {
+      "caption": "CSV or device",
+      "title": "Select import type",
+    },
+    Object {
+      "caption": "Select period or file",
+      "title": "Import data",
+    },
+    Object {
+      "caption": "Review any errors",
+      "title": "Preview import",
+    },
+  ],
+  "enabled": true,
+  "expectedHeaders": Array [],
+  "grid": [Function],
+  "redirectUrl": "/planning_hub/events/1?include_rrule_instance=true#imported_data",
+}
+`;
+
+exports[`useImportConfig should return the correct config for growth_and_maturation 1`] = `
+Object {
+  "enabled": true,
+  "expectedHeaders": Array [
+    "athlete_id",
+    "athlete_first_name",
+    "athlete_last_name",
+    "date_measured",
+    "measured_by_user_id_optional",
+    "head_attire_worn",
+    "standing_height_1_cm",
+    "standing_height_2_cm",
+    "standing_height_3_cm",
+    "box_height_cm",
+    "sitting_height_1_cm",
+    "sitting_height_2_cm",
+    "sitting_height_3_cm",
+    "leg_length_1_cm_optional",
+    "leg_length_2_cm_optional",
+    "leg_length_3_cm_optional",
+    "weight_1_kg",
+    "weight_2_kg",
+    "weight_3_kg",
+  ],
+  "grid": [Function],
+  "redirectUrl": "/growth_and_maturation/assessments",
+}
+`;
+
+exports[`useImportConfig should return the correct config for kit_matrix 1`] = `
+Object {
+  "enabled": true,
+  "expectedHeaders": Array [
+    "Type",
+    "Club",
+    "Season",
+    "Kit name",
+    "Kit Color",
+    "Jersey Color",
+    "Jersey URL",
+    "Shorts Color",
+    "Shorts URL",
+    "Socks Color",
+    "Socks URL",
+  ],
+  "grid": [Function],
+  "redirectUrl": "/settings/kit-matrix/?action=kit-management-success-toast",
+}
+`;
+
+exports[`useImportConfig should return the correct config for league_benchmarking 1`] = `
+Object {
+  "enabled": true,
+  "expectedHeaders": Array [
+    "athlete_id",
+    "athlete_first_name",
+    "athlete_last_name",
+    "squad",
+    "date_of_test",
+    "player_exempt",
+    "player_position",
+    "05m_sprint",
+    "10m_sprint",
+    "20m_sprint",
+    "30m_sprint",
+    "505_agility_right",
+    "505_agility_left",
+    "cmj_optojump",
+    "cmj_vald",
+    "cmj_flight_time",
+    "yo_yo_intermittent_recovery_test_level_1",
+    "yo_yo_intermittent_recovery_test_level_2",
+    "agility_arrow_head_left",
+    "agility_arrow_head_right",
+  ],
+  "grid": [Function],
+  "redirectUrl": "/benchmark/league_benchmarking",
+}
+`;
+
+exports[`useImportConfig should return the correct config for training_variable_answer 1`] = `
+Object {
+  "enabled": true,
+  "expectedHeaders": Array [
+    "id",
+    "first_name",
+    "last_name",
+    "time_measured",
+  ],
+  "grid": [Function],
+  "optionalExpectedHeaders": Array [
+    "micro_cycle",
+  ],
+  "redirectUrl": "/data_importer",
+}
+`;

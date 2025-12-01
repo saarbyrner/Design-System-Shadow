@@ -1,0 +1,87 @@
+.availabilityList {
+  &__emptyList {
+    height: 500px;
+    margin-top: 30px;
+    padding-top: 160px;
+    text-align: center;
+
+    p {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 30px;
+      margin: 0 auto 40px;
+      max-width: 450px;
+    }
+  }
+
+  &__header {
+    height: 45px;
+    overflow: hidden;
+    transition: height 300ms ease-in;
+
+    &--expanded {
+      height: 170px;
+      overflow: visible;
+    }
+
+    @media print {
+      display: none;
+    }
+  }
+
+  &__titleContainer {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+
+    h3 {
+      flex: 1;
+      font-size: 18px;
+      font-weight: normal;
+      margin-bottom: 0;
+
+      span {
+        font-weight: 600;
+        padding-right: 5px;
+      }
+    }
+  }
+
+  &__headerBtnContainer {
+    button {
+      margin-left: 10px;
+    }
+  }
+}
+
+.availabilityListPrint {
+  &__headerContainer {
+    // These rules enforce the browser to print the background
+    -webkit-print-color-adjust: exact; // Chrome/Safari
+    print-color-adjust: exact; // Firefox
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+  }
+
+  &__headerItemTitle {
+    color: $colour-p03;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  &__headerItemText {
+    color: $colour-s16;
+    color: transparentize($colour-s16, 0.1) !important;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+}
+
+@import './src/components/AvailabilityTable/style';
+@import './src/components/IssueList/style';
+@import './src/components/ModInfoModal/style';
+@import './src/components/AddDiagnosticInterventionModal/style';
+@import './src/components/InjuryUploadModal/style';

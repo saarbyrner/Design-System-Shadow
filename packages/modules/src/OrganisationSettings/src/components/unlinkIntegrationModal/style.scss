@@ -1,0 +1,14 @@
+.unlinkIntegrationModal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__description {
+    margin-bottom: 125px;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: flex-end;
+  }
+}

@@ -1,0 +1,14 @@
+.addIntegrationModal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__dropdown {
+    margin-bottom: 125px;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: flex-end;
+  }
+}

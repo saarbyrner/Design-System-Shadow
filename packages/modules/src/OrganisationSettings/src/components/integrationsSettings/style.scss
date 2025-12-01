@@ -1,0 +1,46 @@
+.organisationIntegrationsSettings {
+  margin: auto;
+  max-width: 866px;
+
+  &__title {
+    border-bottom: 1px dashed $colour-s14;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 15px 0;
+    padding: 5px 0;
+  }
+
+  &__activeIntegrationsTable {
+    width: 100%;
+
+    thead {
+      border-bottom: 2px solid $colour-neutral-200;
+
+      th {
+        color: $colour-grey-100;
+        padding: 10px 0;
+      }
+    }
+
+    tbody {
+      td {
+        padding: 10px 0;
+      }
+    }
+  }
+
+  &__unlinkIntegration {
+    color: $colour-blue-100;
+    font-weight: 600;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__noActiveIntegrations {
+    margin: 40px;
+    text-align: center;
+  }
+}

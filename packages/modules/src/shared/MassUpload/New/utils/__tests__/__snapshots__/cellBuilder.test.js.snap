@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`cellBuilder should render as expected if isInvalid 1`] = `
+<ForwardRef(Tooltip)
+  componentsProps={
+    Object {
+      "tooltip": Object {
+        "sx": Object {
+          "bgcolor": "#b11b27",
+        },
+      },
+      "valueForDataGrid": undefined,
+    }
+  }
+  placement="bottom-end"
+  slotProps={
+    Object {
+      "popper": Object {
+        "modifiers": Array [
+          Object {
+            "name": "offset",
+            "options": Object {
+              "offset": Array [
+                120,
+                -20,
+              ],
+            },
+          },
+        ],
+      },
+    }
+  }
+  title="This cell has an error"
+>
+  <ForwardRef(Box)
+    sx={
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+        "gap": 0.5,
+        "height": "100%",
+        "justifyContent": "flex-start",
+        "width": "100%",
+      }
+    }
+  >
+    <KitmanIcon
+      name="ErrorOutline"
+      sx={
+        Object {
+          "color": "#c31d2b",
+        }
+      }
+    />
+    <ForwardRef(Typography)
+      sx={
+        Object {
+          "color": "#c31d2b",
+        }
+      }
+      variant="body"
+    />
+  </ForwardRef(Box)>
+</ForwardRef(Tooltip)>
+`;
+
+exports[`cellBuilder should render as expected if valid 1`] = `
+<ForwardRef(Box)
+  sx={
+    Object {
+      "color": "#3b4960",
+      "fontSize": "14px",
+      "fontWeight": "400",
+    }
+  }
+/>
+`;

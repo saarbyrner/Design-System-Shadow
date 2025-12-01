@@ -1,0 +1,102 @@
+.athleteAvailabilityHistory {
+  &--disabled {
+    .athleteAvailabilityHistory__label,
+    .athleteAvailabilityHistory__index {
+      color: $colour-s18;
+      opacity: 0.5;
+    }
+  }
+
+  &__label {
+    display: block;
+    padding-left: 65px;
+  }
+
+  &__row {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-bottom: 30px;
+
+    &--first {
+      align-items: center;
+    }
+  }
+
+  &__index {
+    border: 1px solid $colour-s14;
+    border-radius: 3px;
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    height: 45px;
+    padding-top: 13px;
+    position: relative;
+    text-align: center;
+    width: 50px;
+
+    &:before {
+      background-color: $colour-s14;
+      bottom: -30px;
+      content: '';
+      display: block;
+      height: 30px;
+      left: 50%;
+      position: absolute;
+      transform: translateX(-50%);
+      width: 1px;
+    }
+
+    &:after {
+      background-color: $colour-s14;
+      content: '';
+      display: block;
+      height: 25px;
+      left: 50%;
+      position: absolute;
+      top: -25px;
+      transform: translateX(-50%);
+      width: 1px;
+    }
+
+    .athleteAvailabilityHistory__row--first & {
+      &:after {
+        display: none;
+      }
+    }
+  }
+
+  &__buttonContainer {
+    button {
+      position: relative;
+
+      &:after {
+        background-color: $colour-s14;
+        content: '';
+        display: block;
+        height: 25px;
+        left: 50%;
+        position: absolute;
+        top: -25px;
+        transform: translateX(-50%);
+        width: 1px;
+      }
+    }
+  }
+
+  &__statusSelect {
+    flex: 1;
+    max-width: 577px;
+    padding: 0 15px;
+  }
+
+  &__date {
+    min-width: 281px;
+    padding-right: 15px;
+  }
+
+  &__datePicker {
+    width: 266px;
+  }
+}

@@ -1,0 +1,20 @@
+.statusForm {
+  &__row {
+    margin-bottom: 15px;
+    max-width: 1250px;
+
+    &--last {
+      margin-bottom: 0;
+    }
+
+    &--scaleType {
+      margin-bottom: -30px;
+    }
+
+    .groupedDropdown {
+      .dropdown-menu {
+        max-height: 325px;
+      }
+    }
+  }
+}

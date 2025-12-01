@@ -1,0 +1,23 @@
+.userMenu {
+  align-items: center;
+  display: flex;
+
+  &__orgLogo {
+    height: 32px;
+    margin-right: 15px;
+    width: 32px;
+  }
+}
+.ip-userMenu {
+  align-items: center;
+  display: flex;
+
+  &__ip-orgLogo {
+    height: 32px;
+    margin-right: 15px;
+    width: 32px;
+  }
+}
+
+@import './SquadSelector/style';
+@import './ProfileTooltip/style';

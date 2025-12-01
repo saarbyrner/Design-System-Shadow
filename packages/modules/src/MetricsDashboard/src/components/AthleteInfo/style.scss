@@ -1,0 +1,89 @@
+.athleteInfo {
+  border-left: 1px solid $colour-s14;
+  border-right: 1px solid $colour-s14;
+  border-top: 1px solid $colour-s14;
+  height: 45px;
+  position: relative;
+
+  .athleteInfo__wrapper {
+    padding-left: 54px;
+    position: relative;
+  }
+
+  .athleteInfo__avatarContainer {
+    height: 43px;
+    left: 0;
+    position: absolute;
+    width: 43px;
+  }
+
+  .athleteInfo__indications {
+    height: 43px;
+    position: absolute;
+    right: 76px;
+    top: 0;
+    width: 38px;
+
+    button {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .athleteInfo__comment {
+    height: 43px;
+    position: absolute;
+    right: 38px;
+    top: 0;
+    width: 38px;
+
+    button {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .athleteInfo__icon {
+    color: $colour-s16;
+    font-size: 22px;
+  }
+
+  .athleteInfo__data {
+    line-height: 15px;
+    padding-top: 7px;
+  }
+
+  .athleteInfo__athleteName {
+    color: $colour-p01;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: auto;
+  }
+
+  .athleteInfo__athletePosition {
+    color: $colour-s16;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: auto;
+  }
+
+  button {
+    background: none;
+    border: 0;
+    height: 100%;
+    padding: 0;
+    width: 100%;
+  }
+}

@@ -1,0 +1,72 @@
+.graphLinksModal {
+  padding-bottom: 150px;
+
+  &__subtitle {
+    margin-bottom: 40px;
+    margin-top: -15px;
+  }
+
+  &__label {
+    align-items: center;
+    color: $colour-p03;
+    display: flex;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+
+  &__labelTooltipIcon {
+    color: $colour-s16;
+    cursor: pointer;
+    font-size: 20px;
+    margin-left: 10px;
+    vertical-align: middle;
+  }
+
+  &__addRowBtn {
+    padding-top: 7px;
+  }
+
+  .graphLinkRow {
+    padding-bottom: 7px;
+    padding-top: 7px;
+
+    &__errorMessage {
+      color: $colour-s11;
+      margin-top: 5px;
+    }
+
+    &__indexWrapper {
+      &:after {
+        background-color: $colour-p04;
+        bottom: -14px;
+        content: '';
+        display: block;
+        height: 40px;
+        left: 50%;
+        position: absolute;
+        transform: translateX(-50%);
+        width: 1px;
+        z-index: -1;
+      }
+    }
+
+    &__index {
+      background-color: $colour-p06;
+      border: solid 1px $colour-p04;
+      border-radius: 5px;
+      color: $colour-s18;
+      font-size: 16px;
+      font-weight: 600;
+      height: 45px;
+      padding-top: 11px;
+      text-align: center;
+      width: 50px;
+    }
+
+    &__removeRowBtn {
+      display: flex;
+      justify-content: center;
+      margin-top: 5px;
+    }
+  }
+}

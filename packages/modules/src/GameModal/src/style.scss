@@ -1,0 +1,86 @@
+.gameModal {
+  &__hr--full {
+    margin: 30px -30px;
+  }
+
+  .gameModalForm {
+    &__section {
+      border-bottom: 1px dashed $colour-s14;
+      margin-bottom: 30px;
+      padding-bottom: 30px;
+    }
+
+    .inputText {
+      label {
+        margin-top: 0;
+      }
+    }
+
+    &__formWrapper {
+      margin-bottom: 30px;
+      min-height: 200px;
+    }
+
+    &__fixtureFormWrapper {
+      border-top: 0;
+      margin-bottom: 30px;
+      padding-top: 0;
+    }
+
+    &__gameFormWrapper {
+      border-top: 1px dashed $colour-s14;
+      margin-bottom: 30px;
+      padding-top: 20px;
+    }
+
+    &__scoreSeparator {
+      display: inline-block;
+      margin: 0 10px;
+      padding-top: 20px;
+      vertical-align: top;
+    }
+
+    &__actionsWrapper {
+      text-align: right;
+
+      button {
+        &:last-child {
+          margin-left: 20px;
+        }
+      }
+    }
+
+    &__scoreWrapper {
+      display: inline-block;
+      margin-top: 10px;
+      vertical-align: top;
+
+      input {
+        width: 80px;
+      }
+    }
+
+    &__label {
+      font-weight: 600;
+    }
+
+    &__error {
+      padding: 0 10px;
+      color: $red-100;
+    }
+  }
+
+  .gameModalFixtureForm {
+    &--error {
+      & > .datePicker {
+        .km-input-control {
+          border-color: $red-100;
+        }
+      }
+    }
+
+    &__createTurnaroundMarkerWrapper {
+      margin-bottom: 10px;
+    }
+  }
+}

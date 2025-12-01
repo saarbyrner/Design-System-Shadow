@@ -1,0 +1,128 @@
+.availabilityReportTable {
+  &__sideBar {
+    background-color: $colour-p06;
+    padding-top: 90px;
+    position: absolute;
+    width: 200px;
+    z-index: 10;
+  }
+
+  &__sideBarRow {
+    border-radius: 5px 0 0 5px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2px;
+    position: relative;
+
+    &:nth-child(even) {
+      background: $colour-s13;
+    }
+
+    &:nth-child(odd) {
+      background: $colour-s23;
+    }
+
+    &:before {
+      box-shadow: inset 12px 0 10px -10px $transparent-black;
+      content: '';
+      display: block;
+      height: 45px;
+      position: absolute;
+      right: -12px;
+      top: 0;
+      width: 12px;
+      z-index: 1;
+    }
+
+    &--expanded {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__sideBarRowShadow {
+    box-shadow: inset -12px 0 10px -10px $transparent-black;
+    display: block;
+    height: 45px;
+    position: absolute;
+    top: 0;
+    width: 12px;
+    z-index: 1;
+  }
+
+  &__athlete {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 45px;
+    min-width: 200px;
+    padding: 10px;
+
+    span {
+      color: $colour-s18;
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 600;
+      overflow: hidden;
+      padding-left: 20px;
+      position: relative;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      width: 100%;
+
+      &.availabilityReportTable__athleteOpener {
+        cursor: pointer;
+      }
+    }
+
+    i {
+      display: inline-block;
+      font-size: 14px;
+      left: 0;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: all 100ms ease-in;
+
+      .availabilityReportTable__sideBarRow--expanded & {
+        transform: rotate(90deg) translate(-50%, 0);
+      }
+    }
+  }
+
+  &__sideBarRowExpansion {
+    .availabilityReportTable__sideBarRow {
+      align-items: center;
+      flex-direction: row;
+      justify-content: flex-start;
+      min-height: 45px;
+      padding: 10px;
+
+      i {
+        color: $colour-p04;
+        display: block;
+        font-size: 14px;
+        margin-right: 10px;
+        text-align: center;
+        width: 18px;
+
+        &.icon-calendar {
+          font-size: 20px;
+        }
+      }
+
+      a,
+      span {
+        display: inline-block;
+        font-size: 12px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      span {
+        padding-left: 28px;
+      }
+    }
+  }
+}

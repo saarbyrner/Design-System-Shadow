@@ -1,0 +1,136 @@
+.columnPanel {
+  height: 100%;
+
+  &__content {
+    height: 100%;
+    margin: 15px 0;
+  }
+
+  &__label {
+    font-weight: 600;
+    margin-left: 30px;
+  }
+
+  &__nameInput {
+    border: 1px solid $colour-p04;
+    border-radius: 5px;
+    color: $colour-s18;
+    display: flex;
+    height: 45px;
+    margin: 0 30px;
+    padding-left: 11px;
+    width: 400px;
+  }
+
+  &__optionalText {
+    color: $colour-s16;
+    float: right;
+    margin-right: 30px;
+    margin-top: 8px;
+  }
+
+  &__metricSelector {
+    border-top: 1px dashed $colour-s14;
+    margin-top: 40px;
+    padding-top: 25px;
+
+    .groupedDropdown {
+      button {
+        width: 400px;
+      }
+
+      .groupedDropdown__menu {
+        max-height: 370px;
+        width: 400px;
+      }
+    }
+  }
+
+  &__dateSelector {
+    .lastXPeriodOffset {
+      align-items: flex-start;
+      display: flex;
+      flex-direction: column;
+      margin: 0 20px;
+    }
+
+    .lastXPeriodOffset__toggle {
+      margin-top: 20px;
+    }
+
+    .lastXPeriodPicker {
+      margin-top: 20px;
+    }
+  }
+
+  &__actions {
+    align-items: center;
+    background: $colour-p06;
+    border-top: 1px solid $colour-s14;
+    bottom: 0;
+    display: flex;
+    height: 96px;
+    justify-content: space-between;
+    padding: 0 30px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  &__back {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    .textButton {
+      border: 0;
+      padding: 0;
+
+      &:hover {
+        background: $colour-p06;
+        border: 0;
+        color: $colour-p01;
+      }
+    }
+  }
+
+  &__backArrow {
+    align-self: center;
+    color: $colour-p01;
+    font-size: 22px;
+    font-weight: bold;
+    position: absolute;
+  }
+
+  &__next {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    .textButton {
+      height: 36px;
+      line-height: 12px;
+      padding-right: 38px;
+
+      &:focus {
+        background: $colour-p01;
+        border-color: $colour-p01;
+      }
+    }
+
+    &--apply {
+      .textButton {
+        padding: 10px;
+      }
+    }
+  }
+
+  &__nextArrow {
+    align-self: center;
+    color: $colour-p06;
+    font-size: 22px;
+    margin-right: 12px;
+    position: absolute;
+  }
+}

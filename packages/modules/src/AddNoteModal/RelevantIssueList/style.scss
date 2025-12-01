@@ -1,0 +1,55 @@
+.athleteNoteRelevantIssues {
+  &__container {
+    margin-bottom: 20px;
+  }
+
+  &__issueContainer {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -5px;
+  }
+
+  &__relevantIssue {
+    margin-bottom: 10px;
+    overflow: hidden;
+    padding: 0 5px;
+    width: 50%;
+  }
+
+  &__emptyText {
+    color: $colour-s16;
+    padding: 0 5px;
+    text-align: center;
+  }
+
+  &__checkboxContainer {
+    display: inline-block;
+    float: left;
+    margin-right: 10px;
+  }
+
+  &__issueDate {
+    color: $colour-s16;
+    line-height: 22px;
+  }
+
+  &__issueName {
+    line-height: 22px;
+    padding: 0 5px;
+  }
+
+  &__issueSide {
+    line-height: 22px;
+  }
+
+  &__currentLabel {
+    background: $colour-s19;
+    border-radius: 3px;
+    color: $colour-p06;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    margin-left: 10px;
+    padding: 0 4px;
+  }
+}

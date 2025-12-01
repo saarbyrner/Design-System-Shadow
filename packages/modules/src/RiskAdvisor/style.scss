@@ -1,0 +1,92 @@
+.riskAdvisor {
+  display: block;
+  margin-bottom: -30px;
+
+  &__noPermission {
+    text-align: center;
+  }
+
+  .tabBar {
+    .rc-tabs-tabpane {
+      padding: 0;
+    }
+  }
+
+  .rc-tabs-tab {
+    &:hover {
+      background: $colour-s23;
+      color: $colour-p03;
+    }
+  }
+
+  .rc-tabs-tab-active {
+    &:hover {
+      background: $colour-p06;
+      color: $colour-p01;
+    }
+  }
+
+  &__content {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+  }
+
+  &__sideBar {
+    border-right: 1px solid $colour-s14;
+    max-width: 360px;
+    min-height: calc(100vh - 100px);
+    min-width: 360px;
+  }
+
+  &__variablePicker {
+    align-items: flex-end;
+    border-bottom: 1px solid $colour-s14;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 20px;
+
+    .dropdown {
+      flex: 1;
+      margin-right: 15px;
+    }
+  }
+
+  &__visualisationContainer {
+    align-items: flex-start;
+    background: $colour-s23;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: flex-start;
+    max-width: calc(100vw - 420px);
+    min-height: calc(100vh - 100px);
+
+    @media (max-width: $breakpoint-desktop) {
+      max-width: calc(100vw - 360px);
+    }
+  }
+
+  &__footer {
+    align-items: flex-start;
+    background: $colour-p06;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 20px 10px 30px;
+    width: 100%;
+
+    button {
+      margin-left: 15px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+@import './src/components/variableForm/style';
+@import './src/components/variableVisualisation/style';

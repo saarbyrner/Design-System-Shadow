@@ -1,0 +1,48 @@
+.dashboardSparkline {
+  &__feedback {
+    background-position: center 50px;
+    background-repeat: no-repeat;
+    background-size: 55px;
+    display: none;
+    height: 200px;
+    width: 100%;
+
+    p {
+      font-size: 16px;
+      font-weight: 600;
+      position: absolute;
+      text-align: center;
+      top: 160px;
+      width: 100%;
+    }
+  }
+
+  &--loading {
+    .dashboardSparkline__feedback {
+      background-image: url('../img/spinner.svg');
+      display: block;
+    }
+  }
+
+  &--error {
+    .dashboardSparkline__feedback {
+      background-image: url('../img/circle_cross.svg');
+      display: block;
+    }
+  }
+}
+
+@import './src/components/AthleteStatusTable/style';
+@import './src/components/Sidebar/style';
+@import './src/components/AthleteInfo/style';
+@import './src/components/AthleteAvatar/style';
+@import './src/components/BodyPart/style';
+@import './src/components/Indications/style';
+@import './src/components/AthleteStatusCellContent/style';
+@import './src/components/AthleteStatusCellContent/sparklineTooltip';
+@import './src/components/AthleteStatusCells/style';
+@import './src/components/Header/style';
+@import './src/components/DashboardControls/style';
+@import './src/components/AthleteStatusHeader/style';
+@import './src/components/AlarmForm/style';
+@import './src/components/ModalContent/style';

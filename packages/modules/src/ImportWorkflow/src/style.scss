@@ -1,0 +1,24 @@
+.importWorkflow {
+  &__hr--full {
+    margin: 30px -30px;
+  }
+
+  &__errorMessage {
+    color: $colour-s25;
+    margin-bottom: 0;
+    margin-top: 30px;
+  }
+
+  .importWorkflowEventDate {
+    &__localTime {
+      color: $colour-s16;
+    }
+  }
+}
+
+@import './components/EventSelection/style';
+@import './components/SourceSelection/style';
+@import './components/Summary/style';
+@import './components/SourceSelection/sources/DateBasedIntegration/style';
+@import './components/SourceSelection/sources/File/style';
+@import './components/shared/Warning/style';

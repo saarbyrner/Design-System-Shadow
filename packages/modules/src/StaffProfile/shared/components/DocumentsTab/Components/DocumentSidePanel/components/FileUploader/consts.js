@@ -1,0 +1,4 @@
+// @flow
+
+export const MAX_FILE_SIZE = '3mb';
+export const MAX_FILES = 1;

@@ -1,0 +1,121 @@
+.scaleColours {
+  &__introText {
+    color: $colour-s16;
+    font-size: 12px;
+    margin-bottom: 30px;
+  }
+
+  .scaleColoursForm {
+    background-color: $colour-s23;
+    border: 1px solid $colour-s14;
+    border-radius: 5px;
+    margin-bottom: 10px;
+
+    &__mainContent {
+      padding: 20px;
+    }
+
+    &__palette {
+      margin-bottom: 5px;
+    }
+
+    &__paletteLabel {
+      color: $colour-s18;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      margin-top: 0;
+    }
+
+    &__metricsDropdown {
+      max-width: 340px;
+    }
+
+    &__footer {
+      background-color: $colour-p06;
+      padding: 7px 10px;
+      text-align: right;
+
+      button {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .scaleColourPalette {
+    background-color: $colour-s23;
+    border: 1px solid $colour-s14;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 20px;
+    position: relative;
+
+    &__label {
+      color: $colour-s18;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      margin-top: 0;
+
+      &--noMargin {
+        margin-bottom: 0;
+      }
+    }
+
+    &__palette {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 5px;
+    }
+
+    &__colour {
+      border-radius: 4px;
+      height: 45px;
+      margin-bottom: 15px;
+      margin-right: 17px;
+      width: 45px;
+    }
+
+    &__metricList {
+      font-size: 14px;
+      list-style: none;
+      margin-bottom: 0;
+      margin-top: 5px;
+      padding: 0;
+
+      li {
+        line-height: 20px;
+      }
+    }
+
+    &__expandBtn {
+      background: none;
+      border: 0;
+      color: $colour-p01;
+      margin-top: 5px;
+      padding: 0;
+
+      &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+    }
+
+    &__dropdownMenuBtn {
+      background: transparent;
+      border: 0;
+      color: $colour-p04;
+      float: right;
+      font-size: 18px;
+      height: 50px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 45px;
+
+      &:hover {
+        color: $colour-p01;
+      }
+    }
+  }
+}

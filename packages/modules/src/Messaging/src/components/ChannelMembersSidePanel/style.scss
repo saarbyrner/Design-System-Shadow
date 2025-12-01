@@ -1,0 +1,267 @@
+.channelMembersSidePanel {
+  background-color: $transparent-black;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  * {
+    scrollbar-color: $colour-blue-100 $colour-neutral-300;
+    scrollbar-width: thin;
+  }
+
+  *::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: $colour-neutral-300;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: $colour-blue-100;
+    border: 3px solid $colour-neutral-300;
+    border-radius: 20px;
+  }
+
+  .athleteAndStaffSelector {
+    margin-top: 10px;
+    max-height: calc(100vh - 330px);
+    overflow: auto;
+
+    @media only screen and (max-width: $breakpoint-desktop) {
+      max-height: calc(100vh - 340px);
+    }
+
+    // No Hover: For touch screens ( excluding Samgsung devices that return true for hover query )
+    @media only screen and (hover: none) {
+      max-height: calc(100vh - 340px - #{$mobile-browser-footer-height});
+    }
+
+    // No Pointer: For touch screens
+    @media only screen and (pointer: none) {
+      max-height: calc(100vh - 340px - #{$mobile-browser-footer-height});
+    }
+
+    // Portrait: For portrait phones and tablets and narrow screens
+    @media only screen and (orientation: portrait) {
+      max-height: calc(100vh - 340px - #{$mobile-browser-footer-height});
+    }
+
+    // Fine Pointer: For PC with mouse override above
+    @media only screen and (pointer: fine) {
+      max-height: calc(100vh - 330px);
+    }
+  }
+
+  .appStatus {
+    background-color: $transparent-black;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+
+    &--embed {
+      .appStatus-cont {
+        top: calc(50% - 65px);
+      }
+    }
+  }
+
+  .slidingPanel {
+    height: 100% !important;
+    z-index: 1999; // 1 less than change squad tootip menu. Does not need to exceed then Intercom frame z-index
+
+    // Account for mobile devices having a browser controls bar at the bottom
+    // Unlike 100vh this will not exceed the height
+    min-height: -webkit-fill-available !important;
+    min-height: -moz-available !important;
+    min-height: stretch !important;
+
+    // Portrait & No Hover: For portrait phones and tablets and narrow screens
+    @media only screen and (orientation: portrait) and (hover: none) {
+      width: 100% !important;
+    }
+
+    // Portrait & No Pointer: For portrait phones and tablets and narrow screens
+    @media only screen and (orientation: portrait) and (pointer: none) {
+      width: 100% !important;
+    }
+
+    // Fine Pointer: For PC with mouse override above
+    @media only screen and (pointer: fine) {
+      width: 460px !important;
+    }
+
+    .dropdownWrapper__search {
+      background: none;
+      max-width: 100% !important;
+      padding: 0 !important;
+      width: 390px !important;
+    }
+
+    .segmentedControl {
+      border: 1px solid $colour-neutral-300;
+      border-radius: 7px;
+      height: 32px;
+      max-width: 100% !important;
+      margin-bottom: 10px;
+      padding: 1px;
+      width: 390px !important;
+
+      .btn {
+        background-color: $colour-p06;
+        color: $colour-grey-400;
+        padding: 0;
+        box-shadow: none;
+        border: none;
+        border-radius: 6.93px !important;
+
+        &:active {
+          background-color: $colour-blue-100-10-percent;
+          color: $colour-blue-100;
+          border: none;
+        }
+
+        &:hover {
+          background-color: $colour-neutral-200;
+          border: none;
+          color: $colour-grey-300;
+          cursor: pointer;
+        }
+
+        &:focus {
+          background-color: $colour-neutral-200;
+          border: 1px solid $colour-neutral-300;
+          border-radius: 3px;
+          box-shadow: none;
+        }
+
+        &.active {
+          background-color: $colour-blue-100;
+          border: none;
+          color: $colour-p06;
+
+          &:active {
+            background-color: $colour-blue-300;
+            border: none;
+            color: $colour-p06;
+          }
+
+          &:focus {
+            background-color: $colour-blue-200;
+            border: 1px solid $colour-blue-50;
+            border-radius: 3px;
+            box-shadow: none;
+            color: $colour-p06;
+          }
+
+          &:hover {
+            background-color: $colour-blue-200;
+            cursor: pointer;
+            color: $colour-p06;
+          }
+        }
+      }
+    }
+
+    &__title {
+      color: $colour-grey-300;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 22px;
+    }
+
+    .dropdownWrapper {
+      max-width: -webkit-fill-available !important;
+      max-width: -moz-available !important;
+      max-width: stretch !important;
+      width: 100%;
+    }
+
+    .dropdownWrapper__menu {
+      max-height: none;
+    }
+
+    .dropdownWrapper__menu--pivotDate {
+      max-height: none;
+    }
+
+    &__indent {
+      margin: 0 30px;
+    }
+
+    &__header {
+      color: $colour-grey-200;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 18px;
+      padding: 12px 30px 6px;
+      position: relative;
+      text-transform: uppercase;
+    }
+
+    &__row {
+      margin: 0 0 10px;
+      padding-left: 0;
+      padding-right: 0;
+
+      &:first-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .slidingPanelActions {
+      bottom: 70px;
+      height: 60px;
+      justify-content: space-between;
+
+      // No Hover: For touch screens ( excluding Samgsung devices that return true for hover query )
+      @media only screen and (hover: none) {
+        bottom: $mobile-browser-footer-height;
+      }
+
+      // No Pointer: For touch screens
+      @media only screen and (pointer: none) {
+        bottom: $mobile-browser-footer-height;
+      }
+
+      &__reset,
+      &__next,
+      &__back,
+      &__apply {
+        .textButton {
+          height: 36px;
+          line-height: 12px;
+          min-width: fit-content;
+
+          [class^='icon-'],
+          [class*='icon-'] {
+            &::before {
+              font-size: 12px;
+              font-weight: 900;
+              line-height: 12px;
+            }
+          }
+        }
+      }
+    }
+
+    &__content {
+      color: $colour-grey-100;
+      font-size: 14px;
+      font-weight: 600;
+
+      .text_header {
+        color: $colour-grey-200;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 18px;
+        padding: 12px 0 6px;
+        position: relative;
+      }
+    }
+  }
+}

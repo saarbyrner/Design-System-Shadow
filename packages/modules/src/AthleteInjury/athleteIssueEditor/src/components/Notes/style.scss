@@ -1,0 +1,16 @@
+.injuryNotes {
+  &__note {
+    margin-bottom: 20px;
+  }
+
+  &__checkbox {
+    &:first-of-type {
+      margin-top: 5px;
+    }
+  }
+
+  &__visibilityDropdown {
+    margin-top: 15px;
+    width: 400px;
+  }
+}

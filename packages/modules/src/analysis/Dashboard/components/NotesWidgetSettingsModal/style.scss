@@ -1,0 +1,43 @@
+.notesWidgetSettingsModal {
+  &__label {
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    height: 255px;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__timePeriod {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: -10px;
+
+    .col-xl-3 {
+      flex: 0 0 50%;
+      max-width: 50%;
+      padding-right: 0;
+    }
+  }
+
+  &__footer {
+    border-top: 1px solid $colour-s14;
+    bottom: 0;
+    left: 0;
+    padding: 30px;
+    position: absolute;
+    text-align: right;
+    width: 100%;
+  }
+
+  .dropdown,
+  .dropdownWrapper,
+  .groupedDropdown {
+    width: 300px;
+  }
+}

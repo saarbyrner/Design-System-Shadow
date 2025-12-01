@@ -1,0 +1,92 @@
+// Alerts
+@import './alerts/style';
+@import './alerts/src/components/alertEditModal/style';
+
+// Assessments
+@import './Assessments/style.scss';
+
+// Analysis
+@import './analysis/GraphComposer/style';
+@import './analysis/shared/style';
+
+// Availability list
+@import './AthleteAvailabilityList/style.scss';
+// Availability report
+@import './AthleteAvailabilityReport/style.scss';
+// Athlete injury
+@import './AthleteInjury/style.scss';
+
+// Annotations
+@import './Annotations/style.scss';
+
+// Calendar
+@import './CalendarPage/style.scss';
+
+// Dashboard
+@import './DashboardTemplates/style';
+@import './DashboardEditor/style';
+@import './analysis/Dashboard/style';
+@import './DashboardEditor/src/components/Metrics/MetricList/style';
+@import './DashboardEditor/src/components/Metrics/AddEditMetric/style';
+
+// Manage athletes
+@import './ManageAthletes/src/style';
+
+// Manage users
+@import './ManageUsers/style';
+@import './Users/src/style';
+
+// Main Navigation & Application Header
+@import './AppHeader/style';
+@import './Athletes/src/style';
+@import './DesktopMenu/style';
+@import './MobileMenu/style';
+@import './UserMenu/style';
+
+// Messaging
+@import './Messaging/style';
+
+// Metrics Dashboard
+@import './MetricsDashboard/style';
+
+// emrOrders
+@import './EmrOrders/src/style';
+
+// Event Modals
+@import './TrainingSessionModal/src/style';
+@import './GameModal/src/style';
+@import './ImportWorkflow/src/style';
+@import './AdvancedEventOptions/style';
+
+// ManageParticipants
+@import './ManageParticipants/style';
+
+// Medical modals
+@import './AddAbsenceModal/style';
+@import './AddNoteModal/style';
+@import './AddNoteModal/RelevantIssueList/style';
+@import './TreatmentSessionModal/style';
+
+// Planning
+@import './PlanningEvent/style.scss';
+@import './PlanningHub/style.scss';
+@import './PlanningSettings/style.scss';
+
+// Questionnaire Manager
+@import './QuestionnaireManager/style';
+@import './QuestionnaireTemplates/style';
+
+// Settings
+@import './OrganisationSettings/style';
+@import './RiskAdvisor/style';
+@import './InjuryMetricContributingFactors/style';
+
+// RehabSessionModal
+@import './RehabSessionModal/style';
+
+// StatusForm
+@import './StatusForm/style';
+@import './StatusForm/TrainingEfficiencyIndex/SecondMetricSelector/style';
+
+// Toasts to be used in non framework areas
+@import './vanillaToasts/style';

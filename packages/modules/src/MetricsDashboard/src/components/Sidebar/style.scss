@@ -1,0 +1,19 @@
+.athleteStatusSidebar {
+  &__heading {
+    color: $colour-p03;
+    font-size: 13px;
+    font-weight: 600;
+    margin: 12px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &__athlete {
+    &:last-child {
+      .athleteInfo {
+        border-bottom: 1px solid $colour-s14;
+      }
+    }
+  }
+}

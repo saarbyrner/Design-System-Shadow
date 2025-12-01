@@ -1,0 +1,84 @@
+.alertsContainer {
+  display: block;
+
+  .alerts {
+    @media only screen and (max-width: 768px) {
+      overflow: auto;
+    }
+  }
+
+  .pageHeader {
+    @media only screen and (max-width: 768px) {
+      left: 0;
+      position: sticky;
+    }
+  }
+
+  .alertsHeader {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &__btnContainer {
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+  }
+
+  .alertsTable {
+    background: $colour-p06;
+    padding: 30px 20px 0;
+
+    @media only screen and (max-width: 768px) {
+      overflow-x: scroll;
+      padding: 20px 0 0;
+    }
+
+    &__cell {
+      &--btn {
+        text-align: right;
+      }
+
+      @media only screen and (max-width: 768px) {
+        white-space: nowrap;
+      }
+    }
+
+    &__activateBtn {
+      .iconButton--transparent {
+        color: $colour-s18;
+      }
+
+      &--active {
+        .iconButton--transparent {
+          color: $colour-p02;
+        }
+      }
+    }
+
+    &__btnContainer {
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      height: 30px;
+      justify-content: flex-end;
+      position: relative;
+    }
+
+    &__button {
+      background: none;
+      border: 0;
+      color: $colour-p04;
+      font-size: 25px;
+      padding-bottom: 0;
+      padding-top: 0;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

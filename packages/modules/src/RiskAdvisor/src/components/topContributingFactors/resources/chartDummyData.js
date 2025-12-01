@@ -1,0 +1,235 @@
+// @flow
+export const mockedTCFGraphDataResponse = [
+  {
+    name: 'RPE x Duration - Training stress balance from today - 7:28',
+    normalized_risk_bands: {
+      bands: [
+        { xstart: 0, xend: 0.3032644982516329, zone: 'lightred' },
+        { xstart: 0.3032644982516329, xend: 0.4258164544434914, zone: 'red' },
+        {
+          xstart: 0.4258164544434914,
+          xend: 0.7316223527083197,
+          zone: 'yellow',
+        },
+        {
+          xstart: 0.7316223527083197,
+          xend: 0.8938906115986012,
+          zone: 'lightyellow',
+        },
+        { xstart: 0.8938906115986012, xend: 1, zone: 'lightred' },
+      ],
+      value: null,
+      x_min: 0,
+      x_max: 3031.4,
+    },
+    parts: {
+      name: ['Name', 'RPE x Duration'],
+      data_source: ['Data source', 'Kitman'],
+      aggregation: ['Calculation', 'Training stress balance'],
+      period_1: ['Acute period', '7 days'],
+      period_2: ['Chronic period', '28 days'],
+    },
+    restricted: false,
+    risk_bands: [
+      { xstart: 0, xend: 919.316, zone: 'lightred' },
+      { xstart: 919.316, xend: 1290.82, zone: 'red' },
+      { xstart: 1290.82, xend: 2217.84, zone: 'yellow' },
+      { xend: 2709.74, xstart: 2217.84, zone: 'lightyellow' },
+      { xstart: 2709.74, xend: 3031.4, zone: 'lightred' },
+    ],
+    status_unit: '',
+    status_value: null,
+    x_labels: [505, 1010, 1516, 2021, 2526],
+    y: 0.974476,
+  },
+  {
+    name: 'STATSports - High Speed Running - Sum from this week',
+    normalized_risk_bands: {
+      bands: [
+        { xstart: 0, xend: 589.336, zone: 'lightred' },
+        { xstart: 589.336, xend: 1235.52, zone: 'red' },
+        { xstart: 1235.52, xend: 1836.6, zone: 'yellow' },
+        { xstart: 1836.6, xend: 2362.82, zone: 'lightyellow' },
+        { xstart: 2362.82, xend: 3046.46, zone: 'lightred' },
+      ],
+      value: null,
+      x_min: 0,
+      x_max: 3046.46,
+    },
+    parts: {
+      aggregation: ['Calculation', 'Sum'],
+      data_source: ['Data source', 'STATSports'],
+      name: ['Name', 'High Speed Running'],
+      period_1: ['Period', 'This week'],
+      period_2: null,
+    },
+    restricted: false,
+    risk_bands: [
+      { xstart: 0, xend: 589.336, zone: 'lightred' },
+      { xstart: 589.336, xend: 1235.52, zone: 'red' },
+      { xstart: 1235.52, xend: 1836.6, zone: 'yellow' },
+      { xstart: 1836.6, xend: 2362.82, zone: 'lightyellow' },
+      { xstart: 2362.82, xend: 3046.46, zone: 'lightred' },
+    ],
+    status_unit: 'm',
+    status_value: null,
+    x_labels: [508, 1015, 1523, 2031, 2539],
+    y: 0.85956,
+  },
+  {
+    name: 'STATSports - Sprints - Sum from this week',
+    normalized_risk_bands: {
+      bands: [
+        { xstart: 0, xend: 0.09183834601495143, zone: 'lightred' },
+        { xstart: 0.09183834601495143, xend: 0.2809785722852232, zone: 'red' },
+        {
+          xstart: 0.2809785722852232,
+          xend: 0.6066321975400771,
+          zone: 'yellow',
+        },
+        {
+          xstart: 0.6066321975400771,
+          xend: 0.8140099676185654,
+          zone: 'lightyellow',
+        },
+        { xstart: 0.8140099676185654, xend: 1, zone: 'lightred' },
+      ],
+      value: null,
+      x_min: 0,
+      x_max: 3001.72,
+    },
+    parts: {
+      aggregation: ['Calculation', 'Sum'],
+      data_source: ['Data source', 'STATSports'],
+      name: ['Name', 'Sprints'],
+      period_1: ['Period', 'This week'],
+      period_2: null,
+    },
+    restricted: false,
+    risk_bands: [
+      { xstart: 0, xend: 275.673, zone: 'lightred' },
+      { xstart: 275.673, xend: 843.419, zone: 'red' },
+      { xstart: 843.419, xend: 1820.94, zone: 'yellow' },
+      { xstart: 1820.94, xend: 2443.43, zone: 'lightyellow' },
+      { xstart: 2443.43, xend: 3001.72, zone: 'lightred' },
+    ],
+    status_unit: '#',
+    status_value: null,
+    x_labels: [500, 1001, 1501, 2001, 2501],
+    y: 0.752221,
+  },
+];
+
+export const mockTCFGraphData = [
+  {
+    injury_risk_status:
+      'RPE x Duration - Training stress balance from today - 7:28_0',
+    shap_value: 0.974476,
+    normalized_risk_bands: {
+      bands: [
+        { xstart: 0, xend: 0.3032644982516329, zone: 'lightred' },
+        { xstart: 0.3032644982516329, xend: 0.4258164544434914, zone: 'red' },
+        {
+          xstart: 0.4258164544434914,
+          xend: 0.7316223527083197,
+          zone: 'yellow',
+        },
+        {
+          xstart: 0.7316223527083197,
+          xend: 0.8938906115986012,
+          zone: 'lightyellow',
+        },
+        { xstart: 0.8938906115986012, xend: 1, zone: 'lightred' },
+      ],
+      value: null,
+      x_min: 0,
+      x_max: 3031.4,
+    },
+    risk_bands: [
+      { xstart: 0, xend: 919.316, zone: 'lightred' },
+      { xstart: 919.316, xend: 1290.82, zone: 'red' },
+      { xstart: 1290.82, xend: 2217.84, zone: 'yellow' },
+      { xend: 2709.74, xstart: 2217.84, zone: 'lightyellow' },
+      { xstart: 2709.74, xend: 3031.4, zone: 'lightred' },
+    ],
+    parts: {
+      name: ['Name', 'RPE x Duration'],
+      data_source: ['Data source', 'Kitman'],
+      aggregation: ['Calculation', 'Training stress balance'],
+      period_1: ['Acute period', '7 days'],
+      period_2: ['Chronic period', '28 days'],
+    },
+    x_labels: [505, 1010, 1516, 2021, 2526],
+  },
+  {
+    injury_risk_status:
+      'STATSports - High Speed Running - Sum from this week_1',
+    shap_value: 0.85956,
+    normalized_risk_bands: {
+      bands: [
+        { xstart: 0, xend: 589.336, zone: 'lightred' },
+        { xstart: 589.336, xend: 1235.52, zone: 'red' },
+        { xstart: 1235.52, xend: 1836.6, zone: 'yellow' },
+        { xstart: 1836.6, xend: 2362.82, zone: 'lightyellow' },
+        { xstart: 2362.82, xend: 3046.46, zone: 'lightred' },
+      ],
+      value: null,
+      x_min: 0,
+      x_max: 3046.46,
+    },
+    parts: {
+      aggregation: ['Calculation', 'Sum'],
+      data_source: ['Data source', 'STATSports'],
+      name: ['Name', 'High Speed Running'],
+      period_1: ['Period', 'This week'],
+      period_2: null,
+    },
+    risk_bands: [
+      { xstart: 0, xend: 589.336, zone: 'lightred' },
+      { xstart: 589.336, xend: 1235.52, zone: 'red' },
+      { xstart: 1235.52, xend: 1836.6, zone: 'yellow' },
+      { xstart: 1836.6, xend: 2362.82, zone: 'lightyellow' },
+      { xstart: 2362.82, xend: 3046.46, zone: 'lightred' },
+    ],
+    x_labels: [508, 1015, 1523, 2031, 2539],
+  },
+  {
+    injury_risk_status: 'STATSports - Sprints - Sum from this week_2',
+    shap_value: 0.752221,
+    normalized_risk_bands: {
+      bands: [
+        { xstart: 0, xend: 0.09183834601495143, zone: 'lightred' },
+        { xstart: 0.09183834601495143, xend: 0.2809785722852232, zone: 'red' },
+        {
+          xstart: 0.2809785722852232,
+          xend: 0.6066321975400771,
+          zone: 'yellow',
+        },
+        {
+          xstart: 0.6066321975400771,
+          xend: 0.8140099676185654,
+          zone: 'lightyellow',
+        },
+        { xstart: 0.8140099676185654, xend: 1, zone: 'lightred' },
+      ],
+      value: null,
+      x_min: 0,
+      x_max: 3001.72,
+    },
+    parts: {
+      aggregation: ['Calculation', 'Sum'],
+      data_source: ['Data source', 'STATSports'],
+      name: ['Name', 'Sprints'],
+      period_1: ['Period', 'This week'],
+      period_2: null,
+    },
+    risk_bands: [
+      { xstart: 0, xend: 275.673, zone: 'lightred' },
+      { xstart: 275.673, xend: 843.419, zone: 'red' },
+      { xstart: 843.419, xend: 1820.94, zone: 'yellow' },
+      { xstart: 1820.94, xend: 2443.43, zone: 'lightyellow' },
+      { xstart: 2443.43, xend: 3001.72, zone: 'lightred' },
+    ],
+    x_labels: [500, 1001, 1501, 2001, 2501],
+  },
+];

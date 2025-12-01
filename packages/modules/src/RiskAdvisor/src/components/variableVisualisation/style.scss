@@ -1,0 +1,228 @@
+.riskAdvisor {
+  &__visualisationHeader {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    padding: 20px 20px 20px 30px;
+    width: 100%;
+  }
+
+  &__title {
+    flex: 1;
+
+    h4 {
+      font-size: 18px;
+    }
+
+    span {
+      color: $colour-s17;
+      font-size: 12px;
+    }
+  }
+
+  &__controls {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    button {
+      margin-left: 10px;
+    }
+  }
+
+  &__visualisationContent {
+    flex: 1;
+    padding: 20px 20px 20px 30px;
+    width: 100%;
+  }
+
+  &__visualisationEmptyState {
+    flex: 1;
+    padding: 20px 20px 20px 30px;
+    width: 100%;
+  }
+
+  &__addNewFromEmptyContainer {
+    align-items: center;
+    background: $colour-p06;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+  }
+
+  &__addNewFromEmpty {
+    text-align: center;
+  }
+
+  &__statusIndicator {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    span {
+      font-weight: 600;
+    }
+  }
+
+  &__status {
+    align-items: center;
+    background: $colour-p06;
+    color: $colour-p01;
+    display: flex;
+    flex-direction: row;
+    font-weight: 600;
+    height: 40px;
+    justify-content: center;
+    margin-left: 10px;
+    min-width: 100px;
+
+    &--archived {
+      color: $colour-p03;
+    }
+
+    &--error {
+      color: $colour-s11;
+    }
+
+    &--progress {
+      color: $colour-s08;
+    }
+
+    &--ready {
+      color: $colour-s03;
+      min-width: 40px;
+    }
+  }
+
+  &__statusIcon {
+    font-size: 20px;
+    margin-right: 5px;
+
+    .riskAdvisor__status--ready & {
+      font-size: 30px;
+    }
+  }
+
+  &__valueVisualisation {
+    margin-bottom: 15px;
+
+    .valueVisualisation {
+      height: 20vh;
+      background: $colour-p06;
+      border: 1px solid $colour-s13;
+      border-radius: 5px;
+
+      .graphDescription {
+        display: none;
+      }
+
+      &__valueContainer {
+        padding-top: 0px;
+        padding-bottom: 0px;
+        height: 100%;
+      }
+
+      &__value {
+        font-size: 10vh !important;
+      }
+
+      &__unit {
+        font-size: 3vh !important;
+      }
+    }
+  }
+
+  &__valueVisualisationGraphHeader {
+    align-items: center;
+    background: $colour-s13;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+    padding: 15px 10px;
+
+    i {
+      font-size: 24px;
+    }
+  }
+
+  &__valueVisualisationGraphTitle {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: flex-start;
+    margin: 0 10px 0 0;
+    overflow: hidden;
+    padding-bottom: 2px;
+    vertical-align: top;
+  }
+
+  &__infoTooltipContent {
+    padding: 10px;
+  }
+
+  &__summaryBar {
+    background: $colour-p06;
+    border: 1px solid $colour-s13;
+    border-radius: 5px;
+
+    .graphDescription {
+      p {
+        margin: 0;
+      }
+
+      .graphDescription__status {
+        background: $colour-s13;
+        margin: 0;
+        padding: 15px 10px;
+      }
+    }
+
+    .graphLegendList {
+      display: none;
+    }
+  }
+
+  &__placeholder {
+    @keyframes placeHolderShimmer {
+      0% {
+        background-position: -468px 0;
+      }
+
+      100% {
+        background-position: 468px 0;
+      }
+    }
+
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: placeHolderShimmer;
+    animation-timing-function: cubic-bezier(0.44, 0.3, 0.9, 0.37);
+    background: #f6f7f8;
+    background: linear-gradient(to right, #eee 8%, #ddd 18%, #eee 33%);
+    background-size: 1400px 104px;
+    margin-top: 20px;
+    max-height: calc(100% - 20px);
+    position: relative;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__topContributingFactorsGraph {
+    &--loading {
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

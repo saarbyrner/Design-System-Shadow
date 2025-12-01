@@ -1,0 +1,119 @@
+.availabilityTable {
+  margin-top: 22px;
+  padding: 0 20px;
+  width: 100%;
+
+  &__groupHeader {
+    align-items: center;
+    background: $colour-s14;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 2px;
+    padding: 10px;
+  }
+
+  &__groupHeaderName {
+    font-weight: 600;
+  }
+
+  &__groupCount {
+    padding: 0 5px;
+  }
+
+  &__header {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    font-weight: 600;
+    justify-content: stretch;
+
+    .availabilityTable__cell--rtp {
+      color: $colour-s18;
+    }
+  }
+
+  &__row {
+    align-items: flex-start;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    margin-bottom: 2px;
+
+    &:nth-child(even) {
+      background: $colour-s13;
+
+      @media print {
+        -webkit-print-color-adjust: exact; // Chrome/Safari
+        print-color-adjust: exact; // Firefox
+        background: transparentize($colour-s13, 0.1) !important;
+      }
+    }
+
+    &:nth-child(odd) {
+      background: $colour-s23;
+
+      @media print {
+        -webkit-print-color-adjust: exact; // Chrome/Safari
+        print-color-adjust: exact; // Firefox
+        background: transparentize($colour-s23, 0.1) !important;
+      }
+    }
+  }
+
+  &__cell {
+    flex: 1;
+    font-size: 12px;
+    padding: 10px;
+
+    &--name {
+      min-width: 165px;
+    }
+
+    &--modinfo,
+    &--issues {
+      max-width: 400px;
+      min-width: 400px;
+
+      @media (max-width: 1225px) {
+        max-width: 200px;
+        min-width: 200px;
+      }
+    }
+
+    &--rtp {
+      color: $colour-s16;
+      max-width: 125px;
+      min-width: 125px;
+    }
+
+    &--menu {
+      padding-right: 15px;
+      text-align: right;
+
+      @media print {
+        display: none;
+      }
+
+      i {
+        cursor: pointer;
+        display: block;
+        float: right;
+        text-align: center;
+        width: 10px;
+      }
+    }
+  }
+
+  &__unavailabilityLength {
+    color: $colour-s16;
+    display: block;
+    padding-left: 15px;
+  }
+
+  &__modInfoMenu {
+    border-bottom: 1px dotted $colour-s14;
+  }
+}

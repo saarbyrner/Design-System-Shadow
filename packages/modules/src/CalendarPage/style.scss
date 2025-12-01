@@ -1,0 +1,97 @@
+.calendarPage {
+  display: grid;
+  grid-template-columns: 1fr min-content;
+  grid-template-rows: min-content 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    'controls slideout'
+    'calendar slideout';
+
+  .calendar {
+    grid-area: calendar;
+    @media only screen and (min-width: $breakpoint-desktop) {
+      height: calc(100vh - 160px);
+      max-height: calc(100vh - 160px);
+    }
+    @media only screen and (max-width: $breakpoint-desktop) {
+      height: calc(100vh - 170px);
+      max-height: calc(100vh - 170px);
+    }
+  }
+
+  &__controls {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    grid-area: controls;
+    justify-content: flex-end;
+    padding: 15px 20px;
+  }
+
+  &__eventTooltip {
+    display: block;
+  }
+
+  &__slideout {
+    z-index: $zIndex-intercomZPlus3; // Above the intercom button
+    background-color: $colour-p06;
+    filter: drop-shadow(0px 2px 8px $colors-semi_transparent_background)
+      drop-shadow(0px 2px 15px $colors-light_transparent_background);
+    grid-area: slideout;
+    overflow-x: clip;
+    position: relative;
+    height: 100vh;
+    max-height: 100vh;
+
+    @media only screen and (min-width: $breakpoint-desktop) {
+      top: -$banner-height-tablet;
+      margin-bottom: -$banner-height-tablet;
+    }
+    @media only screen and (max-width: $breakpoint-desktop) {
+      top: -$banner-height-desktop;
+      margin-bottom: -$banner-height-desktop;
+    }
+  }
+
+  &__sessionFilters {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    &--dropdownFilterEvents {
+      justify-content: flex-start;
+      margin-right: 15px;
+
+      .dropdownWrapper {
+        width: 255px;
+      }
+    }
+
+    &--dropdownFilterAthletes {
+      justify-content: flex-start;
+      width: 100%;
+
+      .dropdownWrapper {
+        width: 300px;
+      }
+    }
+
+    .reactCheckbox--checked {
+      .reactCheckbox__checkbox {
+        background: $colour-p06;
+      }
+    }
+  }
+
+  &__sessionFilterCheckbox {
+    padding-left: 15px;
+  }
+
+  &__addEventButtons {
+    button {
+      margin-left: 20px;
+      min-width: auto;
+    }
+  }
+}

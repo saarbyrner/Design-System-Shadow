@@ -1,0 +1,46 @@
+.importWorkflowSummary {
+  &__panel {
+    border-bottom: 1px dashed $colour-s14;
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+
+    &Title {
+      color: $colour-p03;
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    &InfoLabel {
+      color: $colour-s18;
+      margin-bottom: 5px;
+    }
+  }
+
+  &__contentWrapper {
+    margin-bottom: 30px;
+  }
+
+  &__gameInformation {
+    margin-bottom: 15px;
+  }
+
+  &__missingAthleteIdentifiers {
+    column-count: 4;
+  }
+
+  &__inlcudedParticipants {
+    .importWorkflowSummary__inlcudedParticipantsTitle {
+      color: $colour-s01;
+      font-weight: 600;
+      margin-top: 25px;
+    }
+
+    .importWorkflowSummary__inlcudedParticipantsIcon {
+      font-size: 26px;
+      margin-left: -3px;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+  }
+}

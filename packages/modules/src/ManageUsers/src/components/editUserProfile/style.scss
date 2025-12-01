@@ -1,0 +1,107 @@
+.editUserProfileForm {
+  &__profileGrid {
+    display: grid;
+    grid-template-columns: 192px 488px;
+    grid-template-rows: min-content max-content;
+    gap: 8px 8px;
+    grid-template-areas:
+      'editUserProfileForm__headerArea editUserProfileForm__headerArea'
+      'editUserProfileForm__profilePhotoArea editUserProfileForm__userDetailsArea';
+  }
+
+  h2 {
+    margin: 0;
+    padding: 20px;
+  }
+
+  &__header {
+    grid-area: editUserProfileForm__headerArea;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    overflow: hidden;
+    padding: 20px;
+  }
+
+  &__userDetails {
+    grid-area: editUserProfileForm__userDetailsArea;
+    align-items: stretch;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__userName {
+    color: $colour-grey-200;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16px;
+    margin-top: 8px;
+  }
+
+  &__avatarUpload {
+    margin-top: 16px;
+  }
+
+  &__nameRow,
+  &__emailRow {
+    display: inline-flex;
+    flex-direction: row;
+    gap: 8px;
+    margin-bottom: 18px;
+
+    > * {
+      width: 100%;
+    }
+  }
+
+  &__avatarDetails {
+    align-items: center;
+    align-self: start;
+    display: flex;
+    flex-direction: column;
+    grid-area: editUserProfileForm__profilePhotoArea;
+    justify-content: center;
+    justify-self: center;
+  }
+
+  &__detailsForm {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+  }
+
+  &__inputContainer {
+    flex: 1;
+    max-width: 300px;
+    padding: 0 10px;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  &__passwordForm {
+    border-bottom: 1px solid $colour-light-shadow;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 0 20px 20px;
+  }
+
+  &__footer {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 20px;
+  }
+}

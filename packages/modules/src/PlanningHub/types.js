@@ -1,0 +1,40 @@
+// @flow
+import type { DateRange } from '@kitman/common/src/types';
+
+export type EventFilters = {
+  dateRange: DateRange,
+  eventTypes: Array<string>,
+  competitions: Array<string>,
+  gameDays: Array<string>,
+  oppositions: Array<string>,
+  search_expression?: string,
+  include_game_status?: boolean,
+  include_kit_matrix?: boolean,
+  include_game_kit_matrix?: boolean,
+  include_home_dmr?: boolean,
+  include_away_dmr?: boolean,
+  include_game_participants_lock_time?: boolean,
+  include_time?: boolean,
+  squad_names?: Array<string>,
+  statuses?: Array<string>,
+  organisations?: Array<number>,
+  supervisor_view?: boolean,
+  start_time_asc?: boolean,
+  areRecurringEventsIncluded?: boolean,
+  includeUserEventRequestsCount?: boolean,
+  includeUserEventRequestsCounts?: boolean,
+  user_event_requests_statuses?: Array<string>,
+  round_number?: string,
+  include_match_director?: boolean,
+  include_tv_channels?: boolean,
+  include_tv_game_contacts?: boolean,
+  include_match_monitors?: boolean,
+  include_division?: boolean,
+  include_access_request_accessible?: boolean,
+  include_access_request_time_valid?: boolean,
+  include_association_contact?: boolean,
+  include_visible?: boolean,
+  include_scout_attendees?: boolean,
+};
+
+export type PageView = 'SCHEDULE' | 'TIMELINE' | 'WORKLOAD';

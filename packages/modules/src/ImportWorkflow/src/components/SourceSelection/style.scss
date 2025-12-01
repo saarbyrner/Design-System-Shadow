@@ -1,0 +1,18 @@
+.sourceSelection {
+  &__sourceName {
+    display: inline-block;
+    margin-left: 5px;
+  }
+
+  &__sourceLabel {
+    margin-bottom: 10px;
+  }
+
+  &__footerWrapper {
+    margin-top: 80px;
+  }
+
+  &__options {
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,5 @@
+// @flow
+
+const FORM_CONTENT_HEADER_MAX_LENGTH = 100;
+
+export default FORM_CONTENT_HEADER_MAX_LENGTH;

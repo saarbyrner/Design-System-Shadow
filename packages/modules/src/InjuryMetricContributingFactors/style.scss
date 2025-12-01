@@ -1,0 +1,458 @@
+$riskBandColours__increasing: #c31d2b;
+$riskBandColours__likely_increasing: #e7a5aa;
+$riskBandColours__likely_reducing: #afb7c4;
+$riskBandColours__reducing: #5f7089;
+
+.contributingFactors {
+  background-color: $colour-p06;
+  display: block;
+  padding: 0 0 30px;
+
+  &__backBtn {
+    padding: 10px 0;
+
+    @media print {
+      display: none;
+    }
+
+    button {
+      background: none;
+      border: 0;
+      color: $colour-p01;
+      font-size: 14px;
+
+      i {
+        padding-right: 5px;
+      }
+    }
+  }
+
+  &__header {
+    align-items: center;
+    background: $colour-p06;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 20px;
+
+    @media print {
+      display: none;
+    }
+  }
+
+  &__headerLeft {
+    h3 {
+      font-size: 20px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__headerRight {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    button {
+      margin-left: 10px;
+    }
+  }
+
+  &__graphControls {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: 0 20px;
+  }
+
+  &__dateSwitcher {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    margin-right: 5px;
+  }
+
+  &__dateSwitcherDate {
+    background: $colour-neutral-200;
+    border-radius: 3px;
+    margin: 0 3px;
+    min-width: 140px;
+    padding: 6px 12px;
+    text-align: center;
+  }
+
+  &__athleteChooser {
+    margin-left: 5px;
+    min-width: 200px;
+  }
+
+  &__noData {
+    padding: 20px;
+    text-align: center;
+  }
+
+  &__graphContainer {
+    border: 1px solid $colour-s13;
+    margin: 20px;
+
+    @media print {
+      border: 0;
+    }
+  }
+
+  &__graphContainerHeader {
+    align-items: center;
+    background: $colour-s13;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px 20px;
+
+    @media print {
+      display: none;
+    }
+
+    h4 {
+      font-size: 20px;
+      margin: 0;
+    }
+  }
+
+  &__riskRateTag {
+    background: $colour-blue-300;
+    border-radius: 11px;
+    color: $colour-p06;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    padding: 2px 8px;
+  }
+
+  &__graph {
+    width: 100%;
+  }
+
+  &__analytics {
+    i {
+      display: inline-block;
+      margin-left: 5px;
+    }
+  }
+
+  &__analyticsTooltipContent {
+    font-size: 14px;
+    padding: 15px;
+  }
+
+  &__analyticsRow {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    width: 380px;
+  }
+
+  &__analyticsKey {
+    flex: 1;
+    font-weight: 600;
+  }
+
+  &__analyticsValue {
+    flex: 1.5;
+    padding-right: 10px;
+
+    span {
+      &:after {
+        content: ', ';
+      }
+
+      &:last-child {
+        &:after {
+          content: '';
+        }
+      }
+    }
+  }
+
+  .graphLegendList {
+    display: none;
+  }
+
+  &__printHeader {
+    display: none;
+    padding: 20px 20px 0;
+
+    @media print {
+      display: block;
+    }
+  }
+
+  &__printHeaderMain,
+  &__printHeaderDetails {
+    align-items: flex-start;
+    border-bottom: 1px solid $colour-grey-50;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 0 15px;
+    padding: 0 0 15px;
+  }
+
+  &__printHeaderAthlete {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  &__printHeaderAthleteName {
+    font-size: 18px;
+    font-weight: 600;
+    padding-bottom: 10px;
+  }
+
+  &__printHeadeOrgName {
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  &__printHeaderDetailSection {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  &__printHeaderDetailSectionTitle {
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+}
+
+@page {
+  width: 280mm;
+}
+
+@media print {
+  body {
+    overflow: hidden;
+  }
+
+  // Highcharts generates an SVG when rendered. When you open the print view that doesn't trigger the re-render of
+  // that svg, so we need to adjust that in the print view to fit.
+  .contributingFactors__graph {
+    svg {
+      height: auto;
+      max-width: 250mm;
+    }
+  }
+
+  .contributingFactors__graphControls {
+    display: none;
+  }
+}
+
+.riskLevelBandsTooltip {
+  margin-bottom: 10px;
+  min-width: 500px;
+
+  &__title {
+    color: $colour-p03;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+
+  &__subTitle {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: 5px;
+    max-width: 500px;
+  }
+
+  &__subTitleItem {
+    font-size: 12px;
+    margin-right: 5px;
+
+    span:last-child {
+      font-weight: 600;
+      padding-left: 2px;
+    }
+
+    &:after {
+      content: '|';
+      display: inline-block;
+      padding-left: 5px;
+    }
+
+    &:last-child {
+      margin: 0;
+
+      &:after {
+        display: none;
+      }
+    }
+  }
+
+  &__chartBackground {
+    border: 1px solid $colour-neutral-200;
+    color: transparent;
+    height: 100px;
+    position: relative;
+    width: 500px;
+  }
+
+  &__valueText {
+    display: inline-block;
+  }
+
+  &__valueTextValue {
+    font-weight: 600;
+  }
+
+  &__valueTextUnit {
+    padding-left: 3px;
+  }
+
+  &__outsideRangeMarker {
+    background: $red-100-20-percent;
+    border-radius: 8px;
+    color: $red-200;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    margin-left: 10px;
+    padding: 0 6px;
+  }
+
+  &__valueMarker {
+    border-left: 1px dashed $colour-p02;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    width: 1px;
+    z-index: 2;
+  }
+
+  &__separator {
+    border-left: 1px solid $colour-neutral-200;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    width: 1px;
+    z-index: 0;
+
+    span {
+      bottom: 0;
+      color: $colour-s16;
+      left: 50%;
+      position: absolute;
+      transform: translate(-50%, 100%);
+    }
+  }
+
+  &__band {
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+
+    &--lightyellow {
+      background-color: $riskBandColours__reducing;
+    }
+
+    &--yellow {
+      background-color: $riskBandColours__likely_reducing;
+    }
+
+    &--lightred {
+      background-color: $riskBandColours__likely_increasing;
+    }
+
+    &--red {
+      background-color: $riskBandColours__increasing;
+    }
+  }
+
+  &__athleteValue {
+    margin: 10px 0;
+  }
+
+  &__legend {
+    margin-bottom: 18px;
+  }
+
+  &__legendItem {
+    display: inline-block;
+    font-size: 11px;
+    margin-left: 10px;
+
+    &:before {
+      border-radius: 10px;
+      content: '';
+      display: inline-block;
+      height: 8px;
+      margin-right: 5px;
+      width: 8px;
+    }
+
+    &--severe {
+      margin-left: 0px !important;
+      &:before {
+        background: $riskBandColours__increasing;
+      }
+    }
+
+    &--moderate {
+      &:before {
+        background: $riskBandColours__likely_increasing;
+      }
+    }
+
+    &--minor {
+      &:before {
+        background: $riskBandColours__likely_reducing;
+      }
+    }
+
+    &--low {
+      &:before {
+        background: $riskBandColours__reducing;
+      }
+    }
+
+    &--athlete {
+      &:before {
+        border-radius: 0;
+        border-top: 1px dashed $colour-p02;
+        height: 4px;
+      }
+    }
+  }
+
+  &__tag {
+    background: $colour-blue-300;
+    border-radius: 10px;
+    color: $colour-p06;
+    display: inline-block;
+    margin: 10px 0;
+    padding: 2px 5px;
+  }
+
+  p {
+    margin-bottom: 10px;
+  }
+
+  a {
+    color: $colour-blue-200;
+    font-weight: normal;
+  }
+}

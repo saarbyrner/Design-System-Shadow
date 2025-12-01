@@ -1,0 +1,68 @@
+export default [
+  {
+    id: 1,
+    name: 'Squad 1',
+    athletes: [
+      {
+        avatar_url: '',
+        firstname: 'Any',
+        fullname: 'Any Tester',
+        id: 2345,
+        lastname: 'Tester',
+        shortname: 'A. Tester',
+        user_id: 111111,
+      },
+      {
+        avatar_url: '',
+        firstname: 'Another',
+        fullname: 'Another Test',
+        id: 23456,
+        lastname: 'Test',
+        shortname: 'A. Tester',
+        user_id: 111112,
+      },
+      {
+        avatar_url: '',
+        firstname: 'Joe',
+        fullname: 'Joe Bloggs',
+        id: 1345,
+        lastname: 'Bloggs',
+        shortname: 'J. Bloggs',
+        user_id: 1113,
+      },
+      {
+        avatar_url: '',
+        firstname: 'Jane',
+        fullname: 'Jane Bloggs',
+        id: 2156,
+        lastname: 'Bloggs',
+        shortname: 'J. Bloggs',
+        user_id: 1134,
+      },
+    ],
+  },
+  {
+    id: 2,
+    name: 'Squad 2',
+    athletes: [
+      {
+        avatar_url: '',
+        firstname: 'Stephen',
+        fullname: 'Stephen Smith',
+        id: 1,
+        lastname: 'Smith',
+        shortname: 'S. Smith',
+        user_id: 1,
+      },
+      {
+        avatar_url: '',
+        firstname: 'Michelle',
+        fullname: 'Michelle Smith',
+        id: 2,
+        lastname: 'Smith',
+        shortname: 'M. Smith',
+        user_id: 2,
+      },
+    ],
+  },
+];

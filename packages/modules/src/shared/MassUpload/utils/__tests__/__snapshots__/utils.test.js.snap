@@ -1,0 +1,293 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`utils getCommonRulesetFields 1`] = `
+Object {
+  "DOB": Object {
+    "description": "The format must be YYYY/MM/DD.",
+    "exampleList": Array [
+      "2023/12/31",
+      "2023/01/01",
+    ],
+    "exampleText": "YEAR/MONTH/DAY",
+  },
+  "Email": Object {
+    "description": "The email address associated with an athlete.",
+    "exampleList": Array [],
+    "exampleText": "john.doe@email.com",
+  },
+  "FirstName": Object {
+    "description": "The athlete's First Name.",
+    "exampleList": Array [],
+    "exampleText": "John",
+  },
+  "LastName": Object {
+    "description": "The athlete's Last Name.",
+    "exampleList": Array [],
+    "exampleText": "Doe",
+  },
+}
+`;
+
+exports[`utils getCommonRulesetFields 2`] = `
+Object {
+  "DOB": Object {
+    "description": "The format must be YYYY/MM/DD.",
+    "exampleList": Array [
+      "2023/12/31",
+      "2023/01/01",
+    ],
+    "exampleText": "YEAR/MONTH/DAY",
+  },
+  "Email": Object {
+    "description": "The email address associated with an staff member.",
+    "exampleList": Array [],
+    "exampleText": "john.doe@email.com",
+  },
+  "FirstName": Object {
+    "description": "The staff member's First Name.",
+    "exampleList": Array [],
+    "exampleText": "John",
+  },
+  "LastName": Object {
+    "description": "The staff member's Last Name.",
+    "exampleList": Array [],
+    "exampleText": "Doe",
+  },
+}
+`;
+
+exports[`utils getDataTypeGuideline should render as expected if case insensitive 1`] = `
+<React.Fragment>
+  <ForwardRef(Box)
+    sx={
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+      }
+    }
+  >
+    <EmotionCssPropInternal
+      __EMOTION_TYPE_PLEASE_DO_NOT_USE__="p"
+      css={
+        Object {
+          "color": "#3b4960",
+          "fontWeight": 600,
+          "margin": 0,
+        }
+      }
+    >
+      test_key
+    </EmotionCssPropInternal>
+    <ForwardRef(IconButton)
+      onClick={[Function]}
+    >
+      <KitmanIcon
+        fontSize="small"
+        name="ContentCopy"
+      />
+    </ForwardRef(IconButton)>
+  </ForwardRef(Box)>
+  <EmotionCssPropInternal
+    __EMOTION_TYPE_PLEASE_DO_NOT_USE__="p"
+    css={
+      Object {
+        "margin": 0,
+      }
+    }
+  >
+    Case insensitive.
+  </EmotionCssPropInternal>
+  <p>
+    This is an example
+  </p>
+</React.Fragment>
+`;
+
+exports[`utils getDataTypeGuideline should render as expected if multiple guidelines 1`] = `
+<React.Fragment>
+  <ForwardRef(Box)
+    sx={
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+      }
+    }
+  >
+    <EmotionCssPropInternal
+      __EMOTION_TYPE_PLEASE_DO_NOT_USE__="p"
+      css={
+        Object {
+          "color": "#3b4960",
+          "fontWeight": 600,
+          "margin": 0,
+        }
+      }
+    >
+      test_key
+    </EmotionCssPropInternal>
+    <ForwardRef(IconButton)
+      onClick={[Function]}
+    >
+      <KitmanIcon
+        fontSize="small"
+        name="ContentCopy"
+      />
+    </ForwardRef(IconButton)>
+  </ForwardRef(Box)>
+  <React.Fragment>
+    <EmotionCssPropInternal
+      __EMOTION_TYPE_PLEASE_DO_NOT_USE__="p"
+      css={
+        Object {
+          "margin": 0,
+        }
+      }
+    >
+      Accepted values:
+    </EmotionCssPropInternal>
+    <ul>
+      <li>
+        This is an example
+      </li>
+      <li>
+        This is another example
+      </li>
+    </ul>
+  </React.Fragment>
+</React.Fragment>
+`;
+
+exports[`utils getDataTypeGuideline should render as expected if required 1`] = `
+<React.Fragment>
+  <ForwardRef(Box)
+    sx={
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+      }
+    }
+  >
+    <EmotionCssPropInternal
+      __EMOTION_TYPE_PLEASE_DO_NOT_USE__="p"
+      css={
+        Object {
+          "color": "#3b4960",
+          "fontWeight": 600,
+          "margin": 0,
+        }
+      }
+    >
+      test_key
+    </EmotionCssPropInternal>
+    <ForwardRef(IconButton)
+      onClick={[Function]}
+    >
+      <KitmanIcon
+        fontSize="small"
+        name="ContentCopy"
+      />
+    </ForwardRef(IconButton)>
+  </ForwardRef(Box)>
+  <EmotionCssPropInternal
+    __EMOTION_TYPE_PLEASE_DO_NOT_USE__="p"
+    css={
+      Object {
+        "margin": 0,
+      }
+    }
+  >
+    Required.
+  </EmotionCssPropInternal>
+  <p>
+    This is an example
+  </p>
+</React.Fragment>
+`;
+
+exports[`utils getDataTypeGuideline should render as expected in default state 1`] = `
+<React.Fragment>
+  <ForwardRef(Box)
+    sx={
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+      }
+    }
+  >
+    <EmotionCssPropInternal
+      __EMOTION_TYPE_PLEASE_DO_NOT_USE__="p"
+      css={
+        Object {
+          "color": "#3b4960",
+          "fontWeight": 600,
+          "margin": 0,
+        }
+      }
+    >
+      test_key
+    </EmotionCssPropInternal>
+    <ForwardRef(IconButton)
+      onClick={[Function]}
+    >
+      <KitmanIcon
+        fontSize="small"
+        name="ContentCopy"
+      />
+    </ForwardRef(IconButton)>
+  </ForwardRef(Box)>
+  <p>
+    This is an example
+  </p>
+</React.Fragment>
+`;
+
+exports[`utils template columns should return as expected when calling baselinesTemplateColumns 1`] = `
+Object {
+  "biological_fathers_height_cm": null,
+  "biological_mothers_height_cm": null,
+  "date_of_birth_of_player": null,
+  "gender": null,
+  "method_for_assessing_fathers_height": null,
+  "method_for_assessing_mothers_height": null,
+}
+`;
+
+exports[`utils template columns should return as expected when calling benchmarkingTemplateColumns 1`] = `
+Object {
+  "05m_sprint": null,
+  "10m_sprint": null,
+  "20m_sprint": null,
+  "30m_sprint": null,
+  "505_agility_left": null,
+  "505_agility_right": null,
+  "agility_arrow_head_left": null,
+  "agility_arrow_head_right": null,
+  "cmj_flight_time": null,
+  "cmj_optojump": null,
+  "cmj_vald": null,
+  "player_exempt": null,
+  "player_position": null,
+  "yo_yo_intermittent_recovery_test_level_1": null,
+  "yo_yo_intermittent_recovery_test_level_2": null,
+}
+`;
+
+exports[`utils template columns should return as expected when calling growthAndMaturationTemplateColumns 1`] = `
+Object {
+  "box_height_cm": null,
+  "head_attire_worn": null,
+  "leg_length_1_cm_optional": null,
+  "leg_length_2_cm_optional": null,
+  "leg_length_3_cm_optional": null,
+  "measured_by_user_id_optional": null,
+  "sitting_height_1_cm": null,
+  "sitting_height_2_cm": null,
+  "sitting_height_3_cm": null,
+  "standing_height_1_cm": null,
+  "standing_height_2_cm": null,
+  "standing_height_3_cm": null,
+  "weight_1_kg": null,
+  "weight_2_kg": null,
+  "weight_3_kg": null,
+}
+`;

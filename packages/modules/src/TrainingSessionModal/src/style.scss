@@ -1,0 +1,12 @@
+.trainingSessionModal {
+  &__hr--full {
+    margin: 30px -30px;
+  }
+
+  .trainingSessionModalForm {
+    &__formSeparator {
+      border-top: 1px dashed $colour-s14;
+      margin: 25px 0;
+    }
+  }
+}

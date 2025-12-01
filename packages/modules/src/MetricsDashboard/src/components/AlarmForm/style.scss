@@ -1,0 +1,190 @@
+.alarmForm {
+  border-bottom: 0;
+  border-top: 1px dashed $colour-p04;
+  margin-top: 25px;
+  padding-bottom: 25px;
+  padding-top: 15px;
+  position: relative;
+
+  .alarmForm__selector--condition {
+    label {
+      max-width: 80px;
+    }
+  }
+
+  &:last-child {
+    border-bottom: 0;
+  }
+
+  &__header {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+
+  &__headerControls {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  &__row {
+    clear: both;
+    padding: 0;
+  }
+
+  .alarmForm__label,
+  .alarmForm__selectedSquad {
+    font-weight: 600;
+  }
+
+  .alarmForm__showOnMobile {
+    margin-top: 16px;
+  }
+
+  .alarmForm__selectedSquad {
+    color: $colour-s16;
+  }
+
+  .alarmForm__selector {
+    float: left;
+    position: relative;
+  }
+
+  .alarmForm__deleteBtn {
+    background-color: transparent;
+    border: 0;
+    color: $colour-p04;
+    font-size: 30px;
+    margin-left: 15px;
+    padding: 0;
+    position: static;
+    right: auto;
+    width: auto;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .alarmForm__condition {
+    &::after {
+      clear: both;
+      content: ' ';
+      display: block;
+      font-size: 0;
+      height: 0;
+      visibility: hidden;
+    }
+
+    &.alarmForm__condition--numeric {
+      align-items: flex-start;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+
+      .alarmForm__selector {
+        flex: 1;
+        float: left;
+        max-width: 315px;
+
+        @media (max-width: $breakpoint-tablet) {
+          max-width: none;
+        }
+      }
+
+      .alarmForm__input {
+        float: left;
+        margin-left: 20px;
+        margin-top: 30px;
+      }
+
+      .alarmForm__numericInput {
+        min-width: 130px;
+        width: auto;
+      }
+    }
+
+    &.alarmForm__condition--boolean {
+      .alarmForm__selector {
+        .alarmForm__label {
+          margin-bottom: 15px;
+        }
+      }
+    }
+
+    &.alarmForm__condition--sleep {
+      .alarmForm__selector {
+        width: 321px;
+      }
+
+      .alarmForm__sleepContainer {
+        float: left;
+        margin-left: 20px;
+        margin-top: 30px;
+      }
+    }
+  }
+
+  .alarmForm__colourSelect {
+    border: 1px solid $colour-s15;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 45px;
+    width: 45px;
+  }
+
+  .alarmForm__colour {
+    float: left;
+    margin: 0;
+
+    .alarmForm__colourSelect {
+      height: 25px;
+      width: 25px;
+    }
+  }
+}
+
+// .colour because the backend validates these classes.
+.colour1,
+.alarm_colour1 {
+  background: $alarm-colour1;
+}
+
+.colour2,
+.alarm_colour2 {
+  background: $alarm-colour2;
+}
+
+.colour3,
+.alarm_colour3 {
+  background: $alarm-colour3;
+}
+
+.colour4,
+.alarm_colour4 {
+  background: $alarm-colour4;
+}
+
+.colour5,
+.alarm_colour5 {
+  background: $alarm-colour5;
+}
+
+.colour6,
+.alarm_colour6 {
+  background: $alarm-colour6;
+}
+
+.colour7,
+.alarm_colour7 {
+  background: $alarm-colour7;
+}
+
+.colour8,
+.alarm_colour8 {
+  background: $alarm-colour8;
+}

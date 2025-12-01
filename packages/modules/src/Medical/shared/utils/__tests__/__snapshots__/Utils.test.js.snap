@@ -1,0 +1,240 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getAdditionalEventOptions should have additional events when feature flag is on 1`] = `
+Array [
+  Object {
+    "label": "Other",
+    "value": "other_other",
+  },
+  Object {
+    "label": "Nonsport event",
+    "value": "other_nonsport",
+  },
+]
+`;
+
+exports[`getAdditionalEventOptions should return array of options with value and label 1`] = `
+Array [
+  Object {
+    "label": "Other",
+    "value": "other_other",
+  },
+  Object {
+    "label": "Unlisted Game",
+    "value": "unlisted_game",
+  },
+  Object {
+    "label": "Unlisted Practice",
+    "value": "unlisted_training",
+  },
+]
+`;
+
+exports[`getAmericanStateOptions should renders array of options with value and label 1`] = `
+Array [
+  Object {
+    "label": "AL",
+    "value": "Alabama",
+  },
+  Object {
+    "label": "AK",
+    "value": "Alaska",
+  },
+  Object {
+    "label": "AZ",
+    "value": "Arizona",
+  },
+  Object {
+    "label": "AR",
+    "value": "Arkansas",
+  },
+  Object {
+    "label": "CA",
+    "value": "California",
+  },
+  Object {
+    "label": "CO",
+    "value": "Colorado",
+  },
+  Object {
+    "label": "CT",
+    "value": "Connecticut",
+  },
+  Object {
+    "label": "DE",
+    "value": "Delaware",
+  },
+  Object {
+    "label": "FL",
+    "value": "Florida",
+  },
+  Object {
+    "label": "GA",
+    "value": "Georgia",
+  },
+  Object {
+    "label": "HI",
+    "value": "Hawaii",
+  },
+  Object {
+    "label": "ID",
+    "value": "Idaho",
+  },
+  Object {
+    "label": "IL",
+    "value": "Illinois",
+  },
+  Object {
+    "label": "IN",
+    "value": "Indiana",
+  },
+  Object {
+    "label": "IA",
+    "value": "Iowa",
+  },
+  Object {
+    "label": "KS",
+    "value": "Kansas",
+  },
+  Object {
+    "label": "KY",
+    "value": "Kentucky",
+  },
+  Object {
+    "label": "LA",
+    "value": "Louisiana",
+  },
+  Object {
+    "label": "ME",
+    "value": "Maine",
+  },
+  Object {
+    "label": "MD",
+    "value": "Maryland",
+  },
+  Object {
+    "label": "MA",
+    "value": "Massachusetts",
+  },
+  Object {
+    "label": "MI",
+    "value": "Michigan",
+  },
+  Object {
+    "label": "MN",
+    "value": "Minnesota",
+  },
+  Object {
+    "label": "MS",
+    "value": "Mississippi",
+  },
+  Object {
+    "label": "MO",
+    "value": "Missouri",
+  },
+  Object {
+    "label": "MT",
+    "value": "Montana",
+  },
+  Object {
+    "label": "NE",
+    "value": "Nebraska",
+  },
+  Object {
+    "label": "NV",
+    "value": "Nevada",
+  },
+  Object {
+    "label": "NH",
+    "value": "New Hampshire",
+  },
+  Object {
+    "label": "NJ",
+    "value": "New Jersey",
+  },
+  Object {
+    "label": "NM",
+    "value": "New Mexico",
+  },
+  Object {
+    "label": "NY",
+    "value": "New York",
+  },
+  Object {
+    "label": "NC",
+    "value": "North Carolina",
+  },
+  Object {
+    "label": "ND",
+    "value": "North Dakota",
+  },
+  Object {
+    "label": "OH",
+    "value": "Ohio",
+  },
+  Object {
+    "label": "OK",
+    "value": "Oklahoma",
+  },
+  Object {
+    "label": "OR",
+    "value": "Oregon",
+  },
+  Object {
+    "label": "PA",
+    "value": "Pennsylvania",
+  },
+  Object {
+    "label": "RI",
+    "value": "Rhode Island",
+  },
+  Object {
+    "label": "SC",
+    "value": "South Carolina",
+  },
+  Object {
+    "label": "SD",
+    "value": "South Dakota",
+  },
+  Object {
+    "label": "TN",
+    "value": "Tennessee",
+  },
+  Object {
+    "label": "TX",
+    "value": "Texas",
+  },
+  Object {
+    "label": "UT",
+    "value": "Utah",
+  },
+  Object {
+    "label": "VT",
+    "value": "Vermont",
+  },
+  Object {
+    "label": "VA",
+    "value": "Virginia",
+  },
+  Object {
+    "label": "WA",
+    "value": "Washington",
+  },
+  Object {
+    "label": "DC",
+    "value": "Washington D.C",
+  },
+  Object {
+    "label": "WV",
+    "value": "West Virginia",
+  },
+  Object {
+    "label": "WI",
+    "value": "Wisconsin",
+  },
+  Object {
+    "label": "WY",
+    "value": "Wyoming",
+  },
+]
+`;

@@ -1,0 +1,273 @@
+.graphComposer {
+  background-color: $colour-p06;
+
+  &__graphHeader {
+    align-items: baseline;
+    display: flex;
+  }
+
+  &__graphDetails {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  &__graph {
+    margin-top: 40px;
+  }
+
+  &__header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+    p {
+      font-weight: 600;
+      margin: 0;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+  }
+
+  &__saveBtn {
+    clear: both;
+    float: right;
+    margin-top: 20px;
+  }
+
+  .graphComposerDecoratorLabel {
+    &--barGraph {
+      position: relative;
+      right: -43px;
+    }
+
+    &__icon {
+      color: $colour-p04;
+      font-size: 20px;
+      vertical-align: middle;
+
+      &--illness {
+        font-size: 24px;
+      }
+    }
+
+    &__counter {
+      font-size: 12px;
+      font-weight: 600;
+      margin-right: 3px;
+      vertical-align: middle;
+    }
+  }
+
+  &__form {
+    margin-top: 30px;
+    padding: 0 20px;
+  }
+
+  &__noPermissionText {
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 200px;
+    text-align: center;
+  }
+
+  &__emptyDashboard {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    padding-top: 200px;
+
+    p {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 30px;
+      margin: 0 auto 20px;
+      max-width: 450px;
+    }
+  }
+
+  &__formFooter {
+    border-top: 1px dashed $colour-s14;
+    margin: -30px;
+    margin-top: 40px;
+    padding: 30px;
+    text-align: right;
+
+    button {
+      margin-left: 20px;
+    }
+  }
+
+  &__addMetricBtn {
+    margin-top: 20px;
+  }
+
+  .graphComposerFormSection {
+    padding-bottom: 40px;
+    position: relative;
+
+    .radioList {
+      &__mainLabel {
+        margin-top: 0;
+      }
+
+      ul {
+        margin-bottom: 0;
+      }
+    }
+
+    &--borderTop {
+      border-top: 1px dashed $colour-s14;
+    }
+
+    &--borderBottom {
+      border-bottom: 1px dashed $colour-s14;
+    }
+
+    &--leftGutter {
+      padding-left: 60px;
+
+      .graphComposerFormSection__title {
+        padding-top: 14px;
+      }
+    }
+
+    &--noTitle {
+      padding-top: 20px;
+
+      .graphComposerFormSection__sectionNumber {
+        margin-top: 30px;
+      }
+    }
+
+    .graphComposerFormSection__sectionNumber {
+      border: solid 1px $colour-p04;
+      border-radius: 5px;
+      color: $colour-s18;
+      font-size: 16px;
+      font-weight: 600;
+      height: 45px;
+      left: 0;
+      padding-top: 11px;
+      position: absolute;
+      text-align: center;
+      width: 50px;
+    }
+
+    .graphComposerFormSection__sectionStyleIcon {
+      height: 24px;
+      left: 0;
+      margin-top: 35px;
+      position: absolute;
+      text-align: center;
+      width: 50px;
+    }
+
+    .graphComposerFormSection__title {
+      color: $colour-s18;
+      font-size: 16px;
+      font-weight: 600;
+      margin: 20px 0;
+    }
+
+    .graphComposerFormSection__deleteMetricBtn,
+    .graphComposerFormSection__deletePopulationBtn {
+      position: absolute;
+      right: -18px;
+      top: 10px;
+    }
+
+    .graphComposerFormSection__comparisonGroup {
+      margin-bottom: 10px;
+      margin-top: -10px;
+    }
+  }
+
+  &__modal {
+    padding: 40px 30px 30px;
+    transform: translateY(-50%);
+    width: 98%;
+  }
+
+  .graphComposerDecoratorSelector {
+    align-items: center;
+    display: inline-flex;
+    margin-right: 30px;
+    vertical-align: middle;
+
+    &__checkbox {
+      display: inline-block;
+      margin-left: 15px;
+
+      &:first-of-type {
+        margin-left: 0;
+      }
+    }
+  }
+
+  .graphComposerEventTooltip {
+    color: $colour-p03;
+    font-size: 12px;
+    padding: 10px;
+
+    &__date {
+      color: $colour-s16;
+      font-weight: 600;
+    }
+
+    &__eventList {
+      list-style: none;
+      margin-top: 10px;
+      padding: 0;
+
+      li {
+        line-height: 17px;
+      }
+    }
+
+    &__athleteName {
+      font-weight: 700;
+    }
+
+    &__details {
+      margin-top: 5px;
+    }
+
+    &__unavailibility {
+      color: $colour-s11;
+    }
+  }
+}
+
+.graphComposerDropdownPlaceholder {
+  &__label {
+    color: $colour-s18;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-top: 0;
+  }
+
+  &__fakeDropdown {
+    border: 1px solid $colour-s14;
+    border-radius: 4px;
+    color: $colour-s18;
+    font-size: 14px;
+    height: 45px;
+    line-height: 34px;
+    padding: 6px 12px;
+  }
+}
+
+@import './src/components/GraphView/style';
+@import './src/components/GraphView/ActionBar/Actions/style';
+@import './src/components/GraphForm/GraphSelector/style';
+@import './src/components/GraphForm/OverlaySection/style';
+@import './src/components/GraphForm/SessionDateRangeSection/style';
+@import './src/components/GraphForm/FilterSection/style';
+@import './src/components/DashboardSelectorModal/style';

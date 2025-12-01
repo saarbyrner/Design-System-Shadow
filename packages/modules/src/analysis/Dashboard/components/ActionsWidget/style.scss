@@ -1,0 +1,131 @@
+.actionsWidget {
+  background: $colour-p06;
+  border: 1px solid $colour-s13;
+  border-radius: 5px;
+  display: block;
+  height: 100%;
+
+  &__header {
+    align-items: center;
+    background: $colour-s13;
+    border-radius: 5px 5px 0 0;
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 10px;
+  }
+
+  &__title {
+    align-items: center;
+    display: flex;
+  }
+
+  &__titleText {
+    margin: 0;
+  }
+
+  &__headerRightDetails {
+    align-items: center;
+    display: flex;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 50px);
+    overflow-y: scroll;
+    padding: 20px;
+  }
+
+  &__actionCell {
+    align-items: center;
+    display: flex;
+
+    .actionCheckbox {
+      font-size: 26px;
+    }
+  }
+
+  &__filters {
+    margin-bottom: 20px;
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      .actionsWidget__filtersDropdown {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &__actionText {
+    background: none;
+    border: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  &__annotationableInfo {
+    img {
+      border-radius: 3px;
+      height: 24px;
+      margin-right: 8px;
+    }
+  }
+
+  &__actionColumnTitle {
+    padding-left: 38px;
+  }
+
+  &__row {
+    .dataGrid__cell {
+      // We cannot transition the height of the content to 0
+      // if the container has a padding
+      padding: 0 !important;
+    }
+
+    .dataGrid__fillerCell,
+    .actionsWidget__bodyCell {
+      transition: max-height 0.3s ease 1s, background-color 0.5s ease;
+    }
+
+    .actionsWidget__bodyCell {
+      align-items: center;
+      display: flex;
+      height: 36px;
+      max-height: 100px;
+      padding-right: 10px;
+
+      .actionsWidget__cellText {
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+
+    &--transitionToComplete {
+      .dataGrid__fillerCell,
+      .actionsWidget__bodyCell {
+        background-color: $colour-green-100-20-percent;
+      }
+    }
+
+    &--transitionToUncomplete {
+      .dataGrid__fillerCell,
+      .actionsWidget__bodyCell {
+        background-color: $colour-blue-50;
+      }
+    }
+
+    &--transitionToUncomplete,
+    &--transitionToComplete {
+      .actionsWidget__bodyCell {
+        max-height: 0;
+      }
+    }
+  }
+}

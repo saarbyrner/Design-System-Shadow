@@ -1,0 +1,139 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`useGrowthAndMaturationUploadGrid [computed data] correctly parses the csv data 1`] = `
+Array [
+  Object {
+    "content": <DefaultHeaderCell
+      title="athlete_id"
+    />,
+    "id": "athlete_id",
+    "row_key": "athlete_id",
+  },
+  Object {
+    "content": <DefaultHeaderCell
+      title="athlete_first_name"
+    />,
+    "id": "athlete_first_name",
+    "row_key": "athlete_first_name",
+  },
+  Object {
+    "content": <DefaultHeaderCell
+      title="athlete_last_name"
+    />,
+    "id": "athlete_last_name",
+    "row_key": "athlete_last_name",
+  },
+  Object {
+    "content": <DefaultHeaderCell
+      title="date_measured"
+    />,
+    "id": "date_measured",
+    "row_key": "date_measured",
+  },
+  Object {
+    "content": <DefaultHeaderCell
+      title="measured_by_user_id_optional"
+    />,
+    "id": "measured_by_user_id_optional",
+    "row_key": "measured_by_user_id_optional",
+  },
+  Object {
+    "content": <DefaultHeaderCell
+      title="head_attire_worn"
+    />,
+    "id": "head_attire_worn",
+    "row_key": "head_attire_worn",
+  },
+  Object {
+    "content": <DefaultHeaderCell
+      title="standing_height_1_cm"
+    />,
+    "id": "standing_height_1_cm",
+    "row_key": "standing_height_1_cm",
+  },
+  Object {
+    "content": <DefaultHeaderCell
+      title="standing_height_2_cm"
+    />,
+    "id": "standing_height_2_cm",
+    "row_key": "standing_height_2_cm",
+  },
+  Object {
+    "content": <DefaultHeaderCell
+      title="standing_height_3_cm"
+    />,
+    "id": "standing_height_3_cm",
+    "row_key": "standing_height_3_cm",
+  },
+  Object {
+    "content": <DefaultHeaderCell
+      title="box_height_cm"
+    />,
+    "id": "box_height_cm",
+    "row_key": "box_height_cm",
+  },
+  Object {
+    "content": <DefaultHeaderCell
+      title="sitting_height_1_cm"
+    />,
+    "id": "sitting_height_1_cm",
+    "row_key": "sitting_height_1_cm",
+  },
+  Object {
+    "content": <DefaultHeaderCell
+      title="sitting_height_2_cm"
+    />,
+    "id": "sitting_height_2_cm",
+    "row_key": "sitting_height_2_cm",
+  },
+  Object {
+    "content": <DefaultHeaderCell
+      title="sitting_height_3_cm"
+    />,
+    "id": "sitting_height_3_cm",
+    "row_key": "sitting_height_3_cm",
+  },
+  Object {
+    "content": <DefaultHeaderCell
+      title="leg_length_1_cm_optional"
+    />,
+    "id": "leg_length_1_cm_optional",
+    "row_key": "leg_length_1_cm_optional",
+  },
+  Object {
+    "content": <DefaultHeaderCell
+      title="leg_length_2_cm_optional"
+    />,
+    "id": "leg_length_2_cm_optional",
+    "row_key": "leg_length_2_cm_optional",
+  },
+  Object {
+    "content": <DefaultHeaderCell
+      title="leg_length_3_cm_optional"
+    />,
+    "id": "leg_length_3_cm_optional",
+    "row_key": "leg_length_3_cm_optional",
+  },
+  Object {
+    "content": <DefaultHeaderCell
+      title="weight_1_kg"
+    />,
+    "id": "weight_1_kg",
+    "row_key": "weight_1_kg",
+  },
+  Object {
+    "content": <DefaultHeaderCell
+      title="weight_2_kg"
+    />,
+    "id": "weight_2_kg",
+    "row_key": "weight_2_kg",
+  },
+  Object {
+    "content": <DefaultHeaderCell
+      title="weight_3_kg"
+    />,
+    "id": "weight_3_kg",
+    "row_key": "weight_3_kg",
+  },
+]
+`;

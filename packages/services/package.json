@@ -1,0 +1,18 @@
+{
+  "name": "@kitman/services",
+  "version": "1.2378.0",
+  "description": "kitman services library",
+  "author": "frontend@kitmanlabs.com",
+  "homepage": "https://github.com/KitmanLabs/kitman-frontend/tree/master/packages/services",
+  "license": "ISC",
+  "main": "src/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "dependencies": {
+    "redux-thunk": "^2.4.1"
+  }
+}

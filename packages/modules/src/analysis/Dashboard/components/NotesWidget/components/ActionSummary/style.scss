@@ -1,0 +1,9 @@
+.actionSummary {
+  align-items: center;
+  display: flex;
+  margin-top: 5px;
+
+  &__actionsCompleted {
+    color: $colour-p03;
+  }
+}

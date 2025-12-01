@@ -1,0 +1,201 @@
+.treatmentSessionModal {
+  &__modalTitle {
+    margin-bottom: 20px;
+
+    &--new {
+      color: $colour-s16;
+    }
+  }
+
+  &__row {
+    display: flex;
+    margin-bottom: 20px;
+    padding: 0;
+
+    &--no-margin {
+      margin-bottom: 0;
+    }
+
+    .textarea {
+      width: 100%;
+    }
+
+    &--notes {
+      margin: 0 20px 0 67px;
+    }
+  }
+
+  &__label {
+    color: $colour-s18;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 15px;
+    margin-bottom: 10px;
+  }
+
+  &__templateButton {
+    float: right;
+  }
+
+  &__sessionDetailsSection,
+  &__treatmentsSection {
+    border-bottom: 1px dashed $colour-s14;
+  }
+
+  &__athlete {
+    margin-right: 20px;
+    width: 300px;
+  }
+
+  &__practitioner {
+    width: 300px;
+  }
+
+  &__dateTimeRow {
+    justify-content: space-between;
+  }
+
+  &__date {
+    width: 200px;
+  }
+
+  &__startTime,
+  &__endTime {
+    width: 150px;
+
+    .rc-time-picker-panel {
+      width: 150px;
+    }
+  }
+
+  &__endTime {
+    &--error {
+      input {
+        border: 1px $colour-s11 solid;
+        box-shadow: 0 0 0 1px $colour-s11 inset;
+      }
+    }
+
+    &--errorMessage {
+      color: $colour-s11;
+      margin-top: 6px;
+      position: absolute;
+    }
+
+    &--warningMessage {
+      color: $colour-s08;
+      margin-top: 6px;
+      position: absolute;
+    }
+  }
+
+  &__timeDivider {
+    align-self: center;
+    color: $colour-p04;
+    display: flex;
+    margin-top: 25px;
+
+    &:after {
+      content: '\2014';
+    }
+  }
+
+  &__timezone {
+    width: 200px;
+  }
+
+  &__title {
+    padding-right: 20px;
+    width: 388px;
+  }
+
+  &__totalDuration {
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    margin-top: 12px;
+
+    &--time {
+      margin-top: 16px;
+    }
+  }
+
+  &__treatmentsSection,
+  &__noteSection {
+    margin-top: 15px;
+  }
+
+  &__treatment {
+    border-radius: 5px;
+    margin-top: 5px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+
+    &:nth-child(odd) {
+      background: $colour-s13;
+    }
+
+    &:nth-child(even) {
+      background: $colour-s23;
+    }
+  }
+
+  &__treatmentNumber {
+    background-color: $colour-p06;
+    border: 1px solid $colour-p04;
+    border-radius: 5px;
+    color: $colour-p03;
+    font-size: 14px;
+    font-weight: 600;
+    height: 45px;
+    margin-top: 50px;
+    padding: 12px 20px;
+    width: 50px;
+  }
+
+  &__modality,
+  &__bodyArea {
+    margin-left: 20px;
+    margin-top: 20px;
+    width: 329px;
+  }
+
+  &__removeTreatment {
+    margin-top: 5px;
+    position: absolute;
+    right: 26px;
+  }
+
+  &__reason {
+    margin-left: 70px;
+    width: 508px;
+
+    .groupedDropdown__textwrap {
+      white-space: break-spaces !important;
+    }
+  }
+
+  &__duration {
+    margin-left: 20px;
+    width: 150px;
+  }
+
+  &__addTreatment {
+    margin: 30px 0 20px;
+  }
+
+  &__noteText,
+  &__fileUpload {
+    width: 100%;
+  }
+
+  &__footer {
+    align-items: center;
+    border-top: 1px solid $colour-s14;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 20px -30px 0;
+    padding: 15px 30px 0;
+  }
+}

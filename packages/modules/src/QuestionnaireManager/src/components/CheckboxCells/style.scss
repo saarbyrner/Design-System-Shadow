@@ -1,0 +1,42 @@
+.questionnaireManagerCheckboxCells {
+  background-color: $colour-p06;
+
+  &__break {
+    height: 33px;
+    width: 100%;
+  }
+
+  &__row {
+    background: $colour-s13;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    height: 45px;
+    margin-bottom: 2px;
+
+    &:last-child {
+      margin-bottom: 8px;
+    }
+
+    &:nth-child(even) {
+      background: $colour-s23;
+    }
+  }
+
+  &__cell {
+    // When adding a property here,
+    // please ensure the performances are not affected
+    display: inline-block;
+    height: 100%;
+    text-align: center;
+
+    label {
+      display: inline-block;
+    }
+
+    div {
+      margin-top: 6px;
+    }
+  }
+}

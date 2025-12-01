@@ -1,0 +1,22 @@
+.chartPeriodSelector {
+  align-items: center;
+  display: flex;
+
+  .btn-group {
+    width: 182px;
+
+    .active {
+      @media print {
+        // These rules enforce the browser to print the background
+        -webkit-print-color-adjust: exact; // Chrome/Safari
+        background-color: $colour-p02;
+        background-color: transparentize($colour-p02, 0.1) !important;
+        border-color: $colour-p02;
+        border-color: transparentize($colour-p02, 0.1) !important;
+        print-color-adjust: exact; // Firefox
+        color: $colour-p06;
+        color: transparentize($colour-p06, 0.1) !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.questionnaireManager {
+  &__footer {
+    background: $colour-p06;
+    border-top: 1px dashed $colour-s14;
+    bottom: 0;
+    height: 80px;
+    margin-bottom: 0;
+    max-width: calc(100% - 40px);
+    overflow: hidden;
+    padding: 15px 0 0;
+    position: absolute;
+    width: 100%;
+    z-index: 20;
+  }
+}

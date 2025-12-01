@@ -1,0 +1,234 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`massUploadHeaders athleteHeaders 1`] = `
+Array [
+  Object {
+    "content": <DefaultHeaderCell
+      title="FirstName"
+    />,
+    "id": "FirstName",
+    "row_key": "FirstName",
+  },
+  Object {
+    "content": <DefaultHeaderCell
+      title="LastName"
+    />,
+    "id": "LastName",
+    "row_key": "LastName",
+  },
+  Object {
+    "content": <DefaultHeaderCell
+      title="Email"
+    />,
+    "id": "Email",
+    "row_key": "Email",
+  },
+  Object {
+    "content": <DefaultHeaderCell
+      title="DOB"
+    />,
+    "id": "DOB",
+    "row_key": "DOB",
+  },
+  Object {
+    "content": <DefaultHeaderCell
+      title="SquadName"
+    />,
+    "id": "SquadName",
+    "row_key": "SquadName",
+  },
+  Object {
+    "content": <DefaultHeaderCell
+      title="Country"
+    />,
+    "id": "Country",
+    "row_key": "Country",
+  },
+  Object {
+    "content": <DefaultHeaderCell
+      title="Position"
+    />,
+    "id": "Position",
+    "row_key": "Position",
+  },
+]
+`;
+
+exports[`massUploadHeaders matchMonitorAssignmentHeaders 1`] = `
+Array [
+  Object {
+    "content": <DefaultHeaderCell
+      title="Game ID"
+    />,
+    "id": "Game ID",
+    "row_key": "Game ID",
+  },
+  Object {
+    "content": <DefaultHeaderCell
+      title="Email"
+    />,
+    "id": "Email",
+    "row_key": "Email",
+  },
+]
+`;
+
+exports[`massUploadHeaders officialAssignmentHeaders 1`] = `
+Array [
+  Object {
+    "content": <DefaultHeaderCell
+      title="Game ID"
+    />,
+    "id": "Game ID",
+    "row_key": "Game ID",
+  },
+  Object {
+    "content": <DefaultHeaderCell
+      title="Email"
+    />,
+    "id": "Email",
+    "row_key": "Email",
+  },
+  Object {
+    "content": <DefaultHeaderCell
+      title="Role"
+    />,
+    "id": "Role",
+    "row_key": "Role",
+  },
+]
+`;
+
+exports[`massUploadHeaders officialHeaders 1`] = `
+Array [
+  Object {
+    "content": <DefaultHeaderCell
+      title="FirstName"
+    />,
+    "id": "FirstName",
+    "row_key": "FirstName",
+  },
+  Object {
+    "content": <DefaultHeaderCell
+      title="LastName"
+    />,
+    "id": "LastName",
+    "row_key": "LastName",
+  },
+  Object {
+    "content": <DefaultHeaderCell
+      title="Email"
+    />,
+    "id": "Email",
+    "row_key": "Email",
+  },
+  Object {
+    "content": <DefaultHeaderCell
+      title="DOB"
+    />,
+    "id": "DOB",
+    "row_key": "DOB",
+  },
+  Object {
+    "content": <DefaultHeaderCell
+      title="Language"
+    />,
+    "id": "Language",
+    "row_key": "Language",
+  },
+]
+`;
+
+exports[`massUploadHeaders scoutHeaders 1`] = `
+Array [
+  Object {
+    "content": <DefaultHeaderCell
+      title="FirstName"
+    />,
+    "id": "FirstName",
+    "row_key": "FirstName",
+  },
+  Object {
+    "content": <DefaultHeaderCell
+      title="LastName"
+    />,
+    "id": "LastName",
+    "row_key": "LastName",
+  },
+  Object {
+    "content": <DefaultHeaderCell
+      title="Email"
+    />,
+    "id": "Email",
+    "row_key": "Email",
+  },
+  Object {
+    "content": <DefaultHeaderCell
+      title="DOB"
+    />,
+    "id": "DOB",
+    "row_key": "DOB",
+  },
+  Object {
+    "content": <DefaultHeaderCell
+      title="Language"
+    />,
+    "id": "Language",
+    "row_key": "Language",
+  },
+  Object {
+    "content": <DefaultHeaderCell
+      title="Type"
+    />,
+    "id": "Type",
+    "row_key": "Type",
+  },
+  Object {
+    "content": <DefaultHeaderCell
+      title="Organisation"
+    />,
+    "id": "Organisation",
+    "row_key": "Organisation",
+  },
+]
+`;
+
+exports[`massUploadHeaders staffHeaders 1`] = `
+Array [
+  Object {
+    "content": <DefaultHeaderCell
+      title="FirstName"
+    />,
+    "id": "FirstName",
+    "row_key": "FirstName",
+  },
+  Object {
+    "content": <DefaultHeaderCell
+      title="LastName"
+    />,
+    "id": "LastName",
+    "row_key": "LastName",
+  },
+  Object {
+    "content": <DefaultHeaderCell
+      title="Email"
+    />,
+    "id": "Email",
+    "row_key": "Email",
+  },
+  Object {
+    "content": <DefaultHeaderCell
+      title="DOB"
+    />,
+    "id": "DOB",
+    "row_key": "DOB",
+  },
+  Object {
+    "content": <DefaultHeaderCell
+      title="SquadName"
+    />,
+    "id": "SquadName",
+    "row_key": "SquadName",
+  },
+]
+`;

@@ -1,0 +1,170 @@
+.headerWidget {
+  border-radius: 5px;
+  display: flex;
+  height: 80px;
+  margin: 10px 0;
+
+  &__logo {
+    height: 60px;
+    margin: 10px 0 10px 20px;
+    width: 60px;
+  }
+
+  &__leftDetails {
+    display: flex;
+    flex-direction: column;
+    margin-top: 29px;
+    max-width: calc(40% - 30px);
+  }
+
+  &__name {
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &__pivotDate {
+    display: none;
+    margin-left: 20px;
+  }
+
+  &__reportDate {
+    display: none;
+    margin-left: 20px;
+  }
+
+  &__rightDetails {
+    display: flex;
+    flex-direction: column;
+    margin: 29px 5px 0 auto;
+    max-width: calc(40% - 30px);
+
+    &--action {
+      margin: 11px 0px 0 5px;
+      i.icon-hamburger-circled-dots {
+        font-size: 28px;
+        color: $colour-neutral-100;
+      }
+    }
+  }
+
+  &__orgSquad {
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: auto;
+  }
+
+  &__pivotAthletes {
+    margin-left: auto;
+    max-width: 100%;
+    overflow: hidden;
+    text-align: right;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &__currentUser {
+    display: none;
+    margin: 0 0 10px auto;
+  }
+
+  &__widgetMenu {
+    background: transparent;
+    border: 0;
+    color: $colour-p04;
+    font-size: 18px;
+    margin: 15px 10px;
+  }
+
+  // When the dashboard has been pivoted by Athletes/Date Range
+  &--pivoted {
+    .headerWidget__leftDetails {
+      margin-top: 18px;
+    }
+
+    .headerWidget__pivotDate {
+      display: block;
+    }
+
+    .headerWidget__rightDetails {
+      margin-top: 18px;
+    }
+
+    .headerWidget__pivotAthletes {
+      display: block;
+    }
+  }
+
+  &--whiteFont {
+    color: $colour-p06 !important;
+  }
+
+  &--blackFont {
+    color: $colour-p03 !important;
+  }
+
+  @media (max-width: 992px) {
+    &__leftDetails {
+      max-width: calc(40% - 50px);
+    }
+
+    &__rightDetails {
+      max-width: 40%;
+      text-align: right;
+
+      &--action {
+        margin: 11px 0px 0 5px;
+      }
+    }
+  }
+}
+
+// css for when printing
+@media print {
+  .headerWidget {
+    border: 1px solid $colour-s14;
+    height: auto;
+    padding-bottom: 10px;
+
+    &__logo {
+      height: 70px;
+      width: 70px;
+    }
+
+    &__reportDate {
+      display: block;
+    }
+
+    &__pivotAthletes {
+      white-space: normal;
+    }
+
+    &__currentUser {
+      display: block;
+    }
+
+    &__leftDetails {
+      color: unset !important;
+
+      > * {
+        color: unset !important;
+      }
+    }
+
+    &__rightDetails {
+      color: unset !important;
+      margin-right: 20px;
+
+      > * {
+        color: unset !important;
+      }
+    }
+
+    &__widgetMenu {
+      display: none;
+    }
+  }
+}

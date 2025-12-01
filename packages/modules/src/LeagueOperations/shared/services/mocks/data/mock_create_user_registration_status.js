@@ -1,0 +1,7 @@
+export default {
+  id: 1,
+  status: 'approved',
+  created_at: '2025-05-01T16:08:55Z',
+  current_status: true,
+  annotations: [],
+};

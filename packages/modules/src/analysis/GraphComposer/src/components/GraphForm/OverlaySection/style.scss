@@ -1,0 +1,19 @@
+.overlaySection {
+  margin-top: 40px;
+
+  &__addOverlayBtn {
+    margin-top: 30px;
+  }
+
+  &__removeOverlayBtn {
+    padding: 34px 0 0;
+  }
+
+  .lastXDaysSelector {
+    @media (max-width: 1650px) {
+      .daterangepicker {
+        left: -484px !important;
+      }
+    }
+  }
+}

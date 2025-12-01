@@ -1,0 +1,56 @@
+const exportDemographicReportData = {
+  athletes: [
+    {
+      jersey_number: '44',
+      fullname: 'Niccolo Cannone',
+      firstname: 'Niccolo',
+      lastname: 'Cannone',
+      id: 100,
+      nfl_id: 'NFL_100',
+      position: 'Hooker',
+      dob_short: '1989-06-21',
+      height: '195 cm',
+      allergies: [{ id: 4, display_name: 'Test', severity: 'mild' }],
+      athlete_medical_alerts: [],
+    },
+    {
+      jersey_number: null,
+      fullname: 'Adam Conway',
+      firstname: 'Adam',
+      lastname: 'Conway',
+      id: 200,
+      nfl_id: 'NFL_200',
+      position: 'Scrum Half',
+      dob_short: '1990-09-12',
+      height: null,
+      allergies: [
+        { id: 2, display_name: 'Banana', severity: 'severe' },
+        {
+          id: 1,
+          display_name: 'Stinging insects (Including bees and wasps)',
+          severity: 'mild',
+        },
+      ],
+      athlete_medical_alerts: [
+        { id: 1, display_name: 'Migraines', severity: 'severe' },
+        { id: 2, display_name: 'No breath so good', severity: 'mild' },
+        { id: 3, display_name: 'Low BP', severity: 'none' },
+      ],
+    },
+    {
+      jersey_number: '22',
+      fullname: 'Tomas Albornoz',
+      firstname: 'Tomas',
+      lastname: 'Albornoz',
+      id: 300,
+      nfl_id: null,
+      position: 'Second Row',
+      dob_short: null,
+      height: null,
+      allergies: [],
+      athlete_medical_alerts: [],
+    },
+  ],
+  report_type: 'emergency_medical',
+};
+export default exportDemographicReportData;

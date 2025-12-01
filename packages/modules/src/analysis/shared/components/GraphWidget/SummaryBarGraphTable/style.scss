@@ -1,0 +1,40 @@
+.summaryBarGraphTable {
+  display: flex;
+  margin-top: 20px;
+  width: 100%;
+
+  &__fixed {
+    table {
+      min-width: 310px;
+    }
+
+    td {
+      white-space: nowrap;
+    }
+  }
+
+  &__scrollable {
+    flex-grow: 1;
+    margin-left: -5px;
+    overflow-x: scroll;
+
+    table {
+      th {
+        max-width: 300px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  &--condensed {
+    font-size: 12px;
+
+    .summaryBarGraphTable__fixed {
+      table {
+        min-width: auto;
+      }
+    }
+  }
+}

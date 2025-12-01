@@ -1,0 +1,258 @@
+.athleteIssueDetails {
+  &__title {
+    color: $colour-s18;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+
+    span {
+      color: $colour-s16;
+      font-weight: 600;
+    }
+  }
+
+  &__expandAll {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 15px 0;
+
+    .reactCheckbox {
+      display: inline-block;
+    }
+  }
+
+  &__section {
+    border-bottom: 1px dashed $colour-s14;
+    overflow: hidden;
+    padding-bottom: 30px;
+    padding-top: 20px;
+
+    &--sixCells {
+      .athleteIssueDetails__cell {
+        width: 16%;
+      }
+    }
+
+    &--accordion {
+      padding: 15px 0;
+    }
+
+    &--noFooter {
+      border-bottom: 0;
+    }
+
+    &--last {
+      border-bottom: 0;
+      padding-bottom: 105px;
+    }
+
+    &--rehabs,
+    &--treatments {
+      border-bottom: 0;
+      padding: 0;
+    }
+
+    .accordion__content {
+      margin-top: 15px;
+    }
+  }
+
+  &__sectionTitle {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    // .km-datagrid-modalContent h5 style should be refactor as we need !important to overwrite it.
+    margin-bottom: 20px !important;
+  }
+
+  &__accordionTitle {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  &__accordionSubTitle {
+    color: $colour-cool-mid-grey;
+    display: inline-block;
+    padding-left: 10px;
+  }
+
+  &__cell {
+    float: left;
+    padding-right: 20px;
+    width: 20%;
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  &__label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  &__minutes,
+  &__isCompleted,
+  &__bodySide {
+    color: $colour-s16;
+  }
+
+  &__note {
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__userName {
+    font-weight: 600;
+  }
+
+  &__emptyMessage {
+    color: $colour-s16;
+    display: block;
+    text-align: center;
+  }
+
+  &__attachment {
+    display: inline-block;
+    margin-bottom: 12px;
+    margin-right: 20px;
+    padding-left: 30px;
+    position: relative;
+
+    i {
+      color: $colour-p04;
+      display: block;
+      font-size: 24px;
+      left: 0;
+      position: absolute;
+      top: 0;
+    }
+
+    a {
+      display: block;
+      font-weight: 600;
+    }
+
+    span {
+      display: block;
+    }
+  }
+
+  &__date {
+    color: $colour-s16;
+  }
+
+  &__sessionTable {
+    margin-bottom: 15px;
+  }
+
+  &__sessionTableHeader {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  &__sessionTitle {
+    font-weight: 600;
+  }
+
+  &__sessionNoteLink {
+    color: $colour-p01;
+    font-weight: 600;
+  }
+
+  &__sessionNote {
+    padding: 0 0 15px;
+
+    & > span {
+      &:first-child {
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__sessionPractitioner,
+  &__sessionDate,
+  &__sessionTime {
+    span {
+      &:first-child {
+        font-weight: 600;
+        padding-right: 5px;
+      }
+    }
+  }
+
+  &__sessionAction {
+    background: $colour-neutral-200;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+  }
+
+  &__sessionActionData {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  &__sessionActionIndex {
+    background: $colour-p06;
+    border: 1px solid $colour-s14;
+    border-radius: 4px;
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    height: 35px;
+    line-height: 35px;
+    margin-right: 20px;
+    text-align: center;
+    width: 50px;
+  }
+
+  &__sessionActionDetail {
+    flex: 1;
+    padding-left: 15px;
+
+    & > span {
+      &:first-child {
+        font-weight: 600;
+        padding-right: 5px;
+      }
+    }
+  }
+
+  &__sessionActionBodyArea {
+    &:after {
+      content: ', ';
+    }
+
+    &:last-child {
+      &:after {
+        content: '';
+      }
+    }
+  }
+
+  &__sessionActionNoteLink {
+    color: $colour-p01;
+    font-weight: 600;
+  }
+
+  &__sessionActionNote {
+    padding-top: 15px;
+
+    & > span {
+      &:first-child {
+        font-weight: 600;
+      }
+    }
+  }
+}

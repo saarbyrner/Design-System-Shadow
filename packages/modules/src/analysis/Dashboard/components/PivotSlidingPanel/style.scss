@@ -1,0 +1,233 @@
+.slidingPanel {
+  .athletesDateSelector {
+    height: 30px;
+    margin: 0 30px 20px;
+    width: 400px;
+
+    .btn {
+      padding: 0;
+
+      &.active {
+        background: $colour-p01;
+        border-color: $colour-p01;
+
+        &:focus {
+          box-shadow: none;
+        }
+      }
+
+      &:active {
+        &:focus {
+          background: $colour-s21;
+          border-color: $colour-s21;
+          box-shadow: none;
+        }
+      }
+
+      &:focus {
+        box-shadow: none;
+      }
+    }
+  }
+
+  .dropdownWrapper {
+    height: inherit;
+    margin: 0 30px;
+    position: absolute;
+
+    &__search {
+      padding: 4px 0 !important;
+      width: 400px;
+
+      .searchBar__icon {
+        margin: 6px 5px;
+      }
+
+      input {
+        height: 35px;
+
+        &:focus {
+          box-shadow: none;
+        }
+      }
+    }
+
+    &__menu {
+      max-height: calc(100% - 145px);
+      padding-bottom: 40px;
+      position: initial;
+
+      &--pivotDate {
+        max-height: calc(100% - 198px);
+      }
+
+      .athleteSelector {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+
+    .reactCheckbox__label {
+      display: inline-block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      width: 230px;
+    }
+  }
+
+  .dropdown {
+    margin: 0 30px;
+    width: 399px;
+  }
+
+  .lastXDaysSelector--pushdown {
+    margin: 10px 30px;
+    padding: 0;
+    width: 300px;
+
+    .dateRangePicker__label {
+      color: $colour-s18;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .input-group {
+      margin-top: 10px;
+    }
+  }
+
+  .daterangepicker {
+    left: -492px !important;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 0 !important;
+    z-index: 1001;
+
+    @media (max-height: 830px) {
+      left: -792px !important;
+      top: -46px !important;
+    }
+
+    &.dropdown-menu {
+      height: 348px;
+      padding-bottom: 55px;
+      padding-left: 0;
+      padding-right: 0;
+      padding-top: 0;
+      width: 792px;
+    }
+
+    .drp-buttons {
+      border-top: 0;
+      padding: 0 10px 20px;
+
+      .btn {
+        height: 36px;
+        padding: 6px 15px;
+        width: 120px;
+      }
+    }
+
+    .drp-calendar {
+      margin: 0;
+
+      .calendar-table {
+        padding: 0 20px;
+
+        table {
+          border-spacing: 0 2px;
+          table-layout: fixed;
+
+          thead {
+            tr {
+              th {
+                &.prev,
+                &.month,
+                &.next {
+                  padding-top: 20px;
+                }
+              }
+
+              &:nth-child(2) {
+                th {
+                  padding-bottom: 5px;
+                  padding-top: 10px;
+                }
+              }
+            }
+          }
+        }
+
+        .table-condensed {
+          width: 248px;
+        }
+      }
+
+      &.left {
+        margin-right: 12px;
+      }
+    }
+
+    .turnaround_selects {
+      right: 20px;
+      top: 20px;
+
+      .dropdown {
+        margin: 0;
+      }
+
+      .turnaround__label {
+        margin-top: 8px !important;
+      }
+    }
+  }
+
+  .slidingPanelActions {
+    align-items: center;
+    background: $colour-p06;
+    border-top: 1px solid $colour-s14;
+    bottom: 0;
+    display: flex;
+    height: 96px;
+    justify-content: space-between;
+    padding: 0 30px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    z-index: 1000;
+
+    &__reset {
+      text-align: left;
+      width: fit-content;
+
+      .textButton {
+        color: $colour-s17;
+      }
+    }
+
+    &__apply {
+      .textButton {
+        height: 36px;
+        line-height: 12px;
+        min-width: fit-content;
+
+        &:focus {
+          background: $colour-p01;
+          border-color: $colour-p01;
+        }
+      }
+    }
+  }
+
+  &__rollingDatePicker {
+    margin: 20px 30px 0;
+
+    &.lastXDaysSelector {
+      .radioList__item {
+        padding-left: 10px;
+      }
+    }
+  }
+}

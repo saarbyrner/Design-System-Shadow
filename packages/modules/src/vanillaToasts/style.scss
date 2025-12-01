@@ -1,0 +1,82 @@
+/* Toast container styles */
+#toast-container {
+  z-index: 999999; // TODO - Add zIndices variable
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  bottom: 10%;
+  right: 1%;
+}
+
+/* Toast notification styles */
+.vanillaToast {
+  position: relative;
+  width: 20rem;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  transform: translateX(100%);
+  white-space: pre-line; /* Respects line breaks */
+  line-height: 1.4;
+  max-width: 100%;
+  word-wrap: break-word;
+  overflow-y: hidden;
+  display: block;
+  height: auto;
+}
+
+/* Slide-in animation */
+@keyframes slide-in-from-right {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* When the toast is shown, trigger the animation */
+.vanillaToast.show {
+  animation: slide-in-from-right 0.5s ease-out forwards;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* When the toast's content exceeds max-height, allow scrolling */
+.vanillaToast.show.long-content {
+  overflow-y: auto;
+  max-height: 10rem;
+}
+
+/* Close button styles */
+.toast-close {
+  font-size: 20px;
+  position: absolute;
+  top: 0.4rem;
+  right: 0.7rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.toast-close:hover {
+  color: $colour-p01;
+}
+
+// Used to ensure the tost grows and shrinks when needed
+.toastWrapper {
+  height: 100%;
+}
+
+span.toastMessage {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.15px;
+}

@@ -1,0 +1,38 @@
+.organisationSettings {
+  display: block;
+  background-color: $colour-p06;
+
+  .rc-tabs-bar {
+    margin-left: 24px;
+  }
+
+  .rc-tabs-tab {
+    &:hover {
+      background: $colour-s23;
+      color: $colour-p03;
+    }
+  }
+
+  .rc-tabs-tab-active {
+    &:hover {
+      background: $colour-p06;
+      color: $colour-p01;
+    }
+  }
+
+  .rc-tabs-tabpane {
+    overflow: visible;
+  }
+}
+
+@import './src/components/appearanceSettings/style';
+@import './src/components/GraphColours/style';
+@import './src/components/integrationsSettings/style';
+@import './src/components/addIntegrationModal/style';
+@import './src/components/unlinkIntegrationModal/style';
+@import './src/components/ScaleColours/style';
+@import './src/components/workloadSettings/style';
+@import './src/components/privacyPolicySettings/style';
+@import './src/components/securityAndPrivacySettings/style';
+@import './src/components/termsOfUseSettings/style';
+@import './src/components/termsOfUsePolicySettings/style';

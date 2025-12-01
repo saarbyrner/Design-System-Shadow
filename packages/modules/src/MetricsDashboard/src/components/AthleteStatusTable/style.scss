@@ -1,0 +1,82 @@
+.athleteStatusTable {
+  margin-top: 0;
+  min-height: 200px;
+  padding-left: 20px;
+  position: relative;
+  width: 100%;
+
+  .athleteStatusTable__headerInnerWrapper {
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+
+  &.athleteStatusTable--fixedHeader {
+    .athleteStatusTable__header {
+      background: $colour-p06;
+      box-shadow: 0 4px 4px -4px $transparent-black;
+      left: 0;
+      position: fixed;
+      top: 50px;
+      width: 100%;
+      z-index: 1080;
+    }
+
+    .athleteStatusTable__headerInnerWrapper {
+      margin: 0;
+      overflow: hidden;
+      position: relative;
+      // menu width + padding need to be extracted from width
+      transform: translateX(80px);
+      width: calc(100% - 60px);
+
+      @media (max-width: $breakpoint-desktop) {
+        transform: translateX(20px);
+        width: 100%;
+      }
+
+      @media (max-width: $breakpoint-tablet) {
+        transform: translateX(0);
+        width: 100%;
+      }
+    }
+  }
+
+  .athleteStatusTable__header {
+    height: 105px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  .athleteStatusTable__headerContent {
+    position: relative;
+  }
+
+  .athleteStatusTable__sidebar {
+    background-color: $colour-p06;
+    left: 20px;
+    padding-top: 90px;
+    position: absolute;
+    width: 278px;
+    z-index: 10;
+  }
+
+  .athleteStatusTable__body {
+    overflow-x: scroll;
+    padding-left: 278px;
+    padding-top: 90px;
+    width: 100%;
+  }
+}
+
+.main--mainMenuOpen {
+  .athleteStatusTable {
+    &.athleteStatusTable--fixedHeader {
+      .athleteStatusTable__headerInnerWrapper {
+        transform: translateX(238px);
+        width: calc(100% - 218px);
+      }
+    }
+  }
+}

@@ -1,0 +1,3 @@
+try{
+var p=__STORYBOOKADDONS__,{addons:t,types:_,mockChannel:O}=__STORYBOOKADDONS__;var g=__STORYBOOKTHEMING__,{CacheProvider:S,ClassNames:k,Global:u,ThemeProvider:x,background:y,color:B,convert:C,create:o,createCache:K,createGlobal:N,createReset:R,css:D,darken:G,ensure:Y,ignoreSsrWarning:v,isPropValid:I,jsx:P,keyframes:A,lighten:E,styled:H,themes:M,typography:j,useTheme:w,withTheme:L}=__STORYBOOKTHEMING__;var s=o({base:"light",brandTitle:"Kitman Labs",brandUrl:"https://kitmanlabs.com",brandImage:"/logo.png",colorSecondary:"#2a6ebb",fontBase:'"Open Sans", sans-serif'});t.setConfig({theme:s});
+}catch(e){ console.error("[Storybook] One of your manager-entries failed: " + import.meta.url, e); }

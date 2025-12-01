@@ -1,0 +1,97 @@
+.athleteIssueEditor {
+  &__row {
+    margin-top: 20px;
+  }
+
+  &__inputRow {
+    margin-top: 15px;
+  }
+
+  &__formSection {
+    border-bottom: 1px dashed $colour-s14;
+    padding-bottom: 30px;
+
+    &--last {
+      border-bottom: 0;
+      padding-bottom: 105px;
+    }
+  }
+
+  &__sectionTitle {
+    font-size: 16px;
+    font-weight: 600;
+    // .km-datagrid-modalContent h5 style should be refactor as we need !important to overwrite it.
+    margin-bottom: 20px !important;
+
+    &--disabled {
+      color: $colour-s18;
+      opacity: 0.5;
+    }
+  }
+
+  &__title {
+    color: $colour-s18;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+
+    span {
+      color: $colour-s16;
+      font-weight: 600;
+    }
+  }
+
+  &__oscicsField {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 30px;
+
+    @media (max-width: 1199px) {
+      margin-top: 15px;
+    }
+
+    &--disabled {
+      color: $colour-s18;
+      opacity: 0.5;
+    }
+  }
+
+  &__activityField,
+  &__sideField {
+    @media (max-width: 1199px) {
+      margin-top: 15px;
+    }
+  }
+
+  &__sessionCompletedField,
+  &__showSupplementaryPathologyField,
+  &__hasRecurrenceField {
+    padding-top: 41px;
+  }
+
+  &__oscicsLabel {
+    color: $colour-s18;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 0;
+  }
+
+  &__position {
+    clear: both;
+  }
+
+  &__trainingSession {
+    margin-bottom: 20px;
+  }
+
+  &__userName {
+    font-weight: 600;
+  }
+
+  &__infoText {
+    color: $colour-s16;
+    float: right;
+    font-weight: normal;
+  }
+}

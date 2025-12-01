@@ -1,0 +1,148 @@
+.sparklineTooltip {
+  padding: 30px;
+  position: relative;
+  width: 520px;
+
+  &__title {
+    color: $colour-p03;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 35px;
+    margin-top: 0;
+    word-break: break-word;
+  }
+
+  &__subtitle {
+    color: $colour-s16;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  &__footer {
+    border-top: 1px dashed $colour-p04;
+    color: $colour-p03;
+    font-size: 14px;
+    min-height: 85px;
+    padding-top: 20px;
+    position: relative;
+
+    strong {
+      font-weight: 600;
+    }
+  }
+
+  &__alarmCounter {
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: 20px;
+    text-transform: capitalize;
+  }
+
+  &__detailLink {
+    bottom: 0;
+    position: absolute;
+    right: 0;
+  }
+
+  &__chart {
+    height: 200px;
+    margin-bottom: 20px;
+    margin-top: 25px;
+  }
+
+  &__alarmsItem {
+    border-radius: 5px;
+    color: $colour-p06;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-right: 3px;
+    margin-top: 5px;
+    padding: 3px 8px;
+  }
+
+  &__alarmsItem--colour1 {
+    background: transparentize($colour-s11, 0.5);
+  }
+
+  &__alarmsItem--colour2 {
+    background: transparentize($colour-s08, 0.5);
+  }
+
+  &__alarmsItem--colour3 {
+    background: transparentize($colour-s07, 0.5);
+  }
+
+  &__alarmsItem--colour4 {
+    background: transparentize($colour-s04, 0.5);
+  }
+
+  &__alarmsItem--colour5 {
+    background: $colour-s11;
+    color: $colour-p06;
+  }
+
+  &__alarmsItem--colour6 {
+    background: $colour-s08;
+  }
+
+  &__alarmsItem--colour7 {
+    background: $colour-s07;
+  }
+
+  &__alarmsItem--colour8 {
+    background: $colour-s04;
+    color: $colour-p06;
+  }
+
+  .highcharts-tooltip {
+    &__date {
+      color: $colour-s16;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    &__circle {
+      font-size: 16px;
+    }
+
+    &__value {
+      color: $colour-s18;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    &__statusName {
+      display: inline-block;
+      font-size: 14px;
+      padding: 0 5px;
+    }
+
+    &__legend {
+      margin-top: 4px;
+
+      &--riskMetric {
+        align-items: flex-start;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+
+        .highcharts-tooltip__circle {
+          display: inline-block;
+          margin-top: -2px;
+        }
+
+        .highcharts-tooltip__value {
+          flex: 1;
+          text-align: right;
+        }
+      }
+    }
+
+    &__footer {
+      border-top: 1px dashed $colour-s15;
+      padding: 5px 0 0;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+.dashboardSelectorModal {
+  &__dropdown {
+    .customDropdown {
+      .customDropdown__menu {
+        max-height: 125px;
+      }
+    }
+  }
+}

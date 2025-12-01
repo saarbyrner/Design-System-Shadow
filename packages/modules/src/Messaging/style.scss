@@ -1,0 +1,1319 @@
+$tall-header-height: 60px;
+$short-header-height: 50px;
+$chat-header-height: 60px;
+$chat-input-area-height: 68px;
+$chat-channel-list-width: 345px;
+$mobile-browser-footer-height: 14vh;
+$menu-menu-narrow-width: 60px;
+$menu-menu-wide-width: 220px;
+
+@mixin height-from-header() {
+  @media only screen and (min-width: $breakpoint-desktop) {
+    height: calc(100vh - #{$short-header-height});
+  }
+  @media only screen and (max-width: $breakpoint-desktop) {
+    height: calc(100vh - #{$tall-header-height});
+  }
+}
+
+@mixin height-from-header-minus-input() {
+  @media only screen and (min-width: $breakpoint-desktop) {
+    height: calc(
+      100vh - #{$short-header-height} - #{$chat-header-height} - #{$chat-input-area-height}
+    );
+  }
+  @media only screen and (max-width: $breakpoint-desktop) {
+    height: calc(
+      100vh - #{$tall-header-height} - #{$chat-header-height} - #{$chat-input-area-height}
+    );
+  }
+}
+
+@mixin height-from-chat-header() {
+  @media only screen and (min-width: $breakpoint-desktop) {
+    height: calc(100vh - #{$short-header-height} - #{$chat-header-height});
+  }
+  @media only screen and (max-width: $breakpoint-desktop) {
+    height: calc(100vh - #{$tall-header-height} - #{$chat-header-height});
+  }
+}
+
+.chatContainer {
+  @include height-from-header;
+  background-color: $colour-neutral-200;
+  display: flex;
+  margin-top: 0;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+
+  * {
+    scrollbar-color: $colour-blue-100 $colour-neutral-300;
+    scrollbar-width: thin;
+  }
+
+  *::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: $colour-neutral-300;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: $colour-blue-100;
+    border: 3px solid $colour-neutral-300;
+    border-radius: 20px;
+  }
+
+  @media only screen and (min-width: $breakpoint-desktop) {
+    width: calc(100% - #{$menu-menu-narrow-width});
+  }
+
+  // No Hover: For touch screens ( covers iOS zooming on input issue )
+  @media only screen and (hover: none) {
+    select,
+    textarea,
+    input {
+      font-size: 16px; // Because iOS safari will zoom in if text size is smaller.. and won't zoom out after input
+    }
+  }
+
+  .slidingPanel {
+    // Account for mobile devices having a browser controls bar at the bottom
+    // Unlike 100vh this will not exceed the height
+    min-height: -webkit-fill-available !important;
+    min-height: -moz-available !important;
+    min-height: stretch !important;
+
+    // Portrait & No Hover: For portrait phones and tablets and narrow screens
+    @media only screen and (orientation: portrait) and (hover: none) {
+      width: 100% !important;
+    }
+
+    // Portrait & No Pointer: For portrait phones and tablets and narrow screens
+    @media only screen and (orientation: portrait) and (pointer: none) {
+      width: 100% !important;
+    }
+
+    // Fine Pointer: For PC with mouse override above
+    @media only screen and (pointer: fine) {
+      width: 460px !important;
+    }
+
+    .dropdownWrapper__search {
+      background: none;
+      max-width: 100% !important;
+      padding: 0 !important;
+      width: 390px !important;
+    }
+  }
+
+  &__tooltipMenu {
+    .tooltipMenu__icon {
+      left: -9px;
+      position: relative;
+      top: 3px;
+    }
+  }
+
+  .chatAvatar {
+    height: auto;
+    max-height: 100%;
+    vertical-align: unset;
+  }
+
+  .emojiSelectPopoverGroupItem--big {
+    font-size: 30px;
+    height: 45px;
+    width: 45px;
+  }
+
+  .emojiSelectButton {
+    &--basic {
+      background-color: transparent;
+      border: 0;
+      color: $colour-grey-100;
+      font-size: 24px;
+      height: 50px;
+      padding-bottom: 12px;
+      width: 50px;
+
+      &:before {
+        @include kitman-font;
+        content: '\e975';
+      }
+
+      &:hover {
+        color: $colour-grey-300;
+      }
+    }
+
+    &--pressed {
+      background-color: transparent;
+      border: 0;
+      color: $colour-blue-100;
+      font-size: 24px;
+      height: 50px;
+      padding-bottom: 12px;
+      width: 50px;
+
+      &:before {
+        @include kitman-font;
+        content: '\e975';
+      }
+    }
+  }
+
+  .emojiSelectPopover--bottomUp {
+    bottom: 50px;
+  }
+
+  .DraftEditor-root {
+    background-color: $colour-p06;
+    border-radius: 22px;
+    border-width: 0;
+    box-sizing: border-box;
+    color: $colour-grey-300;
+    font-size: 14px;
+    height: auto;
+    line-height: 20px;
+    min-height: 44px;
+    min-width: 100%;
+    outline: none;
+    overflow: auto;
+    padding: 11px 11px 11px 24px;
+    resize: none;
+    width: 100%;
+
+    // No Hover: For touch screens ( covers iOS zooming on input issue )
+    @media only screen and (hover: none) {
+      font-size: 16px;
+    }
+  }
+
+  .DraftEditor-editorContainer,
+  .public-DraftEditor-content {
+    height: 100%;
+  }
+
+  &__channelLists {
+    @include height-from-header;
+    background-color: $colour-p06;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: -$chat-input-area-height;
+    margin-top: 0;
+    max-width: $chat-channel-list-width;
+    min-width: $chat-channel-list-width;
+    width: $chat-channel-list-width;
+    z-index: 4;
+
+    // Has Hover: For PC and Samsung tablets that return true for hover query
+    @media only screen and (max-width: $breakpoint-tablet) and (hover: hover) {
+      margin-top: 0;
+      position: fixed;
+      transform: translate(-100%, 0);
+      transition: 0.4s;
+    }
+
+    // No Hover: For touch screens ( excluding Samsung devices that return true for hover query )
+    @media only screen and (hover: none) {
+      margin-top: 0;
+      position: fixed;
+      transform: translate(-100%, 0);
+      transition: 0.4s;
+    }
+
+    // No Pointer: For touch screens
+    @media only screen and (pointer: none) {
+      margin-top: 0;
+      position: fixed;
+      transform: translate(-100%, 0);
+      transition: 0.4s;
+    }
+
+    // Portrait: For portrait phones and tablets and narrow screens
+    @media only screen and (orientation: portrait) {
+      max-width: 100%;
+      min-width: 100%;
+      width: 100%;
+    }
+
+    // Fine Pointer: For PC with mouse override above
+    @media only screen and (pointer: fine) {
+      max-width: $chat-channel-list-width;
+      min-width: $chat-channel-list-width;
+      width: $chat-channel-list-width;
+    }
+
+    &--open {
+      transform: translate(0, 0);
+    }
+  }
+
+  &__channelListsHeader {
+    align-items: center;
+    background-color: $colour-neutral-200;
+    border-bottom: 0.5px solid $colour-neutral-300;
+    border-right: 1px solid $colour-neutral-300;
+    color: $colour-grey-400;
+    display: flex;
+    flex-direction: row;
+    font-size: 14px;
+    font-weight: 700;
+    height: $chat-header-height;
+    justify-content: space-between;
+    line-height: 19.07px;
+    min-height: $chat-header-height;
+    padding-left: 24px;
+    padding-right: 10px;
+
+    .iconButton {
+      &::before {
+        color: $colour-grey-300;
+      }
+    }
+  }
+
+  &__channelListsOverflow {
+    @include height-from-chat-header;
+    box-shadow: 4px 0 4px $colour-light-shadow;
+    overflow: auto;
+
+    // No Hover: For touch screens ( excluding Samsung devices that return true for hover query )
+    @media only screen and (hover: none) {
+      padding-bottom: $mobile-browser-footer-height;
+    }
+
+    // No Pointer: For touch screens
+    @media only screen and (pointer: none) {
+      padding-bottom: $mobile-browser-footer-height;
+    }
+
+    // Portrait: For portrait phones and tablets and narrow screens
+    @media only screen and (orientation: portrait) {
+      padding-bottom: $mobile-browser-footer-height;
+    }
+
+    // Fine Pointer: For PC with mouse override above
+    @media only screen and (pointer: fine) {
+      padding-bottom: 0;
+    }
+  }
+
+  &__channelListsClose {
+    display: none;
+
+    // No Hover: For touch screens ( excluding Samsung devices that return true for hover query )
+    @media only screen and (hover: none) {
+      display: block;
+    }
+
+    // No Pointer: For touch screens
+    @media only screen and (pointer: none) {
+      display: block;
+    }
+
+    // Has Hover: For PC and Samsung devices that return true for hover query
+    @media only screen and (max-width: $breakpoint-tablet) and (hover: hover) {
+      display: block;
+    }
+  }
+
+  .channelCreationHeader {
+    align-items: baseline;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+    &__title {
+      color: $colour-grey-200;
+      padding: 12px 24px 6px;
+      position: relative;
+      text-transform: uppercase;
+      width: 100%;
+    }
+  }
+
+  .chatMessaging {
+    width: 100%;
+
+    &__statusInfo {
+      width: 100%;
+      text-align: center;
+      font-size: 10px;
+    }
+
+    &__generalStatus {
+      color: $colour-grey-200;
+      font-size: 16px;
+      font-weight: 600;
+      margin-top: 190px;
+      text-align: center;
+    }
+
+    &__loadingStatus {
+      background-image: url('../img/spinner.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 60px;
+      color: $colour-grey-200;
+      height: 100px;
+      margin-top: 160px;
+      text-align: center;
+      width: 100%;
+    }
+
+    &__date {
+      align-items: center;
+      color: $colour-grey-100;
+      display: flex;
+      font-size: 14px;
+      font-weight: 400;
+      height: 24px;
+      line-height: 12px;
+      padding: 3px 10px;
+      width: 100%;
+
+      &::after {
+        content: '';
+        flex: 1;
+        margin-left: 1rem;
+        height: 0.5px;
+        background-color: $colour-grey-50;
+      }
+
+      &::before {
+        content: '';
+        flex: 1;
+        margin-right: 1rem;
+        height: 0.5px;
+        background-color: $colour-grey-50;
+      }
+    }
+
+    &__mediaTooltip {
+      user-select: none;
+    }
+
+    &__bottom {
+      height: 40px;
+      min-height: 40px;
+      width: 100%;
+
+      // No Hover: For touch screens ( excluding Samsung devices that return true for hover query )
+      @media only screen and (hover: none) {
+        height: $mobile-browser-footer-height;
+        min-height: $mobile-browser-footer-height;
+      }
+
+      // No Pointer: For touch screens
+      @media only screen and (pointer: none) {
+        height: $mobile-browser-footer-height;
+        min-height: $mobile-browser-footer-height;
+      }
+    }
+
+    &__statusBackground {
+      background-image: url('../img/messaging/messaging.svg');
+      background-position-x: center;
+      background-position-y: center;
+      background-repeat: no-repeat;
+      height: 200px;
+      justify-content: center;
+      top: calc(50% - 100px);
+    }
+
+    &__messageList {
+      @include height-from-header-minus-input;
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      overflow: auto;
+      padding: 10px 16px 20px;
+    }
+
+    &__sendButton {
+      margin-bottom: 3px;
+      background-color: transparent;
+
+      .iconButton {
+        background-color: transparent;
+        border-style: none;
+        color: $colour-grey-100;
+        cursor: default;
+
+        &::before {
+          font-size: 26px;
+        }
+
+        &:disabled {
+          background-color: transparent;
+        }
+      }
+
+      &--enabled {
+        .iconButton {
+          color: $colour-blue-400;
+          background-color: transparent;
+
+          &:hover {
+            color: $colour-grey-400;
+            cursor: pointer;
+          }
+
+          &:active {
+            color: $colour-blue-100;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    &__messageInputContainer,
+    &__noInput,
+    &__chatChannelHeader,
+    &__statusBackground {
+      position: fixed;
+      width: calc(100% - #{$chat-channel-list-width});
+
+      @media only screen and (max-width: $breakpoint-tablet) {
+        width: 100%;
+      }
+
+      @media only screen and (min-width: $breakpoint-desktop) {
+        width: calc(
+          100% - #{$chat-channel-list-width} - #{$menu-menu-narrow-width}
+        );
+      }
+
+      @media only screen and (hover: none) and (min-width: $breakpoint-desktop) {
+        width: calc(100% - #{$menu-menu-narrow-width});
+      }
+
+      @media only screen and (pointer: none) and (min-width: $breakpoint-desktop) {
+        width: calc(100% - #{$menu-menu-narrow-width});
+      }
+
+      @media only screen and (hover: none) and (max-width: $breakpoint-desktop) {
+        width: 100%;
+      }
+
+      @media only screen and (pointer: none) and (max-width: $breakpoint-desktop) {
+        width: 100%;
+      }
+    }
+
+    &__messageInputContainer,
+    &__noInput {
+      align-items: end;
+      background-color: $colour-neutral-200;
+      bottom: -5px;
+      box-shadow: 0 -4px 4px $colour-light-shadow;
+      color: $colour-grey-100;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      min-height: $chat-input-area-height;
+      overflow: hidden;
+      padding: 0 10px 14px 24px;
+      text-align: center;
+      z-index: 3;
+    }
+
+    &__messageInputContainer {
+      @media only screen and (min-width: $breakpoint-desktop) {
+        left: $chat-channel-list-width + $menu-menu-narrow-width;
+      }
+
+      @media only screen and (hover: none) and (min-width: $breakpoint-desktop) {
+        left: $menu-menu-narrow-width;
+      }
+
+      @media only screen and (pointer: none) and (min-width: $breakpoint-desktop) {
+        left: $menu-menu-narrow-width;
+      }
+
+      @media only screen and (max-width: $breakpoint-tablet) {
+        left: 0;
+      }
+
+      .public-DraftEditorPlaceholder-root {
+        width: auto;
+      }
+
+      .toastHolder {
+        padding-top: 8px;
+
+        .reactToast {
+          margin-left: -14px;
+          position: inherit;
+        }
+      }
+
+      .inputText {
+        flex: 1;
+        margin-right: 10px;
+
+        // No Hover: For touch screens ( covers iOS zooming on input issue )
+        @media only screen and (hover: none) {
+          font-size: 16px;
+        }
+      }
+
+      .emojiPanel {
+        margin-left: 23px;
+        margin-top: 16px;
+        position: fixed;
+        z-index: 1;
+
+        @media only screen and (hover: none) {
+          display: none;
+        }
+
+        @media only screen and (pointer: none) {
+          display: none;
+        }
+      }
+
+      .input_holder {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        .fileUploadField__browse {
+          left: 10px;
+          position: absolute;
+          top: 11px;
+
+          @media only screen and (hover: none) {
+            left: 10px;
+            position: absolute;
+            top: 14px;
+          }
+
+          @media only screen and (pointer: none) {
+            left: 10px;
+            position: absolute;
+            top: 14px;
+          }
+
+          .iconButton {
+            background-color: transparent;
+            border-style: none;
+            color: $colour-grey-100;
+            cursor: default;
+
+            &:hover {
+              color: $colour-grey-300;
+              cursor: pointer;
+            }
+
+            &:active {
+              color: $colour-blue-100;
+              cursor: pointer;
+            }
+          }
+        }
+
+        .filepond--credits {
+          display: none;
+        }
+
+        .filepond--root {
+          max-height: 66px;
+        }
+
+        .filepond--hopper {
+          margin-left: -15px;
+        }
+
+        .filepond--list {
+          margin-top: 0;
+        }
+
+        .filepond--item {
+          min-width: 140px;
+          width: calc(25% - 0.5em);
+        }
+      }
+
+      .textarea {
+        margin-bottom: -5px;
+        margin-left: 80px;
+        margin-right: 8px;
+        margin-top: 12px;
+        width: calc(100% - 80px);
+
+        @media only screen and (hover: none) {
+          margin-left: 50px;
+          width: calc(100% - 50px);
+        }
+
+        @media only screen and (pointer: none) {
+          margin-left: 50px;
+          width: calc(100% - 50px);
+        }
+      }
+    }
+
+    &__noInput {
+      align-items: center;
+      justify-content: center;
+      padding: 0 10px;
+    }
+
+    &__messageContainer {
+      display: flex;
+      flex-direction: row;
+      margin-top: 5px;
+      min-height: min-content;
+      width: fit-content;
+
+      &--me {
+        align-self: flex-end;
+        margin-right: 15px;
+        max-width: 680px;
+        min-height: min-content;
+
+        @media only screen and (max-width: 1500px) {
+          max-width: 70%;
+        }
+      }
+
+      &--firstInChainMe {
+        &:after {
+          align-self: flex-start;
+          border: 10px solid transparent;
+          border-left-color: $colour-blue-100;
+          border-right: 0;
+          border-top: 0;
+          border-top-right-radius: 1px;
+          content: '';
+          height: 11px;
+          margin-right: -10px;
+          margin-top: -14px;
+          position: relative;
+          right: 1px;
+          top: 14px;
+          width: 0;
+        }
+      }
+
+      &--them {
+        align-self: flex-start;
+        margin-left: 15px;
+        max-width: 680px;
+        min-height: min-content;
+
+        @media only screen and (max-width: 1500px) {
+          max-width: 70%;
+        }
+      }
+
+      &--firstInChainThem {
+        &:before {
+          align-self: flex-start;
+          border: 10px solid transparent;
+          border-left: 0;
+          border-top-left-radius: 1px;
+          border-right-color: $colour-p06;
+          border-top: 0;
+          content: '';
+          height: 11px;
+          left: 1px;
+          margin-left: -10px;
+          margin-top: -14px;
+          position: relative;
+          top: 14px;
+          width: 0;
+        }
+      }
+
+      &--log {
+        align-self: flex-start;
+        margin-left: 15px;
+        min-height: min-content;
+
+        &:before {
+          align-self: flex-start;
+          border: 10px solid transparent;
+          border-left: 0;
+          border-right-color: $colour-p06;
+          border-top: 0;
+          content: '';
+          height: 0;
+          left: 1px;
+          margin-left: -10px;
+          margin-top: -14px;
+          position: relative;
+          top: 14px;
+          width: 0;
+        }
+      }
+    }
+  }
+
+  .chatChannelSelector {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    &__userChannelList,
+    &__publicChannelList,
+    &__directChannelList,
+    &__unreadChannelList {
+      display: block;
+      position: relative;
+    }
+
+    &__publicChannelList,
+    &__directChannelList {
+      margin-top: 20px;
+    }
+
+    &__title {
+      color: $colour-grey-100;
+      padding: 6px 24px;
+      text-transform: uppercase;
+      width: 100%;
+    }
+
+    &__count {
+      color: $colour-blue-100;
+      text-align: center;
+      width: 59px;
+    }
+
+    &__plus {
+      .iconButton {
+        &::before {
+          color: $colour-grey-300;
+          font-size: 15px;
+        }
+      }
+    }
+
+    &__header {
+      align-items: baseline;
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+
+      &:after {
+        align-self: flex-end;
+        border-bottom: 0.5px solid $colour-neutral-300;
+        content: '';
+        display: block;
+        height: 0;
+        left: 0;
+        margin-left: 24px;
+        margin-top: 5px;
+        position: absolute;
+        width: calc(100% - 24px);
+      }
+    }
+
+    &__channel {
+      align-items: center;
+      cursor: default;
+      display: flex;
+      flex-direction: row;
+      height: 42.5px;
+      padding-left: 24px;
+      text-overflow: ellipsis;
+      width: 100%;
+
+      &:hover {
+        background-color: $colour-neutral-200;
+        cursor: pointer;
+      }
+
+      &--active {
+        background-color: $colour-blue-100-5-percent;
+      }
+
+      &--big {
+        height: 60px;
+      }
+
+      &:after {
+        align-self: flex-end;
+        border-bottom: 0.5px solid $colour-neutral-300;
+        content: '';
+        height: 0;
+        position: absolute;
+        width: calc(100% - 24px);
+      }
+
+      &:last-child {
+        &:after {
+          align-self: flex-end;
+          border-bottom: 0.5px solid $colour-neutral-300;
+          content: '';
+          height: 0;
+          margin-left: 0;
+          position: absolute;
+          margin-left: -24px;
+          width: 100%;
+        }
+      }
+    }
+
+    &__channelName {
+      color: $colour-grey-300;
+      display: block;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 19px;
+      margin-left: 5px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      width: 100%;
+
+      &--direct {
+        font-weight: 400;
+      }
+    }
+
+    &__unreadMessagesIcon {
+      align-items: center;
+      background-color: $colour-blue-100;
+      border-radius: 8px;
+      color: $colour-p06;
+      display: flex;
+      flex: 0 0 auto;
+      font-size: 10px;
+      font-weight: 600;
+      height: 16px;
+      justify-content: center;
+      line-height: 16px;
+      margin: 2px 17px 0;
+      min-width: 16px;
+      padding-left: 3px;
+      padding-right: 3px;
+      text-align: center;
+      white-space: nowrap;
+    }
+  }
+
+  .chatChannelCreation {
+    background-color: $transparent-black;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1001;
+
+    &__content {
+      color: $colour-grey-100;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .athleteAndStaffSelector {
+      margin-top: 10px;
+      max-height: calc(100vh - 330px);
+      overflow: auto;
+
+      @media only screen and (max-width: $breakpoint-desktop) {
+        max-height: calc(100vh - 340px);
+      }
+
+      // No Hover: For touch screens ( excluding Samsung devices that return true for hover query )
+      @media only screen and (hover: none) {
+        max-height: calc(100vh - 340px - #{$mobile-browser-footer-height});
+      }
+
+      // No Pointer: For touch screens
+      @media only screen and (pointer: none) {
+        max-height: calc(100vh - 340px - #{$mobile-browser-footer-height});
+      }
+
+      // Portrait: For portrait phones and tablets and narrow screens
+      @media only screen and (orientation: portrait) {
+        max-height: calc(100vh - 340px - #{$mobile-browser-footer-height});
+      }
+
+      // Fine Pointer: For PC with mouse override above
+      @media only screen and (pointer: fine) {
+        max-height: calc(100vh - 330px);
+      }
+    }
+
+    .slidingPanel {
+      height: 100% !important;
+      z-index: 1999; // 1 less than change squad tooltip menu. Does not need to exceed then Intercom frame z-index
+
+      .dropdownWrapper {
+        max-width: -webkit-fill-available !important;
+        max-width: -moz-available !important;
+        max-width: stretch !important;
+        width: 100%;
+      }
+
+      .dropdownWrapper__menu {
+        max-height: none;
+      }
+
+      .dropdownWrapper__menu--pivotDate {
+        max-height: none;
+      }
+
+      .toggleSwitch {
+        justify-content: space-between;
+        margin-bottom: 10px;
+        width: 100%;
+      }
+
+      .toggleSwitch__label {
+        color: $colour-grey-100;
+      }
+
+      &__indent {
+        margin: 0 30px;
+      }
+
+      &__header {
+        color: $colour-grey-200;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 18px;
+        padding: 12px 30px 6px;
+        position: relative;
+        text-transform: uppercase;
+      }
+
+      &__row {
+        margin: 0 0 10px;
+        padding-left: 0;
+        padding-right: 0;
+
+        &:first-child {
+          margin-bottom: 0;
+        }
+      }
+
+      .slidingPanelActions {
+        bottom: 70px;
+        height: 60px;
+        justify-content: space-between;
+
+        // No Hover: For touch screens ( excluding Samsung devices that return true for hover query )
+        @media only screen and (hover: none) {
+          bottom: $mobile-browser-footer-height;
+        }
+
+        // No Pointer: For touch screens
+        @media only screen and (pointer: none) {
+          bottom: $mobile-browser-footer-height;
+        }
+
+        &__reset,
+        &__next,
+        &__back,
+        &__apply {
+          .textButton {
+            height: 36px;
+            line-height: 12px;
+            min-width: fit-content;
+
+            [class^='icon-'],
+            [class*='icon-'] {
+              &::before {
+                font-size: 12px;
+                font-weight: 900;
+                line-height: 12px;
+              }
+            }
+          }
+        }
+      }
+
+      &__content {
+        color: $colour-grey-100;
+        font-size: 14px;
+        font-weight: 600;
+
+        .text_header {
+          color: $colour-grey-200;
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 18px;
+          padding: 12px 0 6px;
+          position: relative;
+        }
+      }
+    }
+
+    &__menuButton {
+      background: none;
+      border: 0;
+      color: $colour-grey-300;
+      cursor: pointer;
+      margin-right: 15px;
+      padding-top: 5px;
+      width: 22px;
+
+      i {
+        font-size: 22px;
+      }
+
+      &--disabled {
+        cursor: default;
+      }
+    }
+  }
+
+  .chatChannelHeader {
+    align-items: center;
+    background-color: $colour-neutral-200;
+    border-bottom: 1px solid $colour-neutral-300;
+    box-shadow: 0 4px 4px $colour-light-shadow;
+    display: flex;
+    flex-direction: row;
+    height: $chat-header-height;
+    justify-content: space-between;
+    min-height: $chat-header-height;
+    padding-left: 15px;
+    padding-right: 10px;
+    position: relative;
+    z-index: 2;
+
+    .chatChannelSearch {
+      align-items: center;
+      color: $colour-grey-300;
+      display: flex;
+      width: 100%;
+
+      &__label {
+        font-size: 14px;
+        font-weight: 600;
+
+        // Portrait: For portrait phones and tablets and narrow screens
+        @media only screen and (orientation: portrait) {
+          display: none;
+        }
+      }
+
+      &__input {
+        height: 32px;
+        margin-left: 10px;
+        width: 500px;
+
+        // No Hover: For touch screens ( covers iOS zooming on input issue )
+        @media only screen and (hover: none) {
+          font-size: 16px;
+          margin-left: 0;
+          width: calc(100% - 5px);
+        }
+
+        // No Pointer: For touch screens
+        @media only screen and (pointer: none) {
+          margin-left: 0;
+          width: calc(100% - 5px);
+        }
+
+        .searchBar__icon {
+          font-size: 20px;
+          margin: 8px 5px;
+        }
+      }
+
+      &__results {
+        align-items: flex-start;
+        background: $colour-p06;
+        border-radius: 3px;
+        box-shadow: 0 3px 5px $colour-light-shadow;
+        color: $colour-grey-300;
+        display: flex;
+        flex-direction: column;
+        max-height: calc(100vh - 200px);
+        overflow-y: auto;
+        padding: 16px 0;
+        position: absolute;
+        top: 40px;
+        width: 100%;
+      }
+
+      &__resultsCount {
+        padding: 0 16px;
+        text-align: center;
+        width: 100%;
+      }
+
+      &__suggestions {
+        font-size: 14px;
+        line-height: 35px;
+        min-height: 35px;
+        overflow: hidden;
+        padding: 0 16px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 100%;
+      }
+
+      &__result,
+      &__noResult,
+      &__searching {
+        font-size: 14px;
+        line-height: 35px;
+        min-height: 35px;
+        overflow: hidden;
+        padding: 0 16px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 100%;
+      }
+
+      &__result {
+        align-items: center;
+        display: inline-flex;
+        flex-wrap: wrap;
+        gap: 8px;
+
+        &:hover {
+          background-color: $colour-neutral-200;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .dropdownWrapper__menu {
+      background: none;
+      overflow: visible;
+    }
+
+    .dropdownWrapper {
+      .searchBar__input {
+        height: 32px;
+
+        // No Hover: For touch screens ( covers iOS zooming on input issue )
+        @media only screen and (hover: none) {
+          font-size: 16px;
+        }
+      }
+    }
+
+    &__showChannelsListButton {
+      display: none;
+      margin-right: 15px;
+
+      // No Hover: For touch screens ( excluding Samsung devices that return true for hover query )
+      @media only screen and (hover: none) {
+        display: block;
+      }
+      // Has Hover: For PC and Samsung devices that return true for hover query
+      @media only screen and (max-width: $breakpoint-tablet) and (hover: hover) {
+        display: block;
+      }
+      // No Pointer: For touch screens
+      @media only screen and (pointer: none) {
+        display: block;
+      }
+    }
+
+    &__menuButton {
+      background: none;
+      border: 0;
+      color: $colour-grey-300;
+      cursor: pointer;
+      margin-right: 15px;
+      padding-top: 5px;
+      width: 22px;
+
+      i {
+        font-size: 24px;
+        color: $colour-grey-300;
+      }
+
+      &--disabled {
+        cursor: default;
+      }
+    }
+
+    &__channelDetails {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      width: 100%;
+    }
+
+    &__channelDescription {
+      color: $colour-grey-300;
+      display: block;
+      font-size: 14px;
+      font-weight: 400;
+      margin-left: 4px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      width: 100%;
+    }
+
+    &__channelName {
+      color: $colour-grey-300;
+      display: block;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 16px;
+      margin-left: 4px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      width: 100%;
+    }
+  }
+
+  .tooltipMenu__icon {
+    left: 29px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -50%);
+  }
+}
+
+.main--mainMenuOpen {
+  .chatContainer {
+    width: calc(100% - #{$menu-menu-wide-width});
+
+    @media only screen and (max-width: $breakpoint-desktop) {
+      width: 100%;
+    }
+
+    .chatMessaging__messageInputContainer,
+    .chatMessaging__noInput,
+    .chatMessaging__statusBackground {
+      @media only screen and (min-width: $breakpoint-desktop) {
+        width: calc(
+          100% - #{$chat-channel-list-width} - #{$menu-menu-wide-width}
+        );
+      }
+
+      @media only screen and (hover: none) {
+        left: $menu-menu-wide-width;
+        width: calc(100% - #{$menu-menu-wide-width});
+      }
+
+      // No Pointer: For touch screens
+      @media only screen and (pointer: none) {
+        left: $menu-menu-wide-width;
+        width: calc(100% - #{$menu-menu-wide-width});
+      }
+    }
+  }
+
+  .chatMessaging__messageInputContainer {
+    @media only screen and (min-width: $breakpoint-desktop) {
+      left: $chat-channel-list-width + $menu-menu-wide-width;
+    }
+  }
+}
+
+@import './src/components/ChannelMemberRemover/style';
+@import './src/components/ChannelMembersSidePanel/style';
+@import './src/components/ChannelSettingsSidePanel/style';
+@import './src/components/MessageInfoSidePanel/style';
+@import './src/components/MessagingMembersModal/style';

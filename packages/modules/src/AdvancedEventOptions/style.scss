@@ -1,0 +1,18 @@
+.advancedEventOptions {
+  &__formSeparator {
+    border-top: 1px dashed $colour-s14;
+    margin: 25px 0;
+  }
+
+  &__section {
+    border-bottom: 1px dashed $colour-s14;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+  }
+
+  &__advancedButton {
+    span {
+      margin-left: 5px;
+    }
+  }
+}

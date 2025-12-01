@@ -1,0 +1,62 @@
+// @flow
+const commonFields = {
+  time_measured: '2023-10-12T04:25:03Z',
+};
+
+export const parsedCsv = [
+  {
+    id: '108269',
+    first_name: 'Niall',
+    last_name: 'Kennedy',
+    body_weight: '60',
+    sit_and_reach: '20',
+    groin_squeeze: '30',
+    shoulder_rotation_internal_left: '40',
+    hip_mobility_left: '50',
+    ...commonFields,
+  },
+  {
+    id: '18447',
+    first_name: 'Diarmuid',
+    last_name: 'Tobin',
+    body_weight: '61',
+    sit_and_reach: '21',
+    groin_squeeze: '31',
+    shoulder_rotation_internal_left: '41',
+    hip_mobility_left: '51',
+    ...commonFields,
+  },
+  {
+    id: '15641',
+    first_name: 'Saar',
+    last_name: 'Byrne',
+    body_weight: '62',
+    sit_and_reach: '22',
+    groin_squeeze: '32',
+    shoulder_rotation_internal_left: '42',
+    hip_mobility_left: '52',
+    ...commonFields,
+  },
+  {
+    id: '2942',
+    first_name: 'Adam',
+    last_name: 'Conway',
+    body_weight: '63',
+    sit_and_reach: '23',
+    groin_squeeze: '33',
+    shoulder_rotation_internal_left: '43',
+    hip_mobility_left: '53',
+    ...commonFields,
+  },
+  {
+    id: '2314',
+    first_name: 'Andy',
+    last_name: 'Shelton',
+    body_weight: '64',
+    sit_and_reach: '24',
+    groin_squeeze: '34',
+    shoulder_rotation_internal_left: '44',
+    hip_mobility_left: '54',
+    ...commonFields,
+  },
+];

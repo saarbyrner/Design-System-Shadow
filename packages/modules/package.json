@@ -1,0 +1,15 @@
+{
+  "name": "@kitman/modules",
+  "version": "1.2379.0",
+  "description": "kitman modules library",
+  "author": "frontend@kitmanlabs.com",
+  "homepage": "https://github.com/KitmanLabs/kitman-frontend/tree/master/packages/modules",
+  "license": "ISC",
+  "main": "src/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  }
+}

@@ -1,0 +1,64 @@
+.athleteStatusHeader {
+  height: 80px;
+  position: relative;
+
+  .athleteStatusHeader__status {
+    align-items: center;
+    border-left: 0;
+    border-right: 1px solid transparent;
+    display: flex;
+    font-size: 0.8em;
+    justify-content: center;
+    line-height: 14px;
+    max-width: 96px;
+    min-width: 96px;
+    overflow-wrap: break-word;
+    padding: 0 6px;
+    position: relative;
+    text-align: center;
+    width: 96px;
+    word-break: break-word;
+
+    i {
+      color: $colour-p04;
+      cursor: pointer;
+      padding-left: 5px;
+      padding-right: 5px;
+      position: absolute;
+      right: 0;
+      top: 5px;
+    }
+
+    span {
+      clear: both;
+      color: $colour-s15;
+      display: block;
+      font-size: 0.9em;
+    }
+  }
+
+  .athleteStatusHeader__athleteTitle {
+    align-items: center;
+    background: $colour-p06;
+    display: flex;
+    height: 100%;
+    left: 0;
+    line-height: 60px;
+    position: absolute;
+    top: 0;
+    width: 278px;
+    z-index: 10;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .athleteStatusHeader__statusesContainer {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    padding-left: 278px;
+    position: relative;
+  }
+}

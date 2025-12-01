@@ -1,0 +1,70 @@
+.eventSelection {
+  &__eventsContentWrapper {
+    margin-bottom: 60px;
+  }
+
+  &__instructions {
+    color: $colour-s16;
+    font-size: 12px;
+    margin-top: -25px;
+  }
+
+  &__athletesQuantity {
+    margin-right: 10px;
+
+    &--zero {
+      color: $colour-s11;
+    }
+  }
+
+  // Required to override the default padding
+  tr.eventSelection__tableRow--expanded {
+    td {
+      padding: 20px;
+    }
+  }
+
+  &__athleteNamesTitle {
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+
+  &__athleteNames {
+    column-count: 4;
+  }
+
+  &__athleteName {
+    margin-bottom: 10px;
+  }
+
+  &__expandIcon {
+    color: $colour-s16;
+    cursor: pointer;
+    font-weight: 800;
+  }
+
+  &__tableDateHeader {
+    background-color: $colour-p06;
+
+    th {
+      background-color: $colour-p06;
+      border-top: 0;
+      color: $colour-s17;
+      font-size: 12px;
+      font-weight: normal;
+      padding-bottom: 5px;
+      padding-left: 15px;
+      padding-top: 18px;
+    }
+
+    &--first {
+      th {
+        padding-top: 0;
+      }
+    }
+  }
+
+  .importWorkflowEventDate__localTime {
+    display: block;
+  }
+}

@@ -1,0 +1,222 @@
+.notesWidget {
+  background: $colour-p06;
+  border: 1px solid $colour-s13;
+  border-radius: 5px;
+  display: block;
+  height: 100%;
+
+  &__header {
+    align-items: center;
+    background: $colour-s13;
+    border-radius: 5px 5px 0 0;
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 10px;
+
+    &--archived {
+      background: $colour-p01;
+
+      button {
+        color: $colour-p06;
+      }
+    }
+  }
+
+  &__title {
+    align-items: center;
+    display: flex;
+    max-width: 320px;
+    width: 100%;
+
+    &--archived {
+      color: $colour-p06;
+    }
+  }
+
+  &__titleText {
+    margin: 0;
+  }
+
+  &__headerBackArrow {
+    border-right: 1px solid $colour-s14;
+    color: $colour-p01;
+    cursor: pointer;
+    font-size: 24px;
+    height: 25px;
+    margin-left: -3px;
+    margin-right: 10px;
+    width: 30px;
+
+    &--archived {
+      color: $colour-p06;
+    }
+  }
+
+  &__headerRightDetails {
+    align-items: center;
+    display: flex;
+  }
+
+  &__addNoteButton {
+    align-items: center;
+    border-right: 1px solid $colour-s14;
+    display: flex;
+    height: 25px;
+    width: 30px;
+  }
+
+  &__addNoteIcon {
+    color: $colour-p04;
+    cursor: pointer;
+    font-size: 20px;
+    margin-bottom: 2px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 50px);
+    overflow-y: scroll;
+    padding: 20px;
+  }
+
+  &__contentV2 {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 50px);
+    overflow-y: scroll;
+    padding: 20px 7px 20px 20px;
+  }
+
+  &__note {
+    border-bottom: 1px dashed $colour-s14;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+
+    &:last-child {
+      border-bottom: 0;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      .note__title {
+        color: $colour-p02;
+      }
+    }
+  }
+
+  &__noteV2 {
+    border-bottom: 1px solid $colour-s33;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+
+    &:last-child {
+      border-bottom: 0;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      .note__title {
+        color: $colour-p02;
+      }
+    }
+  }
+
+  &__loadingImage {
+    background-color: $colour-s14;
+    margin: auto;
+    max-width: 1000px;
+
+    img {
+      max-height: 100%;
+      max-width: 100%;
+    }
+  }
+
+  &--error,
+  &--loading {
+    .notesWidget__header {
+      h6 {
+        background-color: $colour-s14;
+        border-radius: 3px;
+        height: 14px;
+        width: 120px;
+      }
+    }
+  }
+
+  &--loading {
+    @keyframes placeHolderShimmer {
+      0% {
+        background-position: -468px 0;
+      }
+
+      100% {
+        background-position: 468px 0;
+      }
+    }
+
+    &__loadingImage {
+      animation-duration: 0.8s;
+      animation-fill-mode: forwards;
+      animation-iteration-count: infinite;
+      animation-name: placeHolderShimmer;
+      animation-timing-function: cubic-bezier(0.44, 0.3, 0.9, 0.37);
+      background: #f6f7f8;
+      background: linear-gradient(to right, #eee 8%, #ddd 18%, #eee 33%);
+      margin-top: 20px;
+      max-height: calc(100% - 20px);
+      position: relative;
+    }
+  }
+
+  &__noPermissionText {
+    align-items: center;
+    background-color: $colour-p06;
+    bottom: 0;
+    color: $colour-s17;
+    display: flex;
+    font-size: 14px;
+    font-weight: 600;
+    justify-content: center;
+    left: 0;
+    opacity: 0.8;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    z-index: 5;
+  }
+
+  .richTextDisplay--abbreviated {
+    max-height: initial;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+
+    &:after {
+      background-image: none;
+    }
+  }
+}
+
+.printBuilder {
+  .notesWidget__content {
+    padding: 15px;
+  }
+
+  .richTextDisplay--abbreviated {
+    -webkit-line-clamp: initial;
+  }
+}

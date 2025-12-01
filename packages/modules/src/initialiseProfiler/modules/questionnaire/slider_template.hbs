@@ -1,0 +1,20 @@
+<div class="js-dynamic_slider col-md-6 questionnaire__fieldBlock">
+    <label class="km-form-label km-form-label--strong">
+      {{ area_name }}
+      <a href="#" class="js-remove_indication float-right">{{ i18nT "Clear" }}</a>
+    </label>
+
+    <div class="scaleField">
+      <input type="hidden" name="questionnaire_form[indications][{{area}}]" data-rule-required="true" data-rule-numeric="true" data-rule-min="0" data-rule-max="10" class="slider_value" />
+      <ul class="scale">
+        {{#each values}}
+          <li data-value="{{this}}">{{this}}</li>
+        {{/each}}
+      </ul>
+
+      <div class="scaleCaption clearfix">
+        <div class="float-left">{{ i18nT "Less" }}</div>
+        <div class="float-right">{{ i18nT "More" }}</div>
+      </div>
+    </div>
+</div>

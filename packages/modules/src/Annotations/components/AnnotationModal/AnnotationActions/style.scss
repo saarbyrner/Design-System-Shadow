@@ -1,0 +1,43 @@
+.annotationActions {
+  border-top: 1px dashed $colour-s14;
+  padding: 10px 0 0;
+
+  &__action {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    margin-bottom: 20px;
+  }
+
+  &__inputContainer {
+    flex: 1;
+    min-width: 0;
+  }
+
+  &__assignmentRow {
+    margin: 10px -10px 0;
+  }
+
+  &__tickBox {
+    padding-right: 15px;
+    padding-top: 30px;
+
+    .actionCheckbox {
+      font-size: 24px;
+      padding-right: 0;
+    }
+  }
+
+  &__remove {
+    min-width: 50px;
+    padding-top: 20px;
+  }
+
+  &__optionalDatePicker {
+    color: $colour-s16;
+    float: right;
+    font-size: 14px;
+    margin-top: 4px;
+  }
+}

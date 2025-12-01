@@ -1,0 +1,48 @@
+.squadSelector {
+  align-items: center;
+  display: inline-flex;
+  height: 30px;
+  padding-right: 10px;
+
+  &__tooltipTriggerEl {
+    align-items: center;
+    display: flex;
+    height: 50px;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &--disabled {
+      &:hover {
+        cursor: default;
+      }
+
+      .squadSelector__dropdownIcon {
+        display: none;
+      }
+    }
+  }
+
+  &__squadName {
+    color: $colour-s17;
+    font-size: 14px;
+    font-weight: 600;
+    margin-right: 10px;
+
+    @media only screen and (max-width: $breakpoint-desktop) {
+      color: $colour-p06;
+    }
+
+    @media only screen and (max-width: $breakpoint-tablet) {
+      display: none;
+    }
+  }
+
+  &__dropdownIcon {
+    color: $colour-p04;
+    font-size: 18px;
+    margin: 0 5px;
+    vertical-align: middle;
+  }
+}

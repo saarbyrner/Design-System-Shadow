@@ -1,0 +1,74 @@
+.columnHeader {
+  &__metricName {
+    font-size: 12px;
+    line-height: 14px;
+    margin: 0 16px;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    // All browsers that support webkit-line-clamp will ellipsis after 2 lines.
+    // Older browsers will ellipsis after 1.
+    @supports (-webkit-line-clamp: 2) {
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      display: -webkit-box;
+      overflow: hidden;
+      overflow-wrap: break-word;
+      text-overflow: ellipsis;
+      white-space: pre-line;
+    }
+
+    &--sorted {
+      color: $colour-p01;
+    }
+
+    &--error {
+      color: $colour-grey-100;
+    }
+  }
+
+  &__forbiddenIcon {
+    color: $colour-grey-100;
+    display: block;
+    position: absolute;
+  }
+
+  &__pivotLocked {
+    color: $colour-p04;
+    left: calc(50% - 7px);
+    position: absolute;
+    top: -8px;
+  }
+
+  &__sortIcon {
+    color: $colour-p01;
+    display: none;
+    font-weight: 600;
+    position: absolute;
+
+    &--lowHigh,
+    &--highLow {
+      display: block;
+    }
+  }
+
+  &__burgerMenu {
+    color: $colour-p04;
+    opacity: 0;
+    position: absolute;
+    right: 8px;
+    width: 8px;
+  }
+
+  &__historicalSquad,
+  &__calculation {
+    font-size: 10px;
+    font-weight: normal;
+    margin: 0 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}

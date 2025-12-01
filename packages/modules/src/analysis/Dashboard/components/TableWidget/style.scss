@@ -1,0 +1,733 @@
+.tableWidget {
+  background: $colour-p06;
+  border: 1px solid $colour-s13;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+
+  &__header {
+    align-items: center;
+    background: $colour-s13;
+    border-radius: 5px 5px 0 0;
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 10px;
+  }
+
+  &__headerLeftDetails {
+    width: 320px;
+  }
+
+  &__headerRightDetails {
+    align-items: center;
+    display: flex;
+  }
+
+  &__widgetMenu {
+    background: transparent;
+    border: 0;
+    color: $colour-p04;
+    float: right;
+    font-size: 18px;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__content {
+    flex: 1;
+    margin: 12px;
+    overflow: hidden;
+  }
+
+  &__empty {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+  }
+
+  &__editTable {
+    align-items: center;
+    background-color: transparent;
+    border: 1px solid $colour-s15;
+    border-radius: 5px;
+    color: $colour-p01;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    margin: auto;
+    min-height: 84px;
+    padding-bottom: 5px;
+    padding-top: 20px;
+    width: 94px;
+
+    &--icon {
+      font-size: 18px;
+    }
+
+    &--text {
+      margin-top: 8px;
+      text-align: center;
+    }
+  }
+
+  &__addColumn,
+  &__addRow {
+    background: $colour-p06;
+    border: 1px solid $colour-neutral-200 !important;
+    color: $colour-p01 !important;
+    font-size: 20px;
+    font-weight: normal !important;
+    height: 50px !important;
+    justify-content: center;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__addColumn {
+    border-collapse: separate;
+    min-width: 150px;
+    position: sticky;
+    top: 55px;
+  }
+
+  &__errorColumn {
+    background: $colour-neutral-200;
+
+    &--content {
+      color: $colour-grey-100;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &--icon {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    &--message {
+      line-height: 17px;
+    }
+
+    &--reload {
+      color: $colour-p01;
+      cursor: pointer;
+      margin-top: 8px;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__table {
+    border-collapse: collapse;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+
+    .tableWidget__comparisonPopulationRow {
+      td {
+        background: $colour-p06;
+        border: 0;
+        font-size: 12px;
+        font-weight: normal;
+        padding-bottom: 10px;
+        top: 0;
+        z-index: 1;
+      }
+
+      &--disabled {
+        pointer-events: none;
+      }
+    }
+
+    .tableWidget__sessionOrDateRow,
+    .tableWidget__populationRow {
+      td {
+        background: $colour-p06;
+        border: 0;
+        font-size: 12px;
+        font-weight: normal;
+        padding-bottom: 10px;
+        position: sticky;
+        top: 0;
+        z-index: 1;
+      }
+    }
+
+    tr {
+      td {
+        border: 1px solid $colour-neutral-200;
+        height: 55px;
+        line-height: 13px;
+        text-align: center;
+      }
+    }
+
+    .tableWidget__columnHeader {
+      cursor: pointer;
+
+      &--contextSquad {
+        display: inline-block;
+        font-size: 10px;
+        font-weight: normal;
+        line-height: 10px;
+        max-width: 109px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      &--historicalSquad {
+        height: 62.5px;
+      }
+
+      td {
+        background: $colour-p06;
+        font-weight: bold;
+        height: 50px;
+        padding: 4px;
+        position: sticky;
+        top: 55px;
+        z-index: 1;
+
+        &:first-child {
+          border-top: 0;
+        }
+
+        &:hover {
+          .columnHeader__burgerMenu {
+            opacity: 1;
+            transition: all 0.68s ease-in-out;
+          }
+        }
+      }
+
+      &--error {
+        td {
+          background: $colour-neutral-200;
+        }
+      }
+
+      &--disabled {
+        cursor: auto;
+      }
+    }
+
+    .tableWidget__rowHeader {
+      cursor: pointer;
+      padding: 1px;
+
+      &--forbidden {
+        background: $colour-neutral-200;
+        color: $colour-grey-100;
+      }
+
+      &--forbiddenIcon {
+        color: $colour-grey-100;
+        display: block;
+        position: absolute;
+      }
+
+      &--metricName {
+        display: inline-block;
+        font-size: 12px;
+        font-weight: bold;
+        line-height: 14px;
+        margin: 0;
+        max-width: 98px;
+        overflow: hidden;
+        overflow-wrap: break-word;
+        text-align: left;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      &--calculation {
+        font-size: 10px;
+        font-weight: normal;
+        margin: 0;
+        text-align: left;
+      }
+
+      &--container {
+        position: relative;
+        margin-bottom: 1px;
+      }
+
+      &--dynamicContainer {
+        position: relative;
+        max-width: 90px;
+      }
+
+      &--burgerMenu {
+        color: $colour-p04;
+        margin-left: 48px;
+        opacity: 0;
+        position: absolute;
+        right: 4px;
+      }
+
+      &--populationName {
+        color: $colour-grey-200;
+        display: block;
+        line-height: 16px;
+        font-size: 12px;
+        font-weight: 600;
+        max-width: 109px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+        &--narow {
+          max-width: 90px;
+        }
+      }
+
+      &--contextSquad {
+        color: $colour-grey-100;
+        display: block;
+        font-size: 10px;
+        font-weight: 400;
+        max-width: 109px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      &:hover {
+        .tableWidget__rowHeader--burgerMenu {
+          opacity: 1;
+          transition: all 0.68s ease-in-out;
+        }
+      }
+
+      &--dynamic {
+        background-color: $colour-neutral-100;
+        max-width: 90px;
+        border: none;
+      }
+
+      &--dynamicTableData {
+        display: flex;
+        align-items: center;
+        max-width: 119px;
+        flex-wrap: nowrap;
+        overflow: hidden;
+        padding-top: 10px;
+      }
+
+      &--lightText {
+        font-weight: 400;
+      }
+
+      &--disabled {
+        pointer-events: none;
+      }
+    }
+
+    .tableWidget__summaryRow {
+      td {
+        background: $colour-neutral-200;
+        border: 1px solid $colour-neutral-300;
+        bottom: 0;
+        font-size: 12px;
+        height: 30px;
+        position: sticky;
+      }
+
+      &--count {
+        cursor: default;
+        padding: 8px;
+        text-align: left;
+
+        &:hover {
+          background: $colour-neutral-200;
+        }
+      }
+
+      &--selector {
+        cursor: pointer;
+        padding: 0;
+
+        &:hover {
+          background: $colour-neutral-300;
+        }
+
+        &--disabled {
+          pointer-events: none;
+        }
+      }
+
+      &--tooltip {
+        align-items: center;
+        display: flex;
+        height: 28px;
+        justify-content: space-between;
+        width: 100%;
+      }
+
+      &--calc {
+        line-height: 14px;
+        max-width: 50%;
+        overflow: hidden;
+        padding-left: 8px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      &--value {
+        padding-right: 8px;
+      }
+    }
+
+    .tableWidget__summaryColumnHeader {
+      td {
+        background: $colour-neutral-200;
+        border: 1px solid $colour-neutral-300;
+        font-size: 12px;
+        height: 50px;
+        text-align: center;
+      }
+
+      &--count {
+        cursor: default;
+        padding: 8px;
+        text-align: left;
+
+        &:hover {
+          background: $colour-neutral-200;
+        }
+      }
+    }
+
+    .tableWidget__summaryColumn {
+      background: $colour-neutral-200;
+      cursor: pointer;
+      display: inline-table;
+      font-size: 12px;
+      height: 55px;
+      text-align: center;
+      min-width: 120px;
+      position: sticky;
+      right: 0;
+
+      &--row {
+        background: $colour-neutral-200;
+
+        &:hover {
+          background: $colour-neutral-300;
+        }
+      }
+
+      &--selector {
+        padding: 8px;
+      }
+
+      &--selectorForbidden {
+        cursor: default;
+        height: 55px;
+        padding: 0;
+      }
+
+      &--tooltip {
+        align-items: center;
+        display: flex;
+        height: 28px;
+        justify-content: space-between;
+        width: 100%;
+      }
+
+      &--calc {
+        line-height: 14px;
+        max-width: 50%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      &--disabled {
+        pointer-events: none;
+      }
+    }
+
+    .tableWidget__dataCell {
+      &--forbidden {
+        background: $colour-neutral-200;
+      }
+
+      &--error {
+        align-items: center;
+        background: $colour-neutral-200;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
+
+    .tableWidget__blankRow {
+      height: 55px;
+      background: $colour-p06;
+
+      td {
+        background: $colour-p06;
+        border: 0;
+        height: 55px;
+        position: sticky;
+        z-index: 2;
+        top: 0;
+      }
+
+      &--header {
+        height: 50px;
+        &--historicalSquad {
+          height: 71px;
+        }
+
+        td {
+          border: 0;
+          height: 50px;
+          position: sticky;
+          top: 55px;
+        }
+      }
+
+      &--historicalSquadEnabled {
+        height: 55px;
+
+        td {
+          border: 0;
+          height: 71px;
+          position: sticky;
+          top: 55px;
+        }
+      }
+    }
+
+    .tableWidget__sortHandle {
+      background: transparent;
+      border: 0;
+      color: $colour-p04;
+      cursor: grab;
+      display: flex;
+      flex-direction: column;
+      opacity: 0;
+      width: 100%;
+
+      .icon-more {
+        height: 5px;
+
+        &:before {
+          display: inline-block;
+          transform: rotate(90deg);
+        }
+      }
+
+      &--absolute {
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+    }
+
+    .tableWidget__sessionOrDateRow,
+    .tableWidget__populationRow {
+      &:hover {
+        .tableWidget__sortHandle {
+          opacity: 1;
+        }
+      }
+    }
+
+    .tableWidget__column--is-sorting {
+      cursor: grabbing;
+      display: block;
+      overflow: hidden;
+
+      .tableWidget {
+        &__sortHandle {
+          cursor: grabbing;
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__title-column {
+    position: sticky;
+    left: 0;
+    z-index: 2;
+    display: inline-table;
+    height: fit-content;
+    min-width: 120px;
+    max-width: 150px;
+
+    tr {
+      width: 100%;
+
+      td {
+        padding: 10px;
+        text-align: left;
+        background-color: $colour-p06;
+      }
+    }
+  }
+
+  &__column {
+    display: inline-table;
+    height: fit-content;
+
+    tr {
+      width: 100%;
+    }
+  }
+
+  &__layout {
+    &--fit-to-width {
+      .tableWidget {
+        &__table {
+          overflow-x: hidden;
+        }
+
+        &__column {
+          flex: 1;
+        }
+      }
+    }
+
+    &--fit-to-content {
+      .tableWidget {
+        $width: auto;
+
+        &__column {
+          width: $width;
+        }
+
+        &__columnHeader {
+          width: $width;
+        }
+      }
+    }
+
+    &--narrow {
+      .tableWidget {
+        $width: 90px;
+
+        &__column {
+          width: $width;
+        }
+
+        &__columnHeader {
+          width: $width;
+        }
+      }
+    }
+
+    &--normal {
+      .tableWidget {
+        $width: 120px;
+
+        &__column {
+          width: $width;
+        }
+
+        &__columnHeader {
+          width: $width;
+        }
+      }
+    }
+
+    &--wide {
+      .tableWidget {
+        $width: 150px;
+
+        &__column {
+          width: $width;
+        }
+
+        &__columnHeader {
+          width: $width;
+        }
+      }
+    }
+  }
+
+  &__loadingColumnIndicator {
+    background-color: #ddd;
+    border-radius: 3px;
+    height: 16px;
+    margin: 0 auto;
+    width: 100px;
+
+    &--shimmering {
+      @include shimmer-bg;
+    }
+  }
+
+  &__loadingCell {
+    width: 40px;
+    height: 13px;
+    display: inline-block;
+    border-radius: 3px;
+
+    @include shimmer-bg;
+  }
+
+  &__duplicateErrorColumn {
+    align-items: center;
+    background-color: $colour-s13;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__tooltip {
+    color: $colour-grey-300;
+    font-size: 12px;
+    line-height: 20px;
+
+    &--populationName {
+      display: block;
+      font-weight: 600;
+    }
+
+    &--contextSquad {
+      display: block;
+      font-weight: 400;
+    }
+  }
+}
+
+.printBuilder {
+  .tableWidget {
+    &__header {
+      background: transparent;
+      height: 40px;
+      padding: 0 10px;
+    }
+
+    &__headerRightDetails {
+      display: none;
+    }
+
+    &__content {
+      margin: 4px;
+    }
+  }
+}
+
+.dynamicHeaderWrapper {
+  display: flex;
+  width: 100%;
+}

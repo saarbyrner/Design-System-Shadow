@@ -1,0 +1,94 @@
+.chatMessageInfo {
+  background-color: $transparent-black;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1001;
+
+  * {
+    scrollbar-color: $colour-blue-100 $colour-neutral-300;
+    scrollbar-width: thin;
+  }
+
+  *::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: $colour-neutral-300;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: $colour-blue-100;
+    border: 3px solid $colour-neutral-300;
+    border-radius: 20px;
+  }
+
+  .slidingPanel {
+    height: 100% !important;
+    z-index: 1999; // 1 less than change squad tooltip menu. Does not need to exceed then Intercom frame z-index
+
+    &__indent {
+      margin: 0 30px;
+      max-height: calc(100vh - 200px);
+      overflow: auto;
+    }
+
+    &__header {
+      color: $colour-grey-200;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 18px;
+      padding: 12px 30px 6px;
+      position: relative;
+      text-transform: uppercase;
+    }
+
+    &__row {
+      margin: 0 0 10px;
+      padding-left: 0;
+      padding-right: 0;
+
+      &:first-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &__content {
+      color: $colour-grey-100;
+      font-size: 14px;
+      font-weight: 600;
+
+      .text_header {
+        color: $colour-grey-200;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 18px;
+        padding: 12px 0 6px;
+        position: relative;
+      }
+    }
+  }
+
+  &__message {
+    align-self: center;
+    background-color: $colour-neutral-200;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 8px;
+    min-height: min-content;
+    padding: 8px;
+    width: 100%;
+  }
+
+  &__memberRow {
+    margin: 0 0 10px;
+    padding-left: 10px;
+    align-items: center;
+    column-gap: 8px;
+    display: flex;
+  }
+}

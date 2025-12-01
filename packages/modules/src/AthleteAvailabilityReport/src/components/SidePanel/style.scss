@@ -1,0 +1,123 @@
+.availabilityReportTable {
+  &__sidePanel {
+    width: 60px;
+
+    &--withGamesAndSessions {
+      width: 320px;
+    }
+  }
+
+  &__sidePanelHeader {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    height: 90px;
+    justify-content: stretch;
+  }
+
+  &__sidePanelRow {
+    align-items: center;
+    border-radius: 0 5px 5px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    margin-bottom: 2px;
+    min-height: 45px;
+
+    &:nth-child(even) {
+      background: $colour-s13;
+    }
+
+    &:nth-child(odd) {
+      background: $colour-s23;
+    }
+  }
+
+  &__sidePanelRowWrapper {
+    &:nth-child(even) {
+      .availabilityReportTable__sidePanelRow {
+        background: $colour-s13;
+      }
+    }
+
+    &:nth-child(odd) {
+      .availabilityReportTable__sidePanelRow {
+        background: $colour-s23;
+      }
+    }
+
+    &--expanded {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__sidePanelRowExpansion {
+    .availabilityReportTable__sidePanelRow {
+      &:nth-child(even) {
+        background: $colour-s13;
+      }
+
+      &:nth-child(odd) {
+        background: $colour-s23;
+      }
+    }
+  }
+
+  &__sidePanelHeaderCell,
+  &__sidePanelCell {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__sidePanelHeaderCell {
+    span {
+      font-size: 12px;
+      font-weight: 600;
+      text-align: center;
+    }
+  }
+
+  &__sidePanelCell {
+    span {
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .availabilityReportTable__sidePanelPercentage {
+      color: $colour-s16;
+      font-size: 10px;
+      font-weight: 200;
+    }
+  }
+
+  &__sidePanelHeaderIcon {
+    color: $colour-p01;
+    font-size: 24px;
+  }
+
+  &--fixedHeader {
+    @media (min-width: $breakpoint-desktop) {
+      .availabilityReportTable__sidePanelHeader {
+        background: $colour-p06;
+        box-shadow: 0 4px 4px -4px $transparent-black;
+        height: 80px;
+        position: fixed;
+        right: 20px;
+        top: 0;
+        width: 60px;
+        z-index: 1080;
+
+        &--withGamesAndSessions {
+          width: 320px;
+        }
+      }
+
+      .availabilityReportTable__sidePanelSection {
+        padding-top: 90px;
+      }
+    }
+  }
+}

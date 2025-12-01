@@ -1,0 +1,66 @@
+.graphDescription {
+  &__seriesItem {
+    border-right: 1px solid $colour-s18;
+    margin-right: 10px;
+    padding-right: 10px;
+
+    &:last-child {
+      border: 0;
+    }
+  }
+
+  &--condensed {
+    font-size: 10px;
+
+    p {
+      margin-bottom: 5px;
+    }
+  }
+
+  &__status {
+    display: inline-block;
+    font-size: 16px;
+    margin-bottom: 7px;
+    margin-right: 4px;
+    margin-top: 0;
+
+    &--renaming {
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+  }
+
+  &__separator,
+  &__unit {
+    color: $colour-s16;
+    text-indent: 1em;
+  }
+
+  &__metricName {
+    max-width: 370px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &__metricUnit {
+    color: $colour-s16;
+  }
+
+  &__statusName {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    overflow: hidden;
+    padding-bottom: 2px;
+    vertical-align: top;
+  }
+
+  &__filters {
+    color: $colour-s16;
+    font-size: 12px;
+  }
+}

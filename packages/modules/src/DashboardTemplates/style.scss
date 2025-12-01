@@ -1,0 +1,83 @@
+.dashboardTemplates {
+  &__templateListContainer {
+    background: $colour-p06;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 30px;
+  }
+
+  &__nameCell {
+    width: 533px;
+  }
+
+  &__buttonsCell {
+    text-align: right;
+  }
+
+  &__buttonContainer {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+    justify-content: flex-end;
+    position: relative;
+  }
+
+  &__button {
+    background: none;
+    border: 0;
+    color: $colour-p04;
+    font-size: 25px;
+    padding-bottom: 0;
+    padding-top: 0;
+
+    &--disabled {
+      background: none;
+      border: 0;
+      color: $colour-p04;
+      font-size: 25px;
+      opacity: 0.5;
+      padding-bottom: 0;
+      padding-top: 0;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__tooltipHotspot {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+  }
+}
+
+.dashboardTemplatesHeader {
+  &__inner {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__buttonContainer {
+    display: inline-block;
+    height: 36px;
+    position: relative;
+    width: 50px;
+  }
+
+  &__tooltipHotspot {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+  }
+}

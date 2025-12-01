@@ -1,0 +1,10 @@
+// @flow
+import { rest } from 'msw';
+
+import { data } from '../data/fetchStaffProfile';
+
+const handler = rest.put('/administration/staff/:staffId', (req, res, ctx) =>
+  res(ctx.json(data))
+);
+
+export { handler, data };

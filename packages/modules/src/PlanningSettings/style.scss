@@ -1,0 +1,106 @@
+.planningSettings {
+  &__header {
+    background-color: $colour-p06;
+    border-radius: 3px;
+    box-shadow: $section-shadow;
+    margin: 16px;
+    padding: 26px 24px;
+    overflow: auto;
+  }
+
+  &__title {
+    color: $colour-grey-300;
+    font-size: 24px;
+    margin: 0;
+  }
+
+  &__section {
+    background-color: $colour-p06;
+    border-radius: 3px;
+    box-shadow: $section-shadow;
+    margin: 16px;
+    padding: 26px 24px;
+    overflow: auto;
+  }
+
+  &__sectionHeader {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+
+  &__sectionHeaderContent {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__headerTitle {
+    color: $colour-grey-300;
+    font-size: 20px;
+    margin: 0;
+  }
+
+  &__sectionHeaderTitle {
+    color: $colour-grey-300;
+    font-size: 14px;
+    margin: 0;
+  }
+
+  &__sectionHeaderDescription {
+    color: $colour-grey-300;
+    font-size: 14px;
+    margin: 0;
+  }
+
+  &__sectionHeaderActions {
+    button {
+      &:not(:last-of-type) {
+        margin-right: 5px;
+      }
+    }
+  }
+
+  @media only screen and (max-width: $breakpoint-desktop) {
+    &__categoriesSidePanel {
+      .slidingPanelContent {
+        &__categories {
+          height: calc(100vh - 282px);
+        }
+      }
+    }
+
+    &__sectionHeaderActions--desktop {
+      display: none;
+    }
+  }
+
+  @media only screen and (min-width: $breakpoint-desktop) {
+    &__sectionHeaderActions--mobile {
+      display: none;
+    }
+  }
+
+  @media only screen and (min-width: $breakpoint-desktop) {
+    &__sections {
+      &--types {
+        display: flex;
+        > div {
+          &:not(:last-of-type) {
+            margin-right: 24px;
+          }
+        }
+      }
+    }
+
+    &__section {
+      flex: 1;
+    }
+  }
+}
+
+.sessionAssessmentTable {
+  &__columnCell {
+    width: 300px;
+  }
+}

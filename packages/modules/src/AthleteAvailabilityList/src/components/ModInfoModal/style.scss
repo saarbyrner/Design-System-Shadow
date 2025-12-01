@@ -1,0 +1,16 @@
+.athleteAvailabilityModInfoModal {
+  padding-bottom: 107px;
+
+  &__infoText {
+    color: $colour-s16;
+    float: right;
+    font-weight: normal;
+  }
+
+  &__row {
+    &--rtp {
+      margin-top: 10px;
+      max-width: 50%;
+    }
+  }
+}

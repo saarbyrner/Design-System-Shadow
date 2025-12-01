@@ -1,0 +1,28 @@
+.graphSelector {
+  &__section {
+    border: 0;
+    border-left: solid 1px $colour-s14;
+    display: inline-block;
+    margin-left: 20px;
+    padding-left: 20px;
+
+    &:first-of-type {
+      border: 0;
+      margin-left: 0;
+      padding-left: 0;
+    }
+  }
+
+  &__sectionLabel {
+    font-weight: 600;
+  }
+
+  &__btn {
+    display: inline-block;
+    margin-right: 10px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}

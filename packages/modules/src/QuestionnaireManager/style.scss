@@ -1,0 +1,117 @@
+.questionnaireManager {
+  margin-bottom: -30px;
+  position: relative;
+
+  .navArrows {
+    &.questionnaireManager__navArrows {
+      left: 230px;
+
+      .navArrows__rightBtn {
+        right: 0;
+        width: 75px;
+      }
+    }
+  }
+
+  &__container {
+    background: $colour-p06;
+    min-height: 274px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: relative;
+  }
+
+  &__headerContent {
+    height: 100%;
+    margin: 0 20px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    z-index: 20;
+  }
+
+  &__header {
+    background: $colour-p06;
+    height: 80px;
+    margin: 0 -20px;
+    max-width: none;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+  }
+
+  &__body {
+    min-height: 540px;
+    overflow-x: scroll;
+    padding-bottom: 80px - 30px;
+    padding-left: 250px;
+    padding-top: 80px;
+    width: 100%;
+
+    // Improve the scroll performances
+    // https://dev.opera.com/articles/css-will-change-property/
+    will-change: transform;
+    transform: translateZ(0);
+  }
+
+  &__leftBtn {
+    // need to use transform because left property gets overwritten
+    transform: translateX(-13px);
+  }
+
+  &--cantShowManager {
+    .questionnaireManager__header,
+    .questionnaireManager__sidebar,
+    .questionnaireManager__footer,
+    .questionnaireManager__bodyInner {
+      display: none;
+    }
+  }
+
+  &--fixedFooter {
+    .questionnaireManager__footer {
+      bottom: 0;
+      margin-bottom: 0;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: calc(100% - 100px);
+      position: fixed;
+    }
+  }
+
+  &--fixedHeader {
+    .questionnaireManager__header {
+      left: 50%;
+      margin-left: 30px;
+      position: fixed;
+      transform: translateX(-50%);
+      width: calc(100% - 60px);
+    }
+  }
+}
+
+.main--mainMenuOpen {
+  .questionnaireManager {
+    .questionnaireManager--fixedFooter {
+      .questionnaireManager__footer {
+        max-width: calc(100% - 260px);
+      }
+    }
+
+    .questionnaireManager--fixedHeader {
+      .questionnaireManager__header {
+        margin-left: 122px;
+        width: calc(100% - 195px);
+      }
+    }
+  }
+}
+
+@import './src/components/Controls/style';
+@import './src/components/Sidebar/style';
+@import './src/components/VariableHeader/style';
+@import './src/components/CheckboxCells/style';
+@import './src/components/Footer/style';

@@ -1,0 +1,118 @@
+.indicationsModal {
+  &.indicationsModal--hasTabs {
+    .indicationsModal__tabs {
+      display: block;
+    }
+  }
+
+  .indicationsModal__tabs {
+    background: $colour-p05;
+    border-bottom: 1px solid $colour-s14;
+    display: none;
+    height: 55px;
+    width: 100%;
+
+    .indicationsModal__tabBtn {
+      background: none;
+      border: 1px solid $colour-p05;
+      border-bottom: 0;
+      color: $colour-p01;
+      font-size: 14px;
+      font-weight: 600;
+      height: 52px;
+      margin-top: 3px;
+      padding: 0 40px;
+      text-transform: capitalize;
+
+      &:first-child {
+        margin-left: 10px;
+      }
+
+      &.active {
+        background: $colour-p06;
+        border: 1px solid $colour-s14;
+        border-bottom: 0;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        color: $colour-s18;
+
+        span {
+          background: $colour-s16;
+        }
+      }
+
+      span {
+        background: $colour-p01;
+        border-radius: 50%;
+        color: $colour-p06;
+        display: inline-block;
+        font-size: 13px;
+        height: 22px;
+        margin-left: 10px;
+        width: 22px;
+      }
+    }
+  }
+
+  .indicationsModal__closeButton {
+    top: 20px;
+  }
+
+  .indicationsModal__bodymap {
+    width: 490px;
+  }
+
+  .indicationsModal__sidebar {
+    height: 544px;
+    padding: 30px 30px 0;
+    width: 305px;
+
+    h5 {
+      font-size: 14px;
+      margin: 0 0 10px;
+      text-transform: capitalize;
+    }
+
+    .indicationsModal__sidebarMenu {
+      height: 480px;
+      margin: 0;
+      overflow-y: auto;
+      padding: 0 20px 0 0;
+      user-select: none;
+      width: 270px;
+
+      li {
+        background: transparent;
+        border-radius: 2px;
+        color: $colour-s18;
+        cursor: pointer;
+        font-size: 12px;
+        font-weight: 600;
+        height: 35px;
+        list-style: none;
+        margin: 0;
+        padding: 4px 0 4px 10px;
+
+        span {
+          float: right;
+          height: 17px;
+          padding: 0 10px;
+        }
+
+        &:hover {
+          background: $colour-p02;
+          color: $colour-p06;
+        }
+
+        &.active {
+          background: $colour-p01;
+          color: $colour-p06;
+
+          span {
+            color: $colour-p05;
+          }
+        }
+      }
+    }
+  }
+}

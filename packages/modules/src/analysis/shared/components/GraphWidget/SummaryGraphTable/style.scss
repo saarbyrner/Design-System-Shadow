@@ -1,0 +1,37 @@
+.summaryGraphTable {
+  display: flex;
+  margin-top: 20px;
+  width: 100%;
+
+  &__link {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__fixed {
+    table {
+      min-width: 310px;
+    }
+
+    td {
+      white-space: nowrap;
+    }
+  }
+
+  &__scrollable {
+    flex-grow: 1;
+    margin-left: -5px;
+    overflow-x: scroll;
+  }
+
+  &--condensed {
+    font-size: 12px;
+
+    .summaryGraphTable__fixed {
+      table {
+        min-width: auto;
+      }
+    }
+  }
+}

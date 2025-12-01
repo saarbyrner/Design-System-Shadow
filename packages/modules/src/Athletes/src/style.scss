@@ -1,0 +1,142 @@
+.athletes {
+  background-color: $colour-p06;
+  margin-bottom: 20px;
+  min-height: 500px;
+  overflow: hidden;
+  padding: 0 0 30px;
+
+  &__noAthletes {
+    color: $colour-grey-300;
+    margin-top: 50px;
+    text-align: center;
+
+    h4 {
+      font-size: 20px;
+      line-height: 24px;
+      margin-bottom: 12px;
+    }
+  }
+
+  .athletesList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 30px 10px 10px;
+  }
+
+  .athleteCard {
+    align-items: stretch;
+    background-color: $colour-p06;
+    border: 1px solid $colour-s14;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    float: left;
+    height: 253px;
+    line-height: 20px;
+    margin: 0 10px 10px;
+    overflow: hidden;
+    padding: 4px;
+    position: relative;
+    width: 167px;
+
+    &__avatar {
+      background-color: $colour-s14;
+      position: relative;
+
+      img {
+        max-width: 100%;
+        min-height: 157px;
+      }
+    }
+
+    &__corner {
+      border-color: transparent;
+      border-style: solid;
+      border-top-color: $colour-p06;
+      border-width: 37px 37px 0 0;
+      left: -4px;
+      position: absolute;
+      top: -4px;
+
+      &::before {
+        border-right: 35px solid transparent;
+        border-top: 35px solid transparent;
+        content: '';
+        position: absolute;
+        top: -37px;
+      }
+
+      &--returning {
+        &::before {
+          border-top-color: $colour-s07;
+        }
+      }
+
+      &--injured {
+        &::before {
+          border-top-color: $colour-s09;
+        }
+      }
+
+      &--unavailable {
+        &::before {
+          border-top-color: $colour-s25;
+        }
+      }
+    }
+
+    &__details {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 10px 0;
+    }
+
+    &__title {
+      text-align: center;
+    }
+
+    &__label {
+      color: $colour-s16;
+      font-size: 12px;
+      font-weight: 600;
+      text-align: center;
+    }
+  }
+
+  .athletesFilters {
+    margin: 15px 20px 0;
+
+    @media (min-width: $breakpoint-desktop) {
+      align-items: center;
+      display: flex;
+    }
+
+    &__search {
+      margin: 0 0 25px;
+      min-width: 300px;
+      @media (min-width: $breakpoint-desktop) {
+        margin: 0 20px 0 0;
+      }
+    }
+
+    &__label {
+      font-weight: 600;
+      margin: 0 10px 0 0;
+    }
+
+    &__position {
+      margin: 0 0 25px;
+      min-width: 320px;
+      @media (min-width: $breakpoint-desktop) {
+        margin: 0 20px 0 0;
+      }
+    }
+
+    &__availability {
+      min-width: 300px;
+    }
+  }
+}

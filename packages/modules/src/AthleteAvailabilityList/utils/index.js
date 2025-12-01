@@ -1,0 +1,25 @@
+// @flow
+
+export const getDefaultDiagnosticData = () => ({
+  diagnostic_date: null,
+  diagnostic_type: null,
+  injury_ids: [],
+  illness_ids: [],
+  attachment_ids: [],
+  medication_type: null,
+  medication_dosage: null,
+  medication_frequency: null,
+  medication_notes: null,
+  medication_completed: false,
+  medication_completed_at: null,
+  covid_test_date: null,
+  covid_test_type: null,
+  covid_result: null,
+  covid_reference: null,
+  covid_antibody_test_date: null,
+  covid_antibody_test_type: null,
+  covid_antibody_result: null,
+  covid_antibody_reference: null,
+  annotation_content: null,
+  restrict_access_to: null,
+});

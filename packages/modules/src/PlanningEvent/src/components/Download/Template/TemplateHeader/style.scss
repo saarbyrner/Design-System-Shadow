@@ -1,0 +1,48 @@
+.templateHeader {
+  display: flex;
+  margin-bottom: 15px;
+
+  &__logo {
+    margin-right: 15px;
+    max-height: 100px;
+    overflow: hidden;
+  }
+
+  &__logo img {
+    max-width: 70px;
+  }
+
+  &__meta {
+    color: $colour-grey-300;
+    display: flex;
+    flex: 1;
+    flex-flow: row;
+    gap: 0.5rem;
+    font-size: 9px;
+    justify-content: space-between;
+    line-height: 16px;
+  }
+
+  &__metaBox {
+    flex: 1;
+  }
+
+  &__metaTitle {
+    font-size: 10px;
+    font-weight: 600;
+  }
+
+  &__org {
+    color: $colour-grey-300;
+    flex: 1;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 5px;
+  }
+
+  &__right {
+    display: flex;
+    flex: 1;
+    flex-flow: column;
+  }
+}

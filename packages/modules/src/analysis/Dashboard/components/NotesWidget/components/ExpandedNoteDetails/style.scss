@@ -1,0 +1,107 @@
+.expandedNoteDetails {
+  &__attachments {
+    border-bottom: 1px dashed $colour-s14;
+    margin: 0 0 10px;
+    padding: 0 0 10px;
+  }
+
+  &__attachmentItem {
+    background: $colour-s23;
+    border: 1px solid $colour-s13;
+    border-radius: 5px;
+    margin-bottom: 2px;
+    max-width: 430px;
+    padding: 10px 15px 5px 5px;
+    position: relative;
+    width: 100%;
+
+    i {
+      color: $colour-p04;
+      font-size: 18px;
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__noteFileName {
+    color: $colour-p01;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 0;
+  }
+
+  &__noteFileSize {
+    color: $colour-s16;
+    font-size: 12px;
+    margin-bottom: 0;
+  }
+
+  &__noteFileMenu {
+    .tooltipMenu__listItem {
+      &:last-child {
+        .tooltipMenu__icon {
+          color: $colour-s25;
+        }
+      }
+    }
+  }
+
+  &__actions {
+    border-bottom: 1px dashed $colour-s14;
+    margin: 10px 0;
+  }
+
+  &__header {
+    font-weight: 600;
+  }
+
+  &__action {
+    display: flex;
+    margin-bottom: 18px;
+    margin-top: 14px;
+
+    .actionCheckbox {
+      font-size: 24px;
+      margin-right: 18px;
+    }
+  }
+
+  &__actionDetails {
+    line-height: 17px;
+  }
+
+  &__actionContent {
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0;
+  }
+
+  &__actionAssignee {
+    color: $colour-s16;
+    font-size: 12px;
+    line-height: 17px;
+    padding-right: 5px;
+  }
+
+  &__actionDueDate {
+    color: $colour-s16;
+    font-size: 12px;
+    line-height: 17px;
+    padding-right: 5px;
+  }
+
+  &__noteMetadata {
+    color: $colour-s16;
+    font-size: 12px;
+  }
+
+  &__lastEditedBy {
+    display: block;
+  }
+}

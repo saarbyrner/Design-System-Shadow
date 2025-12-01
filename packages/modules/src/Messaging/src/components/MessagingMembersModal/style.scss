@@ -1,0 +1,35 @@
+.messagingMembersModal {
+  max-width: 740px;
+
+  &__membersSection {
+    max-height: 450px;
+    overflow-y: auto;
+  }
+
+  &__row {
+    margin: 0 0 10px;
+    padding-left: 10px;
+    align-items: center;
+    column-gap: 8px;
+    display: flex;
+  }
+
+  &__titleRow {
+    border-bottom: 1px solid $colour-s14;
+    color: $colour-s19;
+    font-size: 12px;
+    font-weight: 600;
+    margin: 0 0 10px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &__footer {
+    align-items: center;
+    border-top: 1px solid $colour-s14;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 15px 30px 0;
+  }
+}

@@ -1,0 +1,77 @@
+.noteDetailModal {
+  &__title {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    margin-bottom: 8px;
+  }
+
+  &__annotationMeta {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 8px;
+  }
+
+  &__annotationableName {
+    color: $colour-s16;
+    font-size: 11px;
+    line-height: 14px;
+    margin-bottom: 8px;
+  }
+
+  &__content {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 16px;
+  }
+
+  &__actionsListTitle {
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 16px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+  }
+
+  &__actionsList {
+    list-style: none;
+    padding-left: 0;
+
+    li {
+      display: flex;
+      margin-bottom: 8px;
+    }
+
+    .noteDetailModal__actionInfo {
+      margin-left: 18px;
+    }
+
+    .actionCheckbox {
+      font-size: 26px;
+    }
+
+    .noteDetailModal__actionContent {
+      font-size: 14px;
+      line-height: 20px;
+      margin-bottom: 4px;
+    }
+
+    .noteDetailModal__actionAssignees {
+      color: $colour-s16;
+      font-size: 11px;
+      line-height: 14px;
+    }
+  }
+
+  &__noteMetadata {
+    border-top: 1px dashed $colour-s14;
+    color: $colour-s16;
+    font-size: 12px;
+    margin-top: 18px;
+    padding-top: 10px;
+  }
+
+  &__lastEditedBy {
+    display: block;
+  }
+}

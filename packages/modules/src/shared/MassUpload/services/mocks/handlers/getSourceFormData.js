@@ -1,0 +1,137 @@
+import { rest } from 'msw';
+
+const data = {
+  integrations: [
+    {
+      id: 136,
+      third_party_source_id: 157,
+      source_identifier: 'forcedecks',
+      name: 'ForceDecks',
+    },
+    {
+      id: 323,
+      third_party_source_id: 40,
+      source_identifier: 'kinexon',
+      name: 'Kinexon',
+    },
+    {
+      id: 458,
+      third_party_source_id: 235,
+      source_identifier: 'random-data-generator',
+      name: 'Random Data Generator',
+    },
+    {
+      id: 528,
+      third_party_source_id: 248,
+      source_identifier: 'push',
+      name: 'PUSH',
+    },
+    {
+      id: 558,
+      third_party_source_id: 263,
+      source_identifier: 'swift',
+      name: 'SWIFT',
+    },
+    {
+      id: 608,
+      third_party_source_id: 6,
+      source_identifier: 'statsports',
+      name: 'STATSports',
+    },
+    {
+      id: 1215,
+      third_party_source_id: 46,
+      source_identifier: 'polar',
+      name: 'Polar',
+    },
+    {
+      id: 1325,
+      third_party_source_id: 1,
+      source_identifier: 'catapult',
+      name: 'Catapult',
+    },
+    {
+      id: 1329,
+      third_party_source_id: 58,
+      source_identifier: 'vald',
+      name: 'Vald Performance',
+    },
+    {
+      id: 1428,
+      third_party_source_id: 154,
+      source_identifier: 'kangatech',
+      name: 'KangaTech',
+    },
+    {
+      id: 1431,
+      third_party_source_id: 192,
+      source_identifier: 'playmaker',
+      name: 'PlayerMaker',
+    },
+    {
+      id: 1739,
+      third_party_source_id: 234,
+      source_identifier: 'oura',
+      name: 'Oura Ring',
+    },
+    {
+      id: 1869,
+      third_party_source_id: 342,
+      source_identifier: 'vald_smartspeed',
+      name: 'Vald SmartSpeed',
+    },
+    {
+      id: 1870,
+      third_party_source_id: 314,
+      source_identifier: 'vald_dynamo',
+      name: 'Vald Dynamo',
+    },
+  ],
+  file_sources: {
+    catapult: 'Catapult',
+    catapult_openfield: 'Catapult Openfield',
+    custom: 'Kitman custom data',
+    statsports: 'STATSports',
+    zephyr: 'Zephyr GPS',
+    gpsports: 'GP Sports',
+    firstbeat: 'Firstbeat',
+    omegawave: 'Omegawave',
+    gpexe: 'GPEXE',
+    'gps session upload': 'GPS Session Upload',
+    kinexon: 'Kinexon',
+    teambuildr: 'TeamBuildr',
+    'worcester warriors sportscode': 'Worcester Warriors Sportscode',
+    vald: 'Vald Performance',
+    'hockey reference': 'NHL Game Data',
+    'Hockey Reference_GK': 'NHL Game Data_GK',
+    FirstBeat_Sharks: 'Firstbeat: Heartbeat Analytics',
+    gymaware: 'Gymaware',
+    bridge: 'Bridge Athletic',
+    fitbit: 'Fitbit',
+    kangatech: 'KangaTech',
+    forcedecks: 'ForceDecks',
+    chelseafcacademy: 'Chelsea F.C. Academy',
+    google_sheets: 'Google Sheets',
+    playmaker: 'PlayerMaker',
+    ivy_batting_stats: 'IVY Batting Stats',
+    ivy_kinatrax_pitching: 'IVY Kinatrax Pitching',
+    ivy_pitching_stats: 'IVY Pitching Stats',
+    ivy_running_stats: 'IVY Running Stats',
+    ivy_throw_logs: 'IVY Throw Logs',
+    ivy_throwing_stats: 'IVY Throwing Stats',
+    ivy_fielding_stats: 'IVY Fielding Stats',
+    playertek: 'PlayerTek',
+    oura: 'Oura Ring',
+    'random-data-generator': 'Random Data Generator',
+    'oura-sleep': 'Oura Ring - Sleep',
+    'oura-activity': 'Oura Ring - Activity',
+    kinduct: 'Kinduct',
+  },
+};
+
+const handler = rest.get(
+  '/workloads/import_workflow/source_form_data',
+  (req, res, ctx) => res(ctx.json(data))
+);
+
+export { handler, data };
