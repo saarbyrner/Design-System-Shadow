@@ -1,0 +1,512 @@
+// Webkit and Moz browsers add an arrow component to
+// number inputs. This removes those default browser stylings.
+input {
+  &[type='number'] {
+    -moz-appearance: textfield;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+}
+
+// remove blue outline from all forms elements
+.btn {
+  &.active {
+    outline: 0 !important;
+  }
+}
+
+a,
+button,
+input,
+select,
+textarea {
+  &:hover {
+    outline: 0 !important;
+  }
+}
+
+a,
+button,
+input,
+select,
+textarea,
+.btn {
+  &:active {
+    outline: 0 !important;
+  }
+}
+
+a,
+button,
+input,
+label,
+select,
+textarea {
+  &:focus {
+    outline: 0 !important;
+  }
+}
+
+select {
+  &:visited {
+    outline: 0 !important;
+  }
+
+  // Chosen
+  &.chzn-select {
+    & + .chosen-container {
+      &.chosen-container-single {
+        .chosen-single {
+          font-weight: 400;
+          line-height: 42px;
+          min-height: 42px;
+        }
+      }
+
+      &.chosen-container-multi {
+        width: 100% !important;
+
+        .chosen-choices {
+          max-height: 84px !important;
+          min-height: 42px !important;
+          overflow-y: scroll;
+
+          .search-field {
+            input {
+              &[type='text'] {
+                color: $colour-p04;
+                margin-left: 5px;
+                margin-top: 5px;
+              }
+            }
+          }
+
+          .search-choice {
+            .group-name {
+              color: $colour-p04;
+              font-weight: 400;
+              padding-right: 5px;
+            }
+          }
+        }
+      }
+    }
+
+    &.km-error + .chosen-container {
+      .chosen-choices {
+        border: 1px $colour-s11 solid;
+        border-radius: 5px;
+        box-shadow: 0 0 0 1px $colour-s11;
+      }
+    }
+  }
+}
+
+.km-form-actions {
+  border-top: 1px dashed $colour-s14;
+  margin-top: 1em;
+  padding-top: 1em;
+}
+
+.km-form-group {
+  margin-bottom: 20px;
+}
+
+// Errors
+
+.km-form-error {
+  color: $colour-s11;
+}
+
+.km-form-warning {
+  bottom: -23px;
+  color: $colour-s11;
+  left: 0;
+  position: absolute;
+}
+
+.km-error {
+  &.date {
+    .km-input-control {
+      border: 1px $colour-s11 solid;
+      border-bottom-left-radius: 5px;
+      border-top-left-radius: 5px;
+      box-shadow: 0 0 0 1px $colour-s11;
+    }
+  }
+}
+
+.km-input-control {
+  border: 1px solid $colour-s15;
+  border-radius: 5px;
+  color: $colour-s18;
+  font-size: 14px;
+  padding: 11.5px;
+  width: 100%;
+
+  // Prevent zoom when the user focus inputs on mobile devices
+  @media (max-width: $breakpoint-tablet) {
+    font-size: 16px;
+  }
+
+  &:disabled {
+    border-color: $colour-p04;
+    color: $colour-p04;
+  }
+
+  .input-group & {
+    border-radius: 5px 0 0 5px;
+  }
+
+  &:focus {
+    border: 1px $colour-p01 solid;
+    box-shadow: 0 0 0 1px $colour-p01;
+    outline: 0 !important;
+  }
+
+  &.km-error {
+    border: 1px $colour-s11 solid;
+    box-shadow: 0 0 0 1px $colour-s11;
+
+    &:focus {
+      border: 1px $colour-s11 solid;
+      box-shadow: 0 0 0 1px $colour-s11;
+    }
+  }
+
+  &--disabled {
+    border-color: $colour-p04;
+    box-shadow: none;
+    color: $colour-p04;
+
+    &:focus {
+      border-color: $colour-p04;
+      box-shadow: none;
+      color: $colour-p04;
+    }
+  }
+
+  &--condensed {
+    height: 30px;
+    text-align: center;
+    width: 50px;
+  }
+}
+
+// Labels
+
+.km-form-label {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 10px 0;
+  width: 100%;
+
+  &--sub {
+    margin-top: 0;
+  }
+
+  &--strong {
+    color: $colour-s18;
+    font-weight: 600;
+  }
+}
+
+.km-form-info {
+  color: $colour-s16;
+  float: right;
+  font-weight: normal;
+}
+
+// Checkbox
+
+.km-form-checkbox {
+  &:not(:checked),
+  &:checked {
+    left: -9999px;
+    position: absolute;
+  }
+
+  &:not(:checked) + label,
+  &:checked + label {
+    cursor: pointer;
+    font-size: 14px;
+    margin: 15px 0 0;
+    padding-left: 25px;
+    position: relative;
+  }
+
+  &:not(:checked) + label:before,
+  &:checked + label:before {
+    background: $colour-p06;
+    border: 1px solid $colour-p04;
+    border-radius: 5px;
+    box-shadow: none;
+    content: '';
+    height: 20px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 20px;
+  }
+
+  &:not(:checked) + label:after,
+  &:checked + label:after {
+    background: url('../img/checkmark.png') no-repeat;
+    background-size: 12px;
+    content: '';
+    height: 18px;
+    left: 4px;
+    padding: 0;
+    position: absolute;
+    top: 6px;
+    width: 14px;
+  }
+
+  &:not(:checked) + label:after {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  &:checked + label:after {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  &:disabled:not(:checked) + label:before,
+  &:disabled:checked + label:before {
+    background-color: $colour-s14;
+    border-color: $colour-s15;
+    box-shadow: none;
+  }
+
+  &:disabled:checked + label:after {
+    color: $colour-s16;
+  }
+
+  &:disabled + label {
+    color: $colour-s16;
+  }
+
+  &.km-error + label:before {
+    border-color: $colour-s11;
+    border-width: 2px;
+  }
+}
+
+// Select inputs
+
+.km-select {
+  li {
+    a {
+      font-weight: normal;
+    }
+  }
+
+  .dropdown-menu {
+    max-height: 400px;
+  }
+}
+
+.km-search-select {
+  background: $colour-p06;
+  border-radius: 4px;
+  min-width: 50px !important;
+
+  button {
+    background: transparent !important;
+    border: 1px solid $colour-s15;
+    color: $colour-s17 !important;
+    height: 45px;
+    outline: 0 !important;
+    padding: 10px;
+
+    &:focus {
+      outline: 0 !important;
+    }
+
+    &:hover {
+      outline: 0 !important;
+    }
+  }
+
+  &.km-error {
+    button {
+      border: 1px $colour-s11 solid;
+      box-shadow: 0 0 0 1px $colour-s11;
+    }
+  }
+
+  button:focus,
+  button:visited,
+  button:active,
+  &:hover,
+  &.open {
+    button {
+      background: transparent !important;
+      border: 1px solid $colour-s15;
+      box-shadow: 0 0 0 1px $colour-p01;
+      outline: 0 !important;
+    }
+  }
+
+  &.open {
+    button {
+      border: 1px $colour-p01 solid !important;
+      box-shadow: 0 0 0 1px $colour-p01 !important;
+      outline: 0 !important;
+    }
+  }
+
+  &.medium > button {
+    padding: 5px;
+  }
+
+  &.small > button {
+    padding: 3px;
+  }
+
+  &.km-select-slim {
+    width: 220px !important;
+
+    select {
+      width: 50px !important;
+    }
+  }
+}
+
+.select-unselect {
+  position: absolute;
+  right: 18px;
+  top: 8px;
+
+  small {
+    color: $colour-p01;
+    cursor: pointer;
+  }
+}
+
+.km_loader {
+  display: none;
+}
+
+// Fine Uploader
+.qq-upload-list {
+  text-align: left;
+}
+
+li {
+  &.alert-error {
+    background-color: $colour-s14;
+    text-align: left;
+  }
+
+  &.alert-success {
+    background-color: $colour-s03;
+    margin-bottom: 5px;
+    text-align: left;
+  }
+}
+
+.alert-error {
+  .qq-upload-failed-text {
+    display: inline;
+  }
+}
+
+.qq-uploader {
+  .qq-upload-button {
+    min-width: 160px;
+  }
+}
+
+.control-label {
+  strong {
+    color: $colour-p03;
+  }
+}
+
+// Urine colour form
+
+.urineColours {
+  .urineColours__square {
+    border: 1px solid $colour-s14;
+    display: inline-block;
+    height: 30px;
+    margin: 0 10px 0 0;
+    width: 30px;
+
+    &.active {
+      border: 1px solid $colour-s18;
+
+      &:hover {
+        border-color: $colour-s18 !important;
+      }
+    }
+
+    &:hover {
+      border: 1px solid $colour-s23;
+      cursor: pointer;
+    }
+  }
+}
+
+.upload_form_leroy {
+  .upload_submit {
+    min-width: 160px;
+  }
+
+  strong {
+    font-weight: 600;
+  }
+}
+
+// Date field
+
+.input-group {
+  &.date {
+    .input-group-addon {
+      color: $colour-p04;
+      font-size: 28px;
+      height: 45px;
+      padding: 0;
+    }
+
+    .input-group-text {
+      color: $colour-p04;
+      font-size: 28px;
+      height: 45px;
+      padding: 6px 10px;
+    }
+
+    .km-input-control {
+      flex: 1 1 auto;
+      width: 1%;
+    }
+  }
+
+  .km-input-appended {
+    border-radius: 0 5px 5px;
+    height: 45px;
+  }
+
+  &--disabled > * {
+    cursor: default !important;
+  }
+
+  &--invalid {
+    border: 2px $colour-s11 solid;
+    border-radius: 5px;
+
+    .km-input-control {
+      border: 0;
+    }
+  }
+
+  &.input-group--fullwidth {
+    width: auto;
+  }
+}

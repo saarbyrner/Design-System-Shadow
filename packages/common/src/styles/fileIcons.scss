@@ -1,0 +1,122 @@
+@font-face {
+  font-family: 'kitman-files';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/kitman-file-icons/kitman-files.eot?qe3j4n');
+  src: url('../fonts/kitman-file-icons/kitman-files.eot?qe3j4n#iefix')
+      format('embedded-opentype'),
+    url('../fonts/kitman-file-icons/kitman-files.ttf?qe3j4n') format('truetype'),
+    url('../fonts/kitman-file-icons/kitman-files.woff?qe3j4n') format('woff'),
+    url('../fonts/kitman-file-icons/kitman-files.svg?qe3j4n#kitman-files')
+      format('svg');
+}
+
+@mixin kitman-files-font {
+  // Better Font Rendering
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  // use !important to prevent issues with browser extensions that change fonts
+  font-family: 'kitman-files' !important;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  speak: none;
+  text-transform: none;
+}
+
+$checkmark-symbol: '\e956' !default;
+$dash-symbol: '\e959' !default;
+
+[class^='file-icon-'],
+[class*=' file-icon-'] {
+  @include kitman-files-font;
+}
+
+.file-icon-csv:before {
+  content: '\e900';
+}
+
+.file-icon-doc:before {
+  content: '\e901';
+}
+
+.file-icon-docx:before {
+  content: '\e902';
+}
+
+.file-icon-file:before {
+  content: '\e903';
+}
+
+.file-icon-heic:before {
+  content: '\e904';
+}
+
+.file-icon-jpeg:before {
+  content: '\e905';
+}
+
+.file-icon-jpg:before {
+  content: '\e906';
+}
+
+.file-icon-key:before {
+  content: '\e907';
+}
+
+.file-icon-mov:before {
+  content: '\e908';
+}
+
+.file-icon-mp3:before {
+  content: '\e909';
+}
+
+.file-icon-mp4:before {
+  content: '\e90a';
+}
+
+.file-icon-numbers:before {
+  content: '\e90b';
+}
+
+.file-icon-pages:before {
+  content: '\e90c';
+}
+
+.file-icon-pdf:before {
+  content: '\e90d';
+}
+
+.file-icon-png:before {
+  content: '\e90e';
+}
+
+.file-icon-ppt:before {
+  content: '\e90f';
+}
+
+.file-icon-pptx:before {
+  content: '\e910';
+}
+
+.file-icon-svg:before {
+  content: '\e911';
+}
+
+.file-icon-txt:before {
+  content: '\e912';
+}
+
+.file-icon-xls:before {
+  content: '\e913';
+}
+
+.file-icon-xlsx:before {
+  content: '\e914';
+}
+
+.file-icon-zip:before {
+  content: '\e915';
+}

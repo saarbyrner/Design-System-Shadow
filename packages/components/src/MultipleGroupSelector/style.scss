@@ -1,0 +1,55 @@
+.multipleGroupSelector {
+  padding-left: 10px;
+  padding-right: 10px;
+
+  &__section {
+    border-bottom: 1px dashed $colour-s15;
+    padding-bottom: 7px;
+    padding-top: 10px;
+
+    header {
+      align-items: center;
+      display: flex;
+      height: 28px;
+      justify-content: space-between;
+    }
+  }
+
+  &__selectAll,
+  &__clearAll {
+    color: $colour-p01;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 14px;
+    padding: 0 10px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__clearAll {
+    padding-right: 0;
+  }
+
+  &__selectAll {
+    border-right: 1px solid $colour-p04;
+  }
+
+  &__groupName {
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  &__subItem {
+    align-items: center;
+    display: flex;
+    height: 35px;
+  }
+
+  &__subItemList,
+  &__groupList {
+    list-style: none;
+    padding: 0;
+  }
+}

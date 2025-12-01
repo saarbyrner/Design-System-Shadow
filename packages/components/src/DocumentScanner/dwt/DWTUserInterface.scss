@@ -1,0 +1,47 @@
+/* DWTUserInterface*/
+img {
+  vertical-align: middle;
+  border: 0;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0px;
+  margin: 0px;
+}
+
+.DWTcontainer {
+  width: 968px;
+  margin: 0 auto;
+}
+
+.DWTcontainer:after,
+.clearfix:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.tc {
+  text-align: center;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.width_48p {
+  width: 48%;
+}
+
+.marginL_2p {
+  margin-left: 2%;
+}
+
+.floatR {
+  float: right;
+}
+
+.floatL {
+  float: left;
+}

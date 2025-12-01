@@ -1,0 +1,27 @@
+@mixin checkbox-check {
+  @include kitman-font;
+  align-items: center;
+  color: $colour-p01;
+  content: $checkmark-symbol;
+  display: inline-flex;
+  font-size: 18px;
+  font-weight: bold;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%) scale(1, 0.8);
+}
+
+@mixin checkbox-dash {
+  @include kitman-font;
+  align-items: center;
+  color: $colour-p01;
+  content: $dash-symbol;
+  display: inline-flex;
+  font-size: 15px;
+  font-weight: normal;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}

@@ -1,0 +1,142 @@
+// React Checkbox
+
+// When adding a property here, please ensure the
+// performances are not affected on the questionnaire manager
+.reactCheckbox {
+  cursor: pointer;
+
+  &:not(.reactCheckbox--kitmanDesignSystem) {
+    .reactCheckbox__checkbox {
+      background-color: $colour-p06;
+      border: 1px solid $colour-p04;
+      border-radius: 5px;
+      display: inline-block;
+      height: 20px;
+      position: relative;
+      text-align: center;
+      vertical-align: middle;
+      width: 20px;
+
+      .km-error & {
+        border-color: $colour-s11;
+        border-width: 2px;
+      }
+    }
+
+    &.reactCheckbox--radioStyle {
+      .reactCheckbox__checkbox {
+        border-radius: 50%;
+      }
+
+      :not(&) {
+        &.reactCheckbox--checked {
+          .reactCheckbox__checkbox {
+            &::after {
+              @include checkbox-check;
+            }
+          }
+        }
+      }
+
+      &.reactCheckbox--checked {
+        .reactCheckbox__checkbox {
+          align-items: center;
+          background: none;
+          display: inline-flex;
+          justify-content: center;
+
+          &:after {
+            background-color: $colour-p01;
+            border-radius: 50%;
+            content: '';
+            height: 70%;
+            width: 70%;
+          }
+        }
+      }
+    }
+
+    .reactCheckbox__label {
+      color: $colour-s18;
+      font-size: 14px;
+      margin-left: 10px;
+      vertical-align: middle;
+    }
+
+    .reactCheckbox__secondaryLabel {
+      color: $colour-s16;
+    }
+
+    &.reactCheckbox--disabled {
+      cursor: default;
+
+      .reactCheckbox__label {
+        color: $colour-p04;
+      }
+
+      .reactCheckbox__checkbox {
+        border-color: $colour-s14;
+      }
+    }
+
+    &.reactCheckbox--checked {
+      .reactCheckbox__checkbox {
+        background: none; // See not --radioStyle for application of checkbox font icon
+      }
+    }
+
+    &.reactCheckbox--leftPositionLabel {
+      .reactCheckbox__label {
+        float: left;
+        margin-left: 0;
+      }
+
+      .reactCheckbox__checkbox {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  &--kitmanDesignSystem {
+    align-items: center;
+    display: flex;
+
+    .reactCheckbox__checkbox {
+      background-color: $colour-p06;
+      border: 2px solid $colour-neutral-300;
+      border-radius: 2px;
+      height: 16px;
+      margin-right: 12px;
+      position: relative;
+      width: 16px;
+    }
+
+    .reactCheckbox__label {
+      color: $colour-grey-300;
+      font-size: 14px;
+    }
+
+    &.reactCheckbox--checked {
+      .reactCheckbox__checkbox {
+        background-color: $colour-grey-200;
+        border-color: $colour-grey-200;
+
+        &::after {
+          color: $colour-p06 !important;
+          font-size: 13px !important;
+        }
+      }
+    }
+
+    &.reactCheckbox--disabled {
+      .reactCheckbox__label {
+        color: $colour-p04;
+      }
+
+      .reactCheckbox__checkbox {
+        background-color: $colour-s14;
+        border-color: $colour-s14;
+      }
+    }
+  }
+}

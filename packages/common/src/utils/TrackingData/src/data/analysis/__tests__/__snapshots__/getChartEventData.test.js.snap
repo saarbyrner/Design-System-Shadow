@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getChartData() returns the correct data for Area Visualisation 1`] = `
+Object {
+  "Axis": "left",
+  "ChartType": "xy",
+  "Groupings": Array [
+    "squad",
+    "position",
+  ],
+  "Population": Array [
+    "labels",
+  ],
+  "TimePeriod": "yesterday",
+  "Visualisation": "area",
+}
+`;
+
+exports[`getChartDataSource() matches the snapshot 1`] = `
+Object {
+  "Source": "Formula",
+  "Subtype": "Percentage",
+}
+`;
+
+exports[`getChartType() matches the snapshot 1`] = `
+Object {
+  "chartType": "xy",
+}
+`;
+
+exports[`getChartTypeLabel() returns the correct label for CHART_TYPE.xy 1`] = `"Add XY Chart"`;

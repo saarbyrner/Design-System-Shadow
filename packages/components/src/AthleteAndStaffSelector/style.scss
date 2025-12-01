@@ -1,0 +1,138 @@
+.athleteAndStaffSelector {
+  padding-right: 10px;
+
+  .accordion__icon {
+    color: $colour-grey-100;
+    font-weight: 800;
+  }
+
+  &__entireSectionHeader {
+    align-items: center;
+    display: flex;
+    height: 28px;
+    justify-content: space-between;
+  }
+
+  &__majorTitle {
+    color: $colour-blue-100;
+    font-weight: 700;
+    line-height: 32px;
+  }
+
+  &__divider {
+    border-bottom: 1px dotted $colour-neutral-300;
+    height: 2px;
+    margin-bottom: 16px;
+    margin-top: 16px;
+    width: 100%;
+  }
+
+  &__accordionTitle {
+    align-items: center;
+    color: $colour-grey-400;
+    display: flex;
+    font-weight: 600;
+    justify-content: space-between;
+    line-height: 34px;
+    width: 100%;
+  }
+
+  &__section {
+    border-bottom: 1px dashed $colour-s14;
+    padding-bottom: 7px;
+    padding-top: 10px;
+
+    header {
+      align-items: center;
+      display: flex;
+      height: 28px;
+      justify-content: space-between;
+    }
+  }
+
+  &__movedAthleteSection {
+    border-bottom: 1px dashed $colour-s14;
+    padding-bottom: 7px;
+    padding-top: 10px;
+    padding-left: 10px;
+
+    header {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+  &__selectAll,
+  &__clearAll {
+    color: $colour-p01;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 14px;
+    padding: 0 10px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__clearAll {
+    padding-right: 0;
+  }
+
+  &__selectAll {
+    border-right: 1px solid $colour-p04;
+  }
+
+  &__positionGroupName {
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  &__positionItem {
+    font-weight: 700;
+  }
+
+  &__athleteItem,
+  &__positionItem,
+  &__staffItem {
+    align-items: center;
+    display: flex;
+    height: 35px;
+    max-height: 100px;
+    overflow: hidden;
+    padding-left: 10px;
+    transition: max-height 0.3s ease 1s, background-color 0.5s ease;
+
+    &--transitionToAdded {
+      background-color: $colour-green-100-20-percent;
+      max-height: 0;
+    }
+  }
+
+  &__athleteItem,
+  &__staffItem {
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  &__positionGroupList,
+  &__positionList,
+  &__athleteList,
+  &__staffList {
+    list-style: none;
+    padding: 0;
+  }
+
+  &__actionButton {
+    align-self: center;
+    margin-left: auto;
+
+    .iconButton--transparent {
+      &::before {
+        color: $colour-grey-400;
+        font-size: 16px;
+        font-weight: 600;
+      }
+    }
+  }
+}

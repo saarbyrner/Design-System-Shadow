@@ -1,0 +1,35 @@
+.actionCheckbox,
+.actionCheckbox--kitmanDesignSystem {
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  padding-right: 5px;
+
+  &--checked {
+    font-weight: normal;
+  }
+
+  &--disabled {
+    cursor: default;
+  }
+}
+
+.actionCheckbox {
+  color: $colour-p04;
+
+  &--checked {
+    color: $colour-s03;
+  }
+}
+
+.actionCheckbox--kitmanDesignSystem {
+  color: $colour-neutral-400;
+
+  &--checked {
+    color: $colour-green-100;
+  }
+
+  &--disabled {
+    color: $colour-neutral-400;
+  }
+}

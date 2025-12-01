@@ -1,0 +1,45 @@
+.actionTooltip {
+  &__content {
+    padding: 15px;
+
+    &--scrollable {
+      max-height: 300px;
+      overflow-y: auto;
+      padding: 15px 15px 52px;
+      position: relative;
+    }
+  }
+
+  &__body {
+    align-items: center;
+    display: flex;
+  }
+
+  &__footer {
+    border-top: 1px $colour-s14 solid;
+    margin: 15px -15px -5px;
+    padding: 10px 15px 0 0;
+    text-align: right;
+
+    &--scrollable {
+      background: $colour-p06;
+      bottom: 0;
+      padding: 10px;
+      position: fixed;
+      width: 100%;
+    }
+  }
+
+  &__trigger {
+    background-color: transparent;
+    border: 0;
+    color: inherit;
+    font-weight: inherit;
+    outline: none;
+    padding: 0;
+  }
+
+  &__trigger--fullWidth {
+    width: 100%;
+  }
+}

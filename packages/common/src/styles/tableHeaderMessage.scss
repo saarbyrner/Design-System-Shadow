@@ -1,0 +1,12 @@
+.tableHeadMessage {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 60px;
+
+  .tableHeadMessage__text {
+    padding-bottom: 10px;
+  }
+}

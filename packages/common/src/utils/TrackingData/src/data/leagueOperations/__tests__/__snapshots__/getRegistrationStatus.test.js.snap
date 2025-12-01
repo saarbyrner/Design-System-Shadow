@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getRegistrationStatus should match snapshot when newAnnotation is not provided 1`] = `
+Object {
+  "Status": Array [
+    "approved",
+  ],
+}
+`;
+
+exports[`getRegistrationStatus should match snapshot when newAnnotation is provided 1`] = `
+Object {
+  "Annotations": true,
+  "Status": Array [
+    "approved",
+  ],
+}
+`;

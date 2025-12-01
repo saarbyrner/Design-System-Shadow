@@ -1,0 +1,139 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getCalendarEventData custom_event should call mixpanel track event with ADD custom event details if event type is custom_event and panel mode is not EDIT 1`] = `
+Object {
+  "Athletes": true,
+  "Athletes Count": 2,
+  "Attachment": false,
+  "Entry point": "Schedule",
+  "Link": true,
+  "Location": true,
+  "Repeat event": true,
+  "Repeat event occurrence": "Weekly",
+  "Staff": true,
+  "Staff Count": 2,
+}
+`;
+
+exports[`getCalendarEventData custom_event should return EDIT custom event details if event type is custom_event and panel mode is EDIT 1`] = `
+Object {
+  "Athletes": true,
+  "Athletes Count": 2,
+  "Attachment": false,
+  "Link": true,
+  "Location": true,
+  "Repeat event": true,
+  "Repeat event occurrence": "Weekly",
+  "Staff": true,
+  "Staff Count": 2,
+}
+`;
+
+exports[`getCalendarEventData game_event should return ADD game event details if event type is game_event and panel mode is not EDIT 1`] = `
+Object {
+  "Athletes Count": 2,
+  "Attachment": false,
+  "Chosen format": false,
+  "Custom duration used": false,
+  "Date of event": "2023-08-22T18:00:07+01:00",
+  "Duplicated": false,
+  "Entry point": "Schedule",
+  "Link": true,
+  "Location": true,
+  "Staff": true,
+  "Staff Count": 2,
+  "Used custom opposition": false,
+}
+`;
+
+exports[`getCalendarEventData game_event should return EDIT game event details if event type is game_event and panel mode is EDIT 1`] = `
+Object {
+  "Athletes Count": 2,
+  "Attachment": false,
+  "Link": true,
+  "Location": true,
+  "Staff": true,
+  "Staff Count": 2,
+}
+`;
+
+exports[`getCalendarEventData getCalendarFilterDataToTrack 1`] = `
+Object {
+  "Filtered by": Array [
+    "types",
+    "locations",
+    "something_else",
+  ],
+}
+`;
+
+exports[`getCalendarEventData getDeleteEventData 1`] = `
+Object {
+  "Repeat event": true,
+  "Repeat event scope": "this",
+}
+`;
+
+exports[`getCalendarEventData session_event should return ADD session event details if event type is session_event and panel mode is CREATE 1`] = `
+Object {
+  "Athletes Count": 2,
+  "Attachment": false,
+  "Create with no participants": true,
+  "Date of session": "2023-08-22T18:00:07+01:00",
+  "Entry point": "Schedule",
+  "Link": true,
+  "Location": true,
+  "Recurrence preferences": Array [
+    Object {
+      "id": 1,
+      "perma_id": "surface_type",
+      "preference_name": "Surface type",
+    },
+  ],
+  "Repeat event": false,
+  "Repeat event occurrence": "Doesn't repeat",
+  "Staff": true,
+  "Staff Count": 2,
+  "Workload type": 1,
+}
+`;
+
+exports[`getCalendarEventData session_event should return DUPLICATE session event details if event type is session_event and panel mode is not DUPLICATE 1`] = `
+Object {
+  "# of drills duplicated": 7,
+  "Athletes Count": 2,
+  "Duplicate participants": true,
+  "Duplicate session plan": true,
+  "Entry point": "Session view",
+  "Recurrence preferences": Array [
+    Object {
+      "id": 1,
+      "perma_id": "surface_type",
+      "preference_name": "Surface type",
+    },
+  ],
+  "Repeat event": false,
+  "Repeat event occurrence": "Doesn't repeat",
+  "Staff Count": 2,
+}
+`;
+
+exports[`getCalendarEventData session_event should return EDIT session event details if event type is session_event and panel mode is EDIT 1`] = `
+Object {
+  "Athletes Count": 2,
+  "Attachment": false,
+  "Link": true,
+  "Location": true,
+  "Recurrence preferences": Array [
+    Object {
+      "id": 1,
+      "perma_id": "surface_type",
+      "preference_name": "Surface type",
+    },
+  ],
+  "Repeat event": false,
+  "Repeat event occurrence": "Doesn't repeat",
+  "Staff Count": 2,
+  "Workload type": 1,
+}
+`;

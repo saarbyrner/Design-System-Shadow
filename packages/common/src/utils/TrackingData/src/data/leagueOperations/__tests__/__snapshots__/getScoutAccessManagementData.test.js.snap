@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getScoutAccessTrackingData should return empty object when no properties provided 1`] = `Object {}`;
+
+exports[`getScoutAccessTrackingData should return the correct tracking data with all properties 1`] = `
+Object {
+  "Bulk Action": true,
+  "Feature": "scout-access-management",
+  "Product": "league-ops",
+  "Product Area": "scout-access-management",
+}
+`;
+
+exports[`getScoutAccessTrackingData should return the correct tracking data with isRequestedOnBehalfOf 1`] = `
+Object {
+  "Requested on behalf of": true,
+}
+`;
+
+exports[`getScoutAccessTrackingData should return the correct tracking data with product and productArea 1`] = `
+Object {
+  "Feature": "scout-access-management",
+  "Product": "league-ops",
+  "Product Area": "schedule",
+}
+`;

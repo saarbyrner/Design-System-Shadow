@@ -1,0 +1,133 @@
+.datepicker {
+  &.datepicker-orient-top {
+    transform: translateY(20px);
+  }
+
+  &.dropdown-menu,
+  &.datepicker-inline {
+    th,
+    td {
+      padding: 5px;
+    }
+  }
+
+  &.datepicker-dropdown {
+    padding: 22px;
+
+    &:after,
+    &:before {
+      display: none;
+    }
+  }
+
+  &.dropdown-menu {
+    font-size: 14px;
+    margin-top: 0;
+  }
+
+  table {
+    tr {
+      td,
+      th {
+        height: 30px;
+        width: 30px;
+      }
+
+      .clear {
+        color: $colour-p01;
+        font-size: 14px;
+        font-weight: 600;
+        padding-bottom: 0;
+        padding-left: 8px;
+        text-align: unset;
+
+        &:hover {
+          background: none;
+        }
+      }
+
+      .datepicker-switch {
+        color: $colour-s22;
+        font-weight: 600;
+
+        &:hover {
+          background-color: $colour-s23;
+        }
+      }
+
+      .prev,
+      .next {
+        color: $colour-p06;
+        // use !important to prevent issues with browser extensions that change fonts
+        font-family: 'kitman' !important;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: normal;
+        line-height: 1;
+        speak: none;
+        text-transform: none;
+
+        &:hover {
+          // remove arrow hover style
+          background-color: transparent;
+        }
+      }
+
+      .prev {
+        &:before {
+          color: $colour-p01;
+          content: '\e913';
+          font-size: 15px;
+        }
+      }
+
+      .next {
+        &:after {
+          color: $colour-p01;
+          content: '\e904';
+          font-size: 15px;
+        }
+      }
+
+      .dow {
+        color: $colour-s17;
+        padding-bottom: 20px;
+        padding-top: 20px;
+      }
+
+      td {
+        &.day,
+        span.month,
+        span.year {
+          &.disabled {
+            color: $colour-s14;
+
+            &:hover {
+              background-color: transparent;
+              color: $colour-s14;
+            }
+          }
+
+          &.active,
+          &:hover {
+            background-color: $colour-p01;
+            background-image: none;
+            color: $colour-p06;
+            text-shadow: none;
+
+            &.active {
+              background-color: $colour-p01;
+            }
+          }
+        }
+
+        &.day {
+          &.active,
+          &:hover {
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+}

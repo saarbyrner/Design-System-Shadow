@@ -1,0 +1,117 @@
+.modal {
+  margin-left: auto;
+  margin-right: auto;
+  overflow-y: scroll;
+
+  .modal-dialog-centered {
+    margin-top: -50px;
+  }
+
+  .modal-header {
+    border-bottom: 0;
+    padding: 30px 30px 15px;
+    padding-bottom: 0;
+  }
+
+  .modal-body {
+    padding: 15px 30px 30px;
+  }
+
+  .modal__message {
+    padding: 20px;
+
+    &--error {
+      color: $colour-s12;
+    }
+
+    &--success {
+      color: $colour-s04;
+    }
+  }
+
+  .import_log {
+    max-height: 200px;
+    overflow: auto;
+    padding: 20px;
+  }
+
+  .modal-footer {
+    border-top: 1px dashed $colour-s14;
+    padding: 15px 30px 30px;
+
+    .btn + .btn {
+      margin-left: 15px;
+    }
+  }
+}
+
+body {
+  &.ReactModal__Body--open {
+    overflow: hidden;
+  }
+}
+
+//override for ReactModal style
+.ReactModal__Overlay {
+  overflow-y: scroll;
+}
+
+// Styles for the "non-fullscreen" react modal,
+// eg rename template modal
+.framedModal {
+  &__content {
+    background: $colour-p06;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 4px;
+    bottom: auto;
+    height: auto;
+    left: 0;
+    margin: auto;
+    outline: none;
+    overflow: auto;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 800px;
+    z-index: 9000;
+  }
+
+  &__content--small {
+    width: 540px;
+  }
+
+  &__content--align-top {
+    margin-bottom: 30px;
+    top: 30px;
+  }
+
+  &__overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 9000;
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .ReactModalPortal {
+    .ReactModal__Overlay {
+      align-items: flex-start;
+      padding: 10px !important;
+
+      .reactModal {
+        margin: 0;
+        padding: 30px 10px;
+
+        .km-datagrid-modalFooter {
+          padding: 15px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getSharedEventData should return correct data for getMassUploadImportType 1`] = `
+Object {
+  "Import Type": "event_data",
+}
+`;
+
+exports[`getSharedEventData should return correct data for getMassUploadParseCSVData 1`] = `
+Object {
+  "Column Count": 5,
+  "Import Type": "event_data",
+  "Row Count": 100,
+  "Vendor": "Statsports",
+}
+`;

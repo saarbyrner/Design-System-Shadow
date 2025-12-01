@@ -1,0 +1,2 @@
+// @flow
+export const VIRTUAL_EVENT_ID_SEPARATOR = 'VIRTUAL_EVENT';

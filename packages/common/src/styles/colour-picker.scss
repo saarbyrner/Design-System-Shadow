@@ -1,0 +1,50 @@
+.colourPicker {
+  margin-bottom: 0;
+  opacity: 1;
+  padding: 4px;
+  width: 128px;
+  z-index: 9000;
+
+  .colour {
+    cursor: pointer;
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+
+    &:hover {
+      box-shadow: 0 0 0 3px $colour-p02 inset;
+    }
+
+    &--alarm_colour1 {
+      background: $alarm-colour1;
+    }
+
+    &--alarm_colour2 {
+      background: $alarm-colour2;
+    }
+
+    &--alarm_colour3 {
+      background: $alarm-colour3;
+    }
+
+    &--alarm_colour4 {
+      background: $alarm-colour4;
+    }
+
+    &--alarm_colour5 {
+      background: $alarm-colour5;
+    }
+
+    &--alarm_colour6 {
+      background: $alarm-colour6;
+    }
+
+    &--alarm_colour7 {
+      background: $alarm-colour7;
+    }
+
+    &--alarm_colour8 {
+      background: $alarm-colour8;
+    }
+  }
+}

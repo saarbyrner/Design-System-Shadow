@@ -1,0 +1,420 @@
+.kitmanReactSelect,
+.kitmanReactSelect__menu-portal {
+  position: relative;
+
+  .kitmanReactSelect__menu {
+    width: auto;
+    z-index: 1000 !important;
+  }
+  .kitmanReactSelect--no-input {
+    .kitmanReactSelect__menu {
+      min-width: 100px;
+    }
+    .kitmanReactSelect__dropdown-indicator {
+      padding: 4px 8px 4px 8px;
+    }
+  }
+
+  .kitmanReactSelect__control {
+    background-color: $colour-neutral-200;
+    border-color: $colour-neutral-200;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $colour-neutral-300;
+      border-color: $colour-neutral-300;
+    }
+  }
+
+  &--invalid {
+    .kitmanReactSelect__control {
+      &:hover {
+        border-color: $red-100;
+      }
+
+      border-color: $red-100;
+      box-shadow: 0 0 0 1px $red-100;
+    }
+  }
+
+  .kitmanReactSelect__control--is-focused {
+    &:hover {
+      background-color: $colour-p06;
+      border-color: $colour-blue-100;
+    }
+
+    background-color: $colour-p06;
+    border-color: $colour-blue-100;
+    box-shadow: 0 0 0 1px $colour-blue-100;
+  }
+
+  .kitmanReactSelect__dropdown-indicator {
+    padding: 4px 14px 4px 8px;
+
+    i {
+      color: $colour-grey-200;
+      font-size: 10px;
+    }
+  }
+
+  .kitmanReactSelect__clear-indicator {
+    align-items: center;
+    background-color: $colour-grey-300-50-percent;
+    border-radius: 50%;
+    color: $colour-neutral-200;
+    display: flex;
+    height: 12px;
+    padding: 0;
+    width: 12px;
+
+    &:hover {
+      background-color: $colour-grey-200;
+      color: $colour-neutral-300;
+    }
+  }
+
+  .kitmanReactSelect__placeholder,
+  .kitmanReactSelect__single-value {
+    color: $colour-grey-100;
+  }
+
+  .kitmanReactSelect__option {
+    color: $colour-grey-300;
+    cursor: pointer;
+    padding-left: 16px;
+    padding-right: 16px;
+
+    &--is-focused,
+    &:hover {
+      background-color: $colour-neutral-200;
+      color: $colour-grey-300;
+    }
+
+    &--is-selected {
+      background-color: $colour-grey-200;
+      color: $colour-p06;
+
+      &:hover {
+        background-color: $colour-grey-200;
+        color: $colour-p06;
+      }
+    }
+
+    &:active {
+      background: transparentize($colour-blue-100, 0.9);
+      color: $colour-blue-100;
+    }
+  }
+
+  .kitmanReactSelect__indicator-separator {
+    visibility: hidden;
+  }
+
+  .kitmanReactSelect__menu-list--is-multi {
+    .kitmanReactSelect__option {
+      align-items: center;
+      display: flex;
+
+      &--is-selected {
+        background-color: $colour-p06;
+        color: $colour-grey-300;
+
+        &:hover {
+          background-color: $colour-neutral-200;
+          color: $colour-grey-300;
+        }
+
+        &:active {
+          background: transparentize($colour-blue-100, 0.9);
+          color: $colour-blue-100;
+        }
+      }
+
+      .kitmanReactSelect__optionLabel {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  .kitmanReactSelect__menu--autoWidthDropdown {
+    max-width: none !important;
+    .kitmanReactSelect__option {
+      display: flex;
+      white-space: nowrap;
+      width: auto;
+      word-break: keep-all;
+    }
+  }
+
+  &.kitmanReactSelect--is-disabled {
+    .kitmanReactSelect__placeholder,
+    .kitmanReactSelect__single-value {
+      color: transparentize($colour-grey-200, 0.5);
+    }
+
+    .kitmanReactSelect__dropdown-indicator {
+      i {
+        color: transparentize($colour-grey-200, 0.5);
+      }
+    }
+
+    .kitmanReactSelect__control {
+      background: $colour-neutral-200;
+      color: transparentize($colour-grey-300, 0.5);
+    }
+  }
+
+  &__labelContainer {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+  }
+
+  &__label {
+    display: block;
+    flex: 1;
+    color: $colour-grey-100;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 4px;
+
+    &--disabled {
+      color: transparentize($colour-grey-300, 0.5);
+    }
+  }
+
+  &__selectAll {
+    .reactCheckbox {
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+  }
+
+  .kitmanReactSelect__value-container {
+    max-height: 30px;
+    height: 30px;
+  }
+
+  .kitmanReactSelect__menu {
+    max-width: 100%;
+  }
+
+  .kitmanReactSelect__menu-list {
+    position: relative;
+    padding-top: 0;
+    padding-bottom: 0;
+    text-align: start;
+
+    &--with-search {
+      padding-top: 42px;
+      min-width: 100px;
+    }
+  }
+
+  .kitmanReactSelect__menuListActionsLabel {
+    position: absolute;
+    font-weight: 600;
+    left: 12px;
+    bottom: 6px;
+  }
+
+  .kitmanReactSelect__menuListActions {
+    padding: 10px 4px 4px;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+  }
+
+  .kitmanReactSelect__group {
+    padding-top: 0;
+  }
+
+  .kitmanReactSelect__group-heading {
+    top: 0;
+    padding-top: 12px;
+    padding-bottom: 6px;
+    margin-bottom: 0;
+    position: sticky;
+    background-color: white;
+    font-size: 12px;
+    line-height: 1.25;
+    font-weight: 600;
+    color: $colour-grey-100;
+    border-bottom: solid 0.5px $colour-neutral-300;
+    z-index: 1;
+  }
+
+  .kitmanReactSelect__optionalOrRequiredFieldText {
+    position: absolute;
+    color: $colour-grey-100;
+    font-size: 12px;
+    font-weight: 400;
+    top: 0px;
+    right: 0px;
+    margin-top: 4px;
+    line-height: 12px;
+  }
+
+  .kitmanReactSelect__searchContainer {
+    padding: 5px;
+
+    /** 
+    * react-select uses the height of the menu-list
+    * to figure out how much space it has to play with
+    * in the bottom of the page, therefore it would ignore
+    * this in its calculations. So this is absolute 
+    * and padding padding is added to the top of the menu-list so
+    * its accounted for by react-select
+    */
+    position: absolute;
+    right: 0;
+    left: 0;
+    background-color: white;
+    z-index: 2;
+  }
+
+  .kitmanReactSelect__searchInput {
+    padding-right: '30px';
+    background: $colour-neutral-200;
+    border: 2px solid $colour-neutral-200;
+    border-radius: 3px;
+    color: $colour-grey-200;
+    font-size: 14px;
+    // If this height updates, then update the INPUT_HEIGHT const in ReactSelectOverrides.js
+    height: 32px;
+    line-height: 32px;
+    padding: 2px 8px;
+    transition: background 0.1s ease-out 0s, border-color 0.1s ease-out 0s;
+    width: 100%;
+
+    &:hover {
+      background: $colour-neutral-300;
+      color: $colour-grey-300;
+    }
+
+    &:focus {
+      background: $colour-p06;
+      border-color: $colour-blue-100;
+    }
+
+    &:disabled {
+      background: $colour-neutral-200;
+      color: transparentize($colour-grey-300, 0.5);
+      cursor: default;
+    }
+  }
+
+  .kitmanReactSelect__searchInputIcon {
+    color: $colour-grey-200;
+    font-size: 14px;
+    position: absolute;
+    right: 10px;
+    top: 15px;
+  }
+
+  .kitmanReactSelect__groupHeading {
+    margin-bottom: 1px solid $colour-grey-100;
+    text-transform: none;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  .kitmanReactSelect__groupHeadingLabel {
+    margin-right: 24px;
+  }
+
+  .kitmanReactSelect__groupHeadingOptions {
+    display: flex;
+    flex-direction: row;
+    font-size: 9px;
+    align-self: flex-end;
+  }
+
+  .kitmanReactSelect__groupHeadingSelectAll {
+    display: flex;
+    padding-right: 3px;
+    border-right: 1px solid $colour-grey-50;
+    cursor: pointer;
+  }
+
+  .kitmanReactSelect__groupHeadingClear {
+    display: flex;
+    margin-left: 3px;
+    cursor: pointer;
+  }
+
+  .kitmanReactSelect__optionWithIcon {
+    align-items: center;
+    display: flex;
+  }
+
+  .kitmanReactSelect__iconOption {
+    .iconButton {
+      &::before {
+        font-size: 16px;
+      }
+    }
+    .iconButton--transparent {
+      color: $colour-grey-100;
+      &:hover {
+        color: $yellow-100;
+      }
+      &:disabled {
+        color: $colour-grey-300-50-percent;
+        &:hover {
+          color: $colour-grey-300-50-percent;
+        }
+      }
+    }
+  }
+
+  .kitmanReactSelect__backButton {
+    margin: 8px 14px 24px;
+    padding-top: 42px;
+    color: $colour-grey-200;
+    font-weight: 600;
+    font-size: 12px;
+    cursor: pointer;
+    i {
+      font-weight: bold;
+    }
+
+    &:hover {
+      color: $colour-grey-200;
+    }
+  }
+
+  .kitmanReactSelect__list {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .kitmanReactSelect__backButtonContainer {
+    margin-top: 42px;
+  }
+
+  .kitmanReactSelect__listContainer {
+    height: 300px;
+    min-width: 300px;
+    overflow: hidden;
+  }
+
+  .kitmanReactSelect__listInner {
+    overflow: auto;
+    flex: 1 1 0;
+    height: 100%;
+  }
+
+  .icon-next-right {
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 2px;
+  }
+}

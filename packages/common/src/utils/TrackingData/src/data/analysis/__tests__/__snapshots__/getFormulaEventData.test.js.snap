@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getFormulaDataSources() matches the snapshot 1`] = `
+Object {
+  "Sources": Array [
+    "MedicalInjury",
+    "TableMetric",
+  ],
+}
+`;

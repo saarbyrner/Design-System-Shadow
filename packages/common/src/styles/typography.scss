@@ -1,0 +1,139 @@
+// Fonts
+$main-font: 'Open Sans';
+
+body {
+  font-family: $main-font;
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+li {
+  line-height: 28px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+}
+
+.kitmanHeading {
+  color: $colour-grey-300;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+
+  &--XXL {
+    color: $colour-grey-300;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  &--XL {
+    color: $colour-grey-300;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 32px;
+  }
+
+  &--L1 {
+    color: $colour-grey-300;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  &--L2 {
+    color: $colour-grey-300;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  &--L3 {
+    color: $colour-grey-300;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  &--L4 {
+    color: $colour-grey-300;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  &--L5 {
+    color: $colour-grey-300;
+    font-weight: 600;
+    color: $colour-grey-300;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16px;
+  }
+
+  &--L6 {
+    color: $colour-grey-100;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+    text-transform: uppercase;
+  }
+
+  &--XS {
+    color: $colour-grey-100;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 16px;
+    text-transform: uppercase;
+  }
+}
+
+a {
+  color: $colour-p01;
+  text-decoration: none;
+
+  &:hover {
+    color: $colour-p01;
+    text-decoration: none;
+  }
+
+  &:focus {
+    color: $colour-p01;
+    text-decoration: none;
+  }
+
+  &:visited {
+    color: $colour-p01;
+    text-decoration: none;
+  }
+}
+
+.km-light-text {
+  color: $colour-s16;
+}
+
+.km-lightweight-text {
+  font-weight: 400;
+}
+
+.km-page-content {
+  a {
+    font-weight: 600;
+  }
+
+  // Truncates overflowing text in a container with `...`
+  .km-ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}

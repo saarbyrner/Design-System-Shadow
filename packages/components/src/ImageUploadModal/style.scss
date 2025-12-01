@@ -1,0 +1,56 @@
+.imageAttachmentArea {
+  &__dropAreaLabel {
+    color: $colour-grey-100;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+
+    p {
+      color: $colour-grey-100;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    .filepond--label-action {
+      color: $colour-blue-200;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 20px;
+      margin-top: 14px;
+    }
+  }
+
+  .filepond--root {
+    height: 350px;
+    margin: 0;
+
+    .filepond--drop-label {
+      height: 350px !important;
+      background-color: $colour-neutral-100;
+    }
+
+    .filepond--image-preview {
+      background-color: $colour-grey-300;
+    }
+
+    .filepond--hopper {
+      height: 350px;
+      margin: 0;
+    }
+
+    .filepond--credits {
+      display: none;
+    }
+
+    .filepond--label-action {
+      color: $colour-blue-200;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 20px;
+      margin-top: 14px;
+    }
+  }
+}

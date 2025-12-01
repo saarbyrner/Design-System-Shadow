@@ -1,0 +1,134 @@
+.iconButton {
+  background-color: $colour-p06;
+  border: 1px solid $colour-p04;
+  border-radius: 5px;
+  color: $colour-p01;
+  height: 45px;
+  min-width: 50px;
+
+  &--small {
+    height: 36px;
+  }
+
+  &--hasText {
+    padding: 2px 12px 3px;
+
+    &::before {
+      float: left;
+    }
+
+    .iconButton__text {
+      float: left;
+      margin-left: 8px;
+    }
+  }
+
+  &__text {
+    font-family: $main-font;
+    font-weight: 600;
+    margin-top: 4px;
+  }
+
+  &::before {
+    font-size: 22px;
+  }
+
+  &:disabled {
+    border-color: $colour-s14;
+    color: $colour-p04;
+
+    &:hover {
+      background-color: $colour-p06;
+      border-color: $colour-s14;
+      color: $colour-p04;
+    }
+  }
+
+  &--isActive {
+    background-color: $colour-p01;
+    border-color: $colour-p01;
+    color: $colour-p06;
+  }
+
+  &:hover {
+    background-color: $colour-p02;
+    border-color: $colour-p02;
+    color: $colour-p06;
+    cursor: pointer;
+  }
+
+  &--transparent {
+    background-color: transparent;
+    border: 0;
+    color: $colour-s15;
+
+    &:hover {
+      background-color: transparent;
+      color: $colour-s15;
+    }
+
+    &:disabled {
+      color: $colour-s14;
+
+      &:hover {
+        background-color: transparent;
+        color: $colour-s14;
+      }
+    }
+  }
+
+  &--borderless {
+    background-color: transparent;
+    border: 0;
+
+    &:hover,
+    &:focus {
+      background-color: transparent;
+      color: $colour-p01;
+    }
+  }
+
+  &--darkIcon {
+    color: $colour-grey-200;
+
+    &:hover {
+      background-color: transparent;
+      color: $colour-grey-300;
+    }
+  }
+
+  &--destruct {
+    background-color: transparent;
+    border-color: transparentize($red-100, 0.5);
+    color: $red-100;
+
+    &:focus {
+      background-color: transparent;
+      border-color: transparentize($red-100, 0.5);
+      color: $red-100;
+    }
+
+    &:hover {
+      background-color: transparent;
+      border-color: transparentize($red-100, 0.5);
+      color: $red-200;
+    }
+
+    &:active {
+      background-color: transparent;
+      border-color: $red-200;
+      color: $red-200;
+    }
+
+    &[disabled] {
+      background-color: transparent;
+      border-color: transparentize($red-200, 0.5);
+      color: transparentize($colour-grey-200, 0.5);
+
+      &:hover,
+      &:active {
+        color: transparentize($colour-grey-200, 0.5);
+      }
+    }
+  }
+}

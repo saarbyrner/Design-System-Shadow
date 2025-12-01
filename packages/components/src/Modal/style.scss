@@ -1,0 +1,56 @@
+.reactModal {
+  background: $colour-p06;
+  border: 1px solid rgb(204, 204, 204);
+  border-radius: 4px;
+  bottom: auto;
+  height: auto;
+  left: 0;
+  margin: auto;
+  min-height: 320px;
+  outline: none;
+  overflow: auto;
+  padding: 30px;
+  position: relative;
+  z-index: 9000;
+
+  &__content {
+    height: 100%;
+    width: 100%;
+  }
+
+  &__overlay {
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 2147483000;
+  }
+
+  &__title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    margin-top: 0;
+  }
+
+  &__closeBtn {
+    background: transparent;
+    border: 0;
+    color: $colour-s16;
+    font-size: 22px;
+    padding: 0;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 100;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

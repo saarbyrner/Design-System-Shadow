@@ -1,0 +1,183 @@
+.timePicker {
+  &__label {
+    color: $colour-s18;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-top: 0;
+  }
+
+  &--invalid {
+    .rc-time-picker-input {
+      &:hover {
+        border-color: $red-100;
+      }
+      box-shadow: 0 0 0 2px $red-100;
+    }
+  }
+
+  &--disabled {
+    .timePicker__label {
+      opacity: 0.5;
+    }
+
+    .rc-time-picker-input {
+      &:disabled {
+        background: $colour-p06;
+        color: $colour-s15;
+        cursor: default;
+      }
+    }
+  }
+
+  &__kitmanDesignSystem {
+    .timePicker__label {
+      color: $colour-grey_100;
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 16px;
+      margin-bottom: 4px;
+    }
+
+    .rc-time-picker-input {
+      background: $colour-neutral_200;
+      border: 0;
+      height: 32px;
+    }
+
+    .rc-time-picker-panel-input {
+      background: $colour-p06;
+      border: 0;
+      height: 32px;
+    }
+
+    .rc-time-picker {
+      &::after {
+        background: $colour-neutral_200;
+        border: 0;
+        color: $colour-grey_300;
+        font-size: 16px;
+        height: 32px;
+      }
+    }
+
+    .rc-time-picker-panel-input-wrap {
+      &::after {
+        background: $colour-p06;
+        border: 0;
+        color: $colour-grey_300;
+        font-size: 16px;
+        height: 32px;
+      }
+    }
+
+    &--disabled {
+      .rc-time-picker-input {
+        &:disabled {
+          background-color: $colour-neutral_200;
+          color: $colour-grey-100-50-percent;
+          cursor: default;
+        }
+      }
+
+      .rc-time-picker {
+        &::after {
+          background: $colour-neutral_200;
+          color: $colour-grey-100-50-percent;
+        }
+      }
+    }
+  }
+}
+
+.rc-time-picker-panel-inner {
+  box-shadow: none;
+  top: 3px;
+  width: 100%;
+}
+
+.rc-time-picker {
+  width: 100%;
+
+  &:after {
+    border: 1px solid #ccc;
+    height: 46px;
+  }
+}
+
+.rc-time-picker-input,
+.rc-time-picker-panel-input {
+  border: 1px solid $colour-p04;
+  border-radius: 4px;
+  font-size: 14px;
+  height: auto;
+  padding: 11.5px;
+  width: 100%;
+
+  &.km-error {
+    border: 1px $colour-s11 solid;
+    box-shadow: 0 0 0 1px $colour-s11 inset;
+  }
+}
+
+.rc-time-picker,
+.rc-time-picker-panel-input-wrap {
+  display: flex;
+
+  &:after {
+    @include kitman-font;
+
+    align-items: center;
+    background-color: #eee;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 4px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 4px;
+    color: $colour-p04;
+    content: '\e940';
+    display: flex;
+    font-size: 24px;
+    padding: 6px 10px;
+    position: absolute;
+    right: 0;
+  }
+}
+
+.rc-time-picker-panel-input-wrap {
+  padding: 0;
+
+  &:after {
+    border-bottom: 1px solid #e9e9e9;
+    border-left: 1px solid #ccc;
+    height: 45px;
+  }
+}
+
+.rc-time-picker-panel-input {
+  border: 0;
+}
+
+.rc-time-picker-panel {
+  z-index: 9000;
+}
+
+.rc-time-picker-panel-combobox {
+  display: flex;
+
+  .rc-time-picker-panel-select {
+    flex-grow: 1;
+    width: auto;
+    // Hiding scrollbar
+    scrollbar-width: none; // Firefox
+    -ms-overflow-style: none; // Internet Explorer and Edge
+  }
+  .rc-time-picker-panel-select::-webkit-scrollbar {
+    // Hiding scrollbar
+    display: none; // Chrome and Safari
+  }
+}
+
+.rc-time-picker-clear-icon {
+  display: none;
+}

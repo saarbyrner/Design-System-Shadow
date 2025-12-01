@@ -1,0 +1,9 @@
+.pageHeader {
+  background-color: $colour-s13;
+  margin: 0 0 10px;
+  padding: 10px 20px;
+
+  &--noMargin {
+    margin: 0;
+  }
+}

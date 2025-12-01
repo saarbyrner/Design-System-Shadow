@@ -1,0 +1,318 @@
+// PRINT SCSS
+//
+// This is the printing rules of the Dashboard.
+// Once there are more pages that should be printed, different component print rules should be put into separate files and
+// have them imported here, to bundle a general print css.
+
+//========================
+// GENERAL PRINT RULES
+//========================
+
+@media print {
+  *,
+  *:before,
+  *:after {
+    color: #000 !important;
+  }
+
+  a {
+    &:not(.btn) {
+      text-decoration: none;
+    }
+  }
+
+  .printContent {
+    display: flex;
+  }
+
+  .alert,
+  .nav-tabs,
+  .js_alert_container,
+  .km-admin-bar,
+  .hidden-print,
+  .hidden-lg,
+  .navArrows {
+    display: none !important;
+  }
+
+  .btn {
+    &.icon-print {
+      display: none;
+    }
+  }
+
+  .visible-lg {
+    display: block !important;
+  }
+
+  .container,
+  .main {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100%;
+  }
+
+  .km-page {
+    .km-page-content {
+      padding: 0 !important;
+    }
+
+    .km-page-header {
+      display: none !important;
+    }
+  }
+}
+
+//========================
+// DASHBOARD
+//========================
+
+@media print {
+  .printContent__header {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 30px 0 0;
+
+    .printContent__logo {
+      height: auto;
+      margin-right: 25px;
+      min-width: 50px;
+    }
+
+    .printContent__headerContent {
+      flex: 1;
+      margin-bottom: 30px;
+      position: relative;
+
+      h3 {
+        font-size: 16px;
+        font-weight: bold;
+        margin: 4px 0 0;
+      }
+
+      h4 {
+        font-size: 16px;
+        font-weight: normal;
+        margin: 10px 0 0;
+      }
+
+      p {
+        display: inline-block;
+        font-size: 14px;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+    }
+  }
+
+  .prime-dashboard {
+    .customDropdown,
+    .dashboardControls,
+    .dashboardHeader__secondaryActionsBtn,
+    .resultActions__button {
+      display: none !important;
+    }
+
+    .athleteStatusTable {
+      margin: 0;
+    }
+  }
+}
+
+//
+// SIDEBAR
+//
+
+@media print {
+  $font-color-print: #000;
+
+  .athleteStatusTable__sidebar {
+    color: $font-color-print;
+    width: 125px !important;
+
+    .athleteStatusSidebar {
+      &__heading {
+        font-size: 12px !important;
+        font-weight: bold;
+        padding-left: 10px;
+      }
+    }
+
+    .athleteInfo {
+      border-bottom: 1px solid $colour-s14;
+      break-inside: avoid;
+      max-width: 100%;
+      padding-left: 2px;
+
+      &__wrapper {
+        padding: 4px 0 4px 10px !important;
+      }
+
+      &__data {
+        font-size: 10px !important;
+        font-weight: normal;
+
+        span {
+          font-size: 9px !important;
+        }
+      }
+
+      &__athleteName {
+        font-size: 12px !important;
+        font-weight: bold;
+      }
+
+      &__athletePosition {
+        font-size: 12px !important;
+        font-weight: normal;
+      }
+
+      &__indications,
+      &__comment,
+      &__avatarContainer {
+        display: none;
+      }
+    }
+  }
+}
+
+//
+// HEADER
+//
+
+@media print {
+  .athleteStatusTable__header {
+    position: static;
+    top: auto;
+
+    .athleteStatusTable__headerInnerWrapper,
+    .athleteStatusTable__headerContent,
+    .athleteStatusHeader,
+    .athleteStatusHeader__statusesContainer {
+      width: 1105px;
+    }
+
+    .athleteStatusHeader {
+      border: 1px solid $colour-s14 !important;
+      height: 45px;
+      margin-bottom: 25px;
+
+      &__athleteTitle {
+        max-width: 125px;
+      }
+
+      &__statusesContainer {
+        padding-left: 125px !important;
+      }
+
+      &__status {
+        break-inside: avoid;
+        font-size: 9px !important;
+        line-height: 1.5;
+        max-width: 10%;
+        min-width: 50px;
+        padding: 4px 0;
+
+        .icon-more {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+//
+// BODY
+//
+
+@media print {
+  .athleteStatusTable__body {
+    max-width: 1105px;
+    overflow-x: visible;
+    padding-left: 125px !important;
+    width: 1105px !important;
+
+    .athleteStatusTable__bodyInner,
+    .athleteStatusCells,
+    .athleteStatusCells__row {
+      width: 1105px - 125px;
+    }
+
+    .athleteStatusCells {
+      &__break {
+        padding: 25px 0 15px;
+      }
+
+      &__row {
+        border: 1px solid $colour-s14;
+        border-bottom-width: 0;
+        break-inside: avoid;
+        margin-bottom: 0;
+
+        &:last-child {
+          border-bottom-width: 1px;
+        }
+      }
+
+      &__cell {
+        min-width: 50px;
+
+        .athleteStatus {
+          button {
+            font-size: 9px !important;
+            padding: 0;
+            width: 100%;
+          }
+
+          &--alarm_colour1,
+          &--alarm_colour2,
+          &--alarm_colour3,
+          &--alarm_colour4,
+          &--alarm_colour5,
+          &--alarm_colour6,
+          &--alarm_colour7,
+          &--alarm_colour8 {
+            button {
+              color: $colour-p06 !important;
+            }
+          }
+
+          &--alarm_colour1 {
+            background: $alarm-colour1 !important;
+          }
+
+          &--alarm_colour2 {
+            background: $alarm-colour2 !important;
+          }
+
+          &--alarm_colour3 {
+            background: $alarm-colour3 !important;
+          }
+
+          &--alarm_colour4 {
+            background: $alarm-colour4 !important;
+          }
+
+          &--alarm_colour5 {
+            background: $alarm-colour5 !important;
+          }
+
+          &--alarm_colour6 {
+            background: $alarm-colour6 !important;
+          }
+
+          &--alarm_colour7 {
+            background: $alarm-colour7 !important;
+          }
+
+          &--alarm_colour8 {
+            background: $alarm-colour8 !important;
+          }
+        }
+      }
+    }
+  }
+}

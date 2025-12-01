@@ -1,0 +1,62 @@
+.reactDialogue {
+  display: block;
+  padding: 0;
+
+  &--hidden {
+    display: none;
+  }
+
+  &--embed {
+    padding: 100px;
+
+    .reactDialogue__container {
+      position: relative;
+      top: 65px;
+    }
+
+    .reactDialogue__background {
+      display: none;
+    }
+  }
+
+  &__container {
+    border-radius: 5px;
+    left: 50%;
+    min-height: 83px;
+    position: fixed;
+    text-align: center;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 467px;
+    z-index: 10000;
+  }
+
+  &__background {
+    background-color: $colour-p06;
+    bottom: 0;
+    display: block;
+    left: 0;
+    opacity: 0.7;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 9999;
+  }
+
+  &__message {
+    color: $colour-s18;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+  }
+
+  &__buttonContainer {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+  }
+
+  &__cancelButtonContainer {
+    margin-right: 20px;
+  }
+}

@@ -1,0 +1,36 @@
+.inputFile {
+  &__wrapper {
+    min-height: 46px;
+  }
+
+  &__selectedFile {
+    align-items: center;
+    display: flex;
+  }
+
+  &__selectedFileDocumentIcon {
+    color: $colour-p01;
+    font-size: 30px;
+    margin-right: 5px;
+  }
+
+  &__selectedFileCloseIcon {
+    color: $colour-s15;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 800;
+    margin-left: 15px;
+  }
+
+  &__errors {
+    margin-top: 10px;
+  }
+
+  &__errorTitle {
+    color: $colour-s10;
+  }
+
+  &__errorSum {
+    margin: 10px 0;
+  }
+}

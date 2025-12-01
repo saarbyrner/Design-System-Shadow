@@ -1,0 +1,19 @@
+{
+  "name": "@kitman/common",
+  "version": "1.2378.0",
+  "description": "kitman common library",
+  "author": "frontend@kitmanlabs.com",
+  "homepage": "https://github.com/KitmanLabs/kitman-frontend/tree/master/packages/common",
+  "license": "ISC",
+  "main": "src/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "json2csv": "^5.0.6",
+    "redux-thunk": "^2.4.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  }
+}

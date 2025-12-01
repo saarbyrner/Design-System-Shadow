@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getMatchMonitorTrackingData should return empty object when no properties provided 1`] = `Object {}`;
+
+exports[`getMatchMonitorTrackingData should return the correct tracking data with all properties 1`] = `
+Object {
+  "Feature": "match-monitor",
+  "Product": "league-ops",
+  "Product Area": "match-monitor-report",
+}
+`;
+
+exports[`getMatchMonitorTrackingData should return the correct tracking data with product and productArea 1`] = `
+Object {
+  "Feature": "match-monitor",
+  "Product": "league-ops",
+  "Product Area": "match-monitor-report",
+}
+`;

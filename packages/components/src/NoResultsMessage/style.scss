@@ -1,0 +1,25 @@
+.noResultsMessage {
+  background-color: $colour-p06;
+  display: none;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+
+  p {
+    margin: 0;
+  }
+
+  .noResultsMessage__bold {
+    font-weight: 600;
+  }
+
+  &--isVisible {
+    display: flex;
+  }
+}

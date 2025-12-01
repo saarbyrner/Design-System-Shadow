@@ -1,0 +1,422 @@
+.km-table {
+  border-collapse: separate;
+  border-spacing: 0 2px;
+  color: $colour-s18;
+  width: 100%;
+
+  &.km-table--empty {
+    td {
+      font-weight: 600;
+    }
+  }
+
+  a {
+    color: $colour-p01;
+    font-weight: 600;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  thead {
+    tr {
+      height: 40px;
+
+      th {
+        border-bottom: 0;
+        border-top: 0;
+        color: $colour-s18;
+        font-weight: 600;
+        padding: 8px 15px;
+        vertical-align: top;
+
+        &.sortable {
+          cursor: pointer;
+
+          .caret {
+            display: none;
+
+            &.desc {
+              transform: rotate(180deg);
+            }
+
+            &.asc,
+            &.desc {
+              display: inline-block;
+            }
+          }
+        }
+      }
+
+      &:hover {
+        th {
+          background: none;
+        }
+      }
+    }
+  }
+
+  ul {
+    &.km-table-controls {
+      margin: 0;
+
+      .btn {
+        padding: 0;
+      }
+
+      li {
+        border-left: 1px solid $colour-s15;
+        display: inline;
+        list-style: none;
+        padding-left: 7px;
+        padding-right: 7px;
+
+        &:first-child {
+          border-left: 0;
+          padding-left: 0;
+        }
+
+        &:last-child {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+
+  tbody,
+  tfoot {
+    tr {
+      td {
+        border: 0;
+        height: 45px;
+        padding: 8px 15px;
+        vertical-align: middle;
+
+        &.km-data-table__caption {
+          border-bottom-left-radius: 0 !important;
+          border-top-left-radius: 0 !important;
+          font-size: 13px;
+          min-width: 200px !important;
+          padding: 10px !important;
+          white-space: normal;
+        }
+
+        .extra-info {
+          display: block;
+          margin: 10px 0;
+
+          &.availability_length {
+            margin-left: 15px;
+            margin-top: 5px;
+          }
+        }
+
+        .km-table-controls {
+          display: inline;
+          vertical-align: middle;
+        }
+
+        .km-availabilityLabel {
+          font-size: 12px;
+          line-height: 16px;
+          padding-left: 15px;
+          position: relative;
+
+          &.unavailable,
+          &.injured,
+          &.returning {
+            &::before {
+              border-radius: 5px;
+              content: '';
+              display: inline-block;
+              height: 8px;
+              left: 0;
+              position: absolute;
+              top: 4px;
+              width: 8px;
+            }
+          }
+
+          &.injured {
+            &::before {
+              background: $colour-s09;
+            }
+          }
+
+          &.returning {
+            &::before {
+              background: $colour-s07;
+            }
+          }
+
+          &.unavailable {
+            &::before {
+              background: $colour-s25;
+            }
+          }
+        }
+      }
+
+      &:nth-child(even) {
+        td {
+          background: $colour-s13;
+
+          &:first-child {
+            border-bottom-left-radius: 5px;
+            border-top-left-radius: 5px;
+          }
+
+          &:last-child {
+            border-bottom-right-radius: 5px;
+            border-top-right-radius: 5px;
+          }
+        }
+      }
+
+      &:nth-child(odd) {
+        background: $colour-s23;
+
+        td {
+          &:first-child {
+            border-bottom-left-radius: 5px;
+            border-top-left-radius: 5px;
+          }
+
+          &:last-child {
+            border-bottom-right-radius: 5px;
+            border-top-right-radius: 5px;
+          }
+        }
+      }
+    }
+  }
+
+  tfoot {
+    tr {
+      td {
+        background: darken($colour-s13, 3);
+      }
+    }
+  }
+
+  .km-table-verticalAlignMiddle {
+    vertical-align: middle;
+  }
+
+  // Data table, e.g. Athlete Reports
+  &.km-data-table {
+    &.km-data-table--allowwrap {
+      td {
+        white-space: normal;
+      }
+    }
+
+    thead {
+      border-spacing: 0;
+
+      th {
+        background: $colour-p06 !important;
+
+        &.km-data-table__head-sub-caption {
+          border-left: 1px solid $colour-p05;
+          border-top: 1px solid $colour-p05 !important;
+
+          &:last-child {
+            border-right: 1px solid $colour-p05;
+          }
+        }
+      }
+
+      tr {
+        &:first-child {
+          th {
+            vertical-align: bottom;
+          }
+        }
+
+        &:nth-child(2) {
+          th {
+            border-top: 1px solid $colour-p05;
+            vertical-align: middle;
+          }
+        }
+      }
+    }
+
+    tr {
+      td {
+        vertical-align: middle;
+
+        &.km-data-table-long-text-cell {
+          white-space: normal;
+        }
+
+        &.km-data-table-row-title {
+          vertical-align: top;
+        }
+
+        &.km-data-table__spaced-data {
+          border-left: 1px solid $colour-s14;
+          font-size: 13px;
+          padding-left: 31px !important;
+          padding-right: 31px !important;
+          text-align: center;
+        }
+
+        &.km-data-table-row-title,
+        &.km-data-table-row-actions {
+          max-width: 150px;
+          min-width: 150px;
+          padding-left: 15px !important;
+          padding-right: 15px !important;
+          padding-top: 5px !important;
+        }
+
+        .km-btn-primary {
+          color: $colour-p06;
+        }
+      }
+    }
+  }
+}
+
+.large-table-container {
+  overflow: hidden;
+  overflow-x: auto;
+  padding-top: 20px;
+  width: 100%;
+}
+
+// This is the styling nessecary for the workloads tables.
+.km_success {
+  background-color: $km-success-colour;
+}
+
+.km_subtle {
+  background-color: $colour-s13;
+}
+
+.km_success_head {
+  background-color: $colour-s04;
+  color: $colour-p06;
+}
+
+.km_subtle_head {
+  background-color: $colour-s15;
+  color: $colour-s17;
+}
+
+.km_center {
+  text-align: center;
+}
+
+td {
+  &.km_center {
+    text-align: center;
+  }
+}
+
+th {
+  &.km_center {
+    text-align: center;
+  }
+}
+
+.workload-training-sessions {
+  thead {
+    tr {
+      th {
+        border-top: 0;
+      }
+    }
+  }
+
+  td {
+    span {
+      &.label {
+        display: inline-block;
+        height: 10px;
+        padding: 0;
+        width: 10px;
+      }
+    }
+  }
+}
+
+.workload-games {
+  thead {
+    tr {
+      th {
+        border-top: 0;
+      }
+    }
+  }
+
+  td {
+    span {
+      &.label {
+        background-color: $colour-s06;
+        display: inline-block;
+        height: 10px;
+        padding: 0;
+        width: 10px;
+      }
+    }
+  }
+}
+
+@media print {
+  .km-table {
+    tbody,
+    tfoot {
+      tr {
+        td {
+          -webkit-print-color-adjust: exact; // Chrome/Safari
+          print-color-adjust: exact; // Firefox
+
+          .km-availabilityLabel {
+            // These rules enforce the browser to print the background
+            -webkit-print-color-adjust: exact; // Chrome/Safari
+            print-color-adjust: exact; // Firefox
+
+            &.unavailable {
+              &::before {
+                background: $colour-s25;
+                background: transparentize($colour-s25, 0.1) !important;
+              }
+            }
+
+            &.injured {
+              &::before {
+                background: $colour-s09;
+                background: transparentize($colour-s09, 0.1) !important;
+              }
+            }
+
+            &.returning {
+              &::before {
+                background: $colour-s07;
+                background: transparentize($colour-s07, 0.1) !important;
+              }
+            }
+          }
+        }
+
+        &:nth-child(even) {
+          td {
+            background: $colour-s13;
+            background: transparentize($colour-s13, 0.1) !important;
+          }
+        }
+
+        &:nth-child(odd) {
+          td {
+            background: $colour-s23;
+            background: transparentize($colour-s23, 0.1) !important;
+          }
+        }
+      }
+    }
+  }
+}

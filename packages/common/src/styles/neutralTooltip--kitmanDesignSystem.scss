@@ -1,0 +1,19 @@
+.tippy-box {
+  &[data-theme~='neutral-tooltip--kitmanDesignSystem'] {
+    background-color: $colour-p06;
+    border-radius: 3px;
+    box-shadow: $tooltip-shadow;
+    color: $colour-s18;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 0;
+
+    .tippy-content {
+      padding: 0;
+    }
+
+    .tippy-arrow {
+      display: none;
+    }
+  }
+}

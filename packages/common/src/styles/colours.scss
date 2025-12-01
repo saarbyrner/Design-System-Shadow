@@ -1,0 +1,307 @@
+// Primary Colours
+
+//iP branding variables
+$theme-primary-color: var(--theme-primary-color);
+$theme-secondary-color: var(--theme-secondary-color);
+$theme-primary-1-gradient: var(--theme-primary-1-gradient);
+$theme-primary-2-gradient: var(--theme-primary-2-gradient);
+$theme-primary-3-gradient: var(--theme-primary-3-gradient);
+$theme-primary-4-gradient: var(--theme-primary-4-gradient);
+
+// http://www.colorhexa.com/3a8dee
+$colour-p01: #3a8dee;
+
+// http://www.colorhexa.com/0e478a
+$colour-p02: #0e478a;
+
+// http://www.colorhexa.com/1c1c1c
+$colour-p03: #1c1c1c;
+
+// http://www.colorhexa.com/bec3c7
+$colour-p04: #bec3c7;
+
+// http://www.colorhexa.com/ecf0f1
+$colour-p05: #ecf0f1;
+
+// http://www.colorhexa.com/fff
+$colour-p06: #fff;
+
+// Secondary Colours
+
+// http://www.colorhexa.com/1bbc9c
+$colour-s01: #1bbc9c;
+
+// http://www.colorhexa.com/15a086
+$colour-s02: #15a086;
+
+// http://www.colorhexa.com/2ecc70
+$colour-s03: #2ecc70;
+
+// http://www.colorhexa.com/29ae61
+$colour-s04: #29ae61;
+
+// http://www.colorhexa.com/9b58b5
+$colour-s05: #9b58b5;
+
+// http://www.colorhexa.com/8f44ad
+$colour-s06: #8f44ad;
+
+// http://www.colorhexa.com/f1c410
+$colour-s07: #f1c410;
+
+// http://www.colorhexa.com/f39c11
+$colour-s08: #f39c11;
+
+// http://www.colorhexa.com/e77e23
+$colour-s09: #e77e23;
+
+// http://www.colorhexa.com/d25400
+$colour-s10: #d25400;
+
+// http://www.colorhexa.com/e74d3d
+$colour-s11: #e74d3d;
+
+// http://www.colorhexa.com/c0392b
+$colour-s12: #c0392b;
+
+// http://www.colorhexa.com/f3f3f3
+$colour-s13: #f3f3f3;
+
+// http://www.colorhexa.com/dedede
+$colour-s14: #dedede;
+
+// http://www.colorhexa.com/bec3c7
+$colour-s15: #bec3c7;
+
+// http://www.colorhexa.com/969696
+$colour-s16: #969696;
+
+// http://www.colorhexa.com/676767
+$colour-s17: #676767;
+
+// http://www.colorhexa.com/3f4448
+$colour-s18: #3f4448;
+
+// http://www.colorhexa.com/34495e
+$colour-s19: #34495e;
+
+// http://www.colorhexa.com/2d3e50
+$colour-s20: #2d3e50;
+
+// http://www.colorhexa.com/082e5a
+$colour-s21: #082e5a;
+
+// http://www.colorhexa.com/969696
+$colour-s22: #969696;
+
+// http://www.colorhexa.com/fafafa
+$colour-s23: #fafafa;
+
+$colour-s24: #e424b0;
+
+$colour-s25: #ff2a2a;
+
+$colour-s26: #2b2e31;
+
+$colour-s27: #1e2022;
+
+$colour-s28: #1f2123;
+
+$colour-s29: #313539;
+
+$colour-s30: #ff7d2a;
+
+$colour-s31: #f0f0f0;
+
+$colour-s32: #201c52;
+
+$colour-s33: #f2f2f2;
+
+// In style guide there are no green colours close to this.
+// So I left it as is.
+$km-success-colour: #dff0d8;
+
+.km- {
+  &colour-p01 {
+    color: $colour-p01;
+  }
+
+  &colour-p02 {
+    color: $colour-p02;
+  }
+
+  &colour-p03 {
+    color: $colour-p03;
+  }
+
+  &colour-p04 {
+    color: $colour-p04;
+  }
+
+  &colour-p05 {
+    color: $colour-p05;
+  }
+
+  &colour-p06 {
+    color: $colour-p06;
+  }
+
+  &colour-s01 {
+    color: $colour-s01;
+  }
+
+  &colour-s02 {
+    color: $colour-s02;
+  }
+
+  &colour-s03 {
+    color: $colour-s03;
+  }
+
+  &green,
+  &colour-s04 {
+    color: $colour-s04;
+  }
+
+  &colour-s05 {
+    color: $colour-s05;
+  }
+
+  &colour-s06 {
+    color: $colour-s06;
+  }
+
+  &colour-s07 {
+    color: $colour-s07;
+  }
+
+  &colour-s08 {
+    color: $colour-s08;
+  }
+
+  &colour-s09 {
+    color: $colour-s09;
+  }
+
+  &colour-s10 {
+    color: $colour-s10;
+  }
+
+  &colour-s11 {
+    color: $colour-s11;
+  }
+
+  &red,
+  &colour-s12 {
+    color: $colour-s12;
+  }
+
+  &colour-s13 {
+    color: $colour-s13;
+  }
+
+  &colour-s14 {
+    color: $colour-s14;
+  }
+
+  &colour-s15 {
+    color: $colour-s15;
+  }
+
+  &colour-s16 {
+    color: $colour-s16;
+  }
+
+  &colour-s17 {
+    color: $colour-s17;
+  }
+
+  &colour-s18 {
+    color: $colour-s18;
+  }
+
+  &colour-s19 {
+    color: $colour-s19;
+  }
+
+  &colour-s20 {
+    color: $colour-s20;
+  }
+
+  &colour-s21 {
+    color: $colour-s21;
+  }
+
+  &colour-s22 {
+    color: $colour-s22;
+  }
+}
+
+$transparent-white: rgba($colour-p06, 0.9);
+$transparent-black: rgba(0, 0, 0, 0.2);
+$transparent-blue: rgba(58, 140, 237, 0.05);
+$transparent-red: rgba(192, 57, 43, 0.2);
+$colors-semi_transparent_background: rgba(0, 0, 0, 0.06);
+$colors-light_transparent_background: rgba(0, 0, 0, 0.1);
+
+// Alarm colours
+
+$alarm-colour1: #f3a69e;
+$alarm-colour2: #f9ce88;
+$alarm-colour3: #f8e187;
+$alarm-colour4: #94d6b0;
+$alarm-colour5: $colour-s11;
+$alarm-colour6: $colour-s08;
+$alarm-colour7: $colour-s07;
+$alarm-colour8: $colour-s04;
+
+// New design system colours
+$colour-background: #fafafa;
+
+$colour-cool-light-grey: #cfdcf0;
+$colour-cool-mid-grey: #8e8e93;
+$colour-warm-light-grey: #bfbfbf;
+$colour-light-shadow: rgba($colour-warm-light-grey, 0.15);
+
+$colour-grey-50: #cfd4db;
+$colour-grey-100: #5f7089;
+$colour-grey-100-50-percent: transparentize($colour-grey-100, 0.5);
+$colour-grey-200: #3b4960;
+$colour-grey-300: #1f2d44;
+$colour-grey-300-50-percent: transparentize($colour-grey-300, 0.5);
+$colour-grey-400: #0d1b30;
+
+$colour-neutral-100: #f6f6f6;
+$colour-neutral-200: #f1f2f3;
+$colour-neutral-300: #e8eaed;
+$colour-neutral-400: #cfd4db;
+$colour-neutral-500: #b6c9d4;
+
+$colour-blue-50: #eaf1f9;
+$colour-blue-100: #2a6ebb;
+$colour-blue-100-5-percent: transparentize($colour-blue-100, 0.95);
+$colour-blue-100-10-percent: transparentize($colour-blue-100, 0.9);
+$colour-blue-200: #245ea1;
+$colour-blue-300: #124283;
+$colour-blue-400: #002664;
+
+$colour-green-100: #43b374;
+$colour-green-100-20-percent: transparentize($colour-green-100, 0.8);
+$green-200: #0a875a;
+
+$red-100: #c31d2b;
+$red-100-20-percent: transparentize($red-100, 0.8);
+$red-100-80-percent: transparentize($red-100, 0.2);
+
+$red-100: #c31d2b;
+$red-200: #b11b27;
+$red-300: #931621;
+$colour-red-100-20-percent: transparentize($red-200, 0.8);
+
+$orange-200: #e55e38;
+$colour-orange-100-20-percent: transparentize($orange-200, 0.8);
+
+$yellow-100: #ffab00;
+
+$tooltip-shadow: 0 8px 12px rgba(9, 30, 66, 0.15), 0 0 1px rgba(9, 30, 66, 0.31);
+$section-shadow: 0 1px 1px rgba(9, 30, 66, 0.25), 0 0 1px rgba(9, 30, 66, 0.31);

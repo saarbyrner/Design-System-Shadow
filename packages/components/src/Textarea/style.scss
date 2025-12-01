@@ -1,0 +1,125 @@
+.textarea {
+  color: $colour-s18;
+
+  &__label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-top: 0;
+
+    &--disabled {
+      color: $colour-s18;
+      opacity: 0.5;
+    }
+
+    &--kitmanDesignSystem {
+      color: $colour-grey-100;
+      display: flex;
+      font-size: 12px;
+      font-weight: 600;
+      justify-content: space-between;
+      margin-bottom: 4px;
+      width: 100%;
+
+      &.textarea__label--disabled {
+        color: transparentize($colour-grey-300, 0.5);
+        opacity: 1;
+      }
+    }
+  }
+
+  &__input {
+    border: 1px solid $colour-s15;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 11.5px;
+    vertical-align: top; // Fix unwanted margin at the bottom of the textareas
+    width: 100%;
+
+    // Prevent zoom when the user focus inputs on mobile devices
+    @media (max-width: $breakpoint-tablet) {
+      font-size: 16px;
+    }
+
+    &:disabled {
+      border-color: $colour-p04;
+      color: $colour-p04;
+    }
+
+    &:focus {
+      border: 1px $colour-p01 solid;
+      box-shadow: 0 0 0 1px $colour-p01;
+      outline: 0 !important;
+    }
+
+    &--kitmanDesignSystem {
+      background: $colour-neutral-200;
+      border-color: $colour-neutral-200;
+      border-radius: 3px;
+      border-style: solid;
+      border-width: 2px;
+      color: $colour-grey-200;
+      font-size: 14px;
+      height: 32px;
+      min-height: unset;
+      padding: 2px 8px;
+      transition: background 0.1s ease-out 0s, border-color 0.1s ease-out 0s;
+      width: 100%;
+
+      &.textarea__input--invalid {
+        background: $colour-neutral-200;
+        border-color: $red-100;
+
+        &:hover {
+          background: $colour-neutral-300;
+          border-color: $red-100;
+        }
+      }
+
+      &:hover {
+        background: $colour-neutral-300;
+        color: $colour-grey-300;
+      }
+
+      &:focus {
+        background: $colour-p06;
+        border-color: $colour-blue-100;
+
+        &:hover {
+          background: $colour-p06;
+          border-color: $colour-blue-100;
+        }
+      }
+
+      &:disabled {
+        background: $colour-neutral-200;
+        color: transparentize($colour-grey-300, 0.5);
+        cursor: default;
+      }
+    }
+  }
+
+  &__errorMsg {
+    display: none;
+  }
+
+  .km-error {
+    border: 1px $colour-s11 solid;
+    border-radius: 5px;
+    box-shadow: 0 0 0 1px $colour-s11;
+  }
+
+  &__optional {
+    color: $colour-s16;
+    display: block;
+    margin-top: 5px;
+    text-align: right;
+
+    &--kitmanDesignSystem {
+      color: $colour-grey-100;
+      font-size: 12px;
+      font-weight: 400;
+      margin-top: 0;
+    }
+  }
+}

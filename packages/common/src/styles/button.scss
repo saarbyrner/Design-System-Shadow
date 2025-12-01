@@ -1,0 +1,229 @@
+// Primary button
+.km-btn-primary {
+  &:visited {
+    color: $colour-p06;
+  }
+
+  @include km-common-button;
+  background: $colour-p01;
+  border-color: $colour-p01;
+  color: $colour-p06;
+  padding: 11px 20px;
+
+  &:hover,
+  &:focus {
+    background: $colour-p02;
+    border-color: $colour-p02;
+    color: $colour-p06;
+    cursor: pointer;
+  }
+
+  &:active,
+  &:active {
+    &:focus {
+      background: $colour-s21;
+      border-color: $colour-s21;
+      color: $colour-p06;
+    }
+  }
+
+  &.disabled,
+  &[disabled] {
+    background: $colour-p05;
+    border-color: $colour-p05;
+    color: $colour-s17;
+    opacity: 1;
+  }
+
+  &--save {
+    margin-top: 30px;
+    padding: 11px 80px;
+  }
+}
+
+// Secondary button
+.km-btn-secondary {
+  @include km-common-button;
+  background: $colour-p06;
+  border-color: $colour-p01;
+  color: $colour-p01;
+  padding: 11px 20px;
+
+  &:hover,
+  &:focus {
+    background: $colour-p02;
+    border-color: $colour-p02;
+    color: $colour-p06;
+    cursor: pointer;
+  }
+
+  &:active,
+  &:active {
+    &:focus {
+      background: $colour-s21;
+      border-color: $colour-s21;
+      color: $colour-p06;
+    }
+  }
+
+  &.disabled,
+  &[disabled] {
+    background: $colour-p05;
+    border-color: $colour-p05;
+    color: $colour-s17;
+    opacity: 1;
+  }
+
+  .glyphicon {
+    left: -5px;
+  }
+}
+
+.km-iconButton {
+  align-items: center;
+  background-color: $colour-p06;
+  border: 1px solid $colour-p04;
+  border-radius: 5px;
+  color: $colour-p01;
+  display: inline-flex;
+  height: 45px;
+  justify-content: center;
+  min-width: 50px;
+
+  .km-page-content & {
+    font-weight: normal;
+  }
+
+  &--small {
+    height: 36px;
+  }
+
+  &--hasText {
+    padding: 2px 12px 3px;
+
+    &::before {
+      float: left;
+    }
+
+    .km-iconButton__text {
+      display: inline-block;
+    }
+  }
+
+  &__text {
+    font-family: $main-font;
+    font-weight: 600;
+    margin-left: 8px;
+    margin-top: 1px;
+  }
+
+  &::before {
+    font-size: 22px;
+  }
+
+  &:disabled {
+    border-color: $colour-s14;
+    color: $colour-p04;
+
+    &:hover {
+      background-color: $colour-p06;
+      border-color: $colour-s14;
+      color: $colour-p04;
+    }
+  }
+
+  &:hover {
+    background-color: $colour-p02;
+    border-color: $colour-p02;
+    color: $colour-p06;
+    cursor: pointer;
+  }
+
+  &--transparent {
+    background-color: transparent;
+    border: 0;
+
+    &:hover {
+      background-color: transparent;
+      color: $colour-p01;
+    }
+
+    &:disabled {
+      color: $colour-s14;
+
+      &:hover {
+        background-color: transparent;
+        color: $colour-s14;
+      }
+    }
+  }
+}
+
+.km-btn--selected {
+  background: $colour-p01;
+  border-color: $colour-p01;
+  color: $colour-p06;
+
+  &:hover,
+  &:focus {
+    background: $colour-p02;
+    border-color: $colour-p02;
+    color: $colour-p06;
+    cursor: pointer;
+  }
+
+  &:active,
+  &:active {
+    &:focus {
+      background: $colour-s21;
+      border-color: $colour-s21;
+      color: $colour-p06;
+    }
+  }
+
+  &.disabled,
+  &[disabled] {
+    background: $colour-p05;
+    border-color: $colour-p05;
+    color: $colour-s17;
+    opacity: 1;
+  }
+}
+
+.km-btn-icon {
+  background-color: $colour-p06;
+  background-position: 0 center;
+  background-repeat: no-repeat;
+  border: 0;
+  color: $colour-s18;
+  font-size: 12px;
+  font-weight: 600;
+  height: 20px;
+  line-height: 22px;
+  margin: 0;
+  padding: 0 0 0 26px;
+  text-align: left;
+
+  &.km-btn-icon--smallplus {
+    background-image: url('../img/icon_plus_small.svg');
+    background-size: 16px;
+  }
+}
+
+.km-btn-plain {
+  @include km-common-button;
+  background-color: transparent;
+  color: $colour-p01;
+  font-weight: 600;
+  padding: 7px 0;
+
+  &:hover,
+  &:focus {
+    color: $colour-p01;
+    cursor: pointer;
+  }
+
+  &:active {
+    box-shadow: none;
+  }
+}

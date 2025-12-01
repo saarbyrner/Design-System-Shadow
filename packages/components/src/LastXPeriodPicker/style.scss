@@ -1,0 +1,118 @@
+.lastXPeriodPicker {
+  // modifiers
+  &.lastXPeriodPicker--pushdown {
+    display: inline-block;
+    margin-bottom: 0;
+    margin-top: 29.5px;
+
+    @media (max-width: 991px) {
+      margin-bottom: 20px;
+      margin-top: 0;
+    }
+  }
+
+  .lastXPeriodPicker__input-cont {
+    float: left;
+    height: 45px;
+    position: relative;
+    width: 130px;
+
+    .lastXPeriodPicker__descriptor,
+    .lastXPeriodPicker__input {
+      color: $colour-s18;
+      display: inline-block;
+    }
+
+    .lastXPeriodPicker__descriptor {
+      border-right: 1px solid $colour-s15;
+      font-weight: 600;
+      height: 83%;
+      left: 15px;
+      line-height: 38px;
+      margin: 4px 0;
+      padding-right: 15.5px;
+      position: absolute;
+      top: 0;
+    }
+
+    .lastXPeriodPicker__input {
+      border: 1px solid $colour-s15;
+      border-radius: 4px;
+      font-size: 14px;
+      height: 100%;
+      line-height: 45px;
+      padding-left: 77px;
+      width: 100%;
+
+      &.km-error {
+        border: 2px solid $colour-s11;
+        padding-left: 76px;
+      }
+
+      &:focus {
+        border: 2px solid $colour-p01;
+        padding-left: 76px;
+      }
+
+      &--disabled {
+        border-color: $colour-p04;
+        color: $colour-s18;
+        opacity: 0.65;
+
+        .lastXPeriodPicker__descriptor {
+          border-color: $colour-p04;
+          color: $colour-s18;
+        }
+      }
+    }
+  }
+
+  .lastXPeriodPicker__options {
+    float: left;
+    margin-left: 20px;
+    margin-top: 3px;
+
+    ul {
+      margin-bottom: 0;
+    }
+  }
+
+  &--kitmanDesignSystem {
+    .lastXPeriodPicker__input-cont {
+      height: 36px;
+      display: flex;
+      align-items: center;
+
+      .lastXPeriodPicker__input {
+        background: $colour-neutral-200;
+        border-color: $colour-neutral-200;
+        border-radius: 3px;
+        border-style: solid;
+        border-width: 2px;
+        color: $colour-grey-200;
+        font-size: 14px;
+        height: 32px;
+        line-height: 32px;
+
+        &:focus {
+          border: 2px solid $colour-blue-100;
+          background-color: white;
+          padding-left: 76px;
+        }
+      }
+
+      .lastXPeriodPicker__descriptor {
+        line-height: 24px;
+        height: auto;
+        color: $colour-grey-100;
+        font-size: 12px;
+        font-weight: 600;
+        top: auto;
+      }
+    }
+
+    .lastXPeriodPicker__options {
+      margin-top: 0;
+    }
+  }
+}

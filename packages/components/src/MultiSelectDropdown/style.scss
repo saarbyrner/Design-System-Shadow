@@ -1,0 +1,62 @@
+.multiSelectDropdown {
+  padding: 0;
+
+  li {
+    cursor: pointer;
+    display: flex;
+    margin-bottom: 5px;
+    margin-top: 5px;
+
+    .reactCheckbox {
+      margin: 0 10px 0 12px;
+      width: 100%;
+    }
+  }
+
+  .multiSelectDropdown__selectAll {
+    align-items: center;
+    border-bottom: 1px dashed $colour-p04;
+    cursor: pointer;
+    height: 40px;
+
+    .multipleCheckboxChecker {
+      margin: 0 10px 0 12px;
+      position: relative;
+    }
+
+    .multiSelectDropdown__selectAllText {
+      color: $colour-p03;
+    }
+
+    .multiSelectDropdown__noresults {
+      cursor: default;
+      height: auto;
+      line-height: 23px;
+      padding: 9px 12px 13px;
+
+      span {
+        color: $colour-p01;
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__item {
+    align-items: center;
+
+    &--bold {
+      font-weight: 600;
+    }
+  }
+
+  &--noButton {
+    .multiSelectDropdown__selectAll {
+      border: 0;
+    }
+  }
+
+  &__emptyText {
+    color: $colour-s16;
+    margin: 5px 10px;
+  }
+}

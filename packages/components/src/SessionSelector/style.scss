@@ -1,0 +1,56 @@
+.sessionSelector {
+  > div {
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    width: 250px;
+  }
+
+  &__label {
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  @media (max-width: 1200px) {
+    .daterangepicker {
+      left: -1px !important;
+      padding-bottom: 120px !important;
+      padding-top: 260px !important;
+      top: -3px !important;
+      width: 100%;
+
+      &.dropdown-menu {
+        padding-left: 0;
+        padding-right: 0;
+        width: 101%;
+      }
+
+      .drp-calendar {
+        float: initial;
+        max-width: initial !important;
+      }
+
+      .turnaround_selects {
+        left: 25px !important;
+        top: 30px !important;
+        width: auto !important;
+      }
+
+      .turnaround__footer {
+        &.drp-buttons {
+          border: 0;
+          padding: 20px 20px 21px;
+
+          .btn {
+            &:first-of-type {
+              margin-right: 10px;
+            }
+            margin-left: 0;
+            min-width: 81px;
+            padding: 9px 7px;
+            width: 81px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+// @flow
+export default {
+  addChart: 'Add Chart Widget',
+  addHeader: 'Add Header Widget',
+  addTable: 'Add Table Widget',
+  addProfile: 'Add Profile Widget',
+  addNotes: 'Add Notes Widget',
+  gameDay: 'Game Day Filter',
+  applyFormula: 'Apply Formula',
+  valueViz: 'Add Value Viz',
+  actionsWidget: 'Add Actions Widget',
+  duplicateDashboard: 'Duplicate Dashboard',
+  createDashboard: 'Create Analysis Dashboard',
+  customiseDashboard: 'Customise Analysis Dashboard Layout',
+  pivotDashboard: 'Pivot Analysis Dashboard',
+  editDashboard: 'Edit Dashboard',
+  createChart: 'Create Chart Widget',
+  refreshDashboardData: 'Refresh Dashboard Data',
+  refreshWidgetData: 'Refresh Widget Data',
+};

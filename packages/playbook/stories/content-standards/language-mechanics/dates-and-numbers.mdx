@@ -1,0 +1,57 @@
+import {Meta} from '@storybook/blocks';
+
+
+<Meta title="Content Standards/Language mechanics/Dates and numbers"/>
+
+# Dates and numbers
+
+Clear numeric and date formats reduce ambiguity across locales.
+
+## Dates
+
+Use full month names (February). If space is constrained, use the three-letter abbreviation (Feb). Avoid numeric-only formats (03/04/20) that vary by locale.
+
+Include the day name in full when space allows in calendar views (Wednesday).
+
+Do not use ordinal indicators ("12th") in dates.
+
+**Do** Wednesday, February 12, 2024
+**Don't** Wed, February 12
+
+**Do** February 12, 2024
+**Don't** February 12, '24
+
+**Do** Feb 12, 2024
+**Don't** 02/12/24
+
+## Date ranges
+
+Use an en dash (`Glossary`) without spaces: February 12–April 3. Do not add ordinal indicators.
+
+## Time
+
+- Use locale-specific format (12-hour vs 24-hour) based on user settings.
+- In 12-hour format add a space before am/pm (12:00 pm).
+- Use organization time zone by default.
+- Time ranges: en dash and include am/pm after both times (11:30 am–1:05 pm).
+- Combine date and time with "at" (Feb 12, 2024 at 12:00 pm).
+
+## Time zones
+
+Include only when context differs from organization time. Use three-letter abbreviations: 4:00 pm PST.
+
+## Numbers
+
+Use numerals. Optionally spell numbers below 10 if not critical to meaning. Avoid thousand separators if the UI design omits them; prefer consistent formatting (check with design system tokens). Do not truncate significant digits.
+
+Ranges: use an en dash (3–5 sessions). If preceded by "from", use "to" (from 3 to 5). If preceded by "between", use "and" (between 3 and 5).
+
+## Units of measurement
+
+- Storage sizes: uppercase unit after a space (10 GB).
+- Dimensions and weights: lowercase unit after a space (5 kg, 12 cm).
+- Use decimals, not fractions (2.5 kg, not 2 1/2 kg).
+
+## Related
+
+- `grammar-and-mechanics`

@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getPlanningHubEventData getAddColumnToParticipantsOrCollectionTabTable 1`] = `
+Object {
+  "Calculation": "Max",
+  "Data Source": "% Difference",
+  "Event Type": "Session",
+}
+`;
+
+exports[`getPlanningHubEventData getAddDrillToSessionData 1`] = `
+Object {
+  "Favourites": true,
+}
+`;
+
+exports[`getPlanningHubEventData getAthleteFiltersAndSorting 1`] = `
+Object {
+  "Filters": Array [
+    "positions",
+    "squads",
+    "availabilities",
+  ],
+  "Sorting": "primary_squad",
+}
+`;
+
+exports[`getPlanningHubEventData getDrillData 1`] = `
+Object {
+  "# of principles added": 1,
+  "From": "Coaching library",
+  "Library": true,
+}
+`;
+
+exports[`getPlanningHubEventData getImportTypeAndVendor should return as expected when CSV type 1`] = `
+Object {
+  "DataSource": "CSV",
+  "FileType": "aurora-ring",
+}
+`;
+
+exports[`getPlanningHubEventData getImportTypeAndVendor should return as expected when integration type 1`] = `
+Object {
+  "DataSource": "API",
+  "FileType": "StatSports",
+}
+`;
+
+exports[`getPlanningHubEventData getRPECollectionChannelsData 1`] = `
+Object {
+  "AthleteAppCollection": false,
+  "KioskAppCollection": true,
+  "KioskAppDisplayStyle": "Grid",
+}
+`;

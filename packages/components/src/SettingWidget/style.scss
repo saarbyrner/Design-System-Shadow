@@ -1,0 +1,92 @@
+.settingWidget {
+  margin-bottom: 30px;
+
+  &__headerContainer {
+    background: $colour-s13;
+    border: 1px solid $colour-s14;
+    border-radius: 5px 5px 0 0;
+    color: $colour-p03;
+    display: flex;
+    height: 54px;
+    justify-content: space-between;
+  }
+
+  &__content {
+    border: 1px $colour-s14 solid;
+    border-radius: 0 0 5px 5px;
+    border-top: 0;
+    padding: 15px 20px;
+  }
+
+  &__headerText {
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 20px;
+    margin-top: 16px;
+  }
+
+  &__headerControls {
+    align-items: center;
+    display: flex;
+    margin-right: 25px;
+
+    .textButton {
+      height: 32px;
+      min-width: 50px;
+      padding: 6px 20px;
+    }
+  }
+
+  &__restoreDefaults {
+    color: $colour-p01;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+  }
+}
+
+.settingWidget--kitmanDesignSystem {
+  margin-bottom: 30px;
+
+  &__headerContainer {
+    background: $colour-p06;
+    border-radius: 3px 3px 0 0;
+    color: $colour-p03;
+    display: flex;
+    height: 54px;
+    justify-content: space-between;
+  }
+
+  &__content {
+    background: $colour-p06;
+    border-radius: 0 0 3px 3px;
+    border-top: 0;
+    padding: 15px 20px;
+  }
+
+  &__headerText {
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 20px;
+    margin-top: 16px;
+  }
+
+  &__headerControls {
+    align-items: center;
+    display: flex;
+    margin-right: 25px;
+
+    .textButton {
+      height: 32px;
+      min-width: 50px;
+      padding: 6px 20px;
+    }
+  }
+
+  &__restoreDefaults {
+    color: $colour-p01;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+  }
+}

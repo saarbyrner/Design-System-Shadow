@@ -1,0 +1,91 @@
+.athleteSelector {
+  padding-left: 10px;
+  padding-right: 10px;
+
+  &--singleSelection {
+    .athleteSelector__selectAll,
+    .athleteSelector__clearAll {
+      display: none;
+    }
+  }
+
+  &--onlyAthletes {
+    .athleteSelector__entireSquadItem,
+    .athleteSelector__positionGroupItem,
+    .athleteSelector__positionItem {
+      display: none;
+    }
+  }
+
+  &__section {
+    border-bottom: 1px dashed $colour-s14;
+    padding-bottom: 7px;
+    padding-top: 10px;
+
+    header {
+      align-items: center;
+      display: flex;
+      height: 28px;
+      justify-content: space-between;
+    }
+  }
+
+  &__SquadSelector {
+    border: 0;
+    padding-bottom: 0;
+  }
+
+  &__selectAll,
+  &__clearAll {
+    color: $colour-p01;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 14px;
+    padding: 0 10px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__clearAll {
+    padding-right: 0;
+  }
+
+  &__selectAll {
+    border-right: 1px solid $colour-p04;
+  }
+
+  &__positionGroupName,
+  &__entireSquadGroupName,
+  &__SquadGroupName {
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  &__positionItem,
+  &__positionGroupItem,
+  &__entireSquadItem,
+  &__allSquadsItem {
+    font-weight: 700;
+  }
+
+  &__athleteItem,
+  &__positionItem,
+  &__positionGroupItem,
+  &__entireSquadItem,
+  &__squadItem,
+  &__allSquadsItem {
+    align-items: center;
+    display: flex;
+    height: 35px;
+  }
+
+  &__positionGroupList,
+  &__positionList,
+  &__athleteList,
+  &__squadList {
+    list-style: none;
+    padding: 0;
+  }
+}

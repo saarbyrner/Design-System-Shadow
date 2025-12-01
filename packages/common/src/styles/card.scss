@@ -1,0 +1,57 @@
+.km-card {
+  border: 1px solid $colour-p05;
+  margin-bottom: 15px;
+  position: relative;
+
+  .km-card-image {
+    display: inline;
+  }
+
+  .km-card-content {
+    display: inline;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+  }
+
+  a {
+    font-weight: normal;
+  }
+}
+
+.km-availability-triangle {
+  border-right: 16px solid transparent;
+  border-top: 14px solid $colour-p06;
+  display: block;
+  height: 0;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 0;
+
+  &::before {
+    border-right: 15px solid transparent;
+    border-top: 13px solid $colour-s25;
+    content: '';
+    display: block;
+    height: 0;
+    left: 0;
+    position: absolute;
+    top: -14px;
+    width: 0;
+    z-index: 0;
+  }
+
+  &.km-availability-available {
+    display: none;
+  }
+
+  &.km-availability-injured::before {
+    border-top-color: $colour-s09;
+  }
+
+  &.km-availability-returning::before {
+    border-top-color: $colour-s07;
+  }
+}

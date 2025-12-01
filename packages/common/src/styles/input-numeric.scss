@@ -1,0 +1,110 @@
+.inputNumeric {
+  height: 45px;
+  position: relative;
+  width: 130px;
+
+  .inputNumeric__descriptor,
+  input {
+    color: $colour-s18;
+    display: inline-block;
+  }
+
+  .inputNumeric__descriptor {
+    background: $colour-p06;
+    border-left: 1px solid $colour-s15;
+    font-weight: 400;
+    height: 83%;
+    line-height: 38px;
+    margin: 4px 0;
+    max-width: 80%;
+    overflow: hidden;
+    padding-left: 15.5px;
+    position: absolute;
+    right: 15px;
+    text-overflow: ellipsis;
+    top: 0;
+    white-space: nowrap;
+  }
+
+  &.inputNumeric--disabled {
+    box-shadow: none;
+    opacity: 0.65;
+  }
+
+  input {
+    border: 1px solid $colour-s15;
+    border-radius: 4px;
+    font-size: 14px;
+    height: 100%;
+    line-height: 45px;
+    padding-left: 15.5px;
+    padding-right: 77px;
+    width: 100%;
+
+    &.km-error {
+      border: 1px solid $colour-s11;
+      box-shadow: 0 0 0 1px $colour-s11;
+    }
+
+    &:focus {
+      border: 1px solid $colour-p01;
+      box-shadow: 0 0 0 1px $colour-p01;
+      padding-left: 14.5px;
+      padding-right: 76px;
+    }
+
+    &[disabled] {
+      @include cursor-disabled();
+
+      &:focus {
+        outline: none !important;
+      }
+    }
+  }
+
+  &--noUnit {
+    input {
+      padding-left: 15.5px;
+      padding-right: 15.5px;
+
+      &:focus {
+        padding-left: 14.5px;
+        padding-right: 14.5px;
+      }
+    }
+  }
+
+  &--fullWidth {
+    width: 100%;
+
+    .inputNumeric__descriptor {
+      max-width: 50%;
+    }
+  }
+
+  &--labelLeft {
+    .inputNumeric__descriptor {
+      border-left: 0;
+      border-right: 1px solid $colour-s15;
+      left: 15px;
+      padding-left: 0;
+      padding-right: 15.5px;
+      right: auto;
+    }
+
+    input {
+      padding-left: 77px;
+      padding-right: 15.5px;
+      text-align: right;
+
+      &:focus {
+        padding-left: 76px;
+        padding-right: 14.5px;
+      }
+    }
+  }
+
+  &--noLabel {
+    margin-top: 28px;
+  }
+}

@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getChangeStatusPanelTrackingData should return the correct tracking data with userType 1`] = `
+Object {
+  "userType": "athlete",
+}
+`;
+
+exports[`getChangeStatusPanelTrackingData should return the correct tracking data with userType and reason 1`] = `
+Object {
+  "reason": "reason",
+  "userType": "athlete",
+}
+`;
+
+exports[`getChangeStatusPanelTrackingData should return the correct tracking data with userType and status 1`] = `
+Object {
+  "status": "approved",
+  "userType": "athlete",
+}
+`;

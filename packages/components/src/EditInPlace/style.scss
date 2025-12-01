@@ -1,0 +1,57 @@
+.edit-in-place {
+  $height: 35px;
+
+  align-items: center;
+  display: flex;
+  width: 100%;
+
+  &--invalid {
+    border: 2px solid $red-100;
+
+    h6 {
+      padding-left: 11px;
+    }
+  }
+
+  &__input {
+    border: 1px solid $colour-p04;
+    border-radius: 5px;
+    color: $colour-s18;
+    flex: 1;
+    height: $height;
+    padding-left: 11px;
+  }
+
+  &__action-icon {
+    cursor: pointer;
+    font-size: 22px;
+    margin-left: 6px;
+
+    &--success {
+      color: $colour-grey-200;
+    }
+
+    &--error {
+      color: $colour-grey-200;
+    }
+
+    &--disabled {
+      pointer-events: none;
+    }
+  }
+
+  &__title {
+    color: $colour-grey-200;
+    cursor: pointer;
+    line-height: $height;
+    margin: 0;
+    font-weight: 400;
+  }
+
+  &__title-icon {
+    color: $colour-p04;
+    cursor: pointer;
+    font-size: 18px;
+    margin-left: 6px;
+  }
+}

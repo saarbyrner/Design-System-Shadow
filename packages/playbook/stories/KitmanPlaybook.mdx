@@ -1,0 +1,61 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Kitman Playbook" />
+
+<img src="/hero.png" style={{ borderRadius: 8, marginBottom: 8 }} />
+
+## About
+
+[Playbook](https://sites.google.com/kitmanlabs.com/playbook/home) is the design system for [Kitman Labs](https://kitmanlabs.com). This documentation, built with [storybook](https://storybook.js.org/), aims to bring together all the pieces you need to build UI's with Playbook
+
+## How to use this guide
+
+Playbook is built using [Material UI](https://mui.com/material-ui/). Components in the side bar should be directly mapped to Components within the material UI docs. This guide will provide the details for any additional configuration added within `@kitman/playbook`.
+
+This storybook should be the go to place for all documentation related to Playbook, and Kitman's implementation of Material ui
+
+Every component and story has:
+
+- A live example
+- A link to the the coressponding Material UI docs
+- A set of props that can be edited in line with designs guidelines
+- A link and explorer of the design's figma file within the playbook master
+
+It is recomended to use this guide in conjunction with the MUI docs, Playbook provides a set of defaults and wrappers to adapt MUI components so they look consistent with Kitman's brand.
+
+We do not wish to restrict MUI's functionality, but make it easy to use and provide structure so we can easily build Kitman's core products.
+
+## Playbook theme
+
+Playbook components should come styled out of the box with the default props applied to match designs. Components will have a set of default props applied to match the basic use cases. This theme is defined and maintained by the design team.
+
+## Usage
+
+Playbook is built using the following `@mui` packages
+
+- `@mui/base`
+- `@mui/icons-material`
+- `@mui/lab`
+- `@mui/material`
+- `@mui/x-data-grid-pro`
+- `@mui/x-date-pickers-pro`
+
+API documentation for all components are found [here](https://mui.com/material-ui/getting-started/)
+
+It is not recommended to import material components directly from MUI. This gives playbook the flexibility to add wrapper components to suit Kitman labs needs, or to create universal components whos styles have been [overrided](https://mui.com/material-ui/customization/how-to-customize/#2-reusable-component).
+
+Example, MUI docs would suggest:
+
+```javascript
+import TextField from '@mui/material/Stack';
+import Button from '@mui/material/Button';
+```
+
+But it is reccomended to import via playbook so consistent usage is maintained
+
+```javascript
+import {
+  TextField,
+  Button
+} from `@kitman/playbook/components`
+```

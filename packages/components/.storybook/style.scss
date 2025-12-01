@@ -1,0 +1,40 @@
+@import '@kitman/common/src/styles/index.scss';
+@import '../src/style.scss';
+
+// Style dependencies
+@import '../../../node_modules/filepond/dist/filepond';
+@import '../../../node_modules/filepond-plugin-image-preview/dist/filepond-plugin-image-preview';
+@import '../../../node_modules/tippy.js/dist/tippy';
+@import '../../../node_modules/rc-time-picker/assets/index';
+@import '../../../node_modules/rc-tabs/dist/rc-tabs';
+
+// Storybook specific layouts
+.storybook__iconGrid {
+  column-gap: 15px;
+  display: grid;
+  grid: auto-flow dense / 1fr 1fr 1fr 1fr;
+}
+
+.storybook__formComponentHolder {
+  box-sizing: border-box;
+  display: block;
+  max-width: 400px;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: relative;
+  width: 100%;
+
+  .customDropdown {
+    ::before {
+      box-sizing: border-box;
+    }
+
+    ::after {
+      box-sizing: border-box;
+    }
+
+    .customDropdown__menu {
+      max-height: 125px;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.chooseNameModal {
+  &--withAdminContent {
+    min-height: 225px;
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    .km-datagrid-modalFooter {
+      display: flex;
+      justify-content: space-between;
+
+      button {
+        margin: 0;
+        min-width: 150px;
+      }
+    }
+  }
+}

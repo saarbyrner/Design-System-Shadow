@@ -1,0 +1,17 @@
+.errorBoundary {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  min-height: 200px;
+
+  h3 {
+    margin-bottom: 20px;
+  }
+}
+
+div#errorIcon svg {
+  width: 98px;
+  height: 98px;
+}

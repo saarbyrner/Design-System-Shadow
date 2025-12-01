@@ -1,0 +1,17 @@
+// This class is used as a wrapper to prepend an icon in an input field.
+.filterInput {
+  position: relative;
+
+  .filterInput__searchIcon {
+    color: $colour-s16;
+    display: block;
+    font-size: 24px;
+    left: 10px;
+    position: absolute;
+    top: 11px;
+  }
+
+  input {
+    padding-left: 38px;
+  }
+}

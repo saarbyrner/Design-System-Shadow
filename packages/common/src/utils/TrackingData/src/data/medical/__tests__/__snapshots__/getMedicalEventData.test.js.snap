@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getMedicalEventData determineMedicalLevel correctly returns athlete level 1`] = `
+Object {
+  "level": "athlete",
+  "tab": "#issues",
+}
+`;
+
+exports[`getMedicalEventData determineMedicalLevel correctly returns athlete level and tab 1`] = `
+Object {
+  "level": "athlete",
+  "tab": "#concussion",
+}
+`;
+
+exports[`getMedicalEventData determineMedicalLevel correctly returns issue level and tab for injuries 1`] = `
+Object {
+  "level": "issue",
+  "tab": "#treatments",
+}
+`;
+
+exports[`getMedicalEventData determineMedicalLevel correctly returns issue level for chronic issues 1`] = `
+Object {
+  "level": "issue",
+  "tab": "#issue",
+}
+`;
+
+exports[`getMedicalEventData determineMedicalLevel correctly returns issue level for illnesses 1`] = `
+Object {
+  "level": "issue",
+  "tab": "#issue",
+}
+`;
+
+exports[`getMedicalEventData determineMedicalLevel correctly returns issue level for injuries 1`] = `
+Object {
+  "level": "issue",
+  "tab": "#issue",
+}
+`;
+
+exports[`getMedicalEventData determineMedicalLevel correctly returns team level 1`] = `
+Object {
+  "level": "team",
+  "tab": "#overview",
+}
+`;
+
+exports[`getMedicalEventData determineMedicalLevel correctly returns team level and tab 1`] = `
+Object {
+  "level": "team",
+  "tab": "#treatments",
+}
+`;
+
+exports[`getMedicalEventData determineMedicalLevel correctly returns team level and unknown tab 1`] = `
+Object {
+  "level": "team",
+  "tab": "unknown",
+}
+`;
+
+exports[`getMedicalEventData getAthleteId 1`] = `
+Object {
+  "athleteId": 12345,
+}
+`;
+
+exports[`getMedicalEventData getDocumentActionElement 1`] = `
+Object {
+  "actionElement": "Add menu",
+}
+`;
+
+exports[`getMedicalEventData getIssueType 1`] = `
+Object {
+  "issueType": "INJURY",
+}
+`;
+
+exports[`getMedicalEventData getLevelAndTab 1`] = `
+Object {
+  "level": "team",
+  "tab": "#overview",
+}
+`;
+
+exports[`getMedicalEventData getNoteActionElement 1`] = `
+Object {
+  "actionElement": "Row meatball",
+}
+`;

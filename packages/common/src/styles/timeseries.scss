@@ -1,0 +1,447 @@
+// Date picker
+
+td {
+  &.disabled {
+    text-decoration: none !important;
+  }
+}
+
+.daterangepicker {
+  color: $colour-s18;
+  font-family: 'Open Sans';
+  line-height: 20px;
+
+  &.opensleft,
+  &.openscenter {
+    &:after,
+    &:before {
+      display: none;
+    }
+  }
+
+  .drp-calendar {
+    margin: 4px;
+
+    &.left,
+    &.right {
+      padding: 0;
+    }
+  }
+
+  .calendar-table {
+    border: 0;
+    padding: 0.5em 1em;
+
+    table {
+      border-collapse: separate;
+      border-spacing: 0 4px;
+
+      th {
+        font-size: 12px;
+        max-width: 29px;
+      }
+
+      thead {
+        th {
+          border: 0;
+          height: 33px;
+          line-height: 20px;
+
+          &.next,
+          &.prev {
+            @include kitman-font;
+            line-height: 5px;
+
+            span {
+              display: none;
+            }
+          }
+
+          &.prev {
+            &:before {
+              color: $colour-p01;
+              content: '\e913';
+              font-size: 18px;
+              position: relative;
+              top: 2px;
+            }
+          }
+
+          &.next {
+            &:before {
+              color: $colour-p01;
+              content: '\e904';
+              font-size: 18px;
+              position: relative;
+              top: 2px;
+            }
+          }
+
+          &.month {
+            color: $colour-s16;
+            cursor: default;
+            font-size: 14px;
+            font-weight: 600;
+          }
+        }
+
+        tr {
+          &:nth-child(2) {
+            th {
+              color: $colour-s17;
+              font-size: 14px;
+              font-weight: 700;
+              padding-bottom: 13px;
+              padding-top: 18px;
+            }
+          }
+        }
+      }
+
+      tbody {
+        td {
+          border: 0;
+          font-size: 14px;
+          line-height: 20px;
+          padding: 5px;
+
+          &.disabled {
+            color: $colour-s14;
+            cursor: default;
+
+            &:hover {
+              cursor: default;
+            }
+          }
+
+          &.active {
+            color: $colour-p06;
+          }
+
+          &.available {
+            &:hover {
+              background-color: $colour-p01;
+              color: $colour-p06;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .fa {
+    &.glyphicon {
+      // use !important to prevent issues with browser extensions that change fonts
+      font-family: 'kitman' !important;
+      font-style: normal;
+      font-variant: normal;
+      font-weight: normal;
+      line-height: 1;
+      speak: none;
+      text-transform: none;
+    }
+  }
+
+  .glyphicon-chevron-left {
+    &:before {
+      color: $colour-p01;
+      content: '\e913';
+      font-size: 18px;
+    }
+  }
+
+  .glyphicon-chevron-right {
+    &:before {
+      color: $colour-p01;
+      content: '\e904';
+      font-size: 18px;
+    }
+  }
+
+  td {
+    &.in-range {
+      background: rgba($colour-p01, 0.15);
+      color: $colour-s18;
+
+      &:first-of-type {
+        border-radius: 15px 0 0 15px;
+
+        &.end-date {
+          border-radius: 0 15px 15px 0;
+        }
+
+        &:hover {
+          border-radius: 0;
+        }
+      }
+
+      &:last-of-type {
+        border-radius: 0 15px 15px 0;
+
+        &.start-date {
+          border-radius: 15px 0 0 15px;
+        }
+
+        &:hover {
+          border-radius: 0;
+        }
+      }
+    }
+
+    &.start-date {
+      border-radius: 15px 0 0 15px;
+    }
+
+    &.end-date {
+      border-radius: 0 15px 15px 0;
+    }
+
+    &.active,
+    &.active:hover {
+      background-color: $colour-p01;
+      border-color: $colour-p01;
+      color: $colour-p06;
+    }
+
+    &.active {
+      &.off {
+        color: #999 !important;
+
+        &:hover {
+          color: $colour-p06 !important;
+        }
+      }
+    }
+  }
+
+  .input-mini {
+    box-sizing: border-box;
+  }
+
+  .calendar {
+    td,
+    th {
+      box-sizing: border-box;
+    }
+
+    &.left {
+      .calendar-table {
+        padding-right: 15px !important;
+      }
+    }
+
+    &.right {
+      .calendar-table {
+        padding-left: 0.5em !important;
+        padding-right: 2em !important;
+      }
+    }
+  }
+
+  .range_inputs {
+    float: right;
+    right: 25px;
+
+    button {
+      font-size: 14px;
+      margin-left: 10px;
+      width: 140px;
+    }
+  }
+
+  &.dropdown-menu {
+    padding-bottom: 100px;
+    padding-left: 20px;
+    padding-right: 200px;
+    padding-top: 15px;
+    width: 750px;
+  }
+
+  .drp-buttons {
+    .cancelBtn,
+    .applyBtn {
+      font-size: 14px;
+      padding: 7px 15px;
+      width: 140px;
+    }
+  }
+}
+
+.daterangepicker_input {
+  display: none;
+}
+
+.turnaround_selects {
+  position: absolute;
+  right: 30px;
+  top: 32px;
+  width: 180px;
+
+  h3 {
+    color: $colour-s18;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.25em;
+    margin: 0;
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+
+  p {
+    font-size: 12px;
+    margin: 0;
+  }
+
+  select {
+    font-size: 12px;
+    width: 140px;
+  }
+}
+
+input {
+  &[name='daterange'] {
+    background: none;
+    border: 0;
+    box-shadow: none;
+    cursor: pointer;
+    font-size: 1.1em;
+    margin: 0;
+    padding: 0 5px;
+  }
+}
+
+i {
+  &.fa-chevron-left,
+  &.fa-chevron-right,
+  &.fa-calendar {
+    display: inline-block;
+    height: 18px;
+    width: 18px;
+  }
+
+  &.fa-chevron-left {
+    background-position: -430px -68px;
+  }
+
+  &.fa-chevron-right {
+    background-position: -454px -68px;
+  }
+
+  &.fa-calendar {
+    background-position: -192px -120px;
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .daterangepicker {
+    overflow: hidden;
+
+    &.dropdown-menu {
+      padding-bottom: 100px;
+      padding-right: 30px;
+      padding-top: 250px;
+      width: 300px;
+    }
+
+    .turnaround__footer {
+      .btn {
+        min-width: 100px;
+        width: auto;
+      }
+    }
+  }
+
+  .turnaround_selects {
+    left: 25px;
+    top: 30px;
+    width: 245px;
+  }
+}
+
+.dateRangeFormatted {
+  color: $colour-p04;
+  font-size: 1.1em;
+  height: 40px;
+
+  &.timeseries-disabled {
+    span {
+      color: $colour-s14;
+      text-shadow: 0 1px 0 transparentize($colour-p06, 0.3);
+
+      &:hover {
+        background: none;
+        border-color: $colour-s14;
+        color: $colour-s14;
+        cursor: text;
+      }
+    }
+  }
+
+  &__selector {
+    border: 2px dotted transparent;
+    border-radius: 3px;
+    color: $colour-s16;
+    margin-bottom: 10px;
+    padding: 5px 7px;
+
+    &:hover {
+      background: $colour-p06;
+      border: 2px dotted $colour-s14;
+      color: $colour-s18;
+      cursor: pointer;
+    }
+  }
+}
+
+.loading-screen {
+  background: transparentize($colour-p03, 0.5);
+  color: $colour-p06;
+  display: none;
+  height: 100%;
+  left: 0;
+  padding-top: 100px;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+
+  h1 {
+    color: $colour-p06;
+    font-size: 2.8em;
+    font-weight: normal;
+  }
+
+  h2 {
+    color: $colour-s14;
+    font-size: 1.3em;
+    font-weight: normal;
+  }
+}
+
+.turnaround__label {
+  color: $colour-s18;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  margin-top: 15px;
+}
+
+.turnaround__footer {
+  &.drp-buttons {
+    border-top: 1px dashed $colour-s14;
+    bottom: 0;
+    display: block;
+    margin: 0;
+    padding: 20px 30px 21px;
+    position: absolute;
+    right: 0;
+    width: 100%;
+  }
+}
+
+.timeseries-controls {
+  margin-right: 15px;
+  margin-top: 15px;
+  position: relative;
+}

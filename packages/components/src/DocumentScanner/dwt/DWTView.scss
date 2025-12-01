@@ -1,0 +1,93 @@
+.DWTcontainerTop {
+  position: relative;
+  float: left;
+  width: 647px;
+  height: 572px;
+}
+
+.DWTcontainerTop .divEdit {
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 60px;
+  background: #fff;
+}
+
+.DWTcontainerTop .divEdit .operateGrp li {
+  margin: 0;
+  width: 60px;
+  height: 57px;
+  line-height: 52px;
+  border-bottom: solid 1px $colour-s14;
+  text-align: center;
+}
+
+.DWTcontainerTop .divEdit .operateGrp li:nth-last-child(2) {
+  height: 58px;
+}
+
+.DWTcontainerTop .divEdit .operateGrp li:first-child {
+  border-top: solid 1px $colour-s14;
+}
+
+.DWTcontainerTop .divEdit .operateGrp li > img {
+  cursor: pointer;
+}
+
+.ds-dwt-container-box > div {
+  border: none !important;
+}
+
+.dynamsoft-dwt-container-box > div {
+  border: none !important;
+}
+
+.image-container * {
+  box-sizing: content-box;
+}
+
+.spanContainer {
+  position: absolute;
+  left: 0px;
+  top: -14px;
+  color: blue;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.navigatePanel {
+  position: absolute;
+  bottom: 0;
+  padding: 14px 25px;
+  height: 57px;
+  background: $colour-s23;
+  font-size: 14px;
+}
+
+.navigatePanel input[type='text'] {
+  height: 20px;
+  width: 30px;
+  font-size: 12px;
+  border: 1px solid $colour-s14;
+  cursor: default;
+}
+
+.previewMode {
+  float: right;
+  padding: 0 5px;
+  margin-left: 5px;
+  width: 80px;
+}
+
+.dvs-WebViewer {
+  border-color: $colour-s14 !important;
+}
+
+.DWT {
+  &__pageCounter {
+    display: inline-flex;
+    padding: 4px 12px;
+    line-height: 24px;
+    vertical-align: top;
+  }
+}

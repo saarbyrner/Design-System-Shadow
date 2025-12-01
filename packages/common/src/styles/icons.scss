@@ -1,0 +1,789 @@
+@font-face {
+  font-display: block;
+  font-family: 'kitman';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/kitman-font-icons/kitman.eot?1zfayi');
+  src: url('../fonts/kitman-font-icons/kitman.eot?1zfayi#iefix')
+      format('embedded-opentype'),
+    url('../fonts/kitman-font-icons/kitman.ttf?1zfayi') format('truetype'),
+    url('../fonts/kitman-font-icons/kitman.woff?1zfayi') format('woff'),
+    url('../fonts/kitman-font-icons/kitman.svg?1zfayi#kitman') format('svg');
+}
+
+@mixin kitman-font {
+  // Better Font Rendering
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  // use !important to prevent issues with browser extensions that change fonts
+  font-family: 'kitman' !important;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  speak: none;
+  text-transform: none;
+}
+
+$checkmark-symbol: '\e956' !default;
+$dash-symbol: '\e959' !default;
+
+[class^='icon-'],
+[class*=' icon-'] {
+  @include kitman-font;
+}
+
+.icon-yellow-card:before {
+  content: '\e97c';
+  color: $yellow-100;
+}
+
+.icon-red-card:before {
+  content: '\e97c';
+  color: $red-100;
+}
+
+.icon-boot:before {
+  content: '\e97d';
+}
+
+.icon-ball:before {
+  content: '\e97e';
+}
+
+.icon-search-field:before {
+  content: '\e976';
+}
+
+.icon-validation-success:before {
+  content: '\e977';
+  color: $green-200;
+  font-size: 16px;
+  position: relative;
+  top: 2px;
+}
+
+.icon-validation-error:before {
+  content: '\e978';
+  color: $red-100;
+  font-size: 16px;
+  position: relative;
+  top: 2px;
+}
+
+.icon-error-active:before {
+  content: '\e981';
+}
+.icon-info-active:before {
+  content: '\e982';
+}
+.icon-warning-active:before {
+  content: '\e983';
+}
+
+.icon-drag-handle:before {
+  content: '\e979';
+}
+
+.icon-time-selection:before {
+  content: '\e97a';
+}
+
+.icon-date-selection:before {
+  content: '\e97b';
+}
+
+.icon-attach-file:before {
+  content: '\e973';
+}
+
+.icon-menu:before {
+  content: '\e974';
+}
+
+.icon-emoji:before {
+  content: '\e975';
+}
+
+.icon-sign-out:before {
+  content: '\e971';
+}
+
+.icon-person-circle:before {
+  content: '\e972';
+}
+
+.icon-star-filled:before {
+  content: '\e96f';
+}
+
+.icon-star:before {
+  content: '\e970';
+}
+
+.icon-new-message:before {
+  content: '\e96c';
+}
+
+.icon-people-group:before {
+  content: '\e96d';
+}
+
+.icon-person:before {
+  content: '\e96e';
+}
+
+.icon-home:before {
+  content: '\e96a';
+}
+
+.icon-chevron-down:before {
+  content: '\e96b';
+}
+
+.icon-at:before {
+  content: '\e966';
+}
+
+.icon-leave:before {
+  content: '\e967';
+}
+
+.icon-messaging:before {
+  content: '\e968';
+}
+
+.icon-send:before {
+  content: '\e969';
+}
+
+.icon-circle-border:before {
+  content: '\e97f';
+}
+
+.icon-circle-tick:before {
+  content: '\e95a';
+}
+
+.icon-circle-cross:before {
+  content: '\e95b';
+}
+
+.icon-reorder-list:before {
+  content: '\e95c';
+}
+
+.icon-minus:before {
+  content: $dash-symbol;
+}
+
+.icon-comment:before {
+  content: '\e957';
+}
+
+.icon-template:before {
+  content: '\e958';
+}
+
+.icon-check:before {
+  content: $checkmark-symbol;
+}
+
+.icon-link:before {
+  content: '\e94d';
+}
+
+.icon-error:before {
+  content: '\e955';
+}
+
+.icon-more:before {
+  content: '\e93c';
+}
+
+.icon-mail:before {
+  content: '\e910';
+}
+
+.icon-document:before {
+  content: '\e91b';
+}
+
+.icon-column-graph:before {
+  content: '\e932';
+}
+
+.icon-bar-graph:before {
+  content: '\e945';
+}
+
+.icon-stack-column-graph:before {
+  content: '\e941';
+}
+
+.icon-stack-bar-graph:before {
+  content: '\e944';
+}
+
+.icon-dashboard:before {
+  content: '\e937';
+}
+
+.icon-nav-activity:before {
+  content: '\e93b';
+}
+
+.icon-burger:before {
+  content: '\e93a';
+}
+
+.icon-athletes:before {
+  content: '\e936';
+}
+
+.icon-workload:before {
+  content: '\e935';
+}
+
+.icon-nav-alert:before {
+  content: '\e934';
+}
+
+.icon-questionnaire:before {
+  content: '\e933';
+}
+
+.icon-attachment:before {
+  content: '\e931';
+}
+
+.icon-spider-graph:before {
+  content: '\e930';
+}
+
+.icon-radar-graph:before {
+  content: '\e942';
+}
+
+.icon-donut-graph:before {
+  content: '\e93f';
+}
+
+.icon-pie-graph:before {
+  content: '\e943';
+}
+
+.icon-value-graph:before {
+  content: '\e946';
+}
+
+.icon-resize:before {
+  content: '\e947';
+}
+
+.icon-customise-layout:before {
+  content: '\e948';
+}
+
+.icon-healthcare:before {
+  content: '\e92f';
+}
+
+.icon-medical:before {
+  content: '\e980';
+}
+
+.icon-thermometer:before {
+  content: '\e92e';
+}
+
+.icon-alert:before {
+  content: '\e92d';
+}
+
+.icon-upload:before {
+  content: '\e92c';
+}
+
+.icon-expand:before {
+  content: '\e929';
+}
+
+.icon-line-graph:before {
+  content: '\e92a';
+}
+
+.icon-table:before {
+  content: '\e92b';
+}
+
+.icon-warning:before {
+  content: '\e926';
+}
+
+.icon-edit-name:before {
+  content: '\e927';
+}
+
+.icon-arrows-up-down:before {
+  content: '\e963';
+}
+
+.icon-arrow-up:before {
+  content: '\e965';
+}
+
+.icon-arrow-down:before {
+  content: '\e964';
+}
+
+.icon-arrow-left:before {
+  content: '\e914';
+}
+
+.icon-arrow-right:before {
+  content: '\e905';
+}
+
+.icon-next-left:before {
+  content: '\e913';
+}
+
+.icon-up:before {
+  content: '\e938';
+}
+
+.icon-down:before {
+  content: '\e939';
+}
+
+.icon-next-right:before {
+  content: '\e904';
+}
+
+.icon-last-left:before {
+  content: '\e912';
+}
+
+.icon-last-right:before {
+  content: '\e903';
+}
+
+.icon-close:before {
+  content: '\e90c';
+}
+
+.icon-bin:before {
+  content: '\e907';
+}
+
+.icon-edit:before {
+  content: '\e906';
+}
+
+.icon-edit-graph:before {
+  content: '\e928';
+}
+
+.icon-duplicate:before {
+  content: '\e917';
+}
+
+.icon-search:before {
+  content: '\e902';
+}
+
+.icon-add:before {
+  content: '\e923';
+}
+
+.icon-calendar:before {
+  content: '\e915';
+}
+
+.icon-export:before {
+  content: '\e90e';
+}
+
+.icon-print:before {
+  content: '\e919';
+}
+
+.icon-reorder:before {
+  content: '\e909';
+}
+
+.icon-reorder-vertical:before {
+  content: '\e916';
+}
+
+.icon-note:before {
+  content: '\e91a';
+}
+
+.icon-microphone:before {
+  content: '\e90f';
+}
+
+.icon-score:before {
+  content: '\e91c';
+}
+
+.icon-lock:before {
+  content: '\e91d';
+}
+
+.icon-settings:before {
+  content: '\e908';
+}
+
+.icon-info:before {
+  content: '\e901';
+}
+
+.icon-question:before {
+  content: '\e90d';
+}
+
+.icon-tick:before {
+  content: '\e924';
+}
+
+.icon-tick-active:before {
+  content: '\e925';
+}
+
+.icon-filter:before {
+  content: '\e91e';
+}
+
+.icon-analysis:before {
+  content: '\e918';
+}
+
+.icon-alarm:before {
+  content: '\e91f';
+}
+
+.icon-user:before {
+  content: '\e90a';
+}
+
+.icon-squad:before {
+  content: '\e90b';
+}
+
+.icon-stiffness:before {
+  content: '\e900';
+}
+
+.icon-bubble:before {
+  content: '\e920';
+}
+
+.icon-msk:before {
+  content: '\e921';
+}
+
+.icon-well-being:before {
+  content: '\e922';
+}
+
+.icon-capture:before {
+  content: '\e911';
+}
+
+.icon-sort-low-high:before {
+  content: '\e93d';
+}
+
+.icon-sort-high-low:before {
+  content: '\e93e';
+}
+
+.icon-clock:before {
+  content: '\e940';
+}
+
+.icon-kitman-logo:before {
+  content: '\e949';
+}
+
+.icon-double-arrow-left:before {
+  content: '\e94a';
+}
+
+.icon-double-arrow-right:before {
+  content: '\e94b';
+}
+
+.icon-widget-header:before {
+  content: '\e94c';
+}
+
+.icon-widget-profile:before {
+  content: '\e94e';
+}
+
+.icon-widget-notes:before {
+  content: '\e94f';
+}
+
+.icon-hide:before {
+  content: '\e950';
+}
+
+.icon-archive:before {
+  content: '\e951';
+}
+
+.icon-restore:before {
+  content: '\e952';
+}
+
+.icon-show:before {
+  content: '\e953';
+}
+
+.icon-combination-graph:before {
+  content: '\e954';
+}
+
+.icon-font-style-bold:before {
+  content: '\e95d';
+}
+
+.icon-font-style-italic:before {
+  content: '\e95e';
+}
+
+.icon-font-style-underline:before {
+  content: '\e95f';
+}
+
+.icon-font-style-strikethrough:before {
+  content: '\e960';
+}
+
+.icon-font-style-numlist:before {
+  content: '\e961';
+}
+
+.icon-font-style-bulletlist:before {
+  content: '\e962';
+}
+
+.icon-video-camera:before {
+  content: '\e984';
+}
+
+.icon-fixture-tree:before {
+  content: '\e9bc';
+}
+
+.icon-pdf:before {
+  content: '\f1c1';
+}
+
+.icon-media:before {
+  content: '\e985';
+}
+
+.icon-checked-checkmark:before {
+  content: '\e986';
+}
+
+.icon-indeterminate-checkmark:before {
+  content: '\e987';
+}
+
+.icon-add-reason-exercise:before {
+  content: '\e988';
+}
+
+.icon-bin-new:before {
+  content: '\e989';
+}
+
+.icon-new-tab:before {
+  content: '\e98a';
+}
+
+.icon-circled-error:before {
+  content: '\e98c';
+}
+
+.icon-bar-chart-reporting:before {
+  content: '\e98b';
+}
+
+.icon-presentation-file:before {
+  content: '\e98d';
+  color: #ffab00;
+}
+
+.icon-pdf-file:before {
+  content: '\e98e';
+  color: #e55e38;
+}
+
+.icon-text-file:before {
+  content: '\e98f';
+  color: #2a6ebb;
+}
+
+.icon-xslx-file:before {
+  content: '\e990';
+  color: #43b374;
+}
+
+.icon-video-file:before {
+  content: '\e991';
+  color: #20a49a;
+}
+
+.icon-audio-file:before {
+  content: '\e992';
+  color: #9b58b5;
+}
+
+.icon-image:before {
+  content: '\e993';
+  color: #c31d2b;
+}
+
+.icon-in-progress:before {
+  content: '\e994';
+  color: #2a6ebb;
+}
+
+.icon-hamburger-circled-dots:before {
+  content: '\e995';
+}
+
+.icon-other-file:before {
+  content: '\e996';
+}
+
+.icon-zip-file:before {
+  content: '\e997';
+}
+
+.icon-refresh:before {
+  content: '\e998';
+}
+
+// NOTE: Ported from CSS
+.km_icon,
+[class^='km_icon'] {
+  background-position: 14px 14px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 64px;
+  line-height: 14px;
+  margin-top: 1px;
+  vertical-align: text-top;
+  width: 69px;
+}
+
+.km_icon-alert {
+  background-position: -10px -7px;
+}
+
+.km_icon-alert-warning {
+  background-position: -80px -7px;
+}
+
+.km_icon-alert-danger {
+  background-position: -150px -7px;
+}
+
+.km_icon_alert-inverse {
+  background-position: -220px -7px;
+}
+
+.km_icon-error {
+  background-position: -10px -7px;
+}
+
+.km_icon-error-warning {
+  background-position: -80px -7px;
+}
+
+.km_icon-error-danger {
+  background-position: -150px -7px;
+}
+
+.km_icon-error-inverse {
+  background-position: -220px -7px;
+}
+
+.km_icon-tick-success {
+  background-position: -10px -80px;
+}
+
+.km_icon-tick-primary {
+  background-position: -80px -7px;
+}
+
+.km_icon-tick-info {
+  background-position: -150px -7px;
+}
+
+.km_icon-tick-inverse {
+  background-position: -220px -7px;
+}
+
+.km_icon-small,
+[class^='km_icon-small'] {
+  height: 15px;
+  width: 17px;
+}
+
+.km_icon-small-alert {
+  background-position: -15px -223px !important;
+}
+
+.km_icon-small-alert-warning {
+  background-position: -33px -223px !important;
+}
+
+.km_icon-small-alert-danger {
+  background-position: -51px -223px !important;
+}
+
+.km_icon-small-alert-inverse {
+  background-position: -69px -223px !important;
+}
+
+.km_icon-small-error {
+  background-position: -15px -260px !important;
+}
+
+.km_icon-small-error-warning {
+  background-position: -33px -260px !important;
+}
+
+.km_icon-small-error-danger {
+  background-position: -51px -260px !important;
+}
+
+.km_icon-small-error-inverse {
+  background-position: -69px -260px !important;
+}
+
+.km_icon-small-tick-success {
+  background-position: -15px -242px !important;
+}
+
+.km_icon-small-tick-primary {
+  background-position: -33px -242px !important;
+}
+
+.km_icon-small-tick-info {
+  background-position: -51px -242px !important;
+}
+
+.km_icon-small-tick-inverse {
+  background-position: -69px -242px !important;
+}

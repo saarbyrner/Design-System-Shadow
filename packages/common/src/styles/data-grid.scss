@@ -1,0 +1,525 @@
+//Temporary change for Availability History banner in the dashboard
+.dashboard-notification {
+  background-color: $colour-s14;
+  border-color: $colour-s14;
+  margin-top: 2em;
+}
+
+.km-tableResults {
+  overflow-x: scroll;
+  padding-left: 287px;
+  width: 100%;
+}
+
+.km-datagrid-paging-cont {
+  position: relative;
+
+  .km-datagrid-paging {
+    color: $colour-p01;
+    cursor: pointer;
+    display: block;
+    height: 17px;
+    margin-bottom: 20px;
+    margin-top: 23px;
+    position: absolute;
+    top: 52px;
+    width: 8px;
+    z-index: 1000;
+
+    &::before {
+      display: block;
+      font-size: 23px;
+      margin-left: -7px;
+    }
+
+    &.left {
+      left: 271px;
+    }
+
+    &.right {
+      right: -15px;
+    }
+  }
+}
+
+.km-datagrid-noresults {
+  .km-datagrid-paging,
+  .km-tableResults,
+  .km-datagrid {
+    display: none;
+  }
+}
+
+.km-datagrid {
+  border-collapse: separate;
+  border-spacing: 0 5px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  table-layout: fixed;
+  width: 100%;
+
+  .km-datagrid-groupLabel {
+    td {
+      &:first-child {
+        background: $colour-p06;
+        border-right: 0 !important;
+        left: 30px;
+        position: absolute;
+        width: 287px;
+      }
+    }
+  }
+
+  thead {
+    tr {
+      border-bottom: 1px solid $colour-s14;
+      border-top: 1px solid $colour-s14;
+
+      th {
+        border-bottom: 1px solid $colour-s14;
+        border-top: 1px solid $colour-s14;
+        color: $colour-s17;
+        font-size: 0.9em;
+        font-weight: normal;
+        height: 90px;
+        line-height: 1.3em;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        text-align: center;
+
+        &:first-child {
+          border-left: 0;
+          text-align: left;
+          z-index: 999;
+
+          p {
+            margin-top: 26px;
+          }
+        }
+
+        &.athleteStatusHeader:last-child {
+          border-right: 0;
+        }
+
+        span {
+          clear: both;
+          color: $colour-s15;
+          display: block;
+          font-size: 0.9em;
+        }
+
+        &.athleteStatusHeader {
+          border-left: 0;
+          border-right: 1px solid $colour-s13;
+          font-size: 0.8em;
+          overflow-wrap: break-word;
+          padding: 5px;
+          position: relative;
+          width: 88px;
+
+          i {
+            color: $colour-p04;
+            cursor: pointer;
+            position: absolute;
+            right: 0;
+            top: 5px;
+          }
+        }
+      }
+    }
+  }
+
+  tbody {
+    font-size: 0.9em;
+
+    tr {
+      &.km-datagrid-groupLabel {
+        td {
+          color: $colour-p03;
+          font-weight: 600;
+          padding-bottom: 5px;
+          padding-top: 10px;
+          text-align: left;
+        }
+      }
+
+      &.km-datagrid-rowSpacer {
+        height: 5px;
+      }
+    }
+  }
+
+  .km-datagrid-athleteData {
+    padding: 0.5em 0;
+  }
+
+  .km-datagrid-avatarHolder {
+    float: left;
+    margin-right: 10px;
+    position: relative;
+
+    button {
+      background: none;
+      border: 0;
+      padding: 0;
+    }
+  }
+
+  tr {
+    &.divider {
+      span {
+        background: $colour-s14;
+        display: block;
+        height: 1px;
+        left: 30px;
+        margin-top: -6px;
+        position: absolute;
+        text-indent: -99999px;
+        width: 288px;
+        z-index: 1001;
+      }
+    }
+  }
+}
+
+.km-datagrid-textInput {
+  position: relative;
+
+  i {
+    top: 3px;
+  }
+
+  .km-btn-clear {
+    background: url('../img/clear.svg');
+    background-size: cover;
+    border: 0;
+    display: block;
+    height: 16px;
+    position: absolute;
+    right: 12px;
+    text-indent: -99999px;
+    top: 14px;
+    width: 16px;
+  }
+
+  &__label {
+    color: $colour-s18;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-top: 0;
+  }
+}
+
+.km-datagrid-modal {
+  height: 100%;
+
+  ::-webkit-scrollbar {
+    background: $colour-s14;
+    border-radius: 3px;
+    box-shadow: inset 0 0 2px transparentize($colour-p03, 0.7);
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: $colour-p01;
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-corner {
+    background: $colour-s14;
+  }
+
+  .km-datagrid-modal-closeButton {
+    background: $colour-p06;
+    border: 0;
+    color: $colour-s16;
+    font-size: 22px;
+    padding: 0;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    z-index: 100;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .km-datagrid-modalContent {
+    height: 100%;
+    overflow: hidden;
+    padding: 30px;
+    position: relative;
+
+    &--bodymap {
+      width: 490px;
+    }
+
+    h5 {
+      margin: 0 0 30px;
+    }
+
+    .km-datagrid-modal-formControls {
+      border-top: 1px dotted $colour-p04;
+      bottom: 0;
+      left: 0;
+      padding: 20px 30px 20px 20px;
+      position: absolute;
+      text-align: right;
+      width: 100%;
+
+      button {
+        margin-left: 20px;
+      }
+    }
+  }
+
+  .km-datagrid-modal-sidebarMenu {
+    li {
+      border-radius: 2px;
+      color: $colour-s18;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 600;
+      height: 45px;
+      list-style: none;
+      margin-top: 3px;
+      padding: 10px;
+
+      span {
+        height: 17px;
+        padding: 5px 10px;
+      }
+
+      &:hover {
+        background: $colour-p02;
+        color: $colour-p06;
+      }
+
+      &.active {
+        background: $colour-p01;
+        color: $colour-p06;
+
+        span {
+          color: $colour-p05;
+        }
+      }
+    }
+  }
+}
+
+.km-datagrid-modalFooter {
+  background-color: $colour-p06;
+  border-top: 1px dotted $colour-p04;
+  bottom: 0;
+  left: 0;
+  margin-top: 15px;
+  padding: 30px;
+  position: absolute;
+  text-align: right;
+  width: 100%;
+
+  button {
+    margin-left: 20px;
+    min-width: 160px;
+  }
+}
+
+.km-datagrid-indications {
+  background-color: transparent;
+  border: 0;
+  height: 43px;
+  width: 43px;
+
+  &__icon {
+    color: $colour-s16;
+    font-size: 22px;
+    font-weight: normal;
+    left: 12px;
+    position: absolute;
+    top: 10px;
+  }
+}
+
+.km-datagrid-modal-sidebarMenuActiveItem {
+  background-color: transparentize($colour-s13, 0.1);
+  border-radius: 2px;
+  box-shadow: 1px 1px 5px 3px transparentize($colour-p03, 0.9);
+  color: $colour-s18;
+  cursor: row-resize;
+  font-size: 0.9em;
+  font-weight: 600;
+  list-style: none;
+  margin: 0;
+  padding: 8px;
+  padding-left: 50px;
+  z-index: 9999;
+
+  &:active {
+    cursor: move;
+  }
+
+  span {
+    color: $colour-s16;
+    padding-left: 5px;
+    padding-right: 10px;
+  }
+}
+
+.km-datagrid-comment {
+  background-color: transparent;
+  border: 0;
+  height: 43px;
+  width: 43px;
+
+  &__icon {
+    color: $colour-s16;
+    font-size: 22px;
+    font-weight: normal;
+    left: 12px;
+    position: absolute;
+    top: 10px;
+  }
+}
+
+.km-datagrid-athleteIndications {
+  background: $colour-p06;
+  border-left: 0 !important;
+  border-right: 0 !important;
+  left: 230px;
+  position: absolute;
+  width: 44px;
+}
+
+.km-datagrid-athleteComment {
+  background: $colour-p06;
+  border-left: 0 !important;
+  border-right: 0 !important;
+  left: 274px;
+  position: absolute;
+  width: 44px;
+}
+
+// Release 6 styles
+// Release 6 is feature flagged. CSS needs to function for both versions
+// pre and post release. Once this lands for customers, the below styles
+// need to be integrated above.
+.km-datagrid-stiffness {
+  .km-datagrid-paging {
+    &.left {
+      left: 265px !important;
+    }
+  }
+
+  .km-tableResults {
+    padding-left: 288px !important;
+  }
+}
+
+.skeletonRear {
+  border-left: 1px $colour-s14 solid;
+  text-align: center;
+}
+
+.skeletonFront {
+  text-align: center;
+}
+
+.km-datagrid-skeleton {
+  background: url('../img/skeletonFront.png') no-repeat $colour-p06;
+  display: inline-block;
+  height: 506px;
+  position: relative;
+  width: 206px;
+
+  &.km-datagrid-skeletonRear {
+    background: url('../img/skeletonBack.png') no-repeat;
+  }
+
+  p {
+    bottom: -40px;
+    color: $colour-s18;
+    font-size: 12px;
+    font-weight: 600;
+    left: 40%;
+    position: absolute;
+    text-transform: uppercase;
+  }
+}
+
+// List of indication items (front and rear) in indication modal component
+
+.km-datagrid-modalIndicationList {
+  display: inline-block;
+  min-height: 220px;
+  width: 100%;
+
+  .km-datagrid-modalIndicationList__section {
+    p {
+      border-bottom: 0;
+      color: $colour-s16;
+      font-size: 12px;
+      margin-bottom: 5px;
+      padding-right: 9px;
+      text-transform: uppercase;
+      width: auto;
+    }
+
+    hr {
+      border-color: $colour-s16;
+      margin-right: 0;
+      margin-top: -15px;
+      width: 185px;
+    }
+
+    &:first-child {
+      margin: 14px 0 75px;
+    }
+  }
+
+  ul {
+    padding: 0;
+  }
+}
+
+// Confirmation Message
+
+.km-confirmAction {
+  background: transparentize($colour-p06, 0.25);
+  display: none;
+  font-size: 2em;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9500;
+
+  &.show {
+    display: fixed;
+  }
+
+  .km-confirmActionMessage {
+    margin: 20% auto;
+    text-align: center;
+    width: 330px;
+
+    p {
+      color: $colour-s18;
+      font-size: 16px;
+      font-stretch: normal;
+      font-style: normal;
+      font-weight: 600;
+      height: 44px;
+      text-align: center;
+    }
+
+    button {
+      font-size: 0.45em;
+      margin: 1em;
+      padding: 7px 15px;
+      width: 135px;
+    }
+  }
+}

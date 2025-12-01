@@ -1,0 +1,283 @@
+$page-background: #fff;
+$font-color: #000;
+
+.containerPrint {
+  background: $page-background;
+  color: $font-color;
+  max-width: 100%;
+  padding: 0;
+  width: 100%;
+}
+
+.athleteStatusTablePrint {
+  display: block;
+  overflow: hidden;
+
+  &__pageHeader {
+    align-items: center;
+    border-bottom: 1px solid $colour-s14;
+    display: flex;
+    margin: 10px 0 20px;
+    padding: 0 10px 20px;
+  }
+
+  &__pageHeaderLogo {
+    margin-right: 30px;
+    min-width: 40px;
+    max-height: 50px;
+    max-width: 50px;
+  }
+
+  &__pageHeaderContainer {
+    // These rules enforce the browser to print the background
+    -webkit-print-color-adjust: exact; // Chrome/Safari
+    print-color-adjust: exact; // Firefox
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+  }
+
+  &__pageHeaderTitle {
+    color: $colour-p03;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  &__pageHeaderContent {
+    color: $colour-s16;
+    color: transparentize($colour-s16, 0.1) !important;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+
+  &__header,
+  &__content {
+    clear: both;
+    display: block;
+    max-width: 100%;
+  }
+
+  &__heading {
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0 0 15px;
+    padding-left: 10px;
+  }
+
+  &__section {
+    page-break-after: always;
+  }
+
+  &__row {
+    border: 1px solid $colour-s14;
+    border-bottom-width: 0;
+    break-inside: avoid;
+
+    &:last-child {
+      border-bottom-width: 1px;
+    }
+
+    &--top,
+    &--bottom {
+      align-items: stretch;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+  }
+
+  &__cellContent--rotated {
+    height: 55px;
+    transform: translate(-83px, 82px) rotate(-90deg);
+    width: 220px;
+  }
+
+  &__cell {
+    align-items: center;
+    border-right: 1px solid $colour-s14;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    font-size: 12px;
+    justify-content: center;
+    line-height: 1.5;
+    min-height: 45px;
+    min-width: 55px;
+    padding: 4px 0;
+    text-align: center;
+
+    &:last-child {
+      border-right: 0;
+    }
+
+    &--rotated {
+      display: block;
+      height: 220px;
+      text-align: left;
+
+      .athleteStatusTablePrint__cellStatusName {
+        display: inline-block;
+        line-height: 1.3;
+      }
+    }
+
+    &--athlete {
+      align-items: flex-start;
+      min-width: 155px;
+      padding-left: 10px;
+      text-align: left;
+    }
+
+    &--stiffness,
+    &--injury,
+    &--pain,
+    &--soreness,
+    &--comments {
+      align-items: flex-start;
+      border-top: 1px solid $colour-s14;
+      font-size: 12px;
+      justify-content: flex-start;
+      padding: 4px 4px 4px 40px;
+      position: relative;
+      text-align: left;
+
+      span {
+        line-height: 15px;
+      }
+
+      i {
+        font-size: 22px;
+        left: 10px;
+        position: absolute;
+        top: 4px;
+      }
+    }
+
+    &--pain {
+      color: $red-100 !important;
+    }
+
+    &--soreness {
+      color: $orange-200 !important;
+    }
+
+    &.colour1,
+    &.colour2,
+    &.colour3,
+    &.colour4,
+    &.colour5,
+    &.colour6,
+    &.colour7,
+    &.colour8 {
+      span {
+        color: $colour-p03 !important;
+        font-weight: bold;
+      }
+    }
+
+    &.colour1 {
+      background: transparentize($colour-s11, 0.5) !important;
+    }
+
+    &.colour2 {
+      background: transparentize($colour-s08, 0.5) !important;
+    }
+
+    &.colour3 {
+      background: transparentize($colour-s07, 0.5) !important;
+    }
+
+    &.colour4 {
+      background: transparentize($colour-s04, 0.5) !important;
+    }
+
+    &.colour5 {
+      background: $colour-s11 !important;
+    }
+
+    &.colour6 {
+      background: $colour-s08 !important;
+    }
+
+    &.colour7 {
+      background: $colour-s07 !important;
+    }
+
+    &.colour8 {
+      background: $colour-s04 !important;
+    }
+  }
+
+  &__header {
+    .athleteStatusTablePrint__row {
+      align-items: stretch;
+      border-bottom-width: 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      margin-bottom: 0;
+    }
+
+    .athleteStatusTablePrint__cell {
+      font-size: 14px;
+      min-height: 45px;
+      padding: 0;
+
+      &--athlete {
+        font-weight: 400;
+        padding-left: 10px;
+      }
+    }
+  }
+
+  .statusUnit {
+    clear: both;
+    display: block;
+    font-size: 0.9em;
+  }
+
+  .athleteName {
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  .positionName {
+    font-size: 12px;
+  }
+
+  .indicationHeader {
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0;
+  }
+}
+
+@media print {
+  .athleteStatusTablePrint__cell {
+    &.athleteStatusTablePrint__cell--pain {
+      i {
+        &:before {
+          color: $red-100 !important;
+        }
+      }
+
+      span {
+        color: $red-100 !important;
+      }
+    }
+
+    &.athleteStatusTablePrint__cell--soreness {
+      i {
+        &:before {
+          color: $orange-200 !important;
+        }
+      }
+
+      span {
+        color: $orange-200 !important;
+      }
+    }
+  }
+}

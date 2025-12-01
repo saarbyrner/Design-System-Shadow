@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`useGenerateResultsEvent returns correct data 1`] = `
+Object {
+  "AgeGroups": Array [
+    "U10",
+  ],
+  "ComparedAgainst": Object {
+    "NumberOfAthletes": 1,
+    "Seasons": Array [
+      "2022/2023",
+    ],
+    "TestingWindows": Array [
+      "Test Window 1",
+    ],
+  },
+  "IsCat1": true,
+  "MaturationStatuses": Array [
+    "Very Early",
+  ],
+  "Positions": Array [
+    "Position group 2",
+  ],
+  "Seasons": Array [
+    "2023/2024",
+  ],
+  "TestingWindows": Array [
+    "Test Window 1",
+  ],
+  "TrainingVariables": Array [
+    "metric_1",
+  ],
+  "age_group_ids": Array [
+    2,
+  ],
+  "bio_band_range": Array [
+    69,
+    100,
+  ],
+  "club_results": true,
+  "compare_to": Object {
+    "athlete_ids": Array [
+      190076,
+    ],
+    "seasons": Array [
+      2022,
+    ],
+    "testing_window_ids": Array [
+      6,
+    ],
+  },
+  "maturation_status_ids": Array [
+    1,
+  ],
+  "national_results": true,
+  "position_ids": Array [
+    2,
+  ],
+  "seasons": Array [
+    2023,
+  ],
+  "testing_window_ids": Array [
+    4,
+  ],
+  "training_variable_ids": Array [
+    1,
+  ],
+}
+`;

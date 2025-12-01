@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getWidgetCacheRefreshData() matches the snapshot 1`] = `
+Object {
+  "DashboardId": 31086,
+  "WidgetId": 397008,
+}
+`;
