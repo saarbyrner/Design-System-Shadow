@@ -20,7 +20,7 @@ This doc is a list of notes from presenting this in the FE bi-weekly on 30th Mar
 - Previously explored by Hugo for Medical section
 - Scoped in [#17231](https://github.com/KitmanLabs/projects/issues/17231)
 - Designs
-  [here](https://www.figma.com/file/GfkGAMUiFVB3oFmRPVg8Ze/%F0%9F%8E%A8-Web-Design-System---Components?node-id=1795%3A0)
+  [here](https://www.figma.com/design/7VG51RENiXwPZrSMvQGmkL/MUI-for-Figma-Material-UI-v5.16.0?node-id=11838-7926&m=dev)
 
 ---
 
