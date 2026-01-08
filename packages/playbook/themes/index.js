@@ -1,6 +1,7 @@
 // @flow
 import { createTheme } from '@mui/material';
-import { colors, zIndices } from '@kitman/common/src/variables';
+import colors from './colors';
+import zIndices from './zIndices';
 
 // Main AppRoot Theme
 export const rootTheme = createTheme({
@@ -283,5 +284,8 @@ export const rootTheme = createTheme({
     modal: zIndices.modal,
   },
 });
+
+// Export colors for consumers who need them
+export { colors, zIndices };
 
 export default rootTheme;
