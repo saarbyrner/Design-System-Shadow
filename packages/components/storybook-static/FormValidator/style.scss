@@ -1,0 +1,14 @@
+.formValidator {
+  &__errorMsg {
+    color: $colour-s11;
+    display: none;
+  }
+
+  &__section {
+    &--hasError {
+      .formValidator__errorMsg {
+        display: block;
+      }
+    }
+  }
+}

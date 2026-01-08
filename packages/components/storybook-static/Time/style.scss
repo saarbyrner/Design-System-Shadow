@@ -1,0 +1,53 @@
+.timeSelector {
+  .timeSelector__timeunit {
+    border-left: 1px $colour-s15 solid;
+    display: inline-block;
+    float: right;
+    font-weight: 600;
+    height: 100%;
+    line-height: 33px;
+    padding-right: 25px;
+  }
+
+  .timeSelector__hours {
+    display: inline-block;
+    width: 160px;
+
+    .timeSelector__timeunit {
+      padding-left: 25.5px;
+    }
+  }
+
+  .timeSelector__mins {
+    display: inline-block;
+    margin-left: 21px;
+    width: 160px;
+
+    .timeSelector__timeunit {
+      padding-left: 15.5px;
+    }
+  }
+
+  .timeSelector__digits {
+    display: block;
+    float: left;
+    height: 100%;
+    line-height: 34px;
+  }
+
+  .timeSelector__content {
+    height: 100%;
+    padding: 5px 0;
+  }
+
+  // default bootstrap dropdown class
+  .open {
+    .timeSelector__content {
+      padding-top: 4px;
+
+      .timeSelector__timeunit {
+        padding-right: 24px;
+      }
+    }
+  }
+}

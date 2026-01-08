@@ -1,0 +1,33 @@
+.richTextDisplay {
+  &:after {
+    background-image: linear-gradient(transparent, $colour-p06, $colour-p06);
+    bottom: 0;
+    content: '';
+    display: none;
+    height: 30px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 0;
+  }
+
+  > ul > li > p,
+  > ol > li > p {
+    margin-bottom: 0;
+  }
+
+  &--abbreviated {
+    max-height: 40px;
+    overflow: hidden;
+    position: relative;
+
+    &:after {
+      display: block;
+    }
+
+    > ul > li > p,
+    > ol > li > p {
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,80 @@
+.reactToast {
+  bottom: 5px;
+  position: fixed;
+  right: 20px;
+  z-index: 9999999999;
+
+  &__item {
+    align-items: center;
+    background: $colour-s23;
+    border: 1px solid $colour-s13;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    height: 54px;
+    justify-content: stretch;
+    margin-bottom: 6px;
+    min-width: 430px;
+    padding: 10px;
+
+    @media (max-width: $breakpoint-tablet) {
+      min-width: 330px;
+    }
+  }
+
+  &__itemContent {
+    flex: 1;
+  }
+
+  &__itemText {
+    font-weight: 600;
+    margin: 0;
+  }
+
+  &__itemSubText {
+    color: $colour-s17;
+    font-size: 12px;
+    margin: 0;
+  }
+
+  &__closeButton {
+    color: $colour-p04;
+    font-size: 25px;
+    margin-right: 15px;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &--disabled {
+      color: $colour-p06;
+      cursor: default;
+    }
+  }
+
+  &__itemStatus {
+    margin-left: 15px;
+
+    span {
+      color: $colour-s09;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    i {
+      font-size: 25px;
+    }
+
+    .reactToast__item--success & {
+      i {
+        color: $colour-s04;
+      }
+    }
+
+    .reactToast__item--error & {
+      i {
+        color: $colour-s11;
+      }
+    }
+  }
+}

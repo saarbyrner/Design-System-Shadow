@@ -1,0 +1,21 @@
+// DWT software update/download modal. It must be over everything else
+.ds-dwt-ui-dlg {
+  z-index: 999999999500002 !important;
+}
+
+.dynamsoft-dialog-wrap {
+  z-index: 2147500000 !important;
+}
+
+#DWTcontainer {
+  @import './dwt/DWTController';
+  @import './dwt/DWTUserInterface';
+  @import './dwt/DWTView';
+}
+
+.DocumentScanner {
+  .appStatus {
+    position: absolute;
+    z-index: 2147500001 !important;
+  }
+}

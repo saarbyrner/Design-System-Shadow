@@ -1,0 +1,219 @@
+.dataGrid {
+  background-color: $colour-p06;
+  min-height: 130px;
+  overflow: scroll;
+  position: relative;
+
+  &__table {
+    width: 100%;
+  }
+
+  &__fillerCell {
+    background-color: $colour-p06;
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+
+  tbody &__row {
+    border-bottom: 1px solid $colour-neutral-300;
+  }
+
+  &__rowActionsCell {
+    background-color: $colour-p06;
+    position: sticky;
+    right: 0;
+    button {
+      background: transparent;
+      border: 0;
+      color: $colour-grey-200;
+      float: right;
+      outline: none;
+    }
+  }
+
+  &__headLine {
+    display: block;
+    left: 0;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+
+    &:after {
+      background-color: $colour-neutral-300;
+      content: '';
+      height: 2px;
+      position: absolute;
+      top: 26px;
+      width: 100%;
+    }
+  }
+
+  &__cell {
+    background-color: $colour-p06;
+    color: $colour-grey-200;
+    font-size: 14px;
+    max-width: 300px;
+    min-height: 20px;
+    min-width: 40px;
+    overflow: hidden;
+    padding-bottom: 4px;
+    padding-right: 10px;
+    padding-top: 4px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 160px;
+
+    &--allowOverflow {
+      overflow: visible;
+    }
+  }
+
+  &__head {
+    .dataGrid__cell {
+      color: $colour-grey-100;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 16px;
+      padding-bottom: 9px;
+      position: sticky;
+      top: 0;
+      z-index: 1;
+
+      @media only screen and (min-width: 768px) {
+        &:first-child {
+          &::after {
+            background: linear-gradient(
+              to right,
+              $colour-neutral-300,
+              transparent
+            );
+            content: '';
+            height: 100%;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 6px;
+          }
+        }
+      }
+
+      &--bolder {
+        font-weight: 700;
+      }
+
+      &--sortable {
+        .dataGrid__sortIndicators {
+          display: inline-flex;
+          flex-direction: column;
+          margin-left: 16px;
+          opacity: 0;
+          transform: translate(0px, -2px);
+          transition: opacity 0.3s ease;
+
+          .dataGrid__sortIndicator {
+            color: $colour-neutral-500;
+            max-height: 6px;
+
+            &--active {
+              color: $colour-blue-100;
+            }
+          }
+        }
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        &:hover,
+        &.dataGrid__cell--sortedColumn {
+          .dataGrid__sortIndicators {
+            opacity: 1;
+          }
+        }
+      }
+
+      &:first-child {
+        z-index: 2;
+
+        @media only screen and (min-width: 768px) {
+          left: 0;
+          padding-top: 0.7em;
+        }
+      }
+    }
+  }
+
+  &__body {
+    .athlete__row {
+      &:first-child {
+        @media only screen and (min-width: 768px) {
+          .dataGrid__cell {
+            padding-top: 0.85em;
+            padding-bottom: 0.063em;
+          }
+        }
+      }
+    }
+    .is__error {
+      .dataGrid__cell {
+        background-color: #ffd6d5;
+      }
+    }
+    .dataGrid__cell {
+      &--bolder {
+        font-weight: 600;
+      }
+
+      &:first-child {
+        @media only screen and (min-width: 768px) {
+          left: 0;
+          position: sticky;
+          z-index: 1;
+
+          &::after {
+            background: linear-gradient(
+              to right,
+              $colour-neutral-300,
+              transparent
+            );
+            content: '';
+            height: 100%;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 6px;
+          }
+        }
+      }
+    }
+  }
+
+  tr {
+    th:first-child,
+    td:first-child {
+      padding-left: 24px;
+    }
+    th:last-child,
+    td:last-child {
+      padding-right: 24px;
+    }
+  }
+
+  &__loading {
+    color: $colour-grey-200;
+    margin-top: 15px;
+    text-align: center;
+  }
+
+  &__emptyTableText {
+    color: $colour-grey-200;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    text-align: center;
+  }
+}

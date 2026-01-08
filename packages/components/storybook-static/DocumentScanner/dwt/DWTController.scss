@@ -1,0 +1,55 @@
+.DWTController {
+  float: right;
+  width: 315px;
+
+  .PCollapse > li {
+    padding: 10px;
+    border-bottom: 1px solid $colour-s14;
+  }
+
+  .PCollapse > li:last-of-type {
+    border-bottom: none;
+  }
+
+  li {
+    line-height: 20px;
+  }
+}
+
+.DWT {
+  &__labelContainer {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+  }
+
+  &__label {
+    display: block;
+    flex: 1;
+    color: $colour-grey-100;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 4px;
+
+    &--disabled {
+      color: transparentize($colour-grey-300, 0.5);
+    }
+  }
+
+  &__scanSettings > li {
+    margin-top: 10px;
+
+    &.DWT__scanButton {
+      margin-top: 15px;
+    }
+  }
+
+  &__scanSettings > li:first-of-type {
+    margin-top: 0px;
+  }
+
+  &__accordionContent {
+    padding: 10px 0 5px;
+  }
+}

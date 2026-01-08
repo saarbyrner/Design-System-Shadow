@@ -1,0 +1,107 @@
+.slidingPanel {
+  background: $colour-p06;
+  box-shadow: 0 0 14px -4px $colour-s14;
+  position: fixed;
+  z-index: 2147483006;
+  // This z-index is 3 over the Intercom frame z-index and 1 over the nav bar
+
+  &__heading {
+    height: 64px;
+  }
+
+  &__title {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 20px 0 0 30px;
+    position: absolute;
+  }
+
+  &__closeIcon {
+    color: $colour-s15;
+    margin-right: 15px;
+    top: 20px;
+  }
+
+  &__left {
+    border-right: 1px solid $colour-s14;
+    left: 60px;
+    transition: 0.2s ease-in-out;
+    transition-property: left, visibility;
+    visibility: visible;
+    z-index: 1000;
+    // intercom is on the bottom right so the left aligned panels can have a lower z-index
+
+    &--closed {
+      left: -340px;
+      position: fixed;
+      transition: 0.2s ease-in-out;
+      transition-property: left, visibility;
+      visibility: hidden;
+    }
+
+    #dateRangePicker.daterangepicker {
+      left: unset !important;
+      top: unset !important;
+      position: absolute;
+    }
+  }
+
+  &__right {
+    border-left: 1px solid $colour-s14;
+    right: 0;
+    transition: 0.2s ease-in-out;
+    transition-property: right, visibility;
+    visibility: visible;
+
+    &--closed {
+      position: fixed;
+      right: -340px;
+      transition: right 0.2s ease-in-out;
+      transition-property: right, visibility;
+      visibility: hidden;
+    }
+  }
+
+  &--kitmanDesignSystem {
+    .slidingPanel {
+      &__heading {
+        border-bottom: 1px solid $colour-neutral-300;
+        height: 80px;
+        margin-bottom: 24px;
+      }
+
+      &__title {
+        color: $colour-grey-200;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 24px;
+        margin: 32px 0 0 24px;
+        position: absolute;
+      }
+
+      &__closeIcon {
+        top: 32px;
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-desktop) {
+  .slidingPanelFixed {
+    height: calc(100vh - 60px) !important;
+    max-width: 100%;
+    top: 60px !important;
+
+    &__left {
+      left: 0;
+    }
+  }
+}
+
+.main--mainMenuOpen {
+  .slidingPanel {
+    &__left {
+      left: 220px;
+    }
+  }
+}

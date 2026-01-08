@@ -1,0 +1,471 @@
+.textButton {
+  background-color: $colour-p06;
+  border: 1px solid $colour-p04;
+  border-radius: 5px;
+  color: $colour-p01;
+  font-weight: normal;
+  min-width: 120px;
+  outline: none;
+  padding: 11px 20px;
+  text-decoration: none;
+
+  &.disabled,
+  &[disabled] {
+    background: $colour-p05;
+    border-color: $colour-p05;
+    color: $colour-s17;
+    opacity: 1;
+
+    &:hover,
+    &:active {
+      background: $colour-p05;
+      border-color: $colour-p05;
+      color: $colour-s17;
+      cursor: default;
+      opacity: 1;
+    }
+  }
+
+  &:hover {
+    background: $colour-p02;
+    border-color: $colour-p02;
+    color: $colour-p06;
+    cursor: pointer;
+  }
+
+  &:active {
+    background: $colour-s21;
+    border-color: $colour-s21;
+    color: $colour-p06;
+  }
+
+  &:visited {
+    color: $colour-p06;
+  }
+
+  &__text {
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &__icon {
+    &::before {
+      font-size: 22px;
+      line-height: 19px;
+    }
+
+    &--before {
+      &::before {
+        float: left;
+      }
+    }
+
+    &--after {
+      &::before {
+        float: right;
+      }
+    }
+
+    &.textButton--small {
+      &::before {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &--primary {
+    background: $colour-p01;
+    border-color: $colour-p01;
+    color: $colour-p06;
+  }
+
+  &--secondary {
+    background: $colour-p06;
+    border-color: $colour-p01;
+    border-width: 2px;
+    color: $colour-p01;
+  }
+
+  &--danger {
+    background: $colour-s11;
+    border-color: $colour-s11;
+    color: $colour-p06;
+
+    &:hover {
+      background: $colour-s12;
+      border-color: $colour-s12;
+      color: $colour-p06;
+    }
+
+    &:active {
+      background: $colour-s12;
+      border-color: $colour-s12;
+      color: $colour-p06;
+    }
+
+    &.disabled,
+    &[disabled] {
+      background: $colour-p05;
+      border-color: $colour-p05;
+      color: $colour-s17;
+      opacity: 1;
+    }
+
+    &:visited {
+      color: $colour-p06;
+    }
+  }
+
+  &--textOnly {
+    background: transparent;
+    border-color: transparent;
+    color: $colour-s16;
+    min-width: 0;
+    padding: 0;
+
+    &:hover {
+      background: transparent;
+      border-color: transparent;
+      color: $colour-s16;
+    }
+
+    &:active {
+      background: transparent;
+      border-color: transparent;
+      color: $colour-s16;
+    }
+
+    &.disabled,
+    &[disabled] {
+      background: transparent;
+      border-color: transparent;
+      color: $colour-s14;
+      opacity: 1;
+    }
+
+    &:visited {
+      color: $colour-s16;
+    }
+  }
+
+  &--small {
+    font-size: 14px;
+    padding: 7px 15px;
+
+    [class^='icon-'],
+    [class*='icon-'] {
+      &::before {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &--extraSmall {
+    font-size: 12px;
+    min-width: 0;
+    padding: 4px 15px;
+  }
+
+  &--isActive {
+    background: $colour-p01;
+    border-color: $colour-p01;
+    color: $colour-p06;
+
+    &:hover {
+      background: $colour-p02;
+      border-color: $colour-p02;
+      color: $colour-p06;
+    }
+
+    &:active {
+      background: $colour-s21;
+      border-color: $colour-s21;
+      color: $colour-p06;
+    }
+
+    &.disabled,
+    &[disabled] {
+      background: $colour-p05;
+      border-color: $colour-p05;
+      color: $colour-s17;
+      opacity: 1;
+    }
+
+    &:visited {
+      color: $colour-p06;
+    }
+  }
+}
+
+.textButton--kitmanDesignSystem {
+  align-items: center;
+  border: 0;
+  border-radius: 3px;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 14px;
+  font-weight: normal;
+  height: 32px;
+  outline: none;
+  padding: 4px 12px;
+  text-decoration: none;
+  transition: background 0.1s ease-out 0s;
+
+  &[disabled] {
+    background: $colour-neutral-200;
+    color: transparentize($colour-grey-100, 0.5);
+    cursor: not-allowed;
+
+    &:hover,
+    &:active {
+      background: $colour-neutral-200;
+      color: transparentize($colour-grey-100, 0.5);
+      cursor: not-allowed;
+    }
+  }
+
+  .textButton__icon {
+    &::before {
+      font-size: 14px;
+    }
+
+    &.icon-chevron-down {
+      &::before {
+        font-size: 10px;
+      }
+    }
+
+    &--before {
+      margin-right: 8px;
+    }
+
+    &--after {
+      margin-left: 8px;
+    }
+  }
+
+  &--primary {
+    background: $colour-grey-200;
+    color: $colour-p06;
+
+    &:focus {
+      background: $colour-grey-300;
+      filter: drop-shadow(0 0 5px transparentize($colour-blue-100, 0.4));
+    }
+
+    &:hover {
+      background: $colour-grey-300;
+    }
+
+    &:active {
+      background: $colour-grey-400;
+      filter: none;
+    }
+  }
+
+  &--secondary {
+    background: $colour-neutral-200;
+    color: $colour-grey-200;
+    font-weight: 600;
+
+    &:focus {
+      filter: drop-shadow(0 0 5px transparentize($colour-grey-100, 0.5));
+    }
+
+    &:hover {
+      background: $colour-neutral-300;
+      color: $colour-grey-300;
+    }
+
+    &:active {
+      background: $colour-neutral-400;
+      filter: none;
+    }
+  }
+
+  &--subtle {
+    background: transparent;
+    color: $colour-grey-200;
+
+    &:focus {
+      background: $colour-neutral-300;
+      color: $colour-grey-300;
+      filter: drop-shadow(0 0 5px transparentize($colour-grey-100, 0.5));
+    }
+
+    &:hover {
+      background: $colour-neutral-300;
+      color: $colour-grey-300;
+    }
+
+    &:active {
+      background: transparentize($colour-blue-100, 0.9);
+      color: $colour-blue-100;
+      filter: none;
+    }
+
+    &[disabled] {
+      background: transparent;
+
+      &:hover,
+      &:active {
+        background: transparent;
+      }
+    }
+  }
+
+  &--link {
+    background: transparent;
+    border: 1px solid transparent;
+    color: $colour-blue-100;
+
+    &:focus {
+      border-color: transparentize($colour-blue-100, 0.5);
+      color: $colour-blue-100;
+      text-decoration: underline;
+    }
+
+    &:hover {
+      color: $colour-blue-100;
+      text-decoration: underline;
+    }
+
+    &:active {
+      color: $colour-blue-300;
+      text-decoration: none;
+    }
+
+    &[disabled] {
+      background: transparent;
+      color: transparentize($colour-grey-200, 0.5);
+
+      &:hover,
+      &:active {
+        background: transparent;
+      }
+    }
+  }
+
+  &--destruct {
+    background: transparent;
+    border: 1px solid transparent;
+    color: $red-100;
+
+    &:focus {
+      border-color: transparentize($red-100, 0.5);
+      color: $red-100;
+    }
+
+    &:hover {
+      color: $red-200;
+    }
+
+    &:active {
+      color: $red-200;
+    }
+
+    &[disabled] {
+      background: transparent;
+      color: transparentize($colour-grey-200, 0.5);
+
+      &:hover,
+      &:active {
+        background: transparent;
+      }
+    }
+  }
+
+  &--primaryDestruct {
+    background: $red-100;
+    color: $colour-p06;
+
+    &:focus {
+      filter: drop-shadow(0 0 5px transparentize($red-100, 0.5));
+    }
+
+    &:hover {
+      background: $red-200;
+      color: $colour-p06;
+    }
+
+    &:active {
+      background: $red-200;
+      color: $colour-p06;
+      filter: none;
+    }
+  }
+
+  &--textOnly {
+    background: transparent;
+    border-color: transparent;
+    color: $colour-grey-100;
+    height: auto;
+    padding: 0;
+
+    &:hover,
+    &:focus {
+      color: $colour-grey-300;
+    }
+
+    &:active {
+      color: $colour-grey-400;
+    }
+
+    &[disabled] {
+      background: transparent;
+      color: transparentize($colour-grey-100, 0.5);
+
+      &:hover,
+      &:active {
+        background: transparent;
+      }
+    }
+  }
+
+  &--warning {
+    background: $yellow-100;
+    color: $colour-grey-300;
+    font-weight: 600;
+  }
+
+  &--isActive {
+    background: $colour-grey-200;
+    color: $colour-p06;
+
+    &:focus,
+    &:hover,
+    &:active {
+      background: $colour-grey-200;
+      color: $colour-p06;
+    }
+  }
+
+  &--fitContainer {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &--small {
+    font-size: 12px;
+  }
+
+  &--extraSmall {
+    font-size: 10px;
+  }
+
+  &--iconOnly {
+    .textButton__icon {
+      &--before {
+        margin-right: 0;
+      }
+
+      &--after {
+        margin-left: 0;
+      }
+    }
+  }
+}

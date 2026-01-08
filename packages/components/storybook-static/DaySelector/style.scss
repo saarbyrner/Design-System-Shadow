@@ -1,0 +1,34 @@
+.daySelector {
+  &__label {
+    color: $colour-s18;
+
+    label {
+      font-size: 14px;
+      font-weight: 600;
+    }
+  }
+}
+
+.daySelectorDays {
+  display: flex;
+  flex-direction: row;
+}
+
+.daySelectorDay {
+  border: 2px solid $colour-p04;
+  border-radius: 24px;
+  color: $colour-p01;
+  cursor: pointer;
+  display: inline-block;
+  height: 36px;
+  margin-right: 5px;
+  padding-top: 5px;
+  text-align: center;
+  width: 36px;
+
+  &--selected {
+    background-color: $colour-p01;
+    border-color: $colour-p01;
+    color: $colour-p06;
+  }
+}

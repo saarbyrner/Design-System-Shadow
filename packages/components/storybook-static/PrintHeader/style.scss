@@ -1,0 +1,38 @@
+.printHeader {
+  align-items: center;
+  border-bottom: 1px solid $colour-s14;
+  display: none;
+  margin: 10px 0 20px;
+  padding: 0 10px 20px;
+
+  @media print {
+    display: flex;
+  }
+
+  img {
+    margin-right: 30px;
+    width: 40px;
+  }
+
+  &__container {
+    // These rules enforce the browser to print the background
+    -webkit-print-color-adjust: exact; // Chrome/Safari
+    print-color-adjust: exact; // Firefox
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+  }
+
+  &__itemTitle {
+    color: $colour-p03;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  &__itemText {
+    color: transparentize($colour-s16, 0.1) !important;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+}

@@ -1,0 +1,190 @@
+.inputText {
+  position: relative;
+
+  &__label {
+    &--disabled {
+      color: $colour-s18;
+      opacity: 0.5;
+    }
+  }
+
+  &__error {
+    bottom: -23px;
+    color: $colour-s11;
+    left: 0;
+    position: absolute;
+
+    &--updatedDesign {
+      align-items: baseline;
+      bottom: -18px;
+      color: $red-100;
+      display: flex;
+      font-size: 12px;
+      height: 19px;
+      font-weight: 600;
+      line-height: 16px;
+      position: initial;
+    }
+  }
+
+  &__warning {
+    bottom: -23px;
+    color: $colour-s11;
+    left: 0;
+    position: absolute;
+  }
+
+  &__lengthCounter {
+    position: absolute;
+    right: 0;
+    top: 11px;
+  }
+
+  &__truncationCounter {
+    color: $colour-s07;
+    position: absolute;
+    right: 0;
+    top: 11px;
+  }
+
+  &--kitmanDesignSystem {
+    width: 100%;
+
+    label {
+      color: $colour-grey-100;
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 4px;
+      width: 100%;
+
+      &.inputText__label--disabled {
+        color: transparentize($colour-grey-300, 0.5);
+      }
+    }
+
+    .inputText__labelContainer {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .inputText__optional {
+      color: $colour-grey-100;
+      font-size: 12px;
+      font-weight: 400;
+    }
+
+    input {
+      background: $colour-neutral-200;
+      border-color: $colour-neutral-200;
+      border-radius: 3px;
+      border-style: solid;
+      border-width: 2px;
+      color: $colour-grey-200;
+      font-size: 14px;
+      height: 32px;
+      line-height: 32px;
+      padding: 2px 8px;
+      transition: background 0.1s ease-out 0s, border-color 0.1s ease-out 0s;
+      width: 100%;
+
+      &:hover {
+        background: $colour-neutral-300;
+        color: $colour-grey-300;
+      }
+
+      &:focus {
+        background: $colour-p06;
+        border-color: $colour-blue-100;
+      }
+
+      &:disabled {
+        background: $colour-neutral-200;
+        color: transparentize($colour-grey-300, 0.5);
+        cursor: default;
+      }
+    }
+
+    .inputText__inputWrapper {
+      position: relative;
+
+      &:hover {
+        .inputText__clearBtn {
+          opacity: 1;
+        }
+      }
+    }
+
+    .inputText__clearBtn {
+      border: 0;
+      background: transparent;
+      color: $colour-grey-200;
+      font-size: 14px;
+      position: absolute;
+      padding: 0 7px;
+      right: 0;
+      top: 7px;
+      opacity: 0;
+      transition: opacity 0.1s ease-out;
+    }
+    .icon-search {
+      color: $colour-grey-200;
+      font-size: 14px;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+    }
+    .icon-calendar {
+      color: $colour-grey-200;
+      font-size: 14px;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+    }
+
+    &.inputText--disabled {
+      .icon-search {
+        color: transparentize($colour-grey-100, 0.5);
+      }
+    }
+
+    &.inputText--clearable {
+      input {
+        padding-right: 22px;
+      }
+    }
+
+    &.inputText--withSearchIcon {
+      input {
+        padding-right: 30px;
+      }
+    }
+
+    &.inputText--withCalendarIcon {
+      input {
+        padding-right: 30px;
+      }
+    }
+
+    input.km-error {
+      background-color: $colour-neutral-200;
+      border-color: $red-100;
+
+      &:hover {
+        background-color: $colour-neutral-300;
+        border-color: $red-100;
+      }
+    }
+  }
+
+  &--invalid {
+    input {
+      background-color: $colour-neutral-200;
+      border-color: $red-100;
+
+      &:hover {
+        background-color: $colour-neutral-300;
+        border-color: $red-100;
+      }
+    }
+  }
+}

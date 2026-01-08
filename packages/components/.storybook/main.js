@@ -43,7 +43,7 @@ module.exports = {
           options: {
             // Needed for reslove-url-loader
             sourceMap: true,
-            silenceDeprecations: ['slash-div'],
+
           },
         },
       ],
@@ -52,6 +52,12 @@ module.exports = {
         path.resolve(__dirname, '../../common/src/styles/'),
       ],
     });
+
+    config.resolve.fallback = {
+      ...config.resolve.fallback,
+      tty: require.resolve('tty-browserify'),
+      os: require.resolve('os-browserify/browser'),
+    };
 
     // Return the altered config
     return config;

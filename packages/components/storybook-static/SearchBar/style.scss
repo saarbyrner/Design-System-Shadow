@@ -1,0 +1,19 @@
+.container {
+  position: relative;
+}
+.searchBar__icon {
+  color: $colour-grey-200;
+  display: block;
+  font-size: 25px;
+  margin: 10px 5px;
+  position: absolute;
+  right: 8px;
+}
+
+.searchBar__input {
+  border: 0px;
+  box-shadow: none;
+  height: 45px;
+  padding-right: 35px;
+  background-color: $colour-neutral-200;
+}

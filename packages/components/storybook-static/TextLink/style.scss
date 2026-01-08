@@ -1,0 +1,52 @@
+.textLink {
+  color: $colour-grey-200;
+  font-weight: 600;
+
+  &:visited {
+    color: $colour-grey-200;
+  }
+
+  &:hover,
+  &:active {
+    color: $colour-grey-300;
+    text-decoration: underline;
+  }
+
+  &--disabled {
+    color: $colour-s14;
+
+    &:active,
+    &:hover,
+    &:visited {
+      color: $colour-s14;
+      cursor: not-allowed;
+      text-decoration: none;
+    }
+  }
+
+  &--kitmanDesignSystem {
+    color: $colour-grey-200;
+    font-weight: 600;
+
+    &:visited {
+      color: $colour-grey-200;
+    }
+
+    &:hover,
+    &:active {
+      color: $colour-grey-200;
+    }
+
+    &.textLink--disabled {
+      color: $colour-neutral-300;
+
+      &:active,
+      &:hover,
+      &:visited {
+        color: $colour-neutral-300;
+        cursor: not-allowed;
+        text-decoration: none;
+      }
+    }
+  }
+}

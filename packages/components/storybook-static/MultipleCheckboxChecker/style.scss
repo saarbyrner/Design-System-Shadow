@@ -1,0 +1,23 @@
+.multipleCheckboxChecker {
+  background-color: $colour-p06;
+  border: 1px solid $colour-p04;
+  border-radius: 5px;
+  color: $colour-p01;
+  cursor: pointer;
+  height: 20px;
+  position: relative;
+  text-align: center;
+  width: 20px;
+
+  &--minus {
+    &::after {
+      @include checkbox-dash;
+    }
+  }
+
+  &--checked {
+    &::after {
+      @include checkbox-check;
+    }
+  }
+}

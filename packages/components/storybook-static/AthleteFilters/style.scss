@@ -1,0 +1,92 @@
+.athleteFilters {
+  background: $colour-s23;
+  box-sizing: initial;
+  clear: both;
+  display: inline-block;
+  height: 0;
+  margin: 0 -20px;
+  opacity: 0;
+  padding: 0 30px;
+  width: 100%;
+
+  &--expanded {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    height: 90px;
+    justify-content: flex-start;
+    margin-bottom: -15px;
+    margin-top: 15px;
+    opacity: 1;
+    padding: 15px 20px;
+    transition: opacity 100ms ease-in 300ms;
+    width: auto;
+
+    .athleteFilters__groupBy {
+      flex: 1;
+      margin-right: 15px;
+      max-width: 255px;
+      padding: 0;
+    }
+
+    .athleteFilters__alarm_filterAthletes {
+      flex: 1;
+      margin-bottom: -10px;
+      margin-right: 15px;
+      max-width: 520px;
+
+      .athleteFilters__alarmInner {
+        max-width: 520px;
+
+        .multiSelect__searchField {
+          max-height: 60px;
+        }
+      }
+    }
+
+    .athleteFilters__availability_filterAthletes {
+      flex: 1;
+      margin-bottom: -10px;
+      margin-right: 15px;
+      max-width: 520px;
+
+      .athleteFilters__availabilityInner {
+        max-width: 520px;
+
+        .multiSelect__searchField {
+          max-height: 60px;
+        }
+      }
+    }
+
+    .athleteFilters__athletes {
+      flex: 1;
+      margin-bottom: -10px;
+      margin-right: 15px;
+
+      .athleteFilters__athletesInner {
+        max-width: 520px;
+
+        .multiSelect__searchField {
+          max-height: 60px;
+        }
+      }
+    }
+
+    .athleteFilters__btnContainer_filterAthletes {
+      margin-left: auto;
+      margin-top: 30px;
+    }
+  }
+
+  &__groupBy {
+    display: inline-block;
+    float: left;
+    padding: 0 10px 0 0;
+    width: 265px;
+  }
+
+  &__btnContainer {
+    margin-top: 20px;
+  }
+}

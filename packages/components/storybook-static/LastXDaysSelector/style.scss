@@ -1,0 +1,86 @@
+.lastXDaysSelector {
+  // modifiers
+  &.lastXDaysSelector--pushdown {
+    display: inline-block;
+    margin-bottom: 0;
+    margin-top: 29.5px;
+
+    @media (max-width: 991px) {
+      margin-bottom: 20px;
+      margin-top: 0;
+    }
+  }
+
+  .lastXDaysSelector__input-cont {
+    float: left;
+    height: 45px;
+    position: relative;
+    width: 130px;
+    margin-bottom: 20px;
+
+    .lastXDaysSelector__descriptor,
+    .lastXDaysSelector__input {
+      color: $colour-s18;
+      display: inline-block;
+    }
+
+    .lastXDaysSelector__descriptor {
+      border-right: 1px solid $colour-s15;
+      font-weight: 600;
+      height: 83%;
+      left: 15px;
+      line-height: 38px;
+      margin: 4px 0;
+      padding-right: 15.5px;
+      position: absolute;
+      top: 0;
+    }
+
+    .lastXDaysSelector__input {
+      border: 1px solid $colour-s15;
+      border-radius: 4px;
+      font-size: 14px;
+      height: 100%;
+      line-height: 45px;
+      padding-left: 77px;
+      width: 100%;
+
+      // Prevent zoom when the user focus inputs on mobile devices
+      @media (max-width: $breakpoint-tablet) {
+        font-size: 16px;
+      }
+
+      &.km-error {
+        border: 2px solid $colour-s11;
+        padding-left: 76px;
+      }
+
+      &:focus {
+        border: 2px solid $colour-p01;
+        padding-left: 76px;
+      }
+    }
+  }
+
+  .lastXDaysSelector__options {
+    float: left;
+    margin-left: 20px;
+    margin-top: 3px;
+
+    ul {
+      margin-bottom: 0;
+    }
+
+    &--kitmanDesignSystem {
+      margin-top: 20px;
+    }
+  }
+
+  &--invalid {
+    .lastXDaysSelector__input-cont {
+      .lastXDaysSelector__input {
+        border: 2px $colour-s11 solid;
+      }
+    }
+  }
+}

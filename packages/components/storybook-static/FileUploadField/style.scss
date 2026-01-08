@@ -1,0 +1,339 @@
+.fileUploadField {
+  &__label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 0;
+  }
+
+  &--noDropLabel {
+    .filepond--drop-label {
+      display: none;
+    }
+  }
+
+  &--hideUploadedItems {
+    .filepond--list {
+      display: none !important;
+    }
+  }
+
+  &--smallerUploadArea {
+    .filepond--drop-label {
+      min-height: 90px !important;
+    }
+  }
+
+  &--verticalLine {
+    grid-column: 1 / span end;
+    border-top: 2px solid black;
+    margin-bottom: 8px;
+  }
+
+  &--hideUploadedItem {
+    .filepond--item {
+      display: none;
+    }
+    .filepond--wrapper {
+      display: none;
+    }
+  }
+
+  .filepond--root {
+    font-family: 'Open Sans', Arial, sans-serif;
+    margin-bottom: 0;
+
+    .filepond--credits {
+      display: none;
+    }
+
+    .filepond--drip-blob {
+      background-color: $colour-s23;
+    }
+
+    .filepond--drop-label {
+      background-color: $colour-s23;
+      border: 1px solid $colour-s13;
+      border-radius: 5px;
+      color: $colour-s17;
+      font-size: 13px;
+
+      &:before {
+        @extend .icon-upload;
+        color: $colour-p04;
+        display: block;
+        font-family: 'kitman' !important;
+        font-size: 27px;
+        left: 50%;
+        position: absolute;
+        top: 10px;
+        transform: translateX(-50%);
+      }
+
+      label {
+        margin-top: 31px;
+      }
+    }
+
+    .filepond--list {
+      left: 0;
+      margin-top: 15px;
+      right: 0;
+    }
+
+    .filepond--label-action {
+      color: $colour-s18;
+      text-decoration-color: $colour-s18;
+    }
+
+    .filepond--panel-root {
+      background-color: transparent;
+      border-radius: 0;
+    }
+
+    .filepond--item-panel {
+      background-color: $colour-s23;
+      border: 1px solid $colour-s13;
+      border-radius: 5px;
+    }
+
+    .filepond--item {
+      margin: 0 0 10px;
+
+      .filepond--panel {
+        .filepond--panel-bottom {
+          box-shadow: none;
+        }
+      }
+
+      &[data-filepond-item-state='load-invalid'] {
+        .filepond--file-status {
+          color: $colour-s11;
+          margin-top: 7px;
+        }
+      }
+    }
+
+    .filepond--file-action-button {
+      background-color: transparent;
+      color: $colour-s18;
+      margin-top: 9px;
+
+      &:hover,
+      &:focus {
+        border: 0;
+        box-shadow: none;
+      }
+
+      i {
+        font-size: 20px;
+      }
+    }
+
+    .filepond--file {
+      color: $colour-s18;
+      padding: 5px 15px 5px 5px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      .filepond--file-status {
+        margin-right: 0px;
+      }
+    }
+
+    .filepond--file-info {
+      display: flex;
+      flex-direction: row;
+      margin-top: 5px;
+    }
+
+    .filepond--file-info,
+    .filepond--file-info-main {
+      font-size: 12px;
+      line-height: 20px;
+      margin-right: 10px;
+    }
+
+    .filepond--file-info-sub {
+      color: $colour-s16;
+      font-size: 12px;
+      line-height: 20px;
+      opacity: 1;
+    }
+  }
+
+  &__uploadedFileList {
+    margin-top: 10px;
+
+    &.unuploadedGap {
+      margin-top: 30px;
+    }
+  }
+
+  &__uploadedFile {
+    align-items: center;
+    background: $colour-s23;
+    border: 1px solid $colour-s13;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    margin-bottom: 10px;
+    padding: 5px 15px 5px 10px;
+    position: relative;
+    width: 100%;
+
+    i {
+      color: $colour-s18;
+      font-size: 20px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    &--preview {
+      position: relative;
+
+      img {
+        max-width: 100%;
+      }
+
+      .fileUploadField__removeIcon {
+        background: $colour-neutral-200;
+        border-radius: 10px;
+        color: $colour-grey-300;
+        cursor: pointer;
+        display: block;
+        left: 5px;
+        padding: 3px;
+        position: absolute;
+        top: 5px;
+      }
+    }
+  }
+
+  &__uploadedFileData {
+    flex: 1;
+    margin-left: 10px;
+  }
+
+  &__uploadedFileName {
+    font-size: 12px;
+    margin-bottom: 0;
+  }
+
+  &__uploadedFileSize {
+    color: $colour-s16;
+    font-size: 12px;
+    margin-bottom: 0;
+  }
+
+  &__uploadedFileLink {
+    i {
+      color: $colour-p01;
+      display: inline-block;
+      font-size: 12px;
+      transform: rotate(-45deg);
+    }
+  }
+
+  &__removeIcon {
+    color: $colour-grey-200;
+  }
+
+  &--kitmanDesignSystem {
+    .filepond--root {
+      .filepond--label-action {
+        color: $colour-grey-100;
+        display: block;
+        font-size: 18px;
+        font-weight: normal;
+        max-width: 250px;
+        text-decoration-color: transparent;
+      }
+
+      .filepond--label-description {
+        color: $colour-grey-100;
+        font-size: 12px;
+        font-weight: 400;
+      }
+
+      .filepond--drop-label {
+        background-color: $colour-neutral-200;
+        border: 0;
+        border-radius: 3px;
+        color: $colour-grey-100;
+        font-size: 14px;
+        min-height: 140px;
+
+        &:before {
+          @extend .icon-upload;
+          color: $colour-grey-100;
+          display: block;
+          font-family: 'kitman' !important;
+          font-size: 32px;
+          left: 50%;
+          position: absolute;
+          top: 29%;
+          transform: translate(-50%, -50%);
+        }
+
+        label {
+          margin-top: 40px;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+
+      .filepond--list {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  &--fileTitleFields {
+    margin-bottom: 40px;
+    &.fileUploadField--kitmanDesignSystem {
+      .filepond--root {
+        .filepond--list {
+          margin-top: 35px;
+        }
+      }
+    }
+
+    .filepond--root {
+      .filepond--list {
+        max-width: 50%;
+        margin-left: 51%;
+      }
+    }
+    .unuploaded_files_titles {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      position: absolute;
+      top: 180px;
+
+      span {
+        font-size: 14px;
+        margin-top: 5px;
+        color: $colour-grey-100;
+        font-weight: 600;
+      }
+
+      .unuploaded_files_titles_area {
+        display: flex;
+        flex-direction: column;
+        margin-top: 4px;
+
+        input {
+          height: 37px;
+          margin-bottom: 11px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,226 @@
+.richTextEditor {
+  label {
+    color: $colour-s18;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 10px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    .textareaLabel {
+      margin-right: 4px;
+    }
+    .textareaOptional {
+      color: $colour-s16;
+    }
+  }
+
+  &__commands {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+  }
+
+  &__styleBtn {
+    background-color: $colour-p06;
+    border: 1px solid $colour-p04;
+    border-radius: 5px;
+    color: $colour-p01;
+    cursor: pointer;
+    height: 36px;
+    margin-right: 5px;
+    min-width: 36px;
+    padding: 0;
+    position: relative;
+
+    i {
+      font-size: 22px;
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &--disabled,
+    &:disabled {
+      border-color: $colour-s14;
+      color: $colour-p04;
+
+      &:hover {
+        background-color: $colour-p06;
+        border-color: $colour-s14;
+        color: $colour-p04;
+      }
+    }
+
+    &--active {
+      background-color: $colour-p01;
+      border-color: $colour-p01;
+      color: $colour-p06;
+    }
+
+    &:hover {
+      background-color: $colour-p02;
+      border-color: $colour-p02;
+      color: $colour-p06;
+      cursor: pointer;
+    }
+  }
+
+  &__editorContainer {
+    background-color: $colour-p06;
+    border: 1px solid $colour-p04;
+    border-radius: 5px;
+    color: $colour-s18;
+    font-size: 14px;
+    height: 100px;
+    overflow-y: auto;
+    padding: 11.5px;
+    resize: vertical;
+
+    &--error {
+      border-color: $colour-s25;
+    }
+  }
+
+  &--disabled {
+    label {
+      color: $colour-s18;
+      opacity: 0.5;
+    }
+
+    .richTextEditor__editorContainer {
+      opacity: 0.5;
+    }
+  }
+
+  &__charCounter {
+    color: $colour-s16;
+    padding-top: 5px;
+    text-align: right;
+  }
+}
+
+.richTextEditor--kitmanDesignSystem {
+  label {
+    color: $colour-grey-100;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    .textareaLabel {
+      margin-right: 4px;
+    }
+    .textareaOptional {
+      color: $colour-grey-100;
+      font-size: 12px;
+      font-weight: 400;
+    }
+  }
+
+  &--active {
+    .richTextEditor--kitmanDesignSystem__textarea {
+      border-color: $colour-blue-100;
+    }
+  }
+
+  &--invalid {
+    .richTextEditor--kitmanDesignSystem__textarea {
+      border-color: $red-100;
+    }
+  }
+
+  &__textarea {
+    background-color: $colour-neutral-200;
+    border: 2px solid $colour-neutral-200;
+    border-radius: 3px;
+  }
+
+  &__editorContainer {
+    box-sizing: content-box;
+    color: $colour-grey-300;
+    font-size: 14px;
+    height: 100px;
+    overflow-y: auto;
+    padding: 11.5px;
+    resize: vertical;
+
+    &--error {
+      border-color: $colour-s25;
+    }
+  }
+
+  &__commands {
+    border-top: 1px solid $colour-neutral-300;
+    opacity: 0.4;
+    padding: 0 3px 3px;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+
+    &--active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+
+  &__styleBtn {
+    background-color: $colour-neutral-200;
+    border: 0;
+    border-radius: 3px;
+    color: $colour-grey-100;
+    cursor: pointer;
+    font-weight: 400;
+    height: 24px;
+    margin-right: 5px;
+    padding: 0;
+    position: relative;
+    width: 24px;
+
+    i {
+      font-size: 22px;
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &:disabled {
+      background: $colour-neutral-200;
+      color: transparentize($colour-grey-100, 0.5);
+      cursor: not-allowed;
+
+      &:hover,
+      &:active {
+        background-color: $colour-neutral-200;
+        border-color: $colour-s14;
+        color: transparentize($colour-grey-100, 0.5);
+        cursor: not-allowed;
+      }
+    }
+
+    &--active {
+      background-color: $colour-blue-100;
+      border-color: $colour-blue-100;
+      color: $colour-p06;
+    }
+
+    &:hover {
+      background-color: $colour-blue-200;
+      border-color: $colour-blue-200;
+      color: $colour-p06;
+    }
+  }
+
+  &--disabled {
+    .richTextEditor--kitmanDesignSystem__editorContainer {
+      color: transparentize($colour-grey-300, 0.5);
+    }
+  }
+}

@@ -1,0 +1,183 @@
+.datePicker {
+  &__label {
+    color: $colour-s18;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-top: 0;
+
+    &--disabled {
+      color: $colour-s18;
+      opacity: 0.5;
+    }
+  }
+
+  &__optionalFieldText {
+    color: $colour-grey-300-50-percent;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 14px;
+    margin-top: 4px;
+    text-align: right;
+  }
+}
+
+.datepicker table tr td.day {
+  color: $colour-grey-300;
+
+  &:hover {
+    color: $colour-grey-300;
+    background-color: $colour-neutral-300;
+  }
+
+  &.disabled {
+    color: $colour-grey-100-50-percent;
+
+    &:hover {
+      color: $colour-grey-100-50-percent;
+    }
+  }
+}
+
+.datepicker table tr td.day.active.active {
+  color: $colour-p06;
+  background-color: $colour-grey-100;
+
+  &:hover {
+    color: $colour-p06;
+    background-color: $colour-grey-200;
+  }
+}
+
+.datepicker table tr td.day.active,
+.datepicker table tr td.day:hover {
+  border-radius: 3px;
+}
+
+.datepicker table tr td.today.day {
+  color: $colour-grey-300;
+  background-color: $colour-p06;
+  background-image: none;
+  position: relative;
+
+  &.disabled {
+    color: $colour-grey-100-50-percent;
+  }
+
+  &:before {
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 20.5px;
+    bottom: 3px;
+    left: 5px;
+    background: $colour-grey-200;
+  }
+}
+
+.datepicker table tr td.new.day,
+.datepicker table tr td.old.day {
+  color: $colour-grey-100;
+
+  &.disabled {
+    color: $colour-grey-100-50-percent;
+
+    &:hover {
+      color: $colour-grey-100-50-percent;
+    }
+  }
+}
+
+.datepicker table tr td.today.day:hover,
+.datepicker table tr td.today.day.disabled,
+.datepicker table tr td.today.day.disabled:hover {
+  background-color: $colour-neutral-300;
+  background-image: none;
+  position: relative;
+
+  &:before {
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 20.5px;
+    bottom: 3px;
+    left: 5px;
+    background: $colour-grey-200;
+  }
+}
+
+.datepicker table tr td.today.active.day {
+  background-color: $colour-grey-100;
+  background-image: none;
+  position: relative;
+
+  &:before {
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 20.5px;
+    bottom: 3px;
+    left: 5px;
+    background: $colour-p06;
+  }
+}
+
+.datepicker table th.datepicker-switch {
+  color: $colour-grey-400;
+  font-weight: 700;
+
+  &:hover {
+    background-color: $colour-neutral-300;
+  }
+}
+
+.datepicker table th.prev::before {
+  color: $colour-grey-200;
+  font-weight: 900;
+}
+
+.datepicker table th.next::after {
+  color: $colour-grey-200;
+  font-weight: 900;
+}
+
+.datepicker table tr .dow {
+  color: $colour-grey-100;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 11px;
+  padding-top: 12px;
+  padding-bottom: 10px;
+}
+
+.datepicker table tr td span.month.active.active {
+  background-color: $colour-grey-100;
+
+  &:hover {
+    color: $colour-p06;
+    background-color: $colour-grey-200;
+  }
+}
+
+.datepicker table tr td span.month:hover {
+  color: $colour-grey-300;
+  background-color: $colour-neutral-300;
+}
+
+.datepicker table tr td span.year.active.active {
+  background-color: $colour-grey-100;
+
+  &:hover {
+    color: $colour-p06;
+    background-color: $colour-grey-200;
+  }
+}
+
+.datepicker table tr td span.year:hover {
+  color: $colour-grey-300;
+  background-color: $colour-neutral-300;
+}
+
+.datepicker table tr .clear {
+  color: $colour-grey-400;
+}

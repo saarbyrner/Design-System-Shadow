@@ -1,0 +1,518 @@
+.tooltipMenu {
+  z-index: 2000;
+
+  &--scrollable {
+    .tooltipMenu__menuList {
+      max-height: 300px;
+      overflow: auto;
+    }
+  }
+
+  &__menuList {
+    list-style: none;
+    margin: 0;
+    max-height: 485px;
+    overflow: auto;
+    padding: 0;
+
+    li {
+      cursor: pointer;
+
+      i {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  &__icon {
+    color: $colour-s15;
+    font-size: 23px;
+    left: 9px;
+    position: absolute;
+
+    &.icon-mail {
+      font-size: 20px;
+    }
+  }
+
+  &__iconSelected {
+    font-size: 23px;
+  }
+
+  &__text {
+    padding-right: 8px;
+  }
+
+  &__item {
+    background-color: $colour-p06;
+    border: 0;
+    border-bottom: 1px dotted $colour-s14;
+    color: $colour-s18;
+    font-weight: 600;
+    height: 46px;
+    min-width: 230px;
+    padding: 10px 11px 10px 10px;
+    position: relative;
+
+    &:visited {
+      color: $colour-s18;
+
+      &:hover {
+        color: $colour-p06;
+      }
+    }
+
+    &--active {
+      background-color: $colour-s13;
+      color: $colour-s18;
+    }
+
+    &:hover {
+      background-color: $colour-p02;
+      color: $colour-p06;
+
+      &:visited {
+        color: $colour-p06;
+      }
+
+      .tooltipMenu__icon {
+        color: $colour-p06;
+      }
+    }
+
+    &--alarms {
+      div {
+        width: 100%;
+      }
+    }
+
+    &--icon {
+      padding-left: 41px;
+    }
+
+    img {
+      border-right: 10px;
+      display: inline-block;
+      margin-right: 5px;
+    }
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  &__listItem {
+    .tooltipMenu__item {
+      align-items: center;
+      border-bottom: 1px dotted $colour-s14;
+      display: flex;
+      justify-content: space-between;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+
+      &:hover {
+        border-bottom: 1px solid $colour-p02;
+      }
+
+      &.tooltipMenu__item--active {
+        border-bottom: 1px solid $colour-s13;
+      }
+
+      &--destructive {
+        color: $colour-s25;
+
+        .tooltipMenu__icon {
+          color: $colour-s25;
+        }
+
+        &:hover {
+          background-color: $colour-s25;
+          color: $colour-p06;
+
+          .tooltipMenu__icon {
+            color: $colour-p06;
+          }
+        }
+      }
+
+      &--disabled {
+        color: transparentize($colour-s18, 0.4);
+
+        .tooltipMenu__icon {
+          color: transparentize($colour-s15, 0.4);
+        }
+
+        &:hover {
+          background-color: $colour-p06;
+          border-bottom: 1px dotted $colour-s14;
+          color: transparentize($colour-s18, 0.4);
+          cursor: default;
+
+          .tooltipMenu__icon {
+            color: transparentize($colour-s15, 0.4);
+          }
+        }
+      }
+
+      &--hasSubMenu {
+        + .tooltipMenu__listItemSubMenu {
+          background: $colour-p06;
+          border: 2px solid $colour-s14;
+          border-radius: 5px;
+          display: none;
+          list-style: none;
+          margin-left: calc(100% - 5px);
+          margin-top: -46px;
+          min-width: 142px;
+          padding-left: 0;
+          position: absolute;
+          white-space: nowrap;
+          z-index: 1;
+
+          &--leftAlign {
+            margin-left: 5px;
+            transform: translate(-100%, 0);
+          }
+
+          &--rightAlign {
+            margin-left: calc(100% - 5px);
+          }
+
+          .tooltipMenu__listItemSubMenuItem {
+            height: 46px;
+            padding: 10px 11px 10px 40px;
+            position: relative;
+
+            &:hover {
+              color: $colour-p02;
+              font-weight: 600;
+            }
+
+            &--active {
+              color: $colour-p02;
+              font-weight: 600;
+
+              &:hover {
+                color: $colour-p02;
+                font-weight: 600;
+              }
+            }
+          }
+
+          &:hover {
+            display: block;
+
+            ~ .tooltipMenu__item {
+              background: $colour-p02;
+            }
+          }
+        }
+
+        &:after {
+          content: '\25B8';
+          float: right;
+          margin-right: 2px;
+          font-family: 'Open Sans';
+        }
+
+        &:hover {
+          + .tooltipMenu__listItemSubMenu {
+            display: block;
+          }
+        }
+      }
+    }
+
+    &:last-child {
+      .tooltipMenu__item {
+        border-bottom: 0;
+      }
+    }
+  }
+
+  &__extraItem {
+    .tooltipMenu__item {
+      border-bottom: 1px dotted $colour-s14;
+    }
+
+    &--last {
+      .tooltipMenu__item {
+        border-bottom: 0;
+      }
+    }
+  }
+
+  &--kitmanDesignSystem {
+    $border-radius: 3px;
+
+    .tooltipMenu__listItem {
+      .tooltipMenu__item {
+        &--highlighted {
+          background-color: scale-color(
+            $color: $colour-blue-100,
+            $lightness: 95%
+          );
+          color: $colour-blue-300;
+          font-weight: 600;
+        }
+      }
+
+      &:first-child {
+        .tooltipMenu__item {
+          border-top-left-radius: $border-radius;
+          border-top-right-radius: $border-radius;
+        }
+      }
+
+      &:last-child {
+        .tooltipMenu__item {
+          border-bottom-left-radius: $border-radius;
+          border-bottom-right-radius: $border-radius;
+        }
+      }
+
+      &:focus-within,
+      &:hover {
+        .tooltipMenu__item {
+          background-color: $colour-neutral-300;
+          color: $colour-grey-400;
+          border-bottom: 0;
+        }
+      }
+    }
+
+    .tooltipMenu__item {
+      background-color: $colour-p06;
+      border: 0;
+      border-bottom: 0;
+      color: $colour-grey-400;
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      font-weight: normal;
+      height: 36px;
+      line-height: 36px;
+      max-width: 300px;
+      min-width: 160px;
+      overflow: hidden;
+      padding: 0 16px;
+      text-align: left;
+      text-overflow: ellipsis;
+      width: 100%;
+
+      &:active {
+        background: transparentize($colour-blue-100, 0.9);
+        color: $colour-blue-100;
+      }
+
+      &--disabled {
+        color: $colour-grey-100;
+
+        &:hover {
+          background-color: $colour-p06;
+          color: $colour-grey-100;
+        }
+      }
+
+      &--icon {
+        padding-left: 42px;
+      }
+
+      .tooltipMenu__icon {
+        color: $colour-grey-100;
+      }
+
+      &:hover {
+        + .tooltipMenu__listItemSubMenuDesignSystem {
+          display: block;
+        }
+      }
+
+      &--active {
+        background-color: $colour-grey-100;
+        color: $colour-neutral-100;
+
+        .tooltipMenu__icon {
+          color: $colour-neutral-100;
+        }
+
+        &:hover {
+          .tooltipMenu__icon {
+            color: $colour-blue-300;
+          }
+        }
+      }
+    }
+
+    .tooltipMenu__listItemSubMenuDesignSystem {
+      border: none;
+      background-color: $colour-p06;
+      border-radius: $border-radius;
+      box-shadow: $tooltip-shadow;
+      box-sizing: border-box;
+      color: $colour-s18;
+      font-size: 12px;
+      font-weight: 400;
+      padding: 0;
+
+      display: none;
+      list-style: none;
+      margin-top: -36px;
+      min-width: 142px;
+      position: absolute;
+      z-index: 1;
+
+      &:hover {
+        display: block;
+      }
+
+      &--leftAlign {
+        margin-left: -4px;
+        transform: translate(-100%, 0);
+
+        /*
+          This pseudo element makes a bridge between the two levels
+          so that the hover styles persist and it doesn't randomly close when
+          a user moves the curser between levels
+        */
+        &::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: -8px;
+          width: 8px;
+        }
+      }
+
+      &--rightAlign {
+        margin-left: calc(100% + 4px);
+
+        /*
+          This pseudo element makes a bridge between the two levels
+          so that the hover styles persist and it doesn't randomly close when
+          a user moves the curser between levels
+        */
+        &::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: -8px;
+          width: 8px;
+        }
+      }
+
+      .tooltipMenu__icon {
+        color: $colour-grey-100;
+      }
+
+      .tooltipMenu__listItemSubMenuItem {
+        $padding: 16px;
+        $padding-left-with-icon: 42px;
+
+        background-color: $colour-p06;
+        border: 0 !important;
+        border-bottom: 0;
+        color: $colour-grey-400;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 14px;
+        font-weight: normal;
+        height: 36px;
+        line-height: 36px;
+        max-width: 300px;
+        min-width: 160px;
+        padding: 0 $padding;
+        text-align: left;
+        text-overflow: ellipsis;
+        width: 100%;
+        white-space: nowrap;
+
+        position: relative;
+
+        &:first-child {
+          border-top-left-radius: $border-radius;
+          border-top-right-radius: $border-radius;
+        }
+
+        &:last-child {
+          border-bottom-left-radius: $border-radius;
+          border-bottom-right-radius: $border-radius;
+        }
+
+        &:hover {
+          background-color: $colour-neutral-300;
+          color: $colour-grey-400;
+
+          .tooltipMenu__listItemSubMenuDesignSystem {
+            display: block;
+            top: 100%;
+
+            &--rightAlign {
+              margin-left: calc(100% - #{$padding - 4px});
+            }
+
+            &--leftAlign {
+              margin-left: -$padding - 4px;
+              transform: translate(-100%, 0);
+            }
+          }
+        }
+
+        &--hasSubMenu {
+          &::after {
+            content: '\25B8';
+            float: right;
+            margin-right: 2px;
+            font-family: 'Open Sans';
+          }
+        }
+
+        &--icon {
+          padding-left: $padding-left-with-icon;
+
+          .tooltipMenu__listItemSubMenuDesignSystem {
+            &--rightAlign {
+              margin-left: calc(
+                100% - #{$padding-left-with-icon - 4px}
+              ) !important;
+            }
+
+            &--leftAlign {
+              margin-left: -$padding-left-with-icon - 4px !important;
+            }
+          }
+        }
+
+        &--active {
+          background-color: $colour-grey-100;
+          color: $colour-neutral-100;
+
+          .tooltipMenu__icon {
+            color: $colour-neutral-100;
+          }
+
+          &:hover {
+            .tooltipMenu__icon {
+              color: $colour-blue-300;
+            }
+          }
+        }
+
+        // For states when child is selected
+        &--highlighted {
+          background-color: scale-color(
+            $color: $colour-blue-100,
+            $lightness: 95%
+          );
+          border-bottom: 0;
+          color: $colour-blue-300;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

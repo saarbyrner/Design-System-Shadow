@@ -1,0 +1,160 @@
+.InputNumeric {
+  color: $colour-s18;
+
+  &__label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-top: 0;
+  }
+
+  &--disabled {
+    color: $colour-s18;
+    opacity: 0.5;
+  }
+
+  &--small {
+    .InputNumeric__inputContainer {
+      height: 30px;
+    }
+  }
+
+  &__input {
+    border: 0;
+    border-radius: 4px;
+    display: table-cell;
+    font-size: 14px;
+    height: 100%;
+    line-height: 45px;
+    padding: 0 10px;
+    width: 100%;
+  }
+
+  &__descriptor {
+    background: $colour-p06;
+    display: table-cell;
+    font-weight: 400;
+    height: 100%;
+    line-height: 43px;
+    margin: 4px 0;
+    overflow: hidden;
+    padding: 0 15px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: auto;
+
+    &--right {
+      border-left: 1px solid $colour-s15;
+    }
+
+    &--left {
+      border-right: 1px solid $colour-s15;
+    }
+  }
+
+  &__optional {
+    color: $colour-s16;
+    float: right;
+    font-size: 14px;
+    margin-top: 6px;
+  }
+
+  &__inputContainer {
+    border: 1px solid $colour-s15;
+    border-radius: 4px;
+    display: inline-table;
+    height: 45px;
+    overflow: hidden;
+    width: 100%;
+
+    &.km-error {
+      border: 1px solid $colour-s11;
+      box-shadow: 0 0 0 1px $colour-s11;
+    }
+
+    &:focus-within {
+      border: 1px solid $colour-p01;
+      box-shadow: 0 0 0 1px $colour-p01;
+    }
+  }
+
+  &--kitmanDesignSystem {
+    .InputNumeric {
+      &__labelContainer {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      &__label {
+        color: $colour-grey-100;
+        font-size: 12px;
+        font-weight: 600;
+        margin-bottom: 4px;
+      }
+
+      &__optional {
+        color: $colour-grey-100;
+        font-size: 12px;
+        font-weight: 400;
+        margin-top: 0;
+      }
+
+      &__inputContainer {
+        border: none;
+        height: auto;
+
+        &:focus-within {
+          border: none;
+          box-shadow: none;
+        }
+      }
+
+      &__input {
+        background: $colour-neutral-200;
+        border-color: $colour-neutral-200;
+        border-radius: 3px 0 0 3px;
+        border-style: solid;
+        border-width: 2px;
+        color: $colour-grey-200;
+        font-size: 14px;
+        height: 32px;
+        line-height: 32px;
+        padding: 2px 8px;
+        transition: background 0.1s ease-out 0s, border-color 0.1s ease-out 0s;
+        width: 100%;
+
+        &:hover {
+          background: $colour-neutral-300;
+          color: $colour-grey-300;
+        }
+
+        &:focus {
+          background: $colour-p06;
+          border-color: $colour-blue-100;
+        }
+
+        &:disabled {
+          background: $colour-neutral-200;
+          color: transparentize($colour-grey-300, 0.5);
+          cursor: default;
+        }
+      }
+
+      &__descriptor {
+        background: $colour-neutral-300;
+        line-height: 32px;
+        border-radius: 0 3px 3px 0;
+      }
+    }
+
+    .InputNumeric__inputContainer {
+      &--invalid {
+        input {
+          border: 2px solid $red-100;
+          border-radius: 3px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+.squadSearch {
+  &__missingAthletes {
+    background-image: url('../img/icon_warning_red.svg');
+    background-position: 0;
+    background-repeat: no-repeat;
+    margin-right: 30px;
+    padding-left: 25px;
+  }
+}

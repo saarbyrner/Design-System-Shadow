@@ -1,0 +1,38 @@
+.radioList {
+  &.radioList--disabled {
+    .radioList__mainLabel {
+      color: $colour-s18;
+      opacity: 0.5;
+    }
+  }
+
+  ul {
+    margin-bottom: 10px;
+    padding-left: 0;
+  }
+
+  .radioList__mainLabel {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  .radioList__item {
+    line-height: 0;
+    padding-right: 5px;
+
+    &--horizontal {
+      display: inline-block;
+      padding-left: 25px;
+
+      &:first-child {
+        padding-left: 0;
+      }
+    }
+
+    &--vertical {
+      display: block;
+    }
+  }
+}

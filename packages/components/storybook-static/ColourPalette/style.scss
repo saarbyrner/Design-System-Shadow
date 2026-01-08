@@ -1,0 +1,32 @@
+.colourPalette {
+  &__delete {
+    color: $colour-s15;
+    cursor: pointer;
+    font-size: 20px;
+
+    &--active {
+      color: $colour-p01;
+    }
+  }
+
+  &__colourPickers {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .colorPicker {
+    margin-bottom: 15px;
+    margin-right: 17px;
+  }
+
+  &__addPicker {
+    background: $colour-p06;
+    border: 1px solid $colour-s14;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    height: 45px;
+    padding: 11px 12px;
+    width: 45px;
+  }
+}

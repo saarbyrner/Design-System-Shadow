@@ -28,6 +28,14 @@ const config = {
     // getAbsolutePath('@storybook/addon-interactions'),
     getAbsolutePath('@storybook/addon-designs'),
   ],
+  webpackFinal: async (config) => {
+    config.resolve.fallback = {
+      ...config.resolve.fallback,
+      tty: require.resolve('tty-browserify'),
+      os: require.resolve('os-browserify/browser'),
+    };
+    return config;
+  },
   babel: {
     presets: [
       '@babel/preset-env',
@@ -56,12 +64,12 @@ const config = {
   },
   // TODO - uncomment this to embed @kitman/components in this storybook
   // Docs - https://storybook.js.org/docs/react/sharing/storybook-composition
-  // refs: {
-  //   components: {
-  //     title: '@kitman/components',
-  //     url: 'http://localhost:8008/',
-  //     expanded: false, // Optional, true by default
-  //   },
-  // },
+  refs: {
+    components: {
+      title: '@kitman/components',
+      url: 'http://localhost:8008/',
+      expanded: false, // Optional, true by default
+    },
+  },
 };
 export default config;
